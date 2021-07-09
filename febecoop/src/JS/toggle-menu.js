@@ -1,26 +1,24 @@
 const MenuButton = document.getElementById("js-main-navigation-menu-button");
-const HeaderMainMenuMobile = document.getElementById("js-header-second-section-mobile");
-
-
+const HeaderMainMenuMobile = document.getElementById(
+  "js-header-second-section-mobile"
+);
+const NavSearchTablet = document.getElementById("js-nav-search-tablet");
+const Header = document.getElementById("js-header");
 
 MenuButton.addEventListener("click", togglemenu);
 function togglemenu() {
-
-  const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-  // body.style.position = 'fixed';
-  // body.style.top = `-${scrollY}`;
-
+  const scrollY = document.documentElement.style.getPropertyValue("--scroll-y");
   HeaderMainMenuMobile.classList.toggle("header-second-section-mobile-active");
-  MenuButton.classList.toggle("main-navigation-menu-button-active")
-  
-  if(document.body.classList.contains('body-fixed')) {
-    console.log("Je retire la classe body")
-    document.body.classList.remove('body-fixed');
+  MenuButton.classList.toggle("main-navigation-menu-button-active");
 
+  if (document.body.classList.contains("body-fixed")) {
+    document.body.classList.remove("body-fixed");
   } else {
-    console.log("J'ajoute la classe body'")
-    document.body.classList.add('body-fixed');
+    document.body.classList.add("body-fixed");
     document.body.style.top = `-${scrollY}`;
   }
 
+  if (NavSearchTablet.classList.contains("nav-search-tablet-active")) {
+    NavSearchTablet.classList.remove("nav-search-tablet-active");
+  }
 }

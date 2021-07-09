@@ -7,7 +7,7 @@ $margin-flex-txt : 40px;
   color: $blue-1;
   font-size: 26px;
   line-height: 34px;
-  margin-bottom: 32px;
+  margin-bottom: $space-between-flex-items-l;
 
   @include tablet {
     font-size: 28px;
@@ -38,7 +38,7 @@ $margin-flex-txt : 40px;
   color: $blue-1;
   font-size: 22px;
   line-height: 28px;
-  margin-bottom: $flex-all-mb;
+  margin-bottom: $space-between-flex-items-l;
 
   @include tablet {
     font-size: 24px;
@@ -71,7 +71,7 @@ $margin-flex-txt : 40px;
   color: $blue-2;
   font-size: 15px;
   line-height: 27px;
-  margin-bottom: $margin-flex-txt / 2;
+  margin-bottom: $space-between-flex-items-l;
   @include tracking(25);
 }
 @mixin flex-link {
@@ -89,7 +89,7 @@ $margin-flex-txt : 40px;
 @mixin ordered-list {
   list-style: none;
   counter-reset: my-counter;
-  margin-bottom: $margin-flex-txt / 2 ;
+  margin-bottom: $space-between-flex-items-l ;
   li {
     @include paragraph;
     counter-increment: my-counter;
@@ -111,7 +111,7 @@ $margin-flex-txt : 40px;
   }
 }
 @mixin unordered-list {
-  margin-bottom: $margin-flex-txt / 2 ;
+  margin-bottom: $space-between-flex-items-l ;
   li {
     @include paragraph;
     margin-bottom: 0;

@@ -180,11 +180,20 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
+
+        img {
+            object-fit: unset;
+        }
+
         @include tablet {
             width: 540px;
             z-index: 0;
             left: 106px;
             top: - $bbc-t;
+
+            img {
+                object-fit: contain;
+            }
         }
         @include laptopS {
             width: 500px;

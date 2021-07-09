@@ -6,7 +6,7 @@ function projet_accompagnes_scripts() {
     // Localize the script with new data
     $script_data_array = array(
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
-        'security' => wp_create_nonce( 'load_more_posts' ),
+        'security' => wp_create_nonce( 'load_more_projetsacc' ),
     );
     wp_localize_script( 'laodmore_projet_acc_scrip', 'blog', $script_data_array );
  
@@ -20,7 +20,7 @@ add_action('wp_ajax_nopriv_load_posts_by_ajax', 'load_posts_by_ajax_callback');
 
 
 function load_posts_by_ajax_callback() {
-    check_ajax_referer('load_more_posts', 'security');
+    check_ajax_referer('load_more_projetsacc', 'security');
     $paged = $_POST['page'];
     $args =
     array(
@@ -69,7 +69,7 @@ $the_query = new WP_Query($args);
     <!-- <div id="more_posts">Load More</div> -->
 
 <?php endif; 
- 
+      wp_reset_postdata(  );
     wp_die();
 }
 ?>

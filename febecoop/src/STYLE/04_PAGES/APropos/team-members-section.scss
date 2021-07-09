@@ -230,6 +230,23 @@ $tmi-size-l : 56px;
                                 }
                             }
                         }
+                        .team-member-item-picture-placeholder {
+                            background-color: $blue-1-30;
+
+                            > svg {
+                                min-width: unset;
+                                min-height: unset;
+                                width: 80%;
+
+                                .placeholder-profil-picture-paths {
+                                    fill: $blue-1-30;
+                                }
+
+                                @include laptopS {
+                                    width: 33%;
+                                }
+                            } 
+                        }
 
                         .team-member-item-content {
                             padding-left: 120px;

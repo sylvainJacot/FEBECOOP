@@ -21,13 +21,13 @@ add_action('wp_ajax_nopriv_load_posts_by_ajax', 'load_actus_by_ajax_callback');
 
 function load_actus_by_ajax_callback() {
     check_ajax_referer('load_more_posts', 'security');
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $pagedActu = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
     $loop = new WP_Query(
       array(
         'post_type' => 'actualites',
         'posts_per_page' => 6,
-        'paged' => $paged
+        'paged' => $pagedActu
       )
     );
     ?>
@@ -45,7 +45,7 @@ function load_actus_by_ajax_callback() {
   <div class="card-type-b-content">
       <p class="card-type-b-date"><?php echo get_the_date('d/m/Y'); ?></p>
       <p class="card-type-b-chapeau"><?php the_title(); ?></p>
-      <p class="cta-c">Lire plus</p>
+      <p class="cta-c"><?php pll_e('Lire plus');?></p>
   </div>
 </a>
 
@@ -55,7 +55,7 @@ function load_actus_by_ajax_callback() {
       <!-- <a class="cta-a actualites_loadmore">Voir plus</a> -->
 
     <?php endif; 
- 
+    wp_reset_postdata(  );
     wp_die();
 }
 ?>

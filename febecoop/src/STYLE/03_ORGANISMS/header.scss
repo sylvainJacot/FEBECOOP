@@ -116,6 +116,12 @@
     &:after {
         display: none;
     }
+    &.current-menu-item {
+        a {
+            color: $orange-1;
+            text-decoration: none !important;
+        }
+    }
 }
 
 @mixin pseudo-el-tablet {
@@ -142,6 +148,8 @@ header {
 
     .header-wrapper {
         background: $white;
+        position: relative;
+        z-index: 11;
 
         @include laptopS {
             display: flex;
@@ -200,92 +208,7 @@ header {
                     }
                 }
 
-                .nav-search-tablet {
-                    position: fixed;
-                    width: 100vw;
-                    background: $orange-light;
-                    left: 0;
-                    top: -300px;
-                    @include shadow-a-nopic($blue-1-60);
-                    display: block;
-                    z-index: 100;
-                    @include trans-a;
-                    padding: 56px 88px 80px 88px;
-                    z-index: -1;
 
-                    label {
-                        display: block;
-                        @include hando-sb;
-                        font-size: 30px;
-                        line-height: 36px;
-                        color: $blue-1;
-                        padding: 40px 0;
-                    }
-                    input[type=image]{
-                        position: absolute;
-                        width: 32px;
-                        bottom: 96px;
-                        right: 88px;                 
-                    }
-                    input[type=text] {
-                        @include hando-xl;
-                        color: $blue-1;
-                        font-size: 32px;
-                        line-height: 64px;
-                        background: transparent;
-                        width: 100%;
-                        border-bottom: solid 1px $orange-1;
-                        padding-right: 60px;
-                        box-shadow: none !important;
-            
-                        &:focus {
-                            background-color: transparent !important;
-                            box-shadow: none !important;
-                        }
-            
-                        &:-webkit-autofill {
-                            background-color: transparent !important;
-                            box-shadow: none !important;
-                        }
-
-                    }
-                }
-                .nav-search-tablet-active {
-                    top: 64px;
-                    @include trans-b;
-                }
-                .nav-search-tablet-close-area {
-                    display: flex;
-                    position: relative;
-                    align-items: center;
-                    justify-content: center;
-                    width: 50px;
-                    height: 50px;
-                    position: absolute;
-                    border-radius: 50%;
-                    // border: 2px solid $orange-1;
-                    top: 72px;
-                    right: 88px;
-                    cursor: pointer;
-                    background-color: $white;
-        
-                    @include laptopL {
-                        top: 20px;
-                    }
-        
-                    >span {
-                        &:before {
-                            display: block;
-                            content: "";
-                            width:13px;
-                            height:13px;
-                            background: url("../ASSETS/IMAGES/common/VECTOR/ic-close-orange.svg") center no-repeat;
-                            background-size: contain;
-                            @include trans-a;
-                        }
-                    }
-
-                }
                 // .nav-search-tablet-close-area-active {
                 //     pointer-events: unset;
                 //     display: block;
@@ -370,7 +293,7 @@ header {
                         display: block;
                         position: absolute;
                         right: 32px;
-                        top: calc(50% + 1px);
+                        bottom: calc(50% - 8px);
                         transform: translateY(100%) scaleY(0.3);
                         transition: all 0.1s ease-out;
                         opacity: 0;
@@ -403,7 +326,8 @@ header {
                         transition: all 0.1s ease-out;
                     }
                     &::after {
-                        transform: translateY(-50%) scaleY(1);
+                        bottom: 50%;
+                        transform: translateY(50%) scaleY(1);
                         opacity: 1;
                         transition: all 0.3s ease-out;
                     }
@@ -414,7 +338,8 @@ header {
         .header-second-section-mobile {
             display: block;
             position: fixed;
-            max-height: calc(100vh - 88px);
+            height: calc(100vh - 88px);
+            // max-height: calc(100vh - 88px);
             width: 100%;
             overflow-y: scroll;
             background: $blue-1;
@@ -423,10 +348,16 @@ header {
             pointer-events: none;
             transform-origin: top center;
             transform: scaleY(0);
+            transition: all 0.2s ease-out;
+
+            .header-second-section-mobile-wrapper {
+                opacity: 0;
+                transition: all 0.1s ease-out;
+            }
 
             @include tablet {
                 padding-top: 88px;
-                padding-bottom: 40vh;
+                padding-bottom: 88px;
             }
 
             @include laptopS {
@@ -575,7 +506,7 @@ header {
         }
 
         .header-second-section-mobile-active {
-            position: relative;
+            position: absolute;
             opacity: 1;
             pointer-events: unset;
             transition: all 0.3s ease-out;
@@ -600,7 +531,10 @@ header {
 }
 
 .header-second-section-mobile-federal {
-    padding-bottom: 144px !important;
+    padding-bottom: 0px !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 

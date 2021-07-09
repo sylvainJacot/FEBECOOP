@@ -138,9 +138,19 @@ get_header();
             $link_target = $link['target'] ? $link['target'] : '_self';
         ?>
             <a class="form-type-a-footer" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
-                <p><?php echo esc_html($link_title); ?></p>
+                <p> 
+                    <?php
+                    $openspan = "<span>";
+                    $openmainttitle = str_replace('(*(', $openspan, $link_title);
+                    $closemainttitle = str_replace(')*)','</span>',$openmainttitle);
+                    echo $closemainttitle;
+                    ?>
+
+                </p>
             </a>
         <?php endif; ?>
+
+
 
 
     </div>

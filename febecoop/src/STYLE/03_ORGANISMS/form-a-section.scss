@@ -184,10 +184,18 @@ $tab-nav-item-radio-size: 22px;
                     width: 14 * $tCol;
                     margin: auto;
                 }
+
+                > span {
+                    color: $orange-1;
+                }
+
+                &:hover {
+                    > span {
+                            color: $red-1
+                    }
+                }
             }
-            &:hover {
-                color: $orange-1;
-            }
+
 
         }
         #js-download-form {

@@ -62,6 +62,13 @@ $yellow-1-40: hsla(43, 96%, 56%,0.4);
 box-shadow: 0 15px 100px -40px $color;
 }
 
+@mixin shadow-search-tablet($color:$blue-1-30) {
+    // -webkit-box-shadow: 0 21px 70px -27px $color; 
+    // box-shadow: 0 21px 70px -27px $color;
+    -webkit-box-shadow: 0 15px 100px -60px $color; 
+    box-shadow: 0 40px 100px -60px $color;
+    }
+
 @mixin shadow-b-nopic($color:$blue-1-30) {
     // -webkit-box-shadow:  0 22px 50px -14px  $color; 
     // box-shadow: 0 22px 50px -14px  $color;

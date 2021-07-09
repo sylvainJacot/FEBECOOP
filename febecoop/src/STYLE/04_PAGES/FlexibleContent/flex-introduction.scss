@@ -1,13 +1,13 @@
 .flex-introduction-wrapper {
-  margin-bottom: 72px;
+  margin-bottom: $space-between-flex-items-d + $space-between-flex-items-l;
 
   @include tablet {
-    margin-bottom: 80px;
+    margin-bottom: $space-between-flex-items-d * 2;
   }
   @include laptopS {
-    margin-bottom: 56px;
+    margin-bottom: $space-between-flex-items-d + $space-between-flex-items-m;
   }
   @include laptopL {
-    margin-bottom: 80px;
+    margin-bottom: $space-between-flex-items-d * 2;
   }
 }

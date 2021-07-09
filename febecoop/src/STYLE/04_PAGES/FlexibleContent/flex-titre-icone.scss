@@ -1,9 +1,9 @@
 .flex-titre-icone-wrapper {
     display: flex;
     align-items: center;
-    margin: 56px 0px 32px;
+    margin: $space-between-flex-items-d + $space-between-flex-items-m 0px $space-between-flex-items-t;
     @include laptopS {
-        margin: 120px 0px 40px;
+        margin: $space-between-flex-items-d * 3 0px $space-between-flex-items-l;
     }
     h2 {
         @include hando-sb;

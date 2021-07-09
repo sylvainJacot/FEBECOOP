@@ -49,11 +49,11 @@ $aqp-d: 32px;
         padding: 32px 0;
         background: $orange-light;
         border-radius: 8px;
-        margin-top: 40px;
+        margin-top: $space-between-flex-items-d;
 
         @include tablet {
             padding: 64px 0;
-            margin-top: 80px;
+            margin-top: $space-between-flex-items-d * 2;
         }
 
         @include laptopS {
@@ -119,15 +119,7 @@ $aqp-d: 32px;
                 }
 
                 &:last-child {
-                    margin-bottom: 24px;
-
-                    @include tablet {
-                        margin-bottom: 32px;
-                    }
-
-                    @include tablet {
-                        margin-bottom: 24px;
-                    }
+                    margin-bottom: $space-between-flex-items-t;
                 }
 
                 &:after {

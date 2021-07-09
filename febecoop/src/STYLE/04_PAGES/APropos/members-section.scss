@@ -100,7 +100,8 @@
                         border-radius: 50%;
                         width: 108px;
                         height: 108px;
-                        @include shadow-a-pic;
+                        @include shadow-a-pic($blue-1);
+                        margin-bottom: 16px;
 
                         @include tablet {
                             width: 3 * $tCol;
@@ -109,14 +110,16 @@
                         @include laptopS {
                             width: 4 * $lCol;
                             height: 4 * $lCol;
+                            margin-bottom: 0px;
+                            @include shadow-a-pic;
                         }
                         @include laptopL {
                             width: 3 * $dCol;
                             height: 3 * $dCol;
                         }
                         > img {
-                            max-width: 80%;
-                            max-height: 80%;
+                            max-width: 70%;
+                            max-height: 70%;
                             object-fit: contain;
                             filter: saturate(0);
                             mix-blend-mode: multiply;
@@ -130,6 +133,14 @@
                             background: $blue-1;
                             mix-blend-mode: screen;
                             opacity: 1;
+                        }
+                    }
+                    .main-members-mandats-section-row-item-pic-placeholder {
+                        > svg {
+                            width: 30%;
+                            > path {
+                                fill: $blue-1-30;
+                            }
                         }
                     }
                     .main-members-mandats-section-row-item-content {

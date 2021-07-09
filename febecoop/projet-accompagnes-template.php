@@ -117,6 +117,7 @@ global $wp_query;
 
 
             <?php endif; ?>
+            <?php wp_reset_postdata(  );?>
 
         </main>
 
@@ -127,12 +128,6 @@ global $wp_query;
 
 </section>
 
-
-
-
-<!-- CONTACT BANNER ==============
-=========================== -->
-<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner"); ?>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -164,6 +159,14 @@ global $wp_query;
 
     });
 </script>
+
+
+
+<!-- CONTACT BANNER ==============
+=========================== -->
+<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner"); ?>
+
+
 
 
 

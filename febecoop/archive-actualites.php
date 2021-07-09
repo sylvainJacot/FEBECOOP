@@ -40,20 +40,9 @@ $terms = get_terms('categories_actualites');
 <section class="actualites-section">
   <div class="actualites-section-wrapper grid">
     <div class="actualites-container" id="actualites-container">
-      <?php
-      // set the "paged" parameter (use 'page' if the query is on a static front page)
-      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-      $loop = new WP_Query(
-        array(
-          'post_type' => 'actualites',
-          'posts_per_page' => 6,
-          'paged' => $paged
-        )
-      );
-      ?>
-      <?php if ($loop->have_posts()) : ?>
-        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+      <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
 
         <a href="<?php the_permalink(); ?>" class="swiper-slide  card-type-b-item card-type-b-item-row-actu">
     <div class="card-type-b-pic-wrapper">
@@ -73,10 +62,11 @@ $terms = get_terms('categories_actualites');
 
         <?php endwhile; ?>
 
-        <a class="cta-a actualites_loadmore"><?php pll_e('Voir plus');?></a>
+
+        <a class="cta-a" id="actualites_loadmore"><?php pll_e('Voir plus');?></a>
 
       <?php endif; ?>
-
+ -->
 
     </div>
 
@@ -118,6 +108,19 @@ $('.js-filtres-types-a-filtres-container a').click(function(e){
     setTimeout(function() {
         $('#actualites-container a').css('opacity', '1'); // effet etc a appliquer apres le chargement 
     },500);
+          
+});
+</script>
+
+<script>
+
+// $('#articles').on('click', '.filter-npoq-container a', function(e) {
+
+     
+$('#actualites_loadmore').click(function(e){
+    console.log("hello")
+    e.preventDefault(); // annule effet ou autre sur le clic
+
           
 });
 </script>
