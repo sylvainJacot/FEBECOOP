@@ -1,0 +1,64 @@
+.frm_opt_container {
+    margin-bottom: $margin-bottom-between-el-m;
+    @include laptopS {
+        margin-bottom: $margin-bottom-between-el-l;
+    }
+    .frm_checkbox {
+        label {
+            @include frm-checkbox-label;
+            text-indent: 0px;
+            display: flex !important;
+            align-items: center !important;
+            padding-left: 0px !important;
+            cursor: pointer;
+
+            input[type=checkbox] {
+                position: relative;
+                width: 20px;
+                height: 20px; 
+                opacity: 1;
+                margin-right: 20px;
+                margin-top: 0;
+                border: none !important;
+                box-shadow: none !important;
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    width: 20px;
+                    height: 20px;
+                    transform: translate(-50%,-50%);
+                    border: 1px solid $blue-1-20;
+                    background-color: $blue-light;
+                    cursor: pointer;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    width: 0px;
+                    height: 0px;
+                    transform: translate(-50%,-50%);
+                    @include trans-a;
+                    cursor: pointer;
+                }
+
+                &:checked {
+                    &:before {
+                    }
+                    &:after {
+                        background-color: $orange-1;
+                        width:12px;
+                        height: 12px;
+                        @include trans-a;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.main-flexible-page-wrapper {
+    padding-top: $bbc-m;
+    padding-bottom: $bbc-m;
+    @include tablet {
+        padding-bottom: $bbc-t;
+        padding-bottom: $bbc-t + 40px;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l;
+        padding-bottom: $bbc-l + 180px;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d;
+        padding-bottom: $bbc-d + 190px;
+    }
+  .main-flexible-page-content {
+    @include laptopS {
+        margin: auto;
+        width: 19 * $lCol;
+    }
+    @include laptopL {
+        margin: auto;
+        width: 15 * $dCol;
+    }
+  }  
+}

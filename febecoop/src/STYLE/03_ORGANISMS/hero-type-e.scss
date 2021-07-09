@@ -1,0 +1,86 @@
+$hste-img-h-t : 224px;
+$hste-img-h-l : 210px;
+$hste-img-h-d : 260px;
+
+.hero-section-type-e {
+    background: $orange-light;
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    @include tablet {
+        padding-top: 72px;
+        padding-bottom: 72px + $hste-img-h-t;
+    }
+    @include laptopS {
+        padding-top: 96px;
+        padding-bottom: 96px + $hste-img-h-t;
+    }
+    @include laptopL {
+        padding-top: 106px;
+        padding-bottom: 106px + $hste-img-h-t;
+    }
+
+    .hero-section-type-e-wrapper  {
+        @include laptopL {
+            width: 21 * $dCol;
+        }
+        .hero-section-type-e-content {
+            .hero-section-type-e-content-text {
+                .hero-section-type-e-content-toptitle-wrapper {
+                    display: flex;
+                    .hero-section-type-e-content-toptitle {
+                        @include top-titre-header;
+                        margin-right: 10px;
+                    }
+                    .hero-section-type-e-content-date {
+
+                    }
+                }
+                h1 {
+                    @include titre-header;
+                    margin-bottom: 40px;
+                    @include tablet {
+                    }
+                    @include laptopS {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero-section-type-e-introduction-wrapper {
+
+    .hero-section-type-e-intro-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 336px;
+        margin: auto;
+        overflow: hidden;
+        background-color: $white;
+        @include tablet {
+            width: 17 * $tCol;
+            height: 390px;
+            transform: translateY(-$hste-img-h-t);
+        }
+        @include laptopS{
+            width: 23 * $lCol;
+            height: 466px;
+            transform: translateY(-$hste-img-h-l);
+        }
+        @include laptopL{
+            width: 21 * $dCol;
+            height: 600px;
+            transform: translateY(-$hste-img-h-d);
+        }
+        img {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+    }
+}

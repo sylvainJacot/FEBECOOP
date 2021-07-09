@@ -1,0 +1,82 @@
+.hero-section-type-f {
+    background: $orange-light;
+    position: relative;
+
+    .hero-section-type-f-wrapper {
+        position: relative;
+        @include laptopL {
+            padding: 0 $lCol;
+        }
+        .illu-publication-detail-wrapper {
+            position: relative;
+            margin: auto;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 32px;
+            width: 8 * $mCol;
+            height: 180px;
+
+            img {
+                @include shadow-a-pic;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            @include tablet {
+                width: 4 * $tCol;
+                height: 225px;
+            }
+            @include laptopS {
+                width: 5 * $lCol;
+                height: 225px;
+            }
+            @include laptopL {
+                width: 4 * $lCol;
+                height: 250px; 
+            }
+        }
+        .hero-section-type-f-content {
+            padding: 48px 0;
+            @include tablet {
+                padding: 112px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            @include laptopS {
+                padding: 72px 0;
+            }
+
+            .hero-section-type-f-content-text{
+                @include tablet {
+                    width:  10 * $tCol;
+                }
+                @include laptopS {
+                    width: 15 * $lCol;
+                }
+                @include laptopL {
+                    width: 16 * $dCol;
+                }
+            .hero-section-type-f-content-toptitle {
+                @include top-titre-header;
+
+            }
+            h1 {
+                @include titre-header;
+
+                @include tablet {
+                }
+                @include laptopS {
+                    margin: 0;
+                }
+            }
+        }
+        }
+    }
+}

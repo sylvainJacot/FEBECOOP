@@ -1,0 +1,44 @@
+.agenda-formations-section {
+    padding-bottom: $bbc-m;
+    @include tablet {
+        padding-bottom: $bbc-t;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d;
+    }
+    .agenda-formations-wrapper {
+        margin: auto;
+        @include laptopS {
+            width: 19 * $lCol;
+        }
+        @include laptopL {
+            width: 15 * $dCol;
+        }
+        .agenda-formations-header {
+            .agenda-formation-titre {
+                @include hando-sb;
+                color: $blue-1;
+                font-size: 22px;
+                margin-bottom: 48px;
+                @include tablet {
+                    font-size: 24px;
+                    line-height: 37px;
+                    margin-bottom: 72px;
+                }
+                @include laptopS {
+                    font-size: 28px;
+                    line-height: 40px;
+                    margin-bottom: 64px;
+                }
+                @include laptopL{
+                    font-size: 30px;
+                    line-height: 42px;
+                    margin-bottom: 64px;
+                }
+            }
+        }
+    }
+}

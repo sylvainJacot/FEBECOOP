@@ -1,0 +1,116 @@
+.hero-section-type-i {
+    background: $orange-light;
+    position: relative;
+    .hero-section-type-waves-container {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        @include laptopS {
+            right: -350px;
+            height: 100%;
+        }
+        @include laptopL {
+            right: -400px;
+        }
+        > img {
+            width: 100%;
+        }
+    }
+    .hero-section-type-i-wrapper {
+        .hero-section-type-i-content {
+            padding-top: 56px;
+            padding-bottom: 70px;
+            @include tablet {
+                padding-top: 88px;
+                padding-bottom: 150px;
+            }
+            @include laptopS {
+                padding-top: 90px; 
+                padding-bottom: 120px;
+            }
+            @include laptopL{
+                padding-top: 130px; 
+                padding-bottom: 130px;
+            }
+            position: relative;
+            .hero-section-type-i-content-text {
+                @include laptopS {
+                    width: 10 * $lCol;
+                    padding-left: $lCol;
+                }
+                @include laptopL {
+                    width: 10 * $dCol;
+                    padding-left: $dCol;
+                }
+                
+            h1 {
+                @include titre-header;
+            }
+            h2 {
+                @include hando-m;
+                font-size: 16px;
+                line-height: 31px;
+                @include tracking(25);
+                color: $blue-1;
+                padding: 0;
+                margin: 24px 0px;
+                @include tablet {
+                    font-size: 18px;
+                    line-height: 35px;
+                    margin: 32px 0px;
+                }
+                @include laptopS {
+                    font-size: 20px;
+                    line-height: 37px;
+                    margin: 24px 0px;
+                }
+                @include laptopL {
+                    font-size: 22px;
+                    line-height: 39px;
+                    margin: 40px 0px;
+                }
+            }
+
+            .hero-section-type-i-content-toptitle {
+                @include top-titre-header;
+            }
+        }
+            .hero-section-pic-wrapper {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                width: 100%;
+                height: 290px;
+                margin: auto;
+                margin-top: 24px;
+                overflow: visible;
+                @include tablet {
+                    width: 550px;
+                    height: 500px;
+                }
+                @include laptopS {
+                   position: absolute;
+                   width: 400px;
+                   height: 430px;
+                   top: 50%;
+                   right: -40px;
+                   transform: translateY(-50%);
+                   margin-top: 0px;
+                }
+                @include laptopL {
+                    width: 700px;
+                    height: 570px;
+                    right: -157px;
+                }
+                img {
+                    height: inherit;
+                }
+            }
+        }
+    }
+}
+
+
+    

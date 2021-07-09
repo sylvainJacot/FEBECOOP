@@ -1,0 +1,302 @@
+$semi-col-l : $lCol / 2;
+$semi-col-d : $dCol / 2;
+
+
+.expertise-section {
+    position: relative;
+    margin-top: 106px;
+    margin-bottom: 64px;
+    @include tablet {
+        margin-top: 180px;
+    }
+    @include laptopS {
+        margin-top: 126px;
+    }
+    @include laptopL {
+        margin-top: 135px;
+    }
+
+       
+    .expertise-section-illu {
+        position: absolute;
+        display: block;
+        width: 389px;
+        height: 180px;
+        top: -62px;
+        left: -72px;
+        background: url("../ASSETS/IMAGES/HOME/VECTOR/illu-expertise-mobile.svg") center no-repeat;
+        background-size: contain;
+        @include tablet {
+            width: 650px;
+            height: 310px;
+            top: -102px;
+            left: -122px;
+        }
+        @include laptopS {
+            top: -96px;
+            left: -199px;
+            width: 620px;
+            height: 315px;
+            background: url("../ASSETS/IMAGES/HOME/VECTOR/illu-expertise.svg") center no-repeat;
+        }
+        @include laptopL {
+            width: 650px;
+            height: 330px;
+            top: -101px;
+            left: -159px;
+        }
+    }
+    .expertise-section-wrapper {
+        padding-top: 118px;
+        padding-bottom: 40px;
+        @include tablet {
+            padding-top: 150px;
+        }
+        @include laptopS {
+            position: relative;
+            padding-top: 150px;
+            padding-bottom: 140px;
+        }
+        @include laptopL {
+            padding-top: 160px;
+            padding-bottom: 130px;
+        }
+        &:before {
+            position: absolute;
+            display: block;
+            width: 100vw;
+            height: 100%;
+            content: "";
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $blue-light;
+            z-index: -1;
+            @include laptopS {
+                left: unset;
+                transform: translateX(0);
+                right:  7 * $semi-col-l;
+            }
+        }
+        &:after {
+            display: none;
+            @include laptopS {
+                position: absolute;
+                display: block;
+                content: "";
+                width: 450px;
+                height: 440px;
+                top: calc(50% + 50px);
+                right: -340px;
+                transform: translateX(-50%) translateY(-50%);
+                background: url("../ASSETS/IMAGES/HOME/VECTOR/illu-dots-publication.svg") center no-repeat;
+                background-size: contain;
+                z-index: 0;
+    
+            }
+            @include laptopL {
+                width: 510px;
+                height: 430px;
+                top: calc(50% + 70px);
+                right: -320px;
+            
+            }
+        }
+        .expertise-section-content {
+            @include laptopS {
+                width: 13 * $lCol;
+            }
+            @include laptopL {
+                padding-left: $dCol;
+                width: 13 * $dCol;
+            }
+            h2 {
+                @include intertitre-b-underlined;
+            }
+            h3 {
+                @include titre-s-2;
+                margin: 32px 0;
+                @include tablet {
+                    margin: 64px 0 16px 0;
+                }
+            }
+            p {
+                @include hando-l;
+                color: $blue-2;
+                font-size: 14px;
+                line-height: 26.62px;
+                @include tracking(25);
+                @include laptopS {
+                    margin-bottom: 48px;
+                }
+            }
+        }
+        .publication-item-container {
+            position: relative;
+            display: block;
+            background: $white;
+            margin-top: 72px;
+            margin-bottom: 40px;
+            padding: 24px $mCol 32px $mCol;
+            border-radius: 8px;
+            z-index: 1;
+
+            @include tablet {
+                display: flex;
+                margin-top: 80px;
+                margin-bottom: 64px;
+                padding: 48px 2 * $tCol;
+                border-radius: 16px;
+                justify-content: space-between;
+                align-items: center;
+            }
+            @include laptopS {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0px;
+                justify-content: flex-start;
+                flex-direction: column;
+                padding: 32px 40px;
+                margin: 0;
+                @include card-type-anime-a(-50%,-51%);
+            }
+            @include laptopL {
+                padding: 40px $dCol;
+            }
+            &:before {
+                position: absolute;
+                display: none;
+                content: "";
+                width: 447px;
+                height: 385px;
+                top: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: url("../ASSETS/IMAGES/HOME/VECTOR/illu-dots-publication.svg") center no-repeat;
+                background-size: contain;
+                z-index: -1;
+                @include tablet {
+                    display: none;
+                    width: 420px;
+                    height: 400px;
+                    top: -80px;
+                    left: unset;
+                    right: -530px;
+                }
+                @include laptopS {
+                    display: none;
+                }
+            }
+            .pi-pic-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+          
+            img {
+                display: block;
+                margin: auto;
+                max-height: 196px;
+                max-width: 9 * $mCol;
+                @include shadow-c;
+                @include tablet {
+                    max-height: 6 * $tCol;
+                    max-width: 5 * $tCol;
+                }
+                @include laptopS {
+                    margin: unset;
+                    max-height: 168px;
+                    max-width: 200px;
+                }
+                @include laptopL{
+                    max-height: 185px;
+                    max-width: 5 * $dCol;
+                }
+            }
+        }
+            .pi-content {
+                @include tablet {
+                    width: 7 * $tCol;
+                }
+                @include laptopS {
+                    width: 5 * $lCol;
+                }
+                @include laptopL {
+                    width: 5 * $dCol; 
+                }
+            .pi-titre {
+                @include hando-m;
+                font-size: 18px;
+                line-height: 28px;
+                color: $blue-1;
+                margin: 24px 0 12px 0;
+
+                @include tablet {
+                    margin-top: 0px;
+                }
+
+                @include laptopS {
+                    margin-top: 24px;
+                    font-size: 16px;
+                    line-height: 25px;
+                }
+                @include laptopL {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+            .pi-desc {
+                margin-bottom: 12px;
+                @include hando-l;
+                color: $blue-2;
+                font-size: 14px;
+                line-height: 26.62px;
+                @include tracking(25);
+                @include laptopS {
+                    margin-bottom: 32px;
+                }
+
+            }
+        }
+        }
+        > a {
+            @include tablet {
+                display: block;
+                margin: auto;
+            }
+            @include laptopS {
+                margin: unset;
+            }
+            @include laptopL {
+                margin-left: $dCol;
+            }
+        }
+    }
+}
+
+.expertise-section-flandre {
+    margin-top: 150px;
+    @include tablet {
+        margin-top: 210px;
+    }
+    @include laptopS {
+        margin-top: 200px;
+    }
+}
+
+.expertise-section-federal {
+    background-color: $blue-light;
+    margin-bottom: 0px;
+    margin-top: 146px;
+    padding-bottom: 40px;
+    @include tablet {
+        margin-top: 160px;
+        padding-bottom: 56px;
+    }
+    @include laptopS {
+        padding-bottom: 0px;
+        margin-top: 166px;
+    }
+
+}
+

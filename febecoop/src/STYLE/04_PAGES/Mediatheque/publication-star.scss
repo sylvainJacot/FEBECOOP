@@ -1,0 +1,110 @@
+.mediatheque-publication-star-section {
+    .mediatheque-publication-star-wrapper{
+        .mediatheque-publication-star-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 16px;
+            background: $blue-light;
+            padding: 32px $mCol;
+            margin-bottom: 80px;
+            @include tablet {
+                display: flex;
+                flex-direction: row;
+                padding: 56px 2 * $tCol;
+            }
+            @include laptopS {
+                width: 19 * $lCol;
+                padding: 48px 2 * $lCol;
+                margin: 0 auto 80px auto;
+            }
+            @include laptopL {
+                width: 15 * $dCol;
+                padding: 48px 2 * $dCol 48px $dCol;
+                margin: 0 auto 106px auto;
+            }
+            .mediatheque-publication-star-item-content-pic {
+                max-height: 230px;
+                max-width: 8 * $mCol;
+                min-height: 230px;
+                min-width: 8 * $mCol;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                margin: 0 0 24px 0;
+
+                @include tablet {
+                    max-width: 5 * $tCol;
+                    min-width: 5 * $tCol;
+                }
+                @include laptopS {
+                    max-height: 280px;
+                    max-width: 6 * $lCol;
+                    min-height: 280px;
+                    min-width: 6 * $lCol;
+                    margin: 0;
+                }
+                @include laptopL {
+                    max-height: 310px;
+                    max-width: 5 * $dCol;
+                    min-height: 310px;
+                    min-width: 5 * $dCol;
+                }
+
+                img {
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: contain;
+                    // @include shadow-a-pic;
+                }
+            }
+            .mediatheque-publication-star-item-content {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                @include tablet {
+                    padding-left: $tCol;
+                    align-items:flex-start;
+                }
+                @include laptopS {
+                    padding-left: $lCol;
+                }
+                @include laptopL {
+                    padding-left: $dCol;  
+                }
+                h3 {
+                    @include hando-sb;
+                    color: $blue-1;
+                    font-size: 20px;
+                    line-height: 30px;
+                    @include tablet {
+
+                    }
+                }
+                p {
+                    @include hando-sb;
+                    color: $blue-3;
+                    font-size: 14px;
+                    line-height: 26.6px;
+                    @include tracking(25);
+                    @include text-shave(3);
+                    margin: 16px 0px;
+                    @include tablet {
+                        margin: 24px 0px;
+                    }
+                    @include laptopS {
+                        margin: 32px 0px; 
+                    }
+                }
+                .cta-a{
+                    @include cta-a;
+                    color: $white;
+                }
+
+            }
+        }
+    }
+}

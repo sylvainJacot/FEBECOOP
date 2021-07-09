@@ -1,0 +1,42 @@
+@mixin trans($time:0.3s,$ease:out-cubic) {
+    transition: all $time ease($ease);
+}
+
+@mixin trans-a($time:0.3s) {
+    transition: all $time ease-out !important;
+}
+@mixin trans-a-b {
+    transition: all 0.3s ease-in;
+}
+
+@mixin trans-b {
+    transition: all 0.6s ease-out;
+}
+
+@mixin trans-b-b {
+    transition: all 0.6s ease-in;
+}
+
+@mixin card-type-anime-a($y-a:0,$y-b:-5px) {
+    transform: translateY($y-a) scale(1.000) translateZ(0);
+    @include trans-a;
+     @include shadow-a-pic;
+    &:hover {
+        transform: translateY($y-b) scale(1.005) translateZ(0);
+        @include trans-a;
+        @include  shadow-a-pic-hover;
+    }
+
+}
+
+@mixin sub-menu-open($time:0.3s) {
+    transition: all $time ease-out;
+}
+@mixin sub-menu-open-items {
+    transition: all 0.2s ease(in-quint);
+    // transition-delay: 0.1s;
+}
+
+@mixin sub-menu-close-items($time:0.1s) {
+    transition: all $time ease(out-quint);
+}

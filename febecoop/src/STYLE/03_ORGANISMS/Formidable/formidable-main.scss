@@ -1,0 +1,19 @@
+$margin-bottom-between-el-m: 32px;
+$margin-bottom-between-el-l: 48px;
+
+@import"./formidable-texts.scss";
+@import"./formidable-input-text.scss";
+@import"./formidable-checkboxes.scss";
+@import"./formidable-ctas.scss";
+@import"./formidable-promptmsg.scss";
+
+
+.custom_frm_half {
+    @include laptopS {
+        grid-column: span 4 / span 4 !important;
+    }
+} 
+
+.frm_style_formidable-style.with_frm_style .frm_blank_field label, .frm_style_formidable-style.with_frm_style .frm_error {
+    color: $red-1;
+}

@@ -1,0 +1,28 @@
+// MODAL EMAIL
+.m-modal {
+    .m-modal-back {
+        background-color: $blue-1;
+    }
+    .m-modal-content {
+        border: none !important;
+        border-radius: 8px !important;
+        padding: 32px !important;
+        @include shadow-a-nopic;
+        .m-title {
+            @include hando-b;
+            color: $blue-1;
+            margin: 16px auto;
+        }
+        a {
+            @include hando;
+            font-size: 16px;
+        }
+        #m-copy,#m-tel-copy {
+            @include cta-b;
+            margin: 24px auto;
+        }
+        .m-by {
+            display: none;
+        }
+    }
+}

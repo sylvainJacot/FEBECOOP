@@ -1,0 +1,27 @@
+.flex-titre-icone-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 56px 0px 32px;
+    @include laptopS {
+        margin: 120px 0px 40px;
+    }
+    h2 {
+        @include hando-sb;
+        color: $blue-1;
+        font-size: 22px;
+        line-height: 28px;
+        padding-left: 40px;
+        @include tablet {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        @include laptopS {
+            font-size: 28px;
+            line-height: 40px;
+        }
+        @include laptopL {
+            font-size: 30px;
+            line-height: 42px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.frm_message {
+    @include hando-b;
+    color: $blue-1;
+    font-size: 14px;
+    line-height: 26.62px;
+    @include tracking(25);
+    text-align: center;
+    color: #459b8a !important;
+    background: #d7efe5 !important;
+    border: 1px solid $red-1;
+}
+
+.frm_error_style {
+    @include hando-b;
+    color: $blue-1;
+    font-size: 14px;
+    line-height: 26.62px;
+    @include tracking(25);
+    text-align: center;
+    color: $red-1 !important;
+    border: 1px solid $red-1;
+}
+
+
+.frm_error{
+    @include hando-b;
+    color: $blue-1;
+    font-size: 14px;
+    line-height: 26.62px;
+    @include tracking(25);
+    text-align: center;
+    color: $red-1;
+}

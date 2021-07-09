@@ -1,0 +1,22 @@
+.flex-image {
+    @include max-heights-media;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: $space-between-flex-items-m 0px;
+    @include tablet {
+        margin: $space-between-flex-items-t  0px;
+    }
+    @include laptopS {
+        margin: $space-between-flex-items-l  0px;
+    }
+    @include laptopL {
+        margin: $space-between-flex-items-d  0px;
+    }
+    > img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+}

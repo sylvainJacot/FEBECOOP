@@ -1,0 +1,78 @@
+$catalogue-de-formations-el-space-m : 48px;
+$catalogue-de-formations-el-space-t : 106px;
+$catalogue-de-formations-el-space-l : 96px;
+$catalogue-de-formations-el-space-d : 114px;
+
+.catalogue-de-formations-section {
+    background-color: $blue-light;
+    padding-top: $catalogue-de-formations-el-space-m;
+    padding-bottom: $bbc-m + 40px;
+    @include tablet {
+        padding-top: $catalogue-de-formations-el-space-t;
+        padding-bottom: $bbc-t + 150px;
+    }
+    @include laptopS {
+        padding-top: $catalogue-de-formations-el-space-l;
+        padding-bottom: $bbc-l + 116px;
+    }
+    @include laptopL {
+        padding-top: $catalogue-de-formations-el-space-d;
+        padding-bottom: $bbc-d + 88px;
+    }
+    .catalogue-de-formations-wrapper  {
+        .catalogue-de-formations-header {
+            margin-bottom: $catalogue-de-formations-el-space-m;
+            @include tablet {
+                margin-bottom: $catalogue-de-formations-el-space-t;
+            }
+            @include laptopS {
+                margin-bottom: $catalogue-de-formations-el-space-l;
+                width: 14 * $lCol;
+            }
+            @include laptopL {
+                margin-bottom: $catalogue-de-formations-el-space-d;
+                width: 13 * $dCol;
+            }
+            .titre-catalogue-formations {
+                @include hando-sb;
+                color: $blue-1;
+                font-size: 22px;
+                margin-bottom: 16px;
+                @include tablet {
+                    font-size: 24px;
+                    line-height: 37px;
+                }
+                @include laptopS {
+                    font-size: 28px;
+                    line-height: 40px;
+                    margin-bottom: 32px;
+                }
+                @include laptopL {
+                    font-size: 30px;
+                    line-height: 42px;
+                }
+            }
+            .stitre-catalogue-formations {
+                @include hando-l;
+                color: $blue-3;
+                font-size: 14px;
+                line-height: 26px;
+                @include tracking(25);
+            }
+        }
+        .catalogue-de-formations-loop-container {
+            @include tablet {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: $tCol;
+            }
+            @include laptopS {
+                grid-template-columns: repeat(3,1fr); 
+                grid-gap: $lCol;
+            }
+            @include laptopS {
+                grid-gap: $dCol;
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+@mixin publication-detail-text {
+    @include hando-l;
+    color: $blue-3;
+    font-size: 14px;
+    line-height: 26.62px;
+    @include tracking(25);
+    margin: 16px 0;
+    @include tablet {
+        margin: 24px 0;
+    }
+}
+
+.publication-content-section {
+    padding-top: 48px;
+    @include tablet {
+        padding-top: 56px;
+    }
+    @include laptopS {
+        padding-top: 106px;
+    }
+    @include laptopL{
+        padding-top: 96px;
+    }
+    .publication-content-main {
+        display: flex;
+        flex-direction: column;
+        @include laptopS {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include laptopL {
+            padding: 0 $lCol;
+        }
+        .publication-content  {
+            order: 2;
+            margin: auto;
+            @include laptopS {
+                order: 1;
+                width: 14 * $lCol;
+            }
+            @include laptopL {
+                width: 12 * $dCol; 
+            }
+        }
+        .publication-detail {
+            order: 1;
+            background: $orange-light-2;
+            border-radius: 16px;
+            padding: 40px $mCol;
+            margin-bottom: 56px;
+
+            @include tablet {
+                padding: 48px 2 * $tCol;
+                margin-bottom: 88px;
+            }
+            @include laptopS {
+                padding: 40px 20px;
+                width: 7 * $lCol;
+                order: 2;
+                height: fit-content;
+                margin: unset;
+                margin-bottom: 0px;
+            }
+            @include laptopL{
+                padding: 48px $dCol;
+                width: 7 * $dCol;
+            }
+            .publication-detail-titre {
+                @include hando-b;
+                color: $blue-1;
+                font-size: 13px;
+                line-height: 24px;
+                @include tracking(100);
+                text-transform: uppercase;
+            }
+            .publication-detail-prix-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 16px 0px;
+                @include tablet {
+                    padding: 24px 0px;
+                }
+                .publication-detail-prix-icone {
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    background: url("../ASSETS/IMAGES/FORMATIONRENCONTRES/VECTOR/ic-ev-price.svg") center no-repeat;
+                    background-size: contain;
+                }
+                .publication-detail-text-prix-container {
+                    display: flex;
+                    flex-direction: column;
+                    width: calc(100% - 32px);
+                    padding-left: 32px;
+                    .publication-detail-prix {
+                        @include hando-b;
+                        color: $blue-3;
+                        font-size: 14px;
+                        line-height: 18px;
+                        @include tracking(25);
+                        margin: 4px 0;
+                    }
+                }
+                .publication-detail-gratuit {
+                    padding-left: 32px;
+                    @include hando-b;
+                    color: $blue-3;
+                    font-size: 14px;
+                    line-height: 26.62px;
+                    @include tracking(25);
+                    margin: 4px 0;
+                }
+
+            }
+            .publication-detail-content {
+                @include publication-detail-text;
+                position: relative;
+                &:before {
+                    position: absolute;
+                    display: block;
+                    height: 1px;
+                    width: 100%;
+                    content: "";
+                    background: $white;
+                    top: -16px;
+                    @include tablet {
+                        top: -24px;
+                    }
+                }
+            }
+            a {
+                @include laptopS {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

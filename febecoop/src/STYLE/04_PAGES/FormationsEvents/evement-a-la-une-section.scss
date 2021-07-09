@@ -1,0 +1,101 @@
+.evement-a-la-une-section {
+    background-color: $orange-light;
+    .evement-a-la-une-section-wrapper {
+        padding: 40px 0px;
+        @include tablet {
+            padding: 72px 2 * $tCol;
+        }
+        @include laptopS {
+            padding: 120px 0px;  
+        }
+        @include laptopL {
+            padding: 120px $lCol;  
+        }
+        .evement-a-la-une-section-content {
+            position: relative;
+            @include laptopS {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &:before {
+                @include laptopS {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 410px;
+                    height: 370px;
+                    top: 50%;
+                    left: -210px;
+                    transform: translateY(-50%);
+                    background: url("../ASSETS/IMAGES/FORMATIONRENCONTRES/VECTOR/dashed-lines.svg") center no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            .evement-a-la-une-section-content-pic-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                height: 280px;
+                margin-bottom: 48px;
+                @include shadow-a-pic;
+                border-radius: 8px;
+                overflow: hidden;
+                @include tablet {
+                    height: 330px;
+                }
+                @include laptopS {
+                    height: 310px;
+                    width: 12 * $lCol;
+                    margin-bottom: 0px;
+                }
+                @include laptopL {
+                    height: 400px;
+                    width: 11 * $dCol;
+                }
+                img {
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .evement-a-la-une-section-content-text {
+                @include laptopS {
+                    width: 9 * $lCol;
+                }
+                @include laptopL {
+                    width: 8* $dCol;
+                }
+            .evement-a-la-une-section-content-title {
+                @include hando-sb;
+                color: $blue-1;
+                font-size: 22px;
+                line-height: 28px;
+                @include tablet {
+                    font-size: 24px;
+                    line-height: 37px;
+                }
+                @include laptopS {
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+                @include laptopL {
+                    font-size: 30px;
+                    line-height: 42px;
+                }
+            }
+            .evement-a-la-une-content-resume {
+                @include hando-l;
+                color: $blue-3;
+                font-size: 14px;
+                line-height: 26.62px;
+                @include tracking(25);
+                margin: 24px 0px;
+            }
+        }
+        }
+    }
+}

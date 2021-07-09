@@ -1,0 +1,148 @@
+$npp-pic-height-m: 256px;
+$npp-pic-margin-bottom-m: 56px;
+$npp-pic-full-padding-top-m: $npp-pic-height-m + $npp-pic-margin-bottom-m;
+
+$npp-pic-height-t: 490px;
+$npp-pic-margin-bottom-t: 48px;
+$npp-pic-full-padding-top-t: $npp-pic-height-t + $npp-pic-margin-bottom-t;
+
+$npp-space-between-els-m: 32px;
+
+.nos-prises-positions-section {
+    background-color: $blue-light;
+    @include tablet {
+        padding-bottom: 88px;
+    }
+    @include laptopS {
+        padding: 128px 0;
+    }
+    .nos-prises-positions-section-wrapper {
+        position: relative;
+        padding-top: $npp-pic-full-padding-top-m;
+        padding-bottom: $npp-space-between-els-m;
+        @include tablet {
+            padding: 2 * $npp-space-between-els-m 2 * $tCol;
+            padding-top: $npp-pic-full-padding-top-t;
+        }
+        @include laptopS {
+            padding: 80px 0;
+        }
+        &::before {
+            @include tablet {
+                position: absolute;
+                display: block;
+                content: "";
+                background-color: $white;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            @include laptopS {
+                transform: translate(0,-50%);
+                left: unset;
+                right: - 7 * $lCol;
+            }
+        }
+        .nos-prises-positions-pic-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: $npp-pic-height-m;
+            left: 50%;
+            transform: translateX(-50%) translateY(- $npp-pic-full-padding-top-m);
+            width: 100vw;
+            background-color: $orange-light;
+            position: absolute;
+            overflow: hidden;
+            @include shadow-a-pic;
+
+            @include tablet {
+                height: $npp-pic-height-t;
+                transform: translateX(-50%) translateY(- $npp-pic-full-padding-top-t);
+            }
+            @include laptopS {
+                width: 15 * $lCol;
+                height: 430px;
+                border-radius: 8px;
+                top: 50%;
+                transform: translateX(0) translateY(- 50%);
+                left: - 4 * $lCol;
+            }
+            @include laptopL {
+                height: 450px;
+                width: 15 * $dCol;
+                left: - 4 * $dCol;
+            }
+
+            > img {
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
+        .nos-prises-positions-content {
+            margin-bottom: $npp-space-between-els-m;
+            position: relative;
+            @include laptopS {
+                width: 9 * $lCol;
+                margin-left: 14 * $lCol;
+            }
+            @include laptopL {
+                width: 9 * $dCol;
+                margin-left: 14 * $dCol;
+            }
+            > h3 {
+                @include intertitre-a-underlined;
+                &:before {
+                    background-color: $red-1-20;
+                }
+                color: $red-1;
+                margin: 0 auto $intertitre-bottom-margin auto;
+                @include tablet {
+                    margin: 0 auto 56px auto;
+                }
+                @include laptopS {
+                    margin: 0 auto 64px auto;
+                }
+            }
+            > h2 {
+                @include hando-sb;
+                color: $blue-1;
+                font-size: 22px;
+                line-height: 28px;
+                @include tablet {
+                    font-size: 24px;
+                    line-height: 37px;
+                }
+                @include laptopS {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                @include laptopL {
+                    font-size: 30px;
+                    line-height: 42px;
+                }
+            }
+            > p {
+                @include hando-l;
+                color: $blue-3;
+                font-size: 14px;
+                line-height: 26.62px;
+                @include tracking(25);
+                margin: $npp-space-between-els-m 0px;
+            }
+
+        }
+        .cta-d {
+            @include laptopS {
+                margin-left: 14 * $lCol;
+            }
+            @include laptopL {
+                margin-left: 14 * $dCol;
+            }
+        }
+    }
+
+}

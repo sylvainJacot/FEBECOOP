@@ -1,0 +1,78 @@
+.main-actualite-content {
+    margin-top: 64px;
+    @include tablet {
+        margin-top: - 120px;
+    }
+    @include laptopL {
+        margin-top: - 136px;
+    }
+    .section-actualite-content {
+        margin: auto;
+        @include laptopS {
+            width: 19 * $lCol;
+        }
+        @include laptopL {
+            width: 15 * $dCol;
+        }
+    }
+}
+.other-news-section {
+    background-color: $blue-light;
+    padding-top: 56px;
+    padding-bottom: $bbc-m + 40px;
+    @include tablet {
+        padding-top: 80px;
+        padding-bottom: $bbc-t + 40px;
+    }
+    @include laptopS {
+        // margin-top: 130px;
+        padding-top: 106px;
+        padding-bottom: $bbc-l + 180px;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d + 190px;
+    }
+    .other-news-section-wrapper  {
+        > a {
+            @include tablet {
+                display: none;
+            }
+        }
+        .swiper-container {
+           > .cta-b {
+               @include tablet {
+                   display: none;
+               }
+           }
+        }
+    }
+}
+.other-news-succes-stories {
+    padding-bottom: $bbc-m;
+    @include tablet {
+        padding-bottom: $bbc-t;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d;
+    }
+    .other-news-succes-stories-mobile {
+        @include laptopS {
+            display: none;
+        }
+    }
+    .other-news-succes-stories-laptop {
+        display: none;
+        @include laptopS {
+            display: grid;
+            grid-template-columns: repeat(3, 7 * $lCol);
+            grid-gap: $lCol;
+        }
+        @include laptopL {
+            grid-template-columns: repeat(3, 7 * $dCol);
+            grid-gap: $dCol;
+        }
+    }
+}

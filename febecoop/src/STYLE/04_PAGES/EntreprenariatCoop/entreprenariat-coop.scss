@@ -1,0 +1,138 @@
+$aqp-m:$mCol;
+$aqp-t: 2 * $tCol;
+$aqp-l: 32px;
+$aqp-d: 32px;
+
+.entreprenarit-coop-content{
+    padding-top: 48px;
+    padding-bottom: $bbc-m;
+
+    @include tablet {
+        padding-top: 96px;
+        padding-bottom: $bbc-t;
+    }
+
+    @include laptopS {
+        padding-top: 106px;
+        padding-bottom: $bbc-l;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include laptopL {
+        padding-top: 106px;
+        padding-bottom: $bbc-d;
+        padding-left: $dCol;
+        padding-right: $dCol;
+    }
+
+    .section-entreprenarit-coop-content {
+        @include laptopS {
+            width: 14 * $lCol;
+        }
+
+        @include laptopL {
+            width: 12 * $dCol;
+        }
+    }
+
+    .entreprenarit-coop-aside {
+        padding: 32px 0;
+        background: $orange-light;
+        border-radius: 8px;
+        margin-top: 40px;
+
+        @include tablet {
+            padding: 64px 0;
+            margin-top: 80px;
+        }
+
+        @include laptopS {
+            margin-top: 0;
+            width: 7 * $lCol;
+            padding: 24px 0;
+            height: fit-content;
+        }
+
+        @include laptopL {
+            width: 7 * $dCol;
+        }
+
+        .ec-title {
+            @include hando-b;
+            font-size: 13px;
+            line-height: 24px;
+            color: $blue-1;
+            @include tracking(100);
+            text-transform: uppercase;
+            padding: 0 $aqp-m;
+
+            @include tablet {
+                padding: 0 $aqp-t;
+            }
+
+            @include laptopS {
+                padding: 0 $aqp-l;
+            }
+
+            @include laptopL {
+                padding: 0 $aqp-d;
+            }
+        }
+
+        .ec-wrapper {
+            li {
+                position: relative;
+                padding: 16px $aqp-m;
+
+                @include tablet {
+                    padding: 16px $aqp-t;
+                }
+    
+                @include laptopS {
+                    padding: 16px $aqp-l;
+                }
+    
+                @include laptopL {
+                    padding: 16px $aqp-d;
+                }
+
+                &:not(:last-child) {
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        bottom: 0;
+                        background: $white;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+#principes-content {
+    .section-entreprenarit-coop-content {
+       .flex-titre-icone-wrapper {
+           &:first-child {
+               margin-top: 0px;
+           }
+       } 
+    }
+}
+
+#success-stories-ec{
+    padding-bottom: $bbc-m + 40px;
+    @include tablet {
+        padding-bottom: $bbc-t + 40px;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l + 180px;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d + 190px;
+    }
+}

@@ -1,0 +1,135 @@
+.notes-pratiques-outils-loop-section {
+    padding-bottom: $bbc-m + 56px;
+    @include tablet {
+        padding-bottom: $bbc-t + 72px;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l + 88px;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d - 8px;
+    }
+    .notes-pratiques-outils-loop-wrapper {
+        @include tablet {
+            min-height: 600px;
+        }
+        @include laptopS {
+            display: flex;
+            justify-content: space-between;
+        }
+        .filters-npo-questions-wrapper {
+            @include laptopS{
+                width: 7 * $lCol;
+            }
+            @include laptopL {
+                width: 5 * $dCol;
+            }
+            .filter-npoq-header {
+                @include hando-b;
+                color: $blue-1;;
+                font-size: 13px;
+                line-height: 24px;
+                @include tracking(100);
+                text-transform: uppercase;
+            }
+            .filter-npoq-container {
+                a {
+                    position: relative;
+                    @include hando-b;
+                    color: $orange-1;
+                    font-size: 12px;
+                    line-height: 24px;
+                    @include tracking(100);
+                    text-transform: uppercase;
+                    display: block;
+                    width: 100%;
+                    padding: 16px 0px;
+                    margin: 0;
+                    @include trans-a;
+                    &:not(:last-child){
+                    &:after {
+                        @include bottom-divider-pseudo-el;
+                    }
+                }
+                }
+                a.active {
+                    color: $blue-1;
+                    @include trans-a;
+                }
+                &:hover {
+                    color: $orange-1;
+                    @include trans-a;
+                }
+            }
+        }
+        .npo-items-wrapper {
+            .npo-items-container{
+            position: relative;
+            margin-bottom: 32px;
+            // &:after {
+            //     @include bottom-divider-pseudo-el;
+            // }
+            @include laptopS {
+                width: 14 * $lCol;
+                // min-height: 334px;
+            }
+
+            @include laptopL {
+                width: 15 * $dCol;
+            }
+
+            .npo-item {
+                position: relative;
+                display: block;
+                background-color: $orange-light;
+                padding: 24px 3 * $mCol 24px $mCol;
+                border-radius: 8px;
+                margin-bottom: 16px;
+                &:first-child{
+                    margin-top: 0;
+                }
+                &:last-child {
+                    margin-bottom: 32px;
+                }
+
+                @include tablet {
+                    padding: 24px 3 * $tCol 24px $tCol;
+                }
+
+                @include laptopS {
+                    padding: 32px 3 * $lCol 32px $lCol;
+                    margin-bottom: 24px;
+                }
+
+                @include laptopL {
+                    padding: 32px 3 * $dCol 32px $dCol;
+                }
+
+                p {
+                    @include hando-b;
+                    color: $blue-1;
+                    font-size: 15px;
+                    @include tracking(25);
+                    width: 8 * $mCol;
+                    display: contents;
+
+                    @include tablet {
+                        font-size: 17px;
+                        line-height: 26px;
+                    }
+                }
+                .button-arrow {
+                    position: absolute;
+                    top: 50%;
+                    right: 15px;
+                    transform: translateY(-50%);
+
+                }
+            }
+        }
+        a {
+            margin-top: 32px;
+        }
+    }
+    }
+}

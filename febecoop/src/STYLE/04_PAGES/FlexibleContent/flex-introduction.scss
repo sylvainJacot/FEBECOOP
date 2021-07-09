@@ -1,0 +1,13 @@
+.flex-introduction-wrapper {
+  margin-bottom: 72px;
+
+  @include tablet {
+    margin-bottom: 80px;
+  }
+  @include laptopS {
+    margin-bottom: 56px;
+  }
+  @include laptopL {
+    margin-bottom: 80px;
+  }
+}

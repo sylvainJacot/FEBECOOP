@@ -1,0 +1,27 @@
+.pentagone-icons-wrapper {
+    position: relative;
+    display: inline-block;
+    height: min-content;
+    z-index: 0;
+    width: fit-content;
+    img {
+        max-width: 45px;
+        max-height: 45px;
+        position: absolute;
+        top: calc(50% - 2px);
+        left: calc(50% - 4px);
+        transform: translate(-50%,-50%);
+    }
+    .main-shape{
+        max-width: 90px;
+        max-height: 90px;
+    }
+    .secondary-shape {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-23px, -57px) scale(1) rotate(-30deg);
+        opacity: 0.5;
+        z-index: -2;
+    }
+}

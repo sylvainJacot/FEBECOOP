@@ -1,0 +1,1 @@
+"use strict";var filtresContainerA=document.querySelector(".js-filtres-type-a-container");if(filtresContainerA){var togglemenu=function(){filtresContainerA.classList.toggle("filtres-type-a-container-active")};filtresContainerA.addEventListener("click",togglemenu)}

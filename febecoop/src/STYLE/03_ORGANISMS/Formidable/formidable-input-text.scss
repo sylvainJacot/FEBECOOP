@@ -1,0 +1,69 @@
+@mixin input-frm-default {
+    border-radius: 6px; 
+    border: 2px solid $blue-light-2;
+    padding: 24px 16px;
+    background: transparent !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    margin-bottom: $margin-bottom-between-el-m;
+    box-shadow: none;
+    @include frm-input-typing-text;
+
+    @include tablet {
+        padding: 24px;
+    }
+    @include laptopS {
+        margin-bottom: $margin-bottom-between-el-l;
+    }
+    &:focus,&:active {
+        background-color:transparent !important;
+        border-color: $orange-1 !important;
+        box-shadow: none !important;
+    }
+    &:-webkit-autofill {
+        background-color:transparent !important;
+    }
+    &[aria-invalid='true'] {
+        border-color: $red-1 !important;
+        }
+}
+
+
+// FORM FIELDS
+//=======================================
+.frm_form_field {
+    margin: 0 !important;
+    .frm_primary_label{
+        @include frm-input-label;
+    }
+    input[type=text]{
+       @include input-frm-default;
+    }
+    input[type=text]::-webkit-input-placeholder,input[type=text]:-ms-input-placeholder,input[type=text]::placeholder {
+        @include frm-input-placeholder;
+    }
+    input[type=number]{
+        @include input-frm-default;
+    }
+    input[type=email] {
+        @include input-frm-default;
+
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-moz-outer-spin-button { 
+
+    }
+    textarea {
+        @include input-frm-default;
+    }
+
+}
+
+// FORM FIELD TYPE TEXT (if required)
+.frm_required_field {
+    .frm_primary_label{
+        .frm_required {
+            color: $blue-3;
+        }
+    }
+}

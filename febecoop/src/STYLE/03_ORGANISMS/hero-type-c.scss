@@ -1,0 +1,156 @@
+$hstc-intro-h-m : 80px;
+$hstc-intro-h-t : 96px;
+
+$hstc-padding-top-l : 160px;
+
+.hero-section-type-c {
+    background: $orange-light;
+    position: relative;
+
+    .hero-section-type-c-wrapper {
+        position: relative;
+        @include laptopL {
+            width: 21 * $dCol;
+        }
+        .hero-section-type-c-illu {
+            position: relative;
+            display: block;
+            width: 286px;
+            height: 155px;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url("../ASSETS/IMAGES/EXPERTISES/VECTOR/illu-hero-expertise-single.svg") center no-repeat;
+            background-size: contain;
+            @include tablet {
+                width: 17 * $tCol;
+                height: 333px;
+            }
+            @include laptopS {
+                position: absolute;
+                bottom: unset;
+                width: 452px;
+                height: 244px;
+                left: unset;
+                right: -400px;
+                top: $hstc-padding-top-l + 40px;
+            }
+            @include laptopL {
+                width: 578px;
+                height: 312px;
+                top: 50%;
+                right: -280px;
+                transform: translateY(-50%);
+            }
+        }
+        .hero-section-type-c-content {
+            padding-top: 56px;
+            padding-bottom: 24px;
+            @include tablet {
+                padding-top: 88px;
+                padding-bottom: 40px;
+                display: flex;
+            }
+            @include laptopS {
+                padding-top: 160px; 
+                padding-bottom: 200px;
+                width: 13 * $lCol;
+            }
+            @include laptopL{
+                width: 13 * $dCol;
+            }
+            position: relative;
+            .pentagone-icons-wrapper {
+                @include laptopS {
+                    transform-origin: top left;
+                    transform: scale(1.55);
+                }
+                @include laptopL {
+                    transform: scale(1.65);
+                }
+            }
+            .hero-section-type-c-content-text{
+                @include tablet {
+                    margin-left: $tCol;
+                }
+                @include laptopS {
+                    margin-left: 3 * $lCol;
+                }
+                @include laptopL {
+                    margin-left: 3 * $dCol;
+                }
+            .hero-section-type-c-content-toptitle {
+                @include top-titre-header;
+                margin-top: 16px;
+            }
+            h1 {
+                @include titre-header;
+                margin-bottom: 40px;
+                @include tablet {
+                }
+                @include laptopS {
+                    margin: 0;
+                }
+            }
+        }
+        }
+        .hero-section-type-c-content-no-pic {
+            padding-bottom: 88px;
+            @include tablet {
+                padding-bottom: 130px;
+            }
+            @include laptopS {
+                padding-bottom: 200px;
+            }
+        }
+        .hero-section-type-c-content-no-shape {
+            .hero-section-type-c-content-text {
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+.hero-section-type-b-introduction-wrapper {
+    position: relative;
+    height: max-content;
+    .hero-section-type-b-intro-content {
+        background: $white;
+        padding: 40px 24px;
+        border-radius: 8px;
+        transform: translateY(- $hstc-intro-h-m);
+        @include shadow-a-nopic;
+        @include tablet  {
+            transform: translateY(- $hstc-intro-h-t);
+            padding: 2 * $tCol;
+        }
+        @include laptopS {
+            padding: 2 * $lCol;
+        }
+        @include laptopL {
+            width: 21 * $dCol;
+            padding: 72px 3 * $dCol;
+            margin: auto;
+        }
+    p {
+        @include hando-m;
+        font-size: 16px;
+        line-height: 32px;
+        color: $blue-1;
+        @include tracking(25);
+
+        @include tablet {
+            font-size: 18px;
+            line-height: 35px;
+        }
+        @include laptopS {
+            font-size: 20px;
+            line-height: 37px;
+        }
+        @include laptopL {
+            font-size: 22px;
+            line-height: 39px;
+        }
+    }
+}
+}

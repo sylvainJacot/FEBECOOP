@@ -1,0 +1,75 @@
+.card-type-c-item {
+    width: 100%;
+    background: $white;
+    @include shadow-a-pic;
+    overflow: hidden;
+    border-radius: 16px;
+    &:not(:last-child){
+        margin-bottom: 40px;
+    }
+    @include tablet {
+        display: flex;
+        &:not(:last-child){
+            margin-bottom: 48px;
+        }
+    }
+    @include laptopS {
+        &:not(:last-child){
+            margin-bottom: 64px;
+        }
+    }
+
+    .card-type-c-item-pic-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 206px;
+        overflow: hidden;
+        > img {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+        @include tablet {
+            height: auto;
+            width: 7 * $tCol;
+        }
+        @include laptopS {
+            width: 8 * $lCol;
+        }
+        @include laptopS {
+            width: 7 * $dCol;
+        }
+    }
+    .card-type-c-item-content {
+        padding: 16px;
+        @include tablet {
+            width: 7 * $tCol;
+            padding: 48px $tCol 48px 2 * $tCol;
+        }
+        @include laptopS {
+            width: 9 * $lCol;
+            padding: 48px $lCol 48px  $lCol;
+        }
+        @include laptopL {
+            width: 6 * $dCol;
+            padding: 72px $dCol 72px  $dCol;
+        }
+        .card-type-c-item-date {
+            @include hando-l;
+            color: $blue-3;
+            font-size: 13px;
+            line-height: 24px;
+            @include tracking(100);
+        }
+        .card-type-c-titre {
+            @include hando-sb;
+            color: $blue-1;
+            font-size: 18px;
+            line-height: 28px;
+            margin: 24px 0;
+        }
+    }
+}

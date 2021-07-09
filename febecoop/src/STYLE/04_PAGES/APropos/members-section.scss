@@ -1,0 +1,167 @@
+.main-members-mandats-section {
+
+    .main-members-mandats-section-row {
+        background: $white;
+        padding: 120px 0px 120px;
+        @include tablet {
+            padding: 80px 0px;
+        }
+        &:nth-child(even){
+            background: $blue-light;
+            .main-members-mandats-section-row-wrapper {
+                .main-members-mandats-section-row-grid {
+                    .main-members-mandats-section-row-item {
+                        &:not(:last-child) {
+                            &:after {
+                                  background: $white;
+                               }
+                          }
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            padding-bottom: $bbc-m;
+            @include tablet {
+                padding-bottom: $bbc-t + 40px;
+            }
+            @include laptopS {
+                padding-bottom: $bbc-l;
+            }
+            @include laptopL {
+                padding-bottom: $bbc-d;
+            }
+        }
+        .main-members-mandats-section-row-wrapper {
+            @include laptopS {
+                width: 19 * $lCol;
+                margin: auto;
+            }
+            @include laptopL {
+                width: 15 * $dCol;  
+            }
+            .main-members-mandats-section-row-title {
+                @include hando-sb;
+                color: $blue-1;
+                font-size: 22px;
+                line-height: 28px;
+                margin-bottom: 40px;
+                @include tablet {
+                    font-size: 28px;
+                    line-height: 40px;
+                    margin-bottom: 48px;
+                }
+                @include laptopL {
+                    font-size: 30px;
+                    line-height: 42px;
+                }
+            }
+            .main-members-mandats-section-row-subtitle {
+                @include hando-m;
+                color: $blue-1;
+                font-size: 16px;
+                line-height: 31px;
+                @include tracking(25);
+                @include tablet {
+                    font-size: 18px;
+                    line-height: 35px;
+                }
+                @include laptopS {
+                    font-size: 20px;
+                    line-height: 37px;
+                }
+                @include laptopL {
+                    font-size: 22px;
+                    line-height: 39px;
+                }
+            }
+            .main-members-mandats-section-row-grid {
+                .main-members-mandats-section-row-item {
+                    position: relative;
+                    padding: 80px 0px;
+                    @include tablet {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 48px 0px;
+                    }
+                    &:not(:last-child) {
+                        &:after {
+                            @include bottom-divider-pseudo-el;
+                           }
+                      }
+                    .main-members-mandats-section-row-item-pic{
+                        position: relative;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: $white;
+                        border-radius: 50%;
+                        width: 108px;
+                        height: 108px;
+                        @include shadow-a-pic;
+
+                        @include tablet {
+                            width: 3 * $tCol;
+                            height: 3 * $tCol;
+                        }
+                        @include laptopS {
+                            width: 4 * $lCol;
+                            height: 4 * $lCol;
+                        }
+                        @include laptopL {
+                            width: 3 * $dCol;
+                            height: 3 * $dCol;
+                        }
+                        > img {
+                            max-width: 80%;
+                            max-height: 80%;
+                            object-fit: contain;
+                            filter: saturate(0);
+                            mix-blend-mode: multiply;
+                        }
+                        .main-members-mandats-section-row-item-pic-filtre {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: $blue-1;
+                            mix-blend-mode: screen;
+                            opacity: 1;
+                        }
+                    }
+                    .main-members-mandats-section-row-item-content {
+                        @include tablet {
+                            width: 13 * $tCol;
+                        }
+                        @include laptopS {
+                            width: 14 * $lCol;
+                        }
+                        @include laptopL {
+                            width: 11 * $dCol;
+                        }
+                        p {
+                            @include hando-l;
+                            color: $blue-3;
+                            font-size: 14px;
+                            line-height: 26.62px;
+                            @include tracking(25);
+                            margin: 8px 0px;
+
+                            span {
+                                @include hando-b;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

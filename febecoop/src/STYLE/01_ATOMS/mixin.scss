@@ -1,0 +1,17 @@
+// Convert illustrator, indesign and photoshop tracking into letter spacing.
+
+@function tracking( $target ){
+    @return ($target / 1000) * 1em;
+  }
+  
+@mixin tracking( $target ){
+letter-spacing: tracking( $target );
+}
+
+@mixin text-shave($textlines:3) {
+  position: relative;
+  display: -webkit-box;   
+  -webkit-line-clamp: $textlines;   
+  -webkit-box-orient: vertical;     
+  overflow: hidden;
+}

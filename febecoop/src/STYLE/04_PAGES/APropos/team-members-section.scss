@@ -1,0 +1,333 @@
+@mixin tm-row-title{
+    @include hando-sb;
+    color: $blue-1;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    @include tablet {
+        font-size: 24px;
+        line-height: 37px; 
+    }
+    @include laptopS {
+        font-size: 28px;
+        line-height: 40px; 
+    }
+    @include laptopL {
+        font-size: 30px;
+        line-height: 42px; 
+    }
+}
+@mixin tm-names {
+    @include hando-sb;
+    color: $blue-1;
+    font-size: 16px;
+    line-height: 30px;
+    @include tablet {
+        font-size: 18px;
+    }
+    @include laptopL {
+        font-size: 20px;
+    }
+}
+@mixin tm-function {
+    @include hando-l;
+    color: $blue-3;
+    font-size: 12px;
+    line-height: 18px;
+    @include tracking(25);
+    margin: 0px 0px 16px;
+    @include tablet {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    @include laptopS {
+        margin: 0px;
+    }
+    @include laptopL {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+
+$tmi-card-h-l : 248px;
+$tmi-size-l : 56px;
+
+.team-members-section {
+    padding-bottom: $bbc-m;
+    @include tablet {
+        padding-bottom: $bbc-t + 40px;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d;
+    }
+        .team-members-row-item {
+            padding: 64px 0px;
+            background: $white;
+
+            &:nth-child(even) {
+                background: $blue-light;
+                .team-members-row-item-container .team-members-row-item-wrapper .team-member-item:not(:last-child) {
+                    &::after {
+                        background: $white;
+                    }
+                }
+            }
+            .team-members-row-item-container {
+                .team-members-row-item-title {
+                    @include tm-row-title;
+                }
+
+                .team-members-row-item-wrapper {
+                    @include laptopS {
+                        display: grid;
+                        grid-template-columns: repeat(4, 5 *$lCol); 
+                        grid-gap: $lCol;
+                    }
+                    @include laptopL {
+                        grid-template-columns: repeat(4, 5 *$dCol); 
+                        grid-gap: $dCol;
+                    }
+
+                    .team-member-item {
+                        position: relative;
+                        padding: 40px 0px;
+                        &:not(:last-child) {
+                            &::after {
+                                @include bottom-divider-pseudo-el;
+                                @include laptopS {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        &:hover { 
+                            .team-member-item-picture  {
+                                &:before {
+                                    @include laptopS {
+                                        opacity: 1;
+                                        @include trans-a;
+                                    }
+                                }
+                            }
+                            .team-member-item-content .team-member-item-content-socials {
+                                .tmis-email {
+                                    transform: translateY(0);
+                                    opacity: 1;
+                                    @include trans-a;
+                                    transition-delay: 0s;
+                                }
+
+                                .tmis-twitter {
+                                    transform: translateY(0);
+                                    opacity: 1;
+                                    @include trans-a;
+                                    transition-delay: 0.2s;
+                                }
+
+                                .tmis-linkedin {
+                                    transform: translateY(0);
+                                    opacity: 1;
+                                    @include trans-a;
+                                    transition-delay: 0.4s;
+                                }
+                            }
+                        }
+
+                        .team-member-item-picture {
+                            overflow: hidden;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            width: 90px;
+                            height: 90px;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+
+                            @include laptopS {
+                                transform: translateY(0);
+                                top: unset;
+                                position: relative;
+                                border-radius: unset;
+                                width: 100%;
+                                height: $tmi-card-h-l ;
+                                border-radius: 16px;
+                                overflow: hidden;
+                            }
+                            img {
+                                min-width: 100%;
+                                min-height: 100%;
+                                object-fit: cover;
+                            }
+                            &:after {
+                                @include laptopS {
+                                    position: absolute;
+                                    content: "";
+                                    display: block;
+                                    background: linear-gradient($purple-2-00, $purple-2-30);
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                }
+                            }
+                            &:before {
+                                @include laptopS {
+                                    position: absolute;
+                                    content: "";
+                                    display: block;
+                                    background: $purple-2;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    z-index: 2;
+                                    opacity: 0;
+                                    @include trans-a;
+                                }
+                            }
+                            .team-member-item-plus-icone-wrapper {
+                                display: none;
+                                @include laptopS {
+                                    display: flex;
+                                    width: 24px;
+                                    height: 24px;
+                                    position: absolute;
+                                    background: $yellow-1;
+                                    z-index: 1;
+                                    border-radius: 50%;
+                                    bottom: 16px;
+                                    right: 16px;
+                                    justify-content: center;
+                                    align-items: center;
+    
+                                    .team-member-item-plus-icone {
+                                        position: relative;
+                                        width: 100%;
+                                        height: 100%;
+                                        &:after {
+                                            position: absolute;
+                                            content: "";
+                                            display: block;
+                                            top: 50%;
+                                            left: 50%;
+                                            width: 16px;
+                                            height: 16px;
+                                            transform: translate(-50%,-50%);
+                                            background: url("../ASSETS/IMAGES/common/VECTOR/ic-plus.svg") center no-repeat;
+                                            background-size: 8px;
+                                        }
+        
+    
+                                    }
+    
+                                }
+                            }
+                        }
+
+                        .team-member-item-content {
+                            padding-left: 120px;
+                            @include laptopS {
+                                padding: 0;
+                                position: relative;
+                            }
+                            .team-member-item-content-names {
+                                display: flex;
+                                flex-wrap: wrap;
+                                @include laptopS {
+                                    margin: 16px 0px;
+                                }
+                                .team-member-item-content-fname {margin-right: 4px; @include tm-names;}
+
+                                .team-member-item-content-name {@include tm-names;}
+                            }
+                            .team-member-item-content-function {@include tm-function;}
+
+                            .team-member-item-content-socials {
+                                display: flex;
+                                @include laptopS {
+                                    position: absolute;   
+                                    flex-direction: column;                                 flex-direction: column;
+                                    justify-content: center;
+                                    top: -228px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                                .team-member-item-social {
+                                    display: block;
+                                    font-size: 0;
+                                    line-height: 0;
+                                    width: 16px;
+                                    height: 16px;
+                                    &:not(:last-child){
+                                        margin-right: 16px;
+                                    }
+                                    @include laptopS {
+                                        margin: 0px;
+                                        width: $tmi-size-l;
+                                        height: $tmi-size-l;
+                                        border-radius: 50%;
+                                        border: 2px solid $white;
+                                        margin-right: 0px;
+                                        transform: translateY(16px);
+                                        opacity: 0;
+
+                                        &:not(:last-child){
+                                            margin-right: 0px;
+                                            margin-bottom: 8px;
+                                        }
+                                    }
+                                }
+
+                                .tmis-email {
+                                    background: url("../ASSETS/IMAGES/common/VECTOR/social-email.svg") center no-repeat;
+                                    background-size: 16px;
+                                    @include laptopS {
+                                        background: url("../ASSETS/IMAGES/common/VECTOR/social-email-white.svg") center no-repeat;
+                                        background-size: 20px;
+                                    }
+                                }
+
+                                .tmis-twitter {
+                                    background: url("../ASSETS/IMAGES/common/VECTOR/social-twitter.svg") center no-repeat;
+                                    background-size: 16px;
+                                    @include laptopS {
+                                        background: url("../ASSETS/IMAGES/common/VECTOR/social-twitter-white.svg") center no-repeat;
+                                        background-size: 20px;
+                                    }
+                                }
+
+                                .tmis-linkedin {
+                                    background: url("../ASSETS/IMAGES/common/VECTOR/social-linkedin.svg") center no-repeat;
+                                    background-size: 16px;
+                                    @include laptopS {
+                                        background: url("../ASSETS/IMAGES/common/VECTOR/social-linkedin-white.svg") center no-repeat;
+                                        background-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+@keyframes go-up{
+    from  {
+        transform: translateY(-16px);
+    }
+    to  {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,17 @@
+$max-height-media-m : 194px;
+$max-height-media-t : 430px;
+$max-height-media-l : 485px;
+$max-height-media-d : 540px;
+
+@mixin max-heights-media {
+    max-height: $max-height-media-m;
+    @include tablet {
+        max-height: $max-height-media-t;
+    }
+    @include laptopS {
+        max-height: $max-height-media-l;
+    }
+    @include laptopL {
+        max-height: $max-height-media-d;
+    }
+}

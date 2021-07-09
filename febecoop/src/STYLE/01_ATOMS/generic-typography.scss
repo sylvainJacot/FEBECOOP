@@ -1,0 +1,195 @@
+$flex-all-mb: 40px;
+
+$margin-flex-txt : 40px;
+
+@mixin flex-titre-1 {
+  @include hando-sb;
+  color: $blue-1;
+  font-size: 26px;
+  line-height: 34px;
+  margin-bottom: 32px;
+
+  @include tablet {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @include laptopS {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @include laptopL {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  a {
+    color: $orange-1;
+    @include trans-a;
+
+    &:hover {
+      color: $red-1;
+      @include trans-a;
+    }
+  }
+}
+@mixin flex-titre-2 {
+  @include hando-sb;
+  color: $blue-1;
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: $flex-all-mb;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 37px;
+  }
+
+  @include laptopS {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  @include laptopL {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  a {
+    color: $orange-1;
+    @include trans-a;
+
+    &:hover {
+      color: $red-1;
+      @include trans-a;
+    }
+  }
+}
+@mixin paragraph {
+  @include hando;
+  color: $blue-2;
+  font-size: 15px;
+  line-height: 27px;
+  margin-bottom: $margin-flex-txt / 2;
+  @include tracking(25);
+}
+@mixin flex-link {
+  color: $orange-1;
+  text-decoration: underline !important;
+  @include trans-a;
+  &:hover {
+    color: $red-1;
+    @include trans-a;
+  }
+}
+@mixin bold {
+  @include hando-b;
+}
+@mixin ordered-list {
+  list-style: none;
+  counter-reset: my-counter;
+  margin-bottom: $margin-flex-txt / 2 ;
+  li {
+    @include paragraph;
+    counter-increment: my-counter;
+    margin-bottom: 0;
+
+    &:before {
+      @include hando-b;
+      content: counter(my-counter) ". ";
+      color: $orange-1;
+    }
+    a {
+      color: $orange-1;
+      @include trans-a;
+      &:hover {
+        color: $red-1;
+        @include trans-a;
+      }
+    }
+  }
+}
+@mixin unordered-list {
+  margin-bottom: $margin-flex-txt / 2 ;
+  li {
+    @include paragraph;
+    margin-bottom: 0;
+    position: relative;
+    padding-left: 40px;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 4px;
+      height: 2px;
+      background: $orange-1;
+      top: 11px;
+      left: 25px;
+    }
+
+    a {
+      color: $orange-1;
+      @include trans-a;
+      &:hover {
+        color: $red-1;
+        @include trans-a;
+      }
+    }
+  }
+}
+@mixin generic-content {
+  p {
+    @include paragraph;
+    strong {
+      @include bold;
+    }
+    a {
+      @include flex-link;
+    }
+  }
+
+  h3 {
+    @include flex-titre-1;
+  }
+  h4 {
+    @include flex-titre-2;
+  }
+  ol {
+    @include ordered-list;
+  }
+  ul {
+    @include unordered-list;
+  }
+}
+.generic-content {
+  @include generic-content;
+}
+
+@mixin introduction-a {
+  @include hando-m;
+  color: $blue-1;
+  font-size: 16px;
+  line-height: 31px;
+  @include tracking(25);
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 35px;
+  }
+
+  @include laptopS {
+    font-size: 20px;
+    line-height: 37px;
+  }
+
+  @include laptopL {
+    font-size: 22px;
+    line-height: 39px;
+  }
+}
+
+#intro-a {
+  @include introduction-a;
+}

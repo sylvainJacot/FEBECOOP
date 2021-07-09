@@ -1,0 +1,45 @@
+// SUBMIT
+//=======================================
+.frm_submit {
+    @include tablet {
+        width: fit-content;
+        margin: auto;
+    }
+    .frm_button_submit {
+        display: block;
+        width: 100% !important;
+        font-family: 'Hando b' !important;
+        font-size: 12px !important;
+        @include tracking(150);
+        line-height: 21px !important;
+        color: $white !important;
+        background: $orange-1 !important;
+        border-radius: 8px !important;
+        padding: 16px 32px !important;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        height: fit-content;
+        border: none !important;
+        margin: 0px !important;
+        @include trans-a;
+        @include tablet {
+            display: inline-block;
+            width: fit-content;
+        }
+        &:hover {
+            background: $red-1 !important;
+            @include trans-a;
+        }
+        @include tablet {
+            width: auto !important;
+        }
+
+    }
+    .frm_button_submit:disabled {
+        opacity: 0.3;
+        &:hover {
+            background: none;
+        }
+    }
+}

@@ -1,0 +1,192 @@
+@import"./members-section.scss";
+@import"./team-members-section.scss";
+
+
+$amsi-padding-verti-m : 56px;
+$amsi-padding-verti-t : 80px;
+
+.about-main-section {
+    padding-bottom: $hstb-intro-h-m;
+    @include tablet {
+        padding-bottom: $hstb-intro-h-t;
+    }
+    .about-main-section-wrapper {
+        @include laptopS {
+            margin: auto;
+            width: 19 * $lCol;
+        }
+        @include laptopL {
+            margin: auto;
+            width: 15 * $dCol;
+        }
+        .about-main-item-content {
+            position: relative;
+            padding: 56px 0px 0px 0px ;
+            &:not(:last-child) {
+                &:after {
+                    @include bottom-divider-pseudo-el;
+                   }
+              }
+            .about-main-item-content-header {
+                .pentagone-icons-wrapper {
+                    position: absolute; 
+                }
+                .about-main-item-content-title {
+                    @include hando-sb;
+                    color: $blue-1;
+                    font-size: 22px;
+                    line-height: 28px;
+                    padding-left: 120px;
+                    padding-top: 32px;
+                    margin-bottom: 72px;
+                    @include tablet {
+                        font-size: 28px;
+                        line-height: 40px;
+                        padding-left: 4 * $tCol;
+                        padding-top: 0px;
+                        margin-bottom: $amsi-padding-verti-t / 3;
+                    }
+                    @include laptopS  {
+                        padding-left: 4 * $lCol;
+                    }
+                    @include laptopL {
+                        font-size: 30px;
+                        line-height: 42px;
+                        padding-left: 3 * $dCol;
+                    }
+                }
+            }
+            .about-main-item-content-wrapper {
+                @include tablet {
+                    padding-left: 4 * $tCol;
+                }
+                @include laptopS  {
+                    padding-left: 4 * $lCol;
+                }
+                @include laptopL {
+                    padding-left: 3 * $dCol;
+                }
+                p {
+                    @include hando-l;
+                    color: $blue-3;
+                    font-size: 14px;
+                    line-height: 26.62px;
+                    @include tracking(25);
+                }
+                .about-main-item-content-sous-titre {
+                    @include hando-b;
+                    color: $blue-1;
+                }
+                .about-main-item-content-texte {
+                    padding-bottom: $amsi-padding-verti-m / 2;
+                    &:last-child {
+                        padding-bottom: $amsi-padding-verti-m;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+.checkout-team-members-section {
+    background: $blue-light;
+    padding-top: 56px;
+    padding-bottom: $bbc-m + 56px;
+    @include tablet {
+        padding-top: 96px;
+        padding-bottom: $bbc-t + 96px;
+    }
+    @include laptopS {
+        margin-top: 144px;
+        padding-bottom: $bbc-l + 144px;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d + 120px;
+    }
+    .checkout-team-members-section-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include laptopL {
+            padding: 0px $dCol;
+        }
+
+        &:before {
+            @include tablet {
+                position: absolute;
+                display: block;
+                content: "";
+                width: 480px;
+                height: 450px;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                background: url("../ASSETS/IMAGES/QUIESTFEBE/VECTOR/dashed-cirles.svg") center no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .checkout-tm-item {
+            background: $white;
+            border-radius: 16px;
+            padding: 40px $mCol;
+            z-index: 1;
+            &:not(:last-child) {
+                margin-bottom: 40px;
+                @include tablet {
+                    margin-bottom: 0px;
+                }
+            }
+            @include tablet {
+                padding: 48px $tCol;
+                width: 8 * $tCol;
+            }
+            @include laptopS {
+                padding: 48px $lCol + $lCol/2;
+                width: 11 * $lCol;
+            }
+            @include laptopL {
+                padding: 48px $dCol + $dCol/2;
+                width: 10 * $dCol;
+            }
+            .checkout-tm-item-title {
+                @include hando-sb;
+                color: $blue-1;
+                font-size: 22px;
+                line-height: 28px;
+                @include tablet {
+                    font-size: 24px;
+                    line-height: 37px;
+                }
+                @include laptopS {
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+                @include laptopL {
+                    font-size: 30px;
+                    line-height: 42px;
+                }
+            }
+            .checkout-tm-item-texte {
+                @include hando-l;
+                color: $blue-3;
+                font-size: 14px;
+                line-height: 26.62px;
+                @include tracking(25);
+                margin: 24px 0px;
+                @include tablet {
+                    margin: 32px 0px;
+                }
+                @include laptopS {
+
+                }
+            }
+        }
+    }
+}

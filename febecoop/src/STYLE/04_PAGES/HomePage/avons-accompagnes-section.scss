@@ -1,0 +1,82 @@
+.avons-accompagnes-section {
+    position: relative;
+    .avons-accompagnes-section-wrapper {
+        position: unset;
+        @include laptopS {
+            position: relative;
+            &:before {
+                position: absolute;
+                display: block;
+                content: "";
+                width: 560px;
+                height: 530px;
+                background: url("../ASSETS/IMAGES/HOME/VECTOR/illu-dots-slider.svg") center no-repeat;
+                background-size: contain;
+                z-index: 1;
+                top: -106px;
+                left: -220px;
+            }
+        }
+        .slider-type-a-header {
+            #avons-accompagnes-cta-tablet {
+                display: none;
+                @include tablet {
+                    display: inline-block;
+                    @include cta-d;
+                }
+                @include laptopS {
+                    display: none;
+                }
+            }
+            #avons-accompagnes-cta {
+                display: none;
+                @include laptopS {
+                    display: inline-block;
+                    @include cta-d;
+                }
+            }
+        }
+        #avons-accompagnes-cta-mobile{
+            display: inline-block;           
+             position: relative;
+            @include cta-b;
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+}
+
+
+.avons-accompagnes-section-mobile {
+    .avons-accompagnes-section-mobile-cards-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            display: none;
+
+            &:nth-child(-n+2){
+                display: block;
+            }
+        }
+
+        a:not(:last-child) {
+            margin-bottom: 32px;
+        }
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 8 * $tCol);
+            grid-gap: $tCol;
+        }
+    }
+    @include laptopS {
+        display: none;
+    }
+}
+.avons-accompagnes-section-desktop {
+display: none;
+@include laptopS {
+    display: block;
+}
+}

@@ -1,0 +1,316 @@
+@import"./modal-mailgo.scss";
+
+$footer-inter-section-m: 24px;
+$footer-inter-section-t: 32px;
+@mixin footer-titre {
+    @include intertitre-a;
+    margin-bottom: $intertitre-bottom-margin - 16px;
+    @include tablet {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@mixin footer-paragraph {
+    @include hando-l;
+    color: $blue-1;
+    font-size: 14px;
+    @include tracking(50);
+    margin-bottom: 6px;
+    @include tablet {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    @include laptopS {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+@mixin footer-paragraph-s {
+    @include footer-paragraph;
+    @include tablet {
+        font-size: 13px;
+        line-height: 28px;
+        margin-bottom: 0;
+    }
+    @include laptopS{
+        font-size: 13px;
+        line-height: 28px;
+        margin-bottom: 0;
+    }
+}
+
+
+@mixin footer-province {
+    @include hando-b;
+    color: $blue-1;
+    font-size: 13px;
+    margin-bottom: 8px;
+    @include tracking(50);
+}
+
+@mixin footer-links {
+    @include hando-b;
+    font-size: 13px;
+    @include tracking(100);
+    color: $orange-1;
+    text-transform: uppercase;
+    @include trans-a;
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+    &:hover {
+        color: $red-1;
+        @include trans-a;
+    }
+}
+
+@mixin footer-section {
+    position: relative;
+    padding:  $footer-inter-section-m 0px;
+    @include tablet {
+        padding:  $footer-inter-section-t 0px;
+    }
+
+    &:after {
+        @include bottom-divider-pseudo-el;
+    }
+}
+
+footer {
+    padding-top: 24px;
+    background: $white;
+    .footer-wrapper  {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+        #Febecoop-logo-footer {
+            img {
+                width: 160px;
+                @include laptopS {
+                    width: 170px;
+                }
+                @include laptopL {
+                    width: 220px;
+                }
+            }
+
+        }
+        .footer-main-wrapper {
+            @include tablet {
+                width: 11 * $tCol;
+            }
+            @include laptopS {
+                width: 16 * $lCol;
+            }
+            @include laptopL {
+                width: 17 * $dCol;
+            }
+        .newsletter-section {
+            @include  footer-section;
+            @include tablet {
+                padding-top: 20px;
+            }
+            .newsletter-title {
+                @include footer-titre;
+            }
+            .newsletter-section-content {
+                @include laptopL {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            .newsletter-subtitle {
+                @include footer-paragraph;
+                margin-bottom: 24px;
+                @include laptopL {
+                    width: 8 * $lCol;
+                }
+            }
+        }
+        }
+        .coordonnees-socials-wrapper {
+            @include  footer-section;
+            @include laptopL {
+                display: flex;
+            }
+        .coordonees-section {
+                margin-bottom: $footer-inter-section-m;
+            .coordonees-item {
+                margin-bottom: 16px;
+            .coordonees-item-province {
+                @include footer-province;
+            }
+            .coordonees-item-content {
+                @include tablet {
+                    display: flex;
+                }
+            .coordonees-item-coordonees {
+                margin-bottom: 16px;
+                @include tablet {
+                    width: 5 * $tCol;
+                }
+                @include laptopS {
+                    width: 5 * $lCol;
+                }
+                @include laptopL {
+                    width: 4 * $dCol;
+                }
+                a {
+
+                    &:hover {
+                        p {
+                            color: $red-1;
+                            @include trans-a;
+                        }
+
+                    }
+                p {
+                    @include footer-paragraph-s;    
+                    @include trans-a;   
+                }
+                 }
+            }
+            .coordonees-item-tel-email {
+                @include tablet {
+                    width: 5 * $tCol;
+                }
+                @include laptopS {
+                    width: 5 * $lCol;
+                    margin-left: 2 * $lCol;
+                }
+                @include laptopL {
+                    width: 4 * $dCol;
+                    margin-left: 1 * $dCol;
+                }
+                p {
+                    @include footer-paragraph-s;
+                }
+                a {
+                    @include footer-paragraph-s;
+                    @include trans-a;
+                    &:hover {
+                        color: $red-1;
+                        @include trans-a;
+                    }
+                }
+
+            }
+        }
+        }
+        }
+        .footer-socials {
+            @include laptopL {
+                margin-left: 1 * $dCol;
+            }
+            .social-titre {
+                @include footer-titre;
+            }
+            .footer-socials-wrapper {
+                display: flex;
+                .social-item-a {
+                    &:not(:last-child) {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+
+
+        }
+        .autres-sites-febecoop {
+            @include  footer-section;
+            @include laptopS {
+                display: flex;
+                flex-direction: column;
+            }
+            @include laptopL{
+                flex-direction: row;
+            }
+            .autres-sites-titre {
+                @include footer-paragraph;
+                margin-bottom: $intertitre-bottom-margin - 16px;
+                @include laptopL {
+                    width: 8 * $dCol;
+                }
+            }
+            .autres-sites-wrapper {
+                display: flex;
+                flex-direction: column;
+                @include laptopS {
+                    display: flex;
+                    flex-direction: row;
+
+                }
+                @include laptopL {
+                    flex-direction: column;
+                    margin-left: 2 * $dCol;
+                }
+                .autre-site {
+                    @include footer-links;
+                    @include laptopS {
+                        &:not(:first-child){
+                            margin-left: $lCol;
+                            @include laptopL {
+                                margin-left: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-bottom {
+            @include  footer-section;
+            flex-direction: column;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            @include tablet {
+                flex-direction: row;
+            }
+            @include laptopL {
+                align-items: center;
+            }
+            .menu-footer-bottom-menu-container {
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    @include laptopS {
+                        flex-direction: row;
+                    }
+                    li {
+                        margin: 4px 0;
+                        @include tablet {
+                            margin: 0;
+                        }
+
+                        a {
+                            @include footer-links;
+                            color : $blue-1;
+                        }
+                        &:not(:first-child) {
+                            margin-top: 10px;
+                            @include laptopS {
+                                margin-top: 0px;
+                                margin-left: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+            #footer-bottom-created-by-id {
+                @include footer-links;
+                color : $blue-1;
+                font-size: 10px;
+                margin: 12px 0;
+                @include tablet {
+                    margin: 0;
+                }
+                @include laptopL {
+                    margin-left: 32px;
+                }
+            }
+        }
+    }
+    }
+}

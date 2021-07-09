@@ -1,0 +1,168 @@
+@import"./publication-star.scss";
+.mediatheque-publications-categrories-section {
+    padding-bottom: $bbc-m;
+    @include tablet {
+        padding-bottom: $bbc-t;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l + 64px;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d + 64px;
+    }
+ .mediatheque-publications-categrories-wrapper {
+     @include laptopS {
+         display: flex;
+         justify-content: center;
+     }
+     .mediatheque-publications-categrory-item {
+         margin-bottom: 106px;
+
+         @include laptopS {
+             margin-bottom: 0;
+             width: 11 * $lCol;
+
+             &:not(:last-child) {
+                margin-right: $lCol;
+             }
+         }
+         @include laptopL {
+            width: 9 * $dCol;
+            &:not(:last-child) {
+                margin-right: $dCol;
+             }
+         }
+
+         .mediatheque-publications-categrory-item-header-wrapper {
+             .mediatheque-publications-categrory-item-header-top {
+                 display: flex;
+                 align-items: center;
+                 flex-direction: column;
+                 align-items: flex-start;
+
+                .pentagone-icons-wrapper {
+
+                }
+               h2 {
+                   @include hando-sb;
+                   color: $blue-1;
+                   font-size: 22px;
+                   line-height: 29px;
+                   margin-top: 24px;
+                   @include tablet {
+                    padding-left: 0;
+                    font-size: 24px;
+                    line-height: 31px;
+                   }
+               }
+             }
+             .mediatheque-publications-categrory-item-header-content {
+                p {
+                    @include hando-sb;
+                    color: $blue-3;
+                    font-size: 14px;
+                    line-height: 26.6px;  
+                    @include tracking(25); 
+                    margin-top: 32px;
+                    margin-bottom: 32px;
+
+                    @include tablet {
+                        margin-bottom: 48px;
+                    }
+                }
+             }
+
+
+         }
+         .mediatheque-publications-categrory-item-header-content {
+
+         }
+         .mediatheque-publications-categrory-item-links {
+             .mediatheque-publications-categrory-item-link-item {
+                 position: relative;
+                 @include trans-a;
+                 display: none;
+                 opacity: 0;
+
+                 @include laptopS {
+                    padding-left: 0px;
+                    padding-right: $lCol;
+                 }
+                a {
+                    position: relative;
+                    display: block;
+                    @include hando-b;
+                    font-size: 13px;
+                    line-height: 24px;
+                    @include tracking(50);
+                    color: $blue-1;
+                    position: relative;
+                    padding: 24px 2 * $mCol 24px 0;
+                    text-transform: uppercase;
+
+                    @include laptopS {
+                        padding: 40px 2 * $lCol 40px 0;
+                    }
+                }
+                    &:before{
+                        display: block;
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        left: 0;
+                        background: $blue-light;
+                        border-bottom-right-radius: 0;
+                        bottom: 0;
+                    }
+                &:after {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 25px;
+                    height: 9px;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    background: url("../ASSETS/IMAGES/common/VECTOR/full-arrow-orange.svg") center no-repeat;
+                    background-size: contain;
+                    @include trans-a;
+                }
+                @include laptopS {
+                    &:hover {
+                        background: $blue-light;
+                        padding-left: $lCol;
+                        padding-right: 0px;
+                        @include trans-a;
+                        &:before {
+                            width: calc(100% - $lCol);
+                        }
+                        &:after {
+                            right: $lCol;
+                            @include trans-a;
+                        }
+                    }
+                }
+
+                &:nth-child(-n+5) {
+                    display: block;
+                    opacity: 1;
+                }
+
+             }
+             .mediatheque-publications-categrory-item-link-item-visible {
+                display: block;
+                opacity: 1;
+                transition: all 3s ease-out;
+             }
+
+             
+         }
+         > a {
+
+            margin-top: 32px;
+
+        }
+     }
+ }   
+}

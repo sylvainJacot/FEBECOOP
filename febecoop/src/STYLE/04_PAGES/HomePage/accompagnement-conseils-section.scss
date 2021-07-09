@@ -1,0 +1,244 @@
+.home-accompagnement-conseils-section {
+    .home-accompagnement-conseils-section-wrapper {
+        @include laptopL {
+            padding: 0px $dCol;
+        }
+        .hac-header {
+            position: relative;
+            h3 {
+                @include intertitre-a-underlined;
+                margin-bottom: $intertitre-bottom-margin;
+                @include tablet {
+                    margin-bottom: 56px;
+                }
+                @include laptopS {
+                    margin-bottom: 64px;
+                }
+            }
+            p {
+                @include sous-intertitre;
+                @include tablet {
+                    width: 14 * $tCol;
+                }
+                @include laptopS {
+                    width: 13 * $lCol;
+                }
+                @include laptopL {
+                    width: 10 * $dCol; 
+                }
+            }
+        }
+
+        .hac-cards-wrapper {
+            margin-top: 72px;
+            @include tablet {
+                border-radius: 8px;
+                background: $white;
+            }
+            @include tablet {
+                @include shadow-b-nopic;
+                padding: 0px 2 * $tCol;
+            }
+            @include laptopS {
+                display: flex;
+                padding: 64px 0px;
+            }
+            .hac-card-item {
+                display: block;
+                border-radius: 8px;
+                width: 100%;
+                background: $white;
+                padding: 40px $mCol;
+                margin-bottom: 32px;
+                @include shadow-a-nopic;
+                position: relative;
+                &:not(:last-child){
+                    &:after {
+                        display: none;
+                        @include tablet {
+                            @include bottom-divider-pseudo-el;
+                        }
+                        @include laptopS {
+                            width: 1px;
+                            height: 100%;
+                            right: 0;
+                        }
+                    }
+                }
+
+                @include tablet{
+                    padding: 40px 0px 48px 0px;
+                    box-shadow: none;
+                }
+                @include laptopS {
+                    margin-bottom: 0px;
+                    padding: 0px $lCol;
+                }
+                @include laptopL {
+                    padding: 0px $dCol;
+                }
+                &:first-child {
+                    @include tablet {
+                        padding-top: 80px;
+                    }
+                    @include laptopS {
+                        padding: 0px $lCol;
+                    }
+                    @include laptopL {
+                        padding: 0px $dCol;
+                    }
+                }
+                &:last-child {
+                    @include tablet {
+                        padding-bottom: 80px;
+                    }
+                    @include laptopS {
+                        padding: 0px $lCol;
+                    }
+                    @include laptopL {
+                        padding: 0px $dCol;
+                    }
+                }
+                .hac-card-item-header {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    @include laptopS {
+                        position: relative;
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        justify-content: unset;
+                    }
+                    .pentagone-icons-wrapper {
+                        @include tablet {
+                            position: absolute;
+                            top: 0px;
+                        }
+                        @include laptopS {
+                            margin-bottom: 32px;
+                            position: relative;
+                        }
+                    }
+                    h2 {
+                        @include hando-m;
+                        color: $blue-1;
+                        font-size: 20px;
+                        line-height: 24px;
+                        margin-left: 24px;
+                        width: 5 * $mCol;
+                        @include tablet {
+                            width: 11 * $tCol;
+                            margin: 0;
+                            padding-left: 4 * $tCol - 20px;
+                        }
+                        @include laptopS {
+                            width: unset;
+                            padding: 0px;
+                            font-size: 23px;
+                            line-height: 27.6px;
+                        }
+                        span {
+                            @include hando-xb;
+                        }
+                    }
+                }
+                .hac-card-item-content {
+                    @include tablet {
+                        width: 13 * $tCol;
+                        padding-left: 4 * $tCol - 20px;
+                    }
+                    @include laptopS {
+                        width: unset;
+                        padding: 0px;
+                    }
+                    .hac-card-item-content-desc {
+                        margin: 32px 0px;
+                        @include hando-l;
+                        color: $blue-2;
+                        font-size: 13px;
+                        line-height: 23px;
+                        @include tracking(25);
+                        @include tablet {
+                            line-height: 25px;
+                            margin: 16px 0 32px 0px;
+                        }
+                        @include laptopS {
+                            margin: 16px 0 40px 0px;
+                            margin-bottom: 80px;
+                        }
+                        @include laptopL {
+                            font-size: 14px;
+                            line-height: 26.62px;
+                        }
+                    }
+                    .cta-b {
+
+                        @include laptopS {
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-accompagnement-conseils-section-flandre {
+    position: relative;
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 50%;
+        background-color: $orange-light;
+        top: 50%;
+        z-index: -1;
+        transform: translateY(50%);
+    }
+    .home-accompagnement-conseils-section-wrapper {
+
+        .hac-header {
+            display: flex;
+            flex-direction: column;
+            h3 {
+                @include intertitre-a-underlined;
+                &:before {
+                    background-color: $red-1-20;
+                }
+                color: $red-1;
+                margin: 0 auto $intertitre-bottom-margin auto;
+                @include tablet {
+                    margin: 0 auto 56px auto;
+                }
+                @include laptopS {
+                    margin: 0 auto 64px auto;
+                }
+            }
+            p {
+                color: $blue-1;
+                text-align: center;
+                margin: auto;
+                @include laptopS {
+                    width: 19 * $lCol;
+                }
+                @include laptopL {
+                    width: 14 * $dCol; 
+                }
+            }
+        }
+
+        .hac-cards-wrapper {
+
+            .hac-card-item {
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+            }
+        }
+    }
+}

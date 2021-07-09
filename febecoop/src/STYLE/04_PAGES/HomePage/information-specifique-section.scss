@@ -1,0 +1,36 @@
+.information-specifique-section {
+    margin-top: 58px;
+    @include tablet {
+        margin-top: 88px;
+    }
+    .information-specifique-section-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .iss-pic-wrapper {
+            img {
+
+            }
+        }
+        h4 {
+            @include hando;
+            color: $blue-1;
+            font-size: 18px;
+            line-height: 31px;
+            text-align: center;
+            margin: 32px 0;
+            @include  tablet {
+                font-size: 22px;
+                line-height: 38px;
+            }
+            @include laptopS {
+                font-size: 26px;
+                line-height: 46px;
+            }
+            @include laptopL {
+                font-size: 30px;
+                line-height: 49px;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import"./expertise-single.scss";
+
+.expertises-loop-section{
+        padding-bottom: $bbc-m;
+    @include tablet {
+        padding-bottom: $bbc-t + 40px;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l + 180px;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d + 190px;
+    }
+.expertises-wrapper  {
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 8 * $tCol);
+        justify-content: space-between;
+        grid-row-gap: $tCol;
+    }
+    @include laptopS {
+        grid-template-columns: repeat(3, 7 * $lCol);
+        justify-content: space-between;
+        grid-row-gap: $lCol;
+    }
+    @include laptopL {
+        grid-template-columns: repeat(3, 7 * $dCol);
+        justify-content: space-between;
+        grid-row-gap: $dCol;
+    }
+}
+}

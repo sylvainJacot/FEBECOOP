@@ -1,0 +1,81 @@
+.card-type-b-item {
+    display: block;
+    background: $white;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    @include card-type-anime-a;
+     &:not(:last-child) {
+        margin-bottom: 40px;
+        @include tablet {
+            margin-bottom: 0px;
+        }
+     }
+    .card-type-b-pic-wrapper {
+        width: 100%;
+        height: 205px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border-radius: 0px 0px 8px 8px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform:scale(1);
+            @include trans-a;
+        }
+        @include tablet {
+            height: 240px;
+        }
+    }
+    .card-type-b-content {
+        padding: 24px $mCol 72px $mCol;
+        border-radius: 8px;
+        @include tablet {
+            padding: 24px $tCol 72px $tCol; 
+        }
+        @include laptopS {
+            padding: 24px 36px 72px 36px;
+        }
+        .card-type-b-date {
+            @include hando-l;
+            font-size: 12px;
+            line-height: 24px;
+            @include tracking(100);
+            color: $blue-3;
+        }
+        .card-type-b-chapeau {
+            @include titre-card;
+            @include text-shave(3);
+            margin-bottom: 8px;
+        }
+        .card-type-b-resume{
+            @include text-shave(3);
+            @include hando-l;
+            font-size: 14px;
+            line-height: 26.6px;
+            @include tracking(25);
+            color: $blue-1;
+            margin-bottom: 8px;
+        } 
+        > .cta-c {
+            width: fit-content;
+            position: absolute;
+            bottom: 24px;
+        }
+    }
+
+    &:hover {
+        .card-type-b-pic-wrapper {
+            img {
+                transform:scale(1.025);
+                @include trans-a;
+            }
+        }
+    }
+
+}
+

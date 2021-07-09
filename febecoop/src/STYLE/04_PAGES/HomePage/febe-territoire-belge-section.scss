@@ -1,0 +1,166 @@
+$ftbt-space-between-els-m: 48px;
+$ftbt-space-between-els-t: 56px;
+$ftbt-space-between-els-d: 72px;
+
+.febe-territoire-belge-section {
+    padding-top: $ftbt-space-between-els-m;
+    padding-bottom: $bbc-m + $ftbt-space-between-els-m;
+    @include tablet {
+        padding-top: $ftbt-space-between-els-t;
+        padding-bottom: $bbc-t + $ftbt-space-between-els-t;
+    }
+    @include laptopS {
+        padding-top: $ftbt-space-between-els-t;
+        padding-bottom: $bbc-l + $ftbt-space-between-els-t;
+    }
+    @include laptopL {
+        padding-top: $ftbt-space-between-els-d;
+        padding-bottom: $bbc-d + $ftbt-space-between-els-d;
+    }
+    .febe-territoire-belge-section-wrapper {
+        @include tablet {
+            width: 13 * $tCol;
+            margin: auto;
+        }
+        @include laptopS {
+            width: 21 * $lCol;
+        }
+        @include laptopL {
+            width: 17 * $dCol;
+        }
+        .febe-territoire-belge-pic-wrapper {
+            margin: auto;
+            img {
+                margin: auto;
+                display: block;
+                width: 176px;
+                @include tablet {
+                    width: 7 * $tCol;
+                }
+                @include laptopS {
+                    width: 8 * $lCol;
+                }
+                @include laptopL {
+                    width: 6 * $dCol;
+                }
+            }
+        }
+        > h2 {
+            font-size: 22px;
+            line-height: 28px;
+            @include hando-sb;
+            color: $blue-1;
+            margin: $ftbt-space-between-els-m 0px;
+            @include tablet {
+                font-size: 24px;
+                line-height: 37px;
+                margin: $ftbt-space-between-els-t 0px;
+            }
+            @include laptopS {
+                width: 15 * $lCol;
+                font-size: 28px;
+                line-height: 40px;
+                margin: $ftbt-space-between-els-t auto;
+                text-align: center;
+            }
+            @include laptopL {
+                width: 11 * $dCol;
+                font-size: 30px;
+                line-height: 42px;
+                margin: $ftbt-space-between-els-d auto;
+            }
+        }
+        .febe-territoire-belge-territoires-container {
+            @include laptopS {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    display: block;
+                    height: 100%;
+                    width: 1px;
+                    content: "";
+                    background: $blue-light;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            .febe-territoire-belge-territoire {
+                padding: $ftbt-space-between-els-m / 2 0;
+                position: relative;
+                @include tablet {
+                    padding: $ftbt-space-between-els-t/ 2 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    &:not(:last-child) {
+                        &:before {
+                        position: absolute;
+                        display: block;
+                        height: 1px;
+                        width: 100%;
+                        content: "";
+                        background: $blue-light;
+                        bottom: 0;
+                        }
+                    }
+                }
+                @include laptopS {
+                    width: 9 * $lCol;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 0;
+                    margin: unset;
+                    &:not(:last-child) {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+                @include laptopL {
+                    width: 7 * $dCol;
+
+                }
+                > h3 {
+                    font-size: 18px;
+                    line-height: 27px;
+                    @include hando-sb;
+                    @include tracking(25);
+                    color: $blue-1;
+
+                    @include tablet {
+                        font-size: 21px;
+                    }
+                    @include laptopS {
+                        text-align: center;
+                    }
+                }
+                > p {
+                    @include hando-l;
+                    color: $blue-3;
+                    font-size: 14px;
+                    line-height: 26.62px;
+                    @include tracking(25);
+                    margin: $ftbt-space-between-els-m / 2 0px;
+                    @include tablet {
+                        margin: $ftbt-space-between-els-t / 2 0px;
+                    }
+                    @include laptopS {
+                        text-align: center;
+                    }
+                    @include laptopL {
+                        margin: $ftbt-space-between-els-d / 2 0px;
+                    }
+                }
+                > a {
+                    @include laptopS {
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}

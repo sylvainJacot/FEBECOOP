@@ -1,0 +1,99 @@
+// SOLID 
+// ===================================
+
+$blue-1: #19005a;
+$blue-2: #5e4c8b;
+$blue-3: #75669c;
+$blue-4: #47337B;
+$blue-5: #0e003f;
+$blue-light: #efedf3;
+$blue-light-2: #c3bdd4;
+
+$purple-1: #30196a;
+$purple-2: #8f5fa4;
+
+$red-1: #ff5548;
+$red-2: #FF7045;
+$red-light: #ffede9;
+
+$orange-1: #FF9223;
+// $orange-1: #ffa951;
+$orange-3: #ffbe7b;
+$orange-light: #fbf1ea;
+$orange-light-2: #f9e7dc;
+
+$yellow-1: #fbbe25;
+
+
+$white : #ffffff;
+$white-2: #fef6ee;
+
+// ALPHA
+// ===================================
+$blue-1-05: hsla(257, 100%, 18%,0.05);
+$blue-1-10: hsla(257, 100%, 18%,0.1);
+$blue-1-20: hsla(257, 100%, 18%,0.2);
+$blue-1-25: hsla(257, 100%, 18%,0.25);
+$blue-1-30: hsla(257, 100%, 18%,0.3);
+$blue-1-60: hsla(257, 100%, 18%,0.6);
+
+$purple-2-00: hsla(282, 27%, 51%,0);
+$purple-2-30: hsla(282, 27%, 51%,0.3);
+$purple-2-50: hsla(282, 27%, 51%,0.5);
+
+$red-1-20: hsla(4, 100%, 64%,0.2);
+$red-1-30: hsla(4, 100%, 64%,0.3);
+$red-1-40: hsla(4, 100%, 64%,0.4);
+
+$orange-1-30: hsla(30, 100%, 57%,0.3);
+
+$yellow-1-30: hsla(43, 96%, 56%,0.3);
+$yellow-1-40: hsla(43, 96%, 56%,0.4);
+
+// SHADOWS
+// ===================================
+
+
+
+@mixin shadow-a-nopic($color:$blue-1-30) {
+// -webkit-box-shadow: 0 21px 70px -27px $color; 
+// box-shadow: 0 21px 70px -27px $color;
+-webkit-box-shadow: 0 15px 100px -40px $color; 
+box-shadow: 0 15px 100px -40px $color;
+}
+
+@mixin shadow-b-nopic($color:$blue-1-30) {
+    // -webkit-box-shadow:  0 22px 50px -14px  $color; 
+    // box-shadow: 0 22px 50px -14px  $color;
+    -webkit-box-shadow: 0 15px 100px -40px $color; 
+box-shadow: 0 15px 100px -40px $color;
+    }
+
+@mixin shadow-c($color:$blue-1-25) {
+    // -webkit-box-shadow:  0 22px 50px -14px  $color; 
+    // box-shadow: 0 22px 50px -14px  $color;
+    -webkit-box-shadow: 0 7px 40px -10px $color; 
+box-shadow: 0 7px 40px -10px $color;
+    }
+
+@mixin shadow-a-pic($color:$blue-1-30)  {
+// -webkit-box-shadow: 0 48px 58px -29px $color; 
+// box-shadow: 0 48px 58px -29px $color;
+-webkit-box-shadow: 0 15px 100px -40px $color; 
+box-shadow: 0 15px 100px -40px $color;
+}
+
+@mixin shadow-a-pic-hover($color:$blue-1-20)  {
+    // -webkit-box-shadow: 0 64px 58px -29px $color; 
+    // box-shadow: 0 64px 58px -29px $color;
+    -webkit-box-shadow: 0 40px 80px -20px $color; 
+box-shadow: 0 40px 80px -20px $color;
+    }
+
+@mixin shadow-a-pic-s($color:$blue-1-30)  {
+    // -webkit-box-shadow: 0 24px 32px -16px $color; 
+    // box-shadow: 0 24px 32px -16px $color;
+    -webkit-box-shadow: 0 15px 100px -40px $color; 
+box-shadow: 0 15px 100px -40px $color;
+    }
+

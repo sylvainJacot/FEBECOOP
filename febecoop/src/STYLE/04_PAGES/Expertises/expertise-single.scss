@@ -1,0 +1,83 @@
+.expertise-contenu-section {
+    padding-bottom: $bbc-m;
+    @include tablet {
+        padding-bottom: $bbc-t + 40px;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l + 180px;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d + 190px;
+    }
+    .expertise-contenu-wrapper {
+        @include laptopS {
+            display: flex;
+            justify-content: space-between;
+            }
+        .expertise-contenu-main {
+            @include laptopS {
+                width: 14 * $lCol;
+            }
+            @include laptopL {
+                width: 12 * $dCol;
+            }
+        }
+        .expertise-contenu-aside {
+            padding: 32px 24px;
+            background: $orange-light;
+            border-radius: 8px;
+            margin-top: 40px;
+    
+            @include tablet {
+                padding: 64px 2 * $tCol;
+                margin-top: 80px;
+            }
+    
+            @include laptopS {
+                margin-top: 0;
+                width: 7 * $lCol;
+                padding: 24px 16px;
+                height: fit-content;
+            }
+    
+            @include laptopL {
+                padding: 24px $dCol;
+                width: 8 * $dCol;
+            }
+            .expertise-contenu-aside-liste-links {
+                .expertise-contenu-aside-liste-titre {
+                    @include hando-b;
+                    color: $blue-1;
+                    font-size: 13px;
+                    line-height: 24px;
+                    @include tracking(100);
+                    text-transform: uppercase;
+                    margin: 16px;
+                }
+                .expertise-contenu-aside-link {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    padding: 16px 0px;
+                    &:not(:last-child) {
+                        &:before {
+                        position: absolute;
+                        display: block;
+                        height: 1px;
+                        width: 100%;
+                        content: "";
+                        background: $white;
+                        bottom: 0;
+                        }
+                    }
+                }
+            }
+            .cta-b {
+                margin-top: 16px;
+                @include laptopL {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

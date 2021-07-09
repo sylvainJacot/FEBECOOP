@@ -1,0 +1,175 @@
+@mixin coordo-map {
+    @include hando-l;
+    font-size: 14px;
+    line-height: 26.62px;
+    @include tracking(25);
+    color: $blue-1;
+    span {
+        @include hando-b;
+    }
+}
+
+// CALCULATIONS OF GUTTERS AND GUTTER SINGLE WIDTHS OF THE VIEWPORT
+$gutters-m : calc(100vw - #{$m-grid-size});
+$gutter-single-m : calc(#{$gutters-m} / 2);
+
+$gutters-t : calc(100vw - #{$t-grid-size});
+$gutter-single-t : calc(#{$gutters-t} / 2);
+
+
+$gutters-l : calc(100vw - #{$l-grid-size});
+$gutter-single-l : calc(#{$gutters-l} / 2);
+
+
+$gutters-d : calc(100vw - #{$d-grid-size});
+$gutter-single-d : calc(#{$gutters-d} / 2);
+
+// WIDTH OF THE MAP ASIDE
+$aside-width-m : 100%;
+$aside-width-t : calc(8 * #{$tCol});
+$aside-width-l : calc(9 * #{$lCol});
+$aside-width-d : calc(8 * #{$dCol});
+
+.contact-map-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    @include tablet {
+        flex-direction: row;
+    }
+    .map-aside {
+        background: $blue-light;
+        width: 100%;
+        @include tablet {
+            width: calc(#{$aside-width-t}  + #{$gutter-single-t});
+            padding-left: $gutter-single-t;
+        }
+        @include laptopS {
+            width: calc(#{$aside-width-l}  + #{$gutter-single-l});
+            padding-left: $gutter-single-l;
+        }
+        @include laptopL {
+            width: calc(#{$aside-width-d}  + #{$gutter-single-d});
+            padding-left: $gutter-single-d;
+        }
+        .map-aside-wrapper {
+            @include tablet {
+                width: $aside-width-t;
+                margin: 0;
+            }
+            @include laptopS {
+                width: $aside-width-l;
+            }
+            @include laptopL {
+                width: $aside-width-d;
+            }
+            .map-aside-coordonees-item {
+                padding: 64px 0px;
+                position: relative;
+                @include laptopS {
+                    margin-right: $lCol;
+                }
+                @include laptopL {
+                    margin-right: $dCol;
+                }
+                .map-aside-coordonees-item-province {
+                    @include hando-m;
+                    font-size: 22px;
+                    line-height: 42px;
+                    color: $blue-1;
+                }
+                .map-aside-coordonees-item-coordonees {
+                    margin: 16px 0px;
+                    p {
+                        @include coordo-map;
+                    }
+                    a {
+                        @include coordo-map;
+                    }
+                }
+                &:not(:last-child) {
+                    &:before {
+                        position: absolute;
+                        display: block;
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        bottom: 0;
+                        background: $white;
+                    }
+                }
+                .map-aside-coordonees-item-routes-container {
+                    display: flex;
+                    .item-route {
+                        position: relative;
+                        display: block;
+                        width: 55px;
+                        height: 55px;
+                        background: $white;
+                        border-radius: 50%;
+                        > img {
+                            position: absolute;
+                            max-height: 24px;
+                            max-width: 24px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            @include trans-a;
+                        }
+                        &:not(:last-child) {
+                            margin-right: 8px;
+                        }
+
+                        &:hover {
+                            > img {
+                                // max-height: 28px;
+                                // max-width: 28px;
+                                // @include trans-a;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    .map-wrapper {
+        width: 100%;
+        height: 290px;
+        @include tablet {
+            width: calc(100% - #{$aside-width-t});
+            height: auto;
+        }
+        @include laptopS {
+            width: calc(100% - #{$aside-width-l});
+        }
+        @include laptopL {
+            width: calc(100% - #{$aside-width-d});
+        }
+        .acf-map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    }
+}
+
+/////// HIDE "PLAN & SATELLITE" +  "ZOOM" BUTTONS
+.gmnoprint {
+    display: none;
+}
+
+/////// HIDE "FULL SCREEN" BUTTON
+.gm-control-active,.gm-fullscreen-control {
+    display: none;
+}
+
+/////// HIDE "PEGMAN"
+.gm-svpc {
+    display: none;
+}
+
+/////// HIDE "INFO BULL MARKER"
+.gm-style-iw-t {
+display: none;
+}

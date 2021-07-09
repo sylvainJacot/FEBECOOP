@@ -1,0 +1,364 @@
+$hstb-intro-h-m : 80px;
+$hstb-intro-h-t : 96px;
+
+.hero-section-type-b {
+    background: $orange-light;
+    position: relative;
+    .hero-section-type-waves-container {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        @include laptopS {
+            right: -200px;
+        }
+        @include laptopL {
+            right: -400px;
+        }
+        > img {
+            width: 100%;
+        }
+    }
+    .hero-section-type-b-wrapper {
+        .hero-section-type-b-content {
+            padding-top: 56px;
+            padding-bottom: 130px;
+            @include tablet {
+                padding-top: 88px;
+                padding-bottom: 150px;
+            }
+            @include laptopS {
+                padding-top: 160px; 
+                padding-bottom: 270px;
+            }
+            @include laptopL{
+                padding-bottom: 280px; 
+            }
+            position: relative;
+            .hero-section-type-b-content-text {
+            h1 {
+                @include titre-header;
+                margin-bottom: 40px;
+                @include tablet {
+                    margin-bottom: 80px;
+                }
+                @include laptopS {
+                    margin: 0;
+                    width: 10 * $lCol;
+                }
+                @include laptopL {
+                    margin-left: 1 * $dCol;
+                }
+            }
+            .hero-section-type-b-content-toptitle {
+                @include top-titre-header;
+                @include laptopL {
+                    margin-left: 1 * $dCol;
+                }
+            }
+        }
+            .hero-section-pic-wrapper {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                width: 100%;
+                height: 290px;
+                margin: auto;
+                overflow: visible;
+                @include tablet {
+                    width: 550px;
+                    height: 500px;
+                }
+                @include laptopS {
+                   position: absolute;
+                   width: 400px;
+                   height: 430px;
+                   top: 50%;
+                   right: -40px;
+                   transform: translateY(-50%);
+                }
+                @include laptopL {
+                    width: 440px;
+                    right: 3 * $dCol;
+                }
+                img {
+                    height: inherit;
+                }
+            }
+        }
+    }
+}
+
+.hero-section-type-b-introduction-wrapper {
+    position: relative;
+    height: max-content;
+    .hero-section-type-b-intro-content {
+        background: $white;
+        padding: 40px 24px;
+        border-radius: 8px;
+        transform: translateY(- $hstb-intro-h-m);
+        @include shadow-a-nopic;
+        @include tablet  {
+            transform: translateY(- $hstb-intro-h-t);
+            padding: 2 * $tCol;
+        }
+        @include laptopS {
+            padding: 2 * $lCol;
+        }
+        @include laptopL {
+            width: 21 * $dCol;
+            padding: 72px 3 * $dCol;
+            margin: auto;
+        }
+    p {
+        @include hando-m;
+        font-size: 16px;
+        line-height: 32px;
+        color: $blue-1;
+        @include tracking(25);
+
+        @include tablet {
+            font-size: 18px;
+            line-height: 35px;
+        }
+        @include laptopS {
+            font-size: 20px;
+            line-height: 37px;
+        }
+        @include laptopL {
+            font-size: 22px;
+            line-height: 39px;
+        }
+    }
+    .hero-section-type-b-petite-intro {
+        margin-top: 48px;
+        @include hando-l;
+        font-size: 14px;
+        line-height: 26.62px;
+        color: $blue-3;
+        @include tracking(25);
+    }
+}
+}
+
+#projets-accompagnes-hero-section {
+    .hero-section-type-b-content {
+        .hero-section-pic-wrapper {
+
+            @include laptopL {
+                height: 520px;
+
+            }
+        }
+    }
+}
+
+#projets-partenaires-hero-section {
+    .hero-section-type-waves-container {
+        @include laptopS {
+            right: -300px;
+        }
+        @include laptopL {
+            right: -600px;
+        }
+    }
+}
+
+#formations-hero-section {
+    .hero-section-type-b-content {
+        @include laptopS {       
+        padding-bottom: 370px;
+        }
+        @include laptopL{
+            padding-bottom: 280px; 
+        }
+        .hero-section-pic-wrapper {
+            @include tablet {
+                width: 500px;
+                height: 410px;
+            }
+            @include laptopL {
+                right: 0;
+            }
+            img {
+                min-height: 100%;
+                min-width: 100%;
+                object-fit: contain;
+                @include tablet {
+                    height: inherit;
+                    min-height: unset;
+                    min-width: unset;
+                    object-fit: unset;
+                }
+            }
+        }
+    }
+}
+
+#qui-nous-sommes-hero-section {
+    .hero-section-type-waves-container {
+        @include laptopS {
+            right: -290px;
+            height: 125%;
+        }
+        @include laptopL {
+            right: -33%;
+        }
+    }
+    .hero-section-type-b-content {
+
+        .hero-section-pic-wrapper {
+            @include laptopS {
+                width: 643px;
+                height: 433px;
+                top: 50%;
+                right: -190px;
+            }
+            @include laptopL {
+                right: -80px;
+            }
+        }
+    }
+}
+
+#equipe-hero-section {
+    .hero-section-type-waves-container {
+        @include laptopS {
+            right: -290px;
+            height: 120%;
+        }
+        @include laptopL {
+            right: -420px;
+        }
+    }
+    .hero-section-type-b-wrapper  {
+        .hero-section-type-b-content {
+            padding-bottom: 60px;
+            @include laptopS {
+                padding-bottom: 276px;
+            }
+            .hero-section-pic-wrapper {
+                height: 200px;
+                @include tablet {
+                    height: 430px;
+                }
+                @include laptopS {
+                    top: unset;
+                    bottom: 0;
+                    transform: translate(0, 0);
+                    right: -120px;
+                }
+                @include laptopL {
+                    right: -22px;
+                    height: 460px;
+                }
+            }
+        }
+    }
+
+}
+
+
+#contact-hero-section {
+    overflow: hidden;
+    padding-bottom: 170px;
+    @include tablet {
+        padding-bottom: 200px;
+        }
+    @include laptopS {
+        padding-bottom: 0px;
+    }
+    .hero-section-type-waves-container {
+        bottom: -60px;
+        @media (min-width:440px) {
+            bottom: -150px;
+        }
+        @media (min-width:560px) {
+            bottom: -230px;
+        }
+        @include tablet {
+            bottom: -90px;
+        }
+        @media (min-width:1000px) {
+            bottom: -180px;
+        }
+        @include laptopS {
+            bottom: 0;
+            right: -380px;
+        }
+    }
+    .hero-section-type-b-content {
+        .hero-section-pic-wrapper {
+            height: 293px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(calc(-50% + 8px)) translateY(-29px);
+            @include tablet {
+                height: 421px;
+                transform: translateX(calc(-50% + 8px)) translateY(-69px);
+            }
+            @include laptopS  {
+                transform: translateX(0) translateY(0);
+                top: 80px;
+                right: -240px;
+            }
+            @include laptopL {
+                height: 550px;
+                top: 30px;
+                right: -30px;
+            }
+        }
+    }
+}
+
+
+#entreprenariat-hero-section {
+    overflow: hidden;
+
+    .hero-section-type-waves-container {
+        bottom: -60px;
+        @media (min-width:440px) {
+            bottom: -150px;
+        }
+        @media (min-width:560px) {
+            bottom: -230px;
+        }
+        @include tablet {
+            bottom: -90px;
+        }
+        @media (min-width:1000px) {
+            bottom: -180px;
+        }
+        @include laptopS {
+            width: 958px;
+            height: 475px;
+            right: -130px;
+            bottom: -30px;
+        }
+        @include laptopL {
+            width: 1350px;
+            height: 809px;
+            bottom: -210px;
+            right: -160px;
+        }
+
+    }
+    .hero-section-type-b-content {
+        .hero-section-pic-wrapper {
+            height: 160px;
+            @include tablet {
+                height: 372px
+            }
+            @include laptopS {
+                height: 305px;
+                top: 220px;
+            }
+            @include laptopL {
+                height: 410px;
+                top: 270px;
+                right: 50px;
+            }
+        }
+    }
+}

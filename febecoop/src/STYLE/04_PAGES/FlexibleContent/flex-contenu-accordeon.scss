@@ -1,0 +1,94 @@
+
+$fcai-w-l: 90%;
+.flex-contenu-accordeon-wrapper {
+    margin-bottom: $flex-all-mb;
+    .contenu-accordeon-item {
+        position: relative;
+        background: $blue-light;
+        padding: 32px $mCol;
+        margin-bottom: 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        @include tablet {
+            padding: $tCol;
+        }
+        @include laptopS {
+            padding: 24px 32px;
+        }
+
+        .cai-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        .cai-titre {
+            width: 7 * $mCol;
+            margin-bottom: 0px;
+            @include hando-b;
+            font-size: 15px;
+            line-height: 23px;
+            @include tracking(25);
+            @include tablet {
+                width: 13 * $tCol;
+            }
+            @include laptopS {
+                width: $fcai-w-l;
+            }
+
+        }
+        .cai-ic {
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $white;
+            transform: translateX(calc(50% - 10px));
+            @include tablet {
+                transform: translateX(50%);
+            }
+            &:before {
+                position: absolute;
+                display: block;
+                width: 10px;
+                height: 10px;
+                content: "";
+                background: url("../ASSETS/IMAGES/common/VECTOR/simple-plus-orange.svg") center no-repeat;
+                background-size: contain;
+                left: 50%;
+                top: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+            @include laptopS {
+                right: 10px;
+            }
+        }
+    }
+        .cai-contenu {
+            display: none;
+            @include tablet {
+                width: 13 * $tCol;
+            }
+            @include laptopS {
+                width: $fcai-w-l;
+            }
+            p {
+                margin-bottom: 0px;
+                margin-top: 24px;
+            }
+        }
+
+    }
+    .contenu-accordeon-item-active {
+        @include trans-a;
+        .cai-contenu {
+            display: block;
+        }
+        .cai-header {
+        .cai-ic {
+            &:before {
+                background: url("../ASSETS/IMAGES/common/VECTOR/simple-minus-orange.svg") center no-repeat;
+            }
+        }
+    }
+    }
+}

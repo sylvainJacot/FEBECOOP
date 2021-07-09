@@ -1,0 +1,225 @@
+$tab-nav-item-radio-size: 22px;
+
+.form-section-type-a {
+    background: $blue-light;
+    padding: 56px 0px 72px 0px;
+    @include tablet {
+        padding: 80px 0px 80px 0px;
+    }
+    @include laptopS {
+        padding: 88px 0px 88px 0px;
+    }
+    .form-section-type-a-wrapper {
+        @include laptopL {
+            width: 17 * $dCol;
+        }
+        .form-type-a-header{
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .form-type-a-title {
+                @include hando-sb;
+                color: $blue-1;
+                font-size: 26px;
+                line-height: 30px;
+                @include tablet {
+                    width: 15 * $tCol;
+                    text-align: center;
+                }
+                @include laptopS {
+                    width: 17 * $lCol; 
+                    font-size: 36px;
+                    line-height: 42px;
+                }
+            }
+            .form-type-a-content {
+                @include hando-l;
+                color: $blue-3;
+                font-size: 14px;
+                line-height: 26.62px;
+                @include tracking(25);
+                margin: 32px 0px 40px 0px;
+                @include tablet {
+                    width: 13 * $tCol;
+                    text-align: center;
+                }
+                @include laptopS {
+                    width: 15 * $lCol;
+                    margin: 40px 0px 48px 0px; 
+                }
+            }
+        }
+        .form-tabulations-wrapper {
+            @include tablet {
+                display: flex;
+                justify-content: center;
+                margin-bottom: $margin-bottom-between-el-m * 2;
+            }
+            @include laptopS {
+                margin-bottom: $margin-bottom-between-el-l;
+            }
+            .tab-nav-item {
+                position: relative;
+                display: flex;
+                align-items: center;
+                @include hando-b;
+                font-size: 13px;
+                line-height: 24px;
+                @include tracking(100);
+                text-transform: uppercase;
+                color: $blue-1;
+                margin-bottom: 40px;
+                cursor: pointer;
+
+                @include tablet {
+                    margin-bottom: 0px;
+                }
+
+                &:first-child {
+                    @include tablet {
+                        margin-right:  $lCol;
+                    }
+                }
+                .tab-nav-item-radio {
+                    position: relative;
+                    content: "";
+                    display: inline-block;
+                    width: $tab-nav-item-radio-size;
+                    height: $tab-nav-item-radio-size;
+                    border: 2px solid $blue-light-2;
+                    border-radius: 50%;
+                    margin-right: 8px;
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        display: block;
+                        width: 0px;
+                        height: 0px;
+                        background: $orange-1;
+                        border-radius: 50%;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+
+            }
+            .tab-nav-item-active {
+                color: $orange-1;
+                text-decoration: underline;
+                .tab-nav-item-radio {
+
+                    &:after {
+                        width: 12px;
+                        height: 12px;
+                        @include trans-a;
+                    }
+                }
+            }
+        }
+
+        .form-wrapper-item {
+            display: none;
+            .frm_form_field {
+                .form-wrapper-item-title {
+                    @include hando-b;
+                    color: $blue-1;
+                    font-size: 13px;
+                    line-height: 24px;
+                    @include tracking(100);
+                    text-transform: uppercase;
+                    margin-bottom: 24px;
+                }
+            }
+            .frm_forms {
+                position: relative;
+                padding-bottom: 48px;
+                margin-bottom: 48px;
+                @include tablet {
+                    padding-bottom: 64px;
+                    margin-bottom: 64px;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                    background: $blue-light-2;
+
+                    @include laptopS {
+                        width: 20 * $lCol;
+                    }
+                    @include laptopL {
+                        width: 15 * $dCol;
+                    }
+                }
+                form {
+                    .frm_form_fields {
+                        fieldset {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .form-wrapper-item-active {
+            display: block;
+        }
+        .form-type-a-footer {
+            p {
+                @include hando-b;
+                color: $blue-1;
+                font-size: 14px;
+                line-height: 26.62px;
+                @include tracking(25);
+                text-align: center;
+                @include laptopS {
+                    width: 14 * $tCol;
+                    margin: auto;
+                }
+            }
+            &:hover {
+                color: $orange-1;
+            }
+
+        }
+        #js-download-form {
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+    }
+}
+
+#contact-form-section {
+    background: $white;
+
+    .form-section-type-a-wrapper {
+        @include laptopS {
+            width: 19 * $lCol;
+        }
+        @include laptopL {
+            width: 15 * $dCol;
+        }
+        .form-type-a-header {
+            .form-type-a-title {
+                margin-bottom:40px;
+                @include laptopS {
+                    margin-bottom:48px;
+                }
+            }
+        }
+    }
+    #frm_form_1_container {
+       &:after {
+            display: none;
+        }
+    }
+}

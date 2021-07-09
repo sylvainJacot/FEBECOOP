@@ -1,0 +1,198 @@
+$intertitre-bottom-margin: 32px;
+$intertitre-bottom-margin-t: 40px;
+
+@mixin header-nav-links {
+    @include hando-b;
+    color: $white;
+    font-size: 15px;
+    line-height: 18px;
+    @include tracking(100);
+    display: block;
+    @include tablet {
+        font-size: 15px;
+        line-height: 18px;
+        text-transform: none;
+    }
+    @include laptopS {
+        @include hando-m;
+        font-size: 9px;
+        line-height: 13px;
+        text-transform: uppercase;
+    }
+    @include laptopL {
+        font-size: 10px;
+        line-height: 18px;
+    }
+}
+
+// ===== TITRE HEADER =====
+@mixin top-titre-header {
+    @include hando-sb;
+    color: $orange-1;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 8px;
+    @include tracking(100);
+    @include tablet {
+        font-size: 15px;
+    }
+}
+@mixin titre-header {
+    @include hando-xl;
+    font-size: 28px;
+    line-height: 37px;
+    color: $blue-1;
+    display: inline-block;
+    position: relative;
+    // text-decoration: underline;
+    // text-decoration-color: $yellow-1;
+    // display: inline;
+    // border-bottom: 1px solid $orange-1;
+    span {
+        background-image: linear-gradient(to right, $red-2 0%, $red-2 100%);
+        background-repeat: repeat-x; 
+        background-position: 0 100%; 
+        background-size: 100% 1px; 
+        padding-bottom: 2px;
+      }
+
+    @include tablet {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    @include laptopL {
+        font-size: 45px;
+        line-height: 54px;
+    }
+}
+@mixin titre-header-neg {
+    @include titre-header;
+    color: $white;
+}
+
+// ===== TITRE =====
+@mixin titre-s-2 {
+    @include hando-sb;
+    color: $blue-1;
+    font-size: 22px;
+    line-height: 29px;
+    @include tablet {
+        font-size: 24px;
+        line-height: 31px;
+    }
+    @include laptopS {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    @include laptopL {
+        font-size: 30px;
+        line-height: 36px;
+    }
+}
+@mixin titre-card {
+    @include hando-sb;
+    color: $blue-1;
+    font-size: 18px;
+    line-height: 28px;
+    @include text-shave(3);
+    margin-bottom: 56px;
+    
+    @include laptopS {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    @include laptopL {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@mixin titre-card-type-a {
+    @include hando-sb;
+    color: $blue-1;
+    font-size: 18px;
+    line-height: 27px;
+    @include tracking(25);
+    margin-bottom: 56px;
+    
+    @include tablet {
+        font-size: 21px;
+        line-height: 26px;
+    }
+
+    @include laptopS {
+        font-size: 23px;
+        line-height: 27px;
+    }
+}
+// ===== INTERTIREs =====
+@mixin intertitre-a {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    @include hando-b;
+    color: $blue-1;
+    font-size: 12px;
+    line-height: 21px;
+    @include tracking(100);
+    text-transform: uppercase;
+
+    @include laptopS {
+        font-size: 13px;
+        line-height: 21px;
+    }
+}
+@mixin intertitre-a-underlined {
+    @include intertitre-a ;
+    &:before {
+        position: absolute;
+        display: none;
+        content: "";
+        bottom: -14px;
+        height: 8px;
+        width: 100%;
+        background: $white;
+
+        @include tablet {
+            display: block;
+        }
+    }
+
+}
+@mixin intertitre-b {
+    @include intertitre-a;
+    color: $orange-1;
+}
+@mixin intertitre-b-underlined {
+    @include intertitre-a-underlined;
+    color: $orange-1;
+}
+
+// =====    sous-INTERTIREs =====
+@mixin sous-intertitre {
+    @include hando-sb;
+    color: $white;
+    font-size: 22px;
+    line-height: 28px;
+    @include tablet {
+        font-size: 24px;
+        line-height: 37px;
+    }
+    @include laptopS {
+        font-size: 28px;
+        line-height: 40px;
+    }
+    @include laptopL {
+        font-size: 30px;
+        line-height: 42px;
+    }
+}
+
+// ===== PARAGRAPH =====
+@mixin text-card {
+    @include hando-l;
+    color: $blue-1;
+    font-size: 14px;
+    line-height: 26px;
+    @include tracking(25);
+}

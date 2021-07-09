@@ -1,0 +1,214 @@
+.contact-banner-section {
+    background: $blue-1;
+    position: relative;
+    &:before {
+        display: none;
+        @include tablet {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 447px;
+            height: 385px;
+            bottom: -110px;
+            right: -190px;
+            background: url("../ASSETS/IMAGES/common/VECTOR/illu-dots-publication-contact-banner.svg") center no-repeat;
+            background-size: contain;
+        }
+        @include laptopS {
+            width: 660px;
+        height: 640px;
+        bottom: -360px;
+        right: -290px;
+        }
+        @include laptopL {
+            width: 740px;
+            height: 640px;
+            bottom: -393px;
+            right: -209px;
+        }
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        background: $blue-1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        @include tablet {
+            top: unset;
+            width: 100%;
+            height: 400px;
+            background: $white;
+        }
+    }
+    .contact-banner-illu-container {
+        position: absolute;
+        top: - $bbc-m;
+        width: 310px;
+        height: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @include tablet {
+            width: 420px;
+            z-index: 0;
+            left: 156px;
+            top: - $bbc-t;
+            transform: translateX(-50%) translateY(0);
+        }
+        @include laptopS {
+            width: 488px;
+            left: 147px;
+            top: - $bbc-l;
+        }
+        @include laptopL {
+            left: 257px;
+            top: - $bbc-d;
+            width: 510px;
+        }
+    }
+    .contact-banner-section-wrapper {
+        padding: 40px 0 56px 0px;
+        background: $blue-1;
+        z-index: 1;
+        min-height: 318px;
+        @include tablet {
+            padding: 80px 0 88px 0px;
+            min-height: 503px;
+        }
+        @include laptopS {
+            padding: 56px 0 56px 0px; 
+            min-height: 397px;
+        }
+        @include laptopS{
+            padding: 64px 0 64px 0px; 
+            min-height: 386px;
+        }
+        .contact-banner-content-wrapper {
+            z-index: 1;
+            @include laptopS {
+                display: flex;
+                flex-direction: column;
+            }
+            @include laptopL {
+                flex-direction: row;
+                align-items: center;
+            }
+        .contact-banner-content-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include tablet {
+                align-items: flex-start;
+                width: 8 * $tCol;
+                margin-left: 8 * $tCol;
+            }
+            @include laptopS{
+                width: 12 * $lCol;
+                margin-left: 9 * $lCol;
+            }
+            @include laptopL {
+                width: 8 * $dCol;
+                margin-left: 9 * $dCol;
+            }
+            h2 {
+                @include titre-header-neg;
+                text-align: center;
+                @include tablet {
+                    text-align: left;
+                }
+            }
+            p {
+                @include hando-l;
+                color: $white;
+                font-size: 17px;
+                line-height: 26px;
+                margin: 40px 0px;
+                text-align: center;
+                @include tablet {
+                    text-align: left;
+                    font-size: 18px;
+                    line-height: 34px;
+                }
+                @include laptopS {
+                    font-size: 19px;
+                    line-height: 35px;
+                }
+            }
+        }
+        > .cta-a {
+            @include tablet {
+                padding: 24px 40px;
+                margin-left: 8 * $tCol;
+            }
+            @include laptopS{
+                padding: 24px 40px;
+                margin-left: 9 * $lCol;
+            }
+            @include laptopL{
+                position: absolute;
+                right: 0;
+                // margin-left: 3 * $dCol;
+            }
+        }
+        }
+    }
+}
+
+.contact-banner-section-far-from-footer {
+
+    &::after {
+        background: $blue-1;
+        @include tablet {
+            background: $blue-light;
+        }
+    }
+}
+
+#contact-banner-section-formation {
+    .contact-banner-illu-container {
+        position: absolute;
+        top: - $bbc-m;
+        width: 310px;
+        height: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        @include tablet {
+            width: 540px;
+            z-index: 0;
+            left: 106px;
+            top: - $bbc-t;
+        }
+        @include laptopS {
+            width: 500px;
+            left: 147px;
+            top: - $bbc-l;
+        }
+        @include laptopL {
+            left: 207px;
+            top: - $bbc-d;
+            width: 536px;
+        }
+    } 
+}
+
+#publication-contact-banner {
+    margin-top: $bbc-m + 40px;
+
+    @include tablet {
+        margin-top: $bbc-t + 40px;  
+    }
+    @include laptopS {
+        margin-top: $bbc-l + 40px;  
+    }
+    @include laptopL {
+        margin-top: $bbc-d + 40px;  
+    }
+}

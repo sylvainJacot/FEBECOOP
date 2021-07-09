@@ -1,0 +1,75 @@
+.addtocalendar var{
+    display:none
+}
+.addtocalendar{
+    position:relative;
+    display:inline-block;
+    background:transparent!important
+}
+.atcb-link{
+    @include cta-b;
+    font-size: 11px;
+}
+.atcb-link:focus~ul,
+.atcb-link:active~ul,
+.atcb-list:hover{
+    visibility:visible
+}
+.atcb-list{
+    visibility:hidden;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    z-index:900;
+    padding: 16px;
+    @include shadow-a-nopic;
+
+    @include tablet {
+        width: 8 * $tCol;
+    }
+}
+.atcb-list,
+.atcb-item{
+    list-style:none;
+    margin:0;
+    padding:0;
+    background:$white;
+    .atcb-item-link{
+        @include hando-sb;
+        color: $blue-1;
+        font-size:14px;
+        padding:5px 15px;
+        text-decoration:none;
+        outline:none;
+        display:block;
+    }
+}
+.atcb-item{
+    float:none;
+    text-align:left
+}
+
+.atcb-item:hover{
+    position:relative;
+    z-index:900;
+    cursor:pointer;
+    text-decoration:none;
+    outline:none;
+    .atcb-item-link {
+        color: $orange-1;
+    }
+}
+
+.atc-style-blue .atcb-link,.atc-style-blue .atcb-link:hover,.atc-style-blue .atcb-link:active,.atc-style-blue .atcb-link:focus{
+@include cta-b;
+}
+    
+.atc-style-blue .atcb-list{
+    width:170px;
+    border-radius:0px 0px 8px 8px;
+    @include shadow-a-nopic;
+}
+
+
+

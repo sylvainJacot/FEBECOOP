@@ -1,0 +1,25 @@
+.main-projet-accompagne-content {
+    padding-top: 64px;
+    padding-bottom: $bbc-m + 80px;
+    @include tablet {
+        margin-top: calc(-80px * 2);
+        padding-bottom: $bbc-t + 150px;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l + 116px;
+    }
+    @include laptopL {
+        margin-top: calc(-104px * 2);
+        padding-bottom: $bbc-d -16px;
+    }
+    .section-projet-accompagne-content {
+        margin: auto;
+        @include laptopS {
+            width: 19 * $lCol;
+        }
+        @include laptopL {
+            width: 15 * $dCol;
+        }
+    }
+}
+

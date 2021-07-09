@@ -1,0 +1,99 @@
+.accompagnement-conseils-contenu-section{
+    padding-bottom: $bbc-m + 40px;
+    @include tablet {
+        padding-bottom: $bbc-t + 40px;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l + 10px;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d + 10px;
+    }
+    .accompagnement-conseils-contenu-main {
+        margin-bottom: 40px;
+        @include laptopS {
+            display: flex;
+            justify-content: center;
+        }
+        @include laptopL {
+            padding: 0 $dCol;
+        }
+        .accompagnement-conseils-content {
+            margin-bottom: 40px;
+            @include laptopS {
+                margin-bottom: 0px;
+                width: 14 * $lCol;
+                margin-right: 2 * $lCol;
+            }
+            @include laptopL {
+                width: 12 * $dCol;
+                margin-right: 2 * $dCol; 
+            }
+        }
+    }
+    .accompagnement-conseils-aside-wrapper {
+        display: flex;
+        flex-direction: column;
+    .accompagnement-conseils-aside {
+        background-color: $orange-light;
+        padding: 48px $mCol;
+        border-radius: 8px;
+        margin-bottom: 32px;
+        @include tablet {
+            padding: 48px 2 * $tCol;
+        }
+        @include laptopS {
+            padding: 40px 24px 24px 24px;
+            width: 7 * $lCol;
+        }
+        @include laptopL {
+            padding: 40px $dCol;
+            width: 7 * $dCol;
+        }
+        .accompagnement-conseils-aside-titre {
+            @include hando-b;
+            font-size: 13px;
+            line-height: 24px;
+            @include tracking(100);
+            color: $blue-1;
+            text-transform: uppercase;
+        }
+        .accompagnement-conseils-aside-text {
+            @include hando-l;
+            font-size: 13px;
+            line-height: 25px;
+            @include tracking(25);
+            color: $blue-3;
+            margin: 32px 0px;
+            @include laptopS {
+                margin: 16px 0px;
+            }
+        }
+        .accompagnement-conseils-aside-links {
+            .accompagnement-conseils-aside-link-item {
+                position: relative;
+                margin: 4px 0px;
+                @include laptopS {
+                    margin: 8px 0px;
+                }
+                &:not(:first-of-type) {
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        width: 100%;
+                        background-color: $white;
+                        top: -2px;
+                        @include laptopS {
+                            top: -4px;
+                        }
+                    }
+            }
+            }
+        }
+        
+    }
+    }
+}
+

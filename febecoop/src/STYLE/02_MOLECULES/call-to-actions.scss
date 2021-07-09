@@ -1,0 +1,507 @@
+$cta-newsletter-pseudo-el-size : 50px;
+$cta-newsletter-pseudo-arrow-size : 10px;
+
+// ================ CTAs ================
+// =======================================
+@mixin cta-a {
+    display: block;
+    @include hando-b;
+    font-size: 12px;
+    @include tracking(150);
+    line-height: 21px;
+    color: $white;
+    background: $orange-1;
+    border-radius: 8px;
+    padding: 16px 32px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    height: fit-content;
+    @include trans-a;
+    @include tablet {
+        display: inline-block;
+        width: fit-content;
+    }
+    &:hover {
+        background: $red-1;
+        @include trans-a;
+    }
+}
+
+@mixin cta-b {
+    @include hando-b;
+    font-size: 12px;
+    @include tracking(150);
+    line-height: 21px;
+    color: $orange-1;
+    background: transparent;
+    border-radius: 8px;
+    padding: 16px 32px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid $orange-1;
+    text-transform: uppercase;
+    display: inline-block;
+    height: fit-content;
+    @include trans-a;
+    cursor: pointer;
+    @include tablet {
+        width: fit-content;
+    }
+    &:hover {
+        background: $orange-1;
+        border: 2px solid $orange-1;
+        color: $white;
+        // border: 2px solid $red-1;
+        @include trans-a;
+    }
+}
+@mixin cta-c {
+    @include hando-b;
+    font-size: 12px;
+    @include tracking(150);
+    line-height: 21px;
+    color: $orange-1;
+    padding: 8px 0px 8px 24px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    @include trans-a;
+    position: relative;
+    display: block;
+    text-align: left;
+
+    &:before {
+        position: absolute;
+        display: block;
+        width: 8px;
+        height: 8px;
+        content: "";
+        background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-orange.svg") center no-repeat;
+        background-size: contain;
+        left: 4px;
+        top: calc(50% - 2px);
+        transform: translateY(-50%) rotate(-90deg);
+        @include trans-a;
+    }
+    &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 0;
+        left: 24px;
+        bottom: 6px;
+        height: 2px;
+        background: $orange-1;
+        @include trans-a;
+    }
+
+    @include tablet {
+        width: fit-content;
+    }
+    &:hover {
+        @include trans-a;
+        &:before {
+            left: 10px;
+        }
+        @include laptopS {
+            &:after {
+                width: calc(100% - 24px);
+                @include trans-a;
+            }
+        }
+    }
+}
+@mixin cta-d {
+    @include hando-b;
+    font-size: 13px;
+    @include tracking(100);
+    line-height: 24px;
+    color: $orange-1;
+    text-align: center;
+    text-transform: uppercase;
+    @include trans-a;
+    position: relative;
+    padding-left: 40px;
+    height: fit-content;
+
+    &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 0;
+        left: 40px;
+        bottom: -1px;
+        height: 2px;
+        background: $orange-1;
+        @include trans-a;
+    }
+
+    &:before {
+        position: absolute;
+        display: block;
+        width: 24px;
+        height: 24px;
+        content: "";
+        background: url("../ASSETS/IMAGES/common/VECTOR/full-arrow-orange.svg") center no-repeat;
+        background-size: contain;
+        left: 0;
+        top: 10px;
+        transform: translateY(-50%);
+        @include trans-a;
+    }
+
+    @include tablet {
+        width: fit-content;
+    }
+    &:hover {
+        @include trans-a;
+        &:before {
+            left: 8px;
+        }
+        &:after {
+            width: calc(100% - 40px);
+        }
+    }
+}
+@mixin cta-e {
+    @include hando;
+    font-size: 10px;
+    @include tracking(150);
+    line-height: 21px;
+    color: $orange-1;
+    padding: 8px 0px 8px 24px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    @include trans-a;
+    position: relative;
+    display: block;
+    text-align: left;
+
+    &:before {
+        position: absolute;
+        display: block;
+        width: 8px;
+        height: 8px;
+        content: "";
+        background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-orange.svg") center no-repeat;
+        background-size: contain;
+        left: 4px;
+        top: calc(50% - 2px);
+        transform: translateY(-50%) rotate(-90deg);
+        @include trans-a;
+    }
+
+    @include tablet {
+        width: fit-content;
+    }
+    &:hover {
+        @include trans-a;
+        &:before {
+            left: 10px;
+        }
+    }
+}
+@mixin cta-flex-a {
+    @include cta-b;
+    @include tablet {
+        @include cta-c;
+        border: none;
+
+        &:hover {
+            color: $orange-1;
+            background: none;
+            border: none;
+        }
+    }
+}
+@mixin flex-download-cta {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    border-radius: 8px;
+    background: $orange-light;
+    color: $orange-1;
+    padding: 32px $mCol 32px 3 * $mCol;
+    @include hando-b;
+    font-size: 12px;
+    line-height: 22px;
+    @include tracking(100);
+    text-transform: uppercase;
+    @include trans-a;
+
+    @media (min-width:500px) {
+        padding: 32px $mCol 32px 2 * $mCol;
+    }
+
+    @include tablet {
+        padding: 40px $tCol 40px 3 * $tCol;
+    }
+    @include laptopS {
+        padding: 40px $lCol 40px 3 * $lCol;
+    }
+    @include laptopL {
+        padding: 32px $dCol 32px 2 * $dCol;
+    }
+
+    &:before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 38px;
+        height: 38px;
+        background: url("../ASSETS/IMAGES/common/VECTOR/doc-to-download.svg") center no-repeat;
+        background-size: contain;
+        top: 50%;
+        left: calc(38px - 16px);
+        transform: translateY(-50%);
+        @include trans-a;
+        @include tablet {
+            left: 45px;
+        }
+        @include laptopS {
+            left: 58px;
+        }
+        @include laptopL {
+            left: 44px;
+        }
+    }
+
+    &:hover {
+        color: $red-1;
+        background: $red-light;
+        @include trans-a;
+
+        &:before {
+            background: url("../ASSETS/IMAGES/common/VECTOR/doc-to-download-red.svg") center no-repeat;
+            @include trans-a;
+        }
+    }
+
+}
+@mixin back-cta {
+    position: relative;
+    display: block;
+    @include hando-b;
+    font-size: 12px;
+    @include tracking(150);
+    line-height: 21px;
+    color: $white;
+    background: $orange-1;
+    border-radius: 8px;
+    padding: 16px 32px 16px 50px;
+    width: 100%;
+        text-align: center;
+    text-transform: uppercase;
+    height: fit-content;
+    @include trans-a;
+    @include tablet {
+        display: inline-block;
+        width: fit-content;
+    }
+    &:before {
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        content: "";
+        background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-white.svg") center no-repeat;
+        background-size: contain;
+        left: calc(25px - 3px);
+        top: calc(50% - 1px);
+        transform: translateY(-50%) rotate(90deg);
+        @include trans-a;
+    }
+    &:hover {
+        background: $red-1;
+        @include trans-a;
+    }
+}
+
+@mixin newsletter-cta {
+    position: relative;
+    overflow: hidden;
+    @include hando-b;
+    font-size: 12px;
+    @include tracking(150);
+    line-height: 21px;
+    color: $orange-1;
+    // background: transparent;
+    background: $orange-1;
+    border-radius: 8px;
+    padding: 16px 32px + $cta-newsletter-pseudo-el-size 16px 32px;
+    width: 100%;
+    text-align: left;
+    border: 2px solid $orange-1;
+    text-transform: uppercase;
+    display: inline-block;
+    height: fit-content;
+    cursor: pointer;
+    z-index: 0;
+    @include laptopS {
+        width: 10 * $dCol;
+    }
+    @include laptopL {
+        width: 7 * $lCol;
+    }
+
+
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: $cta-newsletter-pseudo-el-size * 2;
+        width: calc(100% - #{$cta-newsletter-pseudo-el-size});
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $white;
+        @include trans-a;
+        z-index: -1;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    &:before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 50%;
+        right: calc((#{$cta-newsletter-pseudo-el-size} / 2) - #{$cta-newsletter-pseudo-arrow-size});
+        width: 16px;
+        height: 16px;
+        transform: translateY(-50%) rotate(-90deg);
+        background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-white.svg") center no-repeat;
+        background-size: $cta-newsletter-pseudo-arrow-size;
+        z-index: 1;
+    }
+
+    &:hover {
+        color: $white;
+        // color: $orange-1;
+        @include trans-a;
+        transition-delay: 0.2s;
+        &:after {
+            width: 0%;          
+            z-index: -1;
+            @include trans-a;
+        }
+    }
+}
+
+.cta-a {
+    @include cta-a; 
+ }
+.cta-b {
+    @include cta-b; 
+}
+.cta-c {
+    @include cta-c; 
+ }
+ .cta-d {
+    @include cta-d; 
+ }
+ .cta-e {
+     @include cta-e;
+ }
+ .cta-flex-a {
+    @include cta-flex-a; 
+ }
+ .flex-download-cta {
+     @include flex-download-cta;
+     margin-bottom: $flex-all-mb;
+ }
+ .back-cta {
+    @include back-cta;
+ }
+
+ .newsletter-cta {
+     @include newsletter-cta;
+ }
+
+
+// ================ ICONS ================
+// =======================================
+
+@mixin simple-arrow {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-orange.svg") center no-repeat;
+    background-size: contain;
+    @include trans-a;
+}
+
+@mixin arrow-button {
+    &:before {
+        @include simple-arrow;
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid $white;
+        background: none;
+    }
+}
+@mixin arrow-button-active {
+    @include arrow-button;
+    &:before {
+        transform: rotate(180deg);
+        z-index: 1;
+        @include trans-a;
+    }
+    &:after {
+        background: $white;
+    }
+}
+
+@mixin scroll-down-button {
+    display: block;
+    position: relative;
+    width: 72px;
+    height: 72px;
+    background: $white;
+    border-radius: 50%;
+    @include trans-a;
+    &:before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-blue.svg") center no-repeat;
+        background-size: contain;
+    }
+    &:hover {
+        transform: scale(1.08);
+        @include trans-a;
+    }
+
+}
+
+@mixin button-arrow {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background: $white;
+    border-radius: 50%;
+    &:before {
+        @include simple-arrow;
+        transform: translate(-50%,-50%) rotate(-90deg);
+        top: 50%;
+        left: 50%;
+    }
+}
+.button-arrow {
+    @include button-arrow;
+}

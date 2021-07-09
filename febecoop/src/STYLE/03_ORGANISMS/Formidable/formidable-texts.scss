@@ -1,0 +1,31 @@
+@mixin frm-input-label {
+    @include hando-l;
+    color: $blue-3;
+    font-size: 11px;
+    line-height: 26.62px;
+    @include tracking(200);
+    text-transform: uppercase;
+}
+
+@mixin frm-input-typing-text {
+        // style text
+        @include hando-b;
+        color: $blue-1;
+        font-size: 11px;
+        line-height: 26.62px;
+        @include tracking(200);
+}
+
+@mixin frm-input-placeholder {
+    @include hando-l;
+    color: $blue-3;
+    text-transform: uppercase;
+}
+
+@mixin frm-checkbox-label {
+    @include hando-l;
+    color: $blue-3;
+    font-size: 14px;
+    line-height: 26.62px;
+    @include tracking(25);
+}

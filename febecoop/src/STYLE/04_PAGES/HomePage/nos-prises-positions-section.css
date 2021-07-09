@@ -1,0 +1,27 @@
+.nos-prises-positions-section {
+  padding-top: 256px; }
+  .nos-prises-positions-section .nos-prises-positions-section-wrapper {
+    position: relative; }
+    .nos-prises-positions-section .nos-prises-positions-section-wrapper .nos-prises-positions-pic-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 256px;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-256px);
+      -ms-transform: translateX(-50%) translateY(-256px);
+      transform: translateX(-50%) translateY(-256px);
+      width: 100vw;
+      background-color: blue;
+      position: absolute; }
+      .nos-prises-positions-section .nos-prises-positions-section-wrapper .nos-prises-positions-pic-wrapper > img {
+        min-width: 100%;
+        min-height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover; }

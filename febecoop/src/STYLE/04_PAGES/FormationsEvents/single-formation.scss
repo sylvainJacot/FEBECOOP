@@ -1,0 +1,107 @@
+.evenement-formation-single-section{
+.evenement-formation-single-wrapper  {
+    margin-bottom: 80px;
+    .evenement-formation-single-content  {
+        padding-top: 80px;
+        @include laptopS {
+        display: flex;
+        justify-content: space-between;
+        }
+        .evenement-formation-single-content-flex {
+            @include laptopS {
+                width: 14 * $lCol;
+            }
+            @include laptopL {
+                width: 12 * $dCol;
+            }
+        }
+
+    }
+    .evenement-formation-single-content-details {
+        padding: 32px 24px;
+        background: $orange-light;
+        border-radius: 8px;
+        margin-top: 40px;
+
+        @include tablet {
+            padding: 64px 2 * $tCol;
+            margin-top: 80px;
+        }
+
+        @include laptopS {
+            margin-top: 0;
+            width: 7 * $lCol;
+            padding: 24px 16px;
+            height: fit-content;
+        }
+
+        @include laptopL {
+            padding: 24px $dCol;
+            width: 7 * $dCol;
+        }
+
+        .efscd-titre {
+            @include hando-b;
+            color: $blue-1;
+            font-size: 13px;
+            line-height: 24px;
+            @include tracking(100);
+            text-transform: uppercase;
+            margin: 0px;
+        }
+        .efscd-liste-details {
+            margin: 20px 0px;
+            .efscd-liste-detail-item {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 16px 0px;
+                &:not(:last-child) {
+                    &:before {
+                    position: absolute;
+                    display: block;
+                    height: 1px;
+                    width: 100%;
+                    content: "";
+                    background: $white;
+                    bottom: 0;
+                    }
+                }
+                .efscd-liste-detail-item-icone {
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                }
+                .efscd-date-ic{
+                    background: url("../ASSETS/IMAGES/FORMATIONRENCONTRES/VECTOR/ic-ev-calendar.svg") center no-repeat;
+                    background-size: contain;
+                }
+                .efscd-place-ic {
+                    background: url("../ASSETS/IMAGES/FORMATIONRENCONTRES/VECTOR/ic-ev-place.svg") center no-repeat;
+                    background-size: contain;
+                }
+                .efscd-price-ic {
+                    background: url("../ASSETS/IMAGES/FORMATIONRENCONTRES/VECTOR/ic-ev-price.svg") center no-repeat;
+                    background-size: contain;
+                }
+                .efscd-liste-detail-content {
+                    margin-bottom: 0;
+                    padding-left: 32px;
+                }
+            }
+        }
+        .efscd-ctas {
+            display: flex;
+            flex-direction: column;
+            .addtocalendar {
+                margin-bottom: 16px;
+            }
+            .cta-a {
+                @include laptopS {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+}

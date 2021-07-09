@@ -1,0 +1,44 @@
+.hero-section-type-h {
+    background: $orange-light;
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    @include tablet {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    @include laptopS {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @include laptopL {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .hero-section-type-h-wrapper {
+
+        .hero-section-type-h-content {
+            display: flex;
+            flex-direction: column;
+
+            @include tablet {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .hero-section-type-h-content-text {
+                .hero-section-type-h-content-toptitle {
+                    @include top-titre-header;
+                }
+                h1 {
+                    @include titre-header;
+                }
+            }
+        }
+    }
+}

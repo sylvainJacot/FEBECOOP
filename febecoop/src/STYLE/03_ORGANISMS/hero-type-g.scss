@@ -1,0 +1,45 @@
+$hstg-img-h-m : 96px;
+$hstg-img-h-t : 130px;
+$hstg-img-h-l : 200px;
+$hstg-img-h-d : 260px;
+
+.hero-section-type-g {
+    background: $orange-light;
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 64px + $hstg-img-h-m;
+
+    @include tablet {
+        padding-top: 72px;
+        padding-bottom: 72px + $hste-img-h-t;
+    }
+    @include laptopS {
+        padding-top: 120px;
+        padding-bottom: 80px + $hste-img-h-l;
+    }
+    @include laptopL {
+        padding-top: 128px;
+        padding-bottom: 88px + $hste-img-h-d;
+    }
+
+    .hero-section-type-g-wrapper  {
+
+        .hero-section-type-g-content {
+            display: flex;
+            flex-direction: column;
+            @include tablet {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .hero-section-type-g-content-text {
+                h1 {
+                    @include titre-header;
+                }
+            }
+            .hero-section-type-g-content-filtres {
+
+            }
+        }
+    }
+}

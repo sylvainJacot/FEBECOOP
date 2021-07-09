@@ -1,0 +1,121 @@
+.search-results-section {
+    padding-bottom: $bbc-m + 40px;
+    @include tablet {
+        padding-bottom: $bbc-t + 40px;
+    }
+    @include laptopS {
+        padding-bottom: $bbc-l + 40px;
+    }
+    @include laptopL {
+        padding-bottom: $bbc-d + 40px;
+    }
+    .nav-search-laptop {      
+    top: -325px;
+    }
+    .search-results-wrapper {
+        margin: auto;
+        @include laptopS {
+            width: 15 * $lCol;
+        }
+        @include laptopL {
+            width: 15 * $dCol;
+        }
+        .search-results-total {
+            @include hando-sb;
+            font-size: 30px;
+            line-height: 36px;
+            color: $blue-1;
+            padding: 40px 0;
+            @include laptopS {
+                padding: 88px 0;
+                font-size: 36px;
+                line-height: 42px;
+            }
+        }
+        .search-result-item {
+            display: flex;
+            flex-direction: column;
+            padding:32px 0;
+            position: relative;
+            cursor: pointer;
+
+            @include laptopS {
+                padding:32px $lCol;
+            }
+            @include laptopL {
+                padding:32px $dCol;
+            }
+
+            &:before {
+                position: absolute;
+                content: "";
+                display: block;
+                top: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $blue-light;
+                @include laptopS {
+                    width: calc(100% - 2 * #{$lCol});
+                }
+                @include laptopL {
+                    width: calc(100% - 2 * #{$dCol});
+                }
+            }
+            &:hover {
+                background-color: $blue-light;
+                @include trans-a;
+            }
+            .search-result-item_tag {
+                @include hando-l;
+                display: inline-block;
+                font-size: 12px;
+                line-height: 24px;
+                color: $blue-1;
+                @include tracking(100);
+                padding: 0 8px;
+                width: fit-content;
+                margin-bottom: 8px;
+                text-transform: uppercase;
+
+        
+            }
+            #tag-actualites {
+                background-color: $blue-1-30;
+            }
+            #tag-publications {
+                background-color: $purple-2-30;
+            }
+            #tag-projet-accompagnes {
+                background-color: $yellow-1-40;
+            }
+            #tag-notes-outils {
+                background-color: $yellow-1-30; 
+            }
+            #tag-projet-partenaires {
+                background-color: $orange-1-30;
+            }
+            #tag-formation-evenement {
+                background-color: $red-1-30;
+            }
+            #tag-domaines-expertises{
+                background-color: $red-1-40;
+            }
+            #tag-default{
+                background-color: $blue-1-20;
+            }
+            .search-result-item-title {
+                margin-bottom: 24px
+            }
+            a {
+                @include hando-sb;
+                font-size: 20px;
+                line-height: 30px;
+                color: $blue-1;
+                @include tablet {
+                    font-size: 24px;
+                    line-height: 34px;
+                }
+            }
+        }
+    }
+}
