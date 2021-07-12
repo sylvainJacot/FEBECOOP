@@ -1,5 +1,5 @@
-$cta-newsletter-pseudo-el-size : 50px;
-$cta-newsletter-pseudo-arrow-size : 10px;
+$cta-newsletter-pseudo-el-size : 72px;
+$cta-newsletter-pseudo-arrow-size : 12px;
 
 // ================ CTAs ================
 // =======================================
@@ -331,7 +331,7 @@ $cta-newsletter-pseudo-arrow-size : 10px;
     // background: transparent;
     background: $orange-1;
     border-radius: 8px;
-    padding: 16px 32px + $cta-newsletter-pseudo-el-size 16px 32px;
+    padding: 24px 32px + $cta-newsletter-pseudo-el-size 24px 32px;
     width: 100%;
     text-align: left;
     border: 2px solid $orange-1;

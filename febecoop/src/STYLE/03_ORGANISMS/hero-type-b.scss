@@ -143,6 +143,7 @@ $hstb-intro-h-t : 96px;
 }
 
 #projets-accompagnes-hero-section {
+
     .hero-section-type-b-content {
         .hero-section-pic-wrapper {
 
@@ -150,6 +151,17 @@ $hstb-intro-h-t : 96px;
                 height: 520px;
 
             }
+        }
+    }
+}
+
+.nl-projets-accompagnes {
+    .hero-section-type-b-content {
+        @include laptopS {
+            min-height: 506px;
+        }
+        @include laptopL {
+            min-height: 574px;
         }
     }
 }

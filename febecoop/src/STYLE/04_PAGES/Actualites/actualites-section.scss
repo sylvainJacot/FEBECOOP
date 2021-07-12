@@ -40,6 +40,9 @@
             @include laptopS {
                 grid-gap: $dCol;
             }
+            > a {
+                opacity: 1 !important;
+            }
         }
         .actualites_loadmore {
             display: block;
@@ -54,3 +57,9 @@
     }
 
 }
+
+// .pagination-actualites {
+//     position: fixed;
+//     pointer-events: none;
+//     opacity: 0;
+// }

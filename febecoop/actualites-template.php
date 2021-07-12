@@ -20,8 +20,8 @@ $terms = get_terms('categories_actualites');
       </div>
 
       <div class="hero-section-type-g-content-filtres filtres-type-a-container js-filtres-type-a-container">
-        <p class="filtres-type-a-title">Filtrer par</p>
-        <ul class="filtres-types-a-filtres-container js-filtres-types-a-filtres-container">
+        <p class="filtres-type-a-title"><?php pll_e('Filtrer par');?></p>
+        <ul class="filtres-types-a-filtres-container" id="js-filtres-types-a-filtres-container">
 
           <?php foreach ($terms as $tag) : ?>
             <?php $term_link = get_term_link($tag); ?>
@@ -73,8 +73,8 @@ $terms = get_terms('categories_actualites');
 
         <?php endwhile; ?>
 
-         
-        <!-- <?php
+         <!-- <div class="pagination-actualites">
+        <?php
                 $big = 9999999; // need an unlikely integer
                 echo paginate_links( [
 
@@ -85,12 +85,18 @@ $terms = get_terms('categories_actualites');
                 'prev_text' => 'Previous',
                 'next_text' => 'Next',
                 ] );
-            ?> -->
+            ?>
+            </div> -->
   
+              <div class="pagination-actualites">
+            <?php 
+             next_posts_link( '<span class="cta-a" id="actualites_loadmore">Voir plus</span>' ); 
+             ?>
+            </div>
 
-        <a class="cta-a" id="actualites_loadmore"><?php pll_e('Voir plus');?></a>
+        <!-- <a class="cta-a" id="actualites_loadmore"><?php pll_e('Voir plus');?></a> -->
 
-      <?php endif; ?>
+      <?php endif; wp_reset_postdata();?>
 
 
     </div>
@@ -110,20 +116,17 @@ $terms = get_terms('categories_actualites');
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
-
-// $('#articles').on('click', '.filter-npoq-container a', function(e) {
-
      
-$('.js-filtres-types-a-filtres-container a').click(function(e){
+$('#js-filtres-types-a-filtres-container a').click(function(e){
 
     e.preventDefault(); // annule effet ou autre sur le clic
+ 
+    var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
+    alert(next_page);
 
     $('#actualites-container a').fadeOut(); // vire les anciens item 
  
-    var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
-    // alert(next_page)
- 
-    $('.js-filtres-types-a-filtres-container a').each(function(){ $(this).removeClass('active'); })
+    $('#js-filtres-types-a-filtres-container a').each(function(){ $(this).removeClass('active'); })
     $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
    
     $('.actualites-section-wrapper').append(
@@ -138,16 +141,31 @@ $('.js-filtres-types-a-filtres-container a').click(function(e){
 </script>
 
 <script>
+  
 
-// $('#articles').on('click', '.filter-npoq-container a', function(e) {
+// $('#actualites_loadmore').click(function(e){
 
-     
-$('#actualites_loadmore').click(function(e){
-    console.log("hello")
-    e.preventDefault(); // annule effet ou autre sur le clic
 
+
+//     console.log("hello");
+
+//     e.preventDefault(); // annule effet ou autre sur le clic
+
+//     var next_page_actu = $('.next').attr('href');
+
+//     alert(next_page_actu);
+
+//     $('.actualites-section-wrapper').append(
+//         $('#actualites-container').load(next_page_actu + ' #actualites-container a') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
+//     );
+
+//     setTimeout(function() {
+//         $('#actualites-container a').css('opacity', '1'); // effet etc a appliquer apres le chargement 
+//     },500);
+    
           
 });
+
 </script>
 
 

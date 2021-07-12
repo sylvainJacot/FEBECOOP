@@ -22,15 +22,15 @@
         }
 
         &:last-child {
-            padding-bottom: $bbc-m;
+            padding-bottom: $bbc-m + 40px;
             @include tablet {
                 padding-bottom: $bbc-t + 40px;
             }
             @include laptopS {
-                padding-bottom: $bbc-l;
+                padding-bottom: $bbc-l + 40px;
             }
             @include laptopL {
-                padding-bottom: $bbc-d;
+                padding-bottom: $bbc-d + 40px;
             }
         }
         .main-members-mandats-section-row-wrapper {
@@ -40,6 +40,10 @@
             }
             @include laptopL {
                 width: 15 * $dCol;  
+            }
+
+            > .cta-b {
+                margin: 16px 0px;
             }
             .main-members-mandats-section-row-title {
                 @include hando-sb;

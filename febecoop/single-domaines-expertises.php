@@ -30,6 +30,9 @@ get_header();
 <div class="hero-section-type-b-introduction-wrapper grid">
     <div class="hero-section-type-b-intro-content">
         <p><?php echo the_field('resume'); ?></p>
+        <?php if (get_field('ajout_de_petit_texte_a_lintroduction_')) :?>
+        <p class="hero-section-type-b-petite-intro"><?php the_field('texte_supplementaire_introduction');?></p>
+        <?php endif;?>
     </div>
 </div>
 
@@ -54,7 +57,7 @@ get_header();
     'post__not_in' => array( get_the_ID())
     )); ?>
 <ul class="expertise-contenu-aside-liste-links">
-    <p class="expertise-contenu-aside-liste-titre">autres domaines d'expertises</p>
+    <p class="expertise-contenu-aside-liste-titre"><?php pll_e("autres domaines d'expertises");?></p> 
 <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 <li class="expertise-contenu-aside-link"> 
 <a class="cta-c" href="<?php the_permalink();?>"><?php the_title();?></a>
@@ -62,7 +65,7 @@ get_header();
 <?php endwhile; ?>
     </ul>
     <?php if($count_posts > 7) :?>
-        <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>expertises">Voir tous les domaines d’expertises</a>
+        <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>expertises"><?php pll_e('Voir tous les domaines d’expertises');?></a>
     <?php endif;?>
     </aside>
     </div>
@@ -74,8 +77,8 @@ get_header();
     <div class="slider-wrapper-type-b  other-news-section-wrapper grid">
                 
                 <div class="slider-type-b-header">
-                <h3>Success stories</h3>
-                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>success-stories" >Toutes les stories</a>
+                <h3><?php pll_e('Projets accompagnés');?></h3> 
+                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>success-stories" ><?php pll_e('Tous les projets accompagnés');?></a>
                 </div>
 
                 <div class="swiper-container slider-container-type-b js-type-b-swiper">
@@ -108,7 +111,7 @@ get_header();
                     <div class="swiper-button-next swiper-button-next-type-a js-button-next-actus"></div>
                     </div>
                 </div>
-                <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>actualites" >Toutes les actualités</a>
+                <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>succes-stories" ><?php pll_e('Tous les projets accompagnés');?></a>
     </div>
 </section>
 

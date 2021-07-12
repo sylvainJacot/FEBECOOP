@@ -68,8 +68,8 @@ get_header();
                         <?php if ($several_date  || $hour_start_days) : ?>
                             <div class="efscd-liste-detail-item">
                                 <span class="efscd-liste-detail-item-icone efscd-date-ic"></span>
-                                <p class="efscd-liste-detail-content">Du <?php the_field('ev-date-start'); ?>
-                                    </br> au <?php the_field('ev-date-end'); ?>
+                                <p class="efscd-liste-detail-content"><?php pll_e('Du');?> <?php the_field('ev-date-start'); ?>
+                                    </br> <?php pll_e('au');?> <?php the_field('ev-date-end'); ?>
                                     </br><?php the_field('several-days-heure-start'); ?>-<?php the_field('several-days-heure-end'); ?>
                                 </p>
                             </div>
@@ -117,8 +117,23 @@ get_header();
     </main>
 </section>
 
+
+
+
+
+<?php
+$one_day= get_field('one-day');
+$multi_days= get_field('several-days');
+
+$one_date = get_field('ev-date');
+$start_date = get_field('ev-date-start');
+$end_date = get_field('ev-date-end');
+?>
+
+
+<!-- if($one_day || $multi_days) : -->
 <!-- FORM TYPE A ==============
-=========================== -->
+// =========================== -->
 <section class="formation-form-section form-section-type-a" id="formation-form-section">
     <div class="form-section-type-a-wrapper grid">
 
@@ -176,6 +191,8 @@ get_header();
         }
     })();
 </script>
+
+
 
 <?php
 get_footer();

@@ -17,7 +17,7 @@ $post_type = $post_type_obj->labels->singular_name;
         <div class="hero-section-type-e-content">
             <div class="hero-section-type-e-content-text">
                 <div class="hero-section-type-e-content-toptitle-wrapper">
-                <p class="hero-section-type-e-content-toptitle"><?php echo $post_type;?></p>
+                <p class="hero-section-type-e-content-toptitle">Praktijkverhaal</p>
                 </div>
                 <h1><span><?php echo the_title(); ?></h1></span>
             </div>

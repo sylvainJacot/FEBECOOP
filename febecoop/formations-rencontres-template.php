@@ -44,6 +44,9 @@
 <div class="hero-section-type-b-introduction-wrapper grid">
         <div class="hero-section-type-b-intro-content">
         <p><?php the_field('introduction-hero');?></p>
+        <?php if (get_field('ajout_de_petit_texte_a_lintroduction_')) :?>
+        <p class="hero-section-type-b-petite-intro"><?php the_field('texte_supplementaire_introduction');?></p>
+        <?php endif;?>
         </div>
 </div>
 
@@ -53,21 +56,24 @@
 =========================== -->
 <section class="agenda-formations-section">
     <div class="agenda-formations-wrapper grid">
-        <div class="agenda-formations-header">
+        <?php
+            $loop = new WP_Query(
+            array(
+                'post_type' => 'formation-evenement',
+                'orderby' => 'date',
+                'posts_per_page' => -1
+            )
+            );
+        
+            //  $count_ev = $loop->post_count;
+            //  print_r($count_ev)
+            ?>
+        <div class="agenda-formations-header" id="js-agenda-formations-header">
             <h2 class="agenda-formation-titre">
                 <?php the_field('agenda_titre');?>
             </h2>
-            <div class="agenda-formations-container">
-
-                <?php
-                $loop = new WP_Query(
-                array(
-                    'post_type' => 'formation-evenement',
-                    'orderby' => 'date',
-                    'posts_per_page' => -1
-                )
-                );
-                ?>
+            </div>
+            <div class="agenda-formations-container" id="js-agenda-formations-container">
                 <?php if ($loop->have_posts()) :?>
                 <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
@@ -77,26 +83,26 @@
                 wp_reset_query(); ?>
                 
                 <?php else :?>
-                <p><?php the_field('texte_si_aucun_evenement');?></p>
+                <p class="agenda-formation-empty-texte"><?php the_field('texte_si_aucun_evenement');?></p>
                 <?php endif;?>
 
 
             </div>
         </div>
 
-    </div>
 </section>
 
 
 
 <!-- EVENEMENT A LA UNE==============
 =========================== -->
-<section class="evement-a-la-une-section">
-<div class="evement-a-la-une-section-wrapper grid">
-    <div class="evement-a-la-une-section-content">
 <?php
 $featured_posts = get_field('choisir_formationevenement');
 if( $featured_posts ): ?>
+<section class="evement-a-la-une-section">
+<div class="evement-a-la-une-section-wrapper grid">
+    <div class="evement-a-la-une-section-content">
+
 
     <?php foreach( $featured_posts as $post ): 
         setup_postdata($post); ?>
@@ -121,12 +127,13 @@ if( $featured_posts ): ?>
     <?php 
     // Reset the global post object so that the rest of the page works correctly.
     wp_reset_postdata(); ?>
-<?php endif; ?>
+
 
 </div>
         </div>
 </div>
 </section>
+<?php endif; ?>
 
 
 <!-- CATALOGUE DE FORMATIONS ==============
@@ -164,7 +171,7 @@ if( $featured_posts ): ?>
                 </div>
                 <div class="card-type-b-content">
                     <p class="card-type-b-chapeau"><?php the_field('titre_de_la_formationevenement'); ?></p>
-                    <p class="cta-c"><?php pll_e('Lire plus');?></p>
+                    <p class="cta-c"><?php pll_e('En savoir plus');?></p>
                 </div>
             </a>
 
@@ -186,7 +193,19 @@ if( $featured_posts ): ?>
 =========================== -->
 <?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner-formation"); ?>
 
+<script>
 
+    const AgendaHeader = document.querySelector('#js-agenda-formations-header');
+    const Agenda = document.querySelectorAll('#js-agenda-formations-container a');
+
+    if(Agenda.length === 0) {
+        AgendaHeader.style.display = "none";
+    } else {
+        AgendaHeader.style.display = "block";
+    }
+    
+
+</script>
 
 <?php
 get_footer();

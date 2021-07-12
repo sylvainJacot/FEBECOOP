@@ -45,6 +45,9 @@
 <div class="hero-section-type-b-introduction-wrapper grid">
         <div class="hero-section-type-b-intro-content">
         <p><?php the_field('introduction-hero');?></p>
+        <?php if (get_field('ajout_de_petit_texte_a_lintroduction_')) :?>
+        <p class="hero-section-type-b-petite-intro"><?php the_field('texte_supplementaire_introduction');?></p>
+        <?php endif;?>
         </div>
 </div>
 

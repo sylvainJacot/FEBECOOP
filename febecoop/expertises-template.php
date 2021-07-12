@@ -78,7 +78,23 @@
       </div>
 
       <div class="card-type-a-content">
-          <p class="card-type-a-content-txt"><?php the_field('resume') ?></p>
+
+      <?php if (get_field('resume')) : ?>
+                    <p class="card-type-a-content-txt"><?php the_field('resume') ?></p>
+                <?php else : ?>
+
+                    <?php if (have_rows('contenu-flexible')) : while (have_rows('contenu-flexible')) : the_row(); ?>
+                            <?php if (get_row_layout() == 'introduction-principale') :
+
+                                $txt = get_sub_field('introduction');
+                            ?>
+                                <p class="card-type-a-content-txt"><?php echo $txt; ?></p>
+
+                            <?php endif; ?>
+                    <?php endwhile;
+                    endif; ?>
+                <?php endif; ?>
+
           <p class="cta-flex-a"><?php pll_e('En savoir plus');?></p>
       </div>
         </a>

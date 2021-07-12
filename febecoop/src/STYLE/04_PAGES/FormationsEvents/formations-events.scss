@@ -40,5 +40,13 @@
                 }
             }
         }
+        .agenda-formation-empty-texte {
+            @include hando-b;
+            color: $blue-1;
+            font-size: 15px;
+            @include tracking(25);
+            width: 8 * $mCol;
+            display: contents;
+        }
     }
 }

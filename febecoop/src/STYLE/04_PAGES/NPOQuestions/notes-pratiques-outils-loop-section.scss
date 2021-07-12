@@ -112,6 +112,7 @@
                     @include tracking(25);
                     width: 8 * $mCol;
                     display: contents;
+                    
 
                     @include tablet {
                         font-size: 17px;

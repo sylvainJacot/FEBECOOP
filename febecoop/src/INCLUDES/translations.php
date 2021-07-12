@@ -33,7 +33,7 @@ if (function_exists('pll_register_string')) {
     pll_register_string('Découvrez le programme','Découvrez le programme', 'febecoop', true); 
     pll_register_string('Découvrir le projet','Découvrir le projet', 'febecoop', true);
     pll_register_string('Découvrir les membres','Découvrir les membres', 'febecoop', true);
-    pll_register_string("'Découvrir l'équipe'","'Découvrir l'équipe'", 'febecoop', true);
+    pll_register_string("Découvrir l'équipe","Découvrir l'équipe", 'febecoop', true);
     pll_register_string('Découvrir','Découvrir', 'febecoop', true);
     pll_register_string('Médiathèques','Médiathèques', 'febecoop', true);
     pll_register_string('Sur le terrain','Sur le terrain', 'febecoop', true);
@@ -50,5 +50,9 @@ if (function_exists('pll_register_string')) {
     pll_register_string('Aller sur le site','Aller sur le site', 'febecoop', true);   
     pll_register_string('Nos prises de position','Nos prises de position', 'febecoop', true);  
     pll_register_string('Toutes les formations','Toutes les formations', 'febecoop', true);   
-    
+    pll_register_string('Du','Du', 'febecoop', true);   
+    pll_register_string('au','au', 'febecoop', true);   
+    pll_register_string("autres domaines d'expertises","autres domaines d'expertises", 'febecoop', true);   
+    pll_register_string("Voir tous les domaines d’expertises","Voir tous les domaines d’expertises", 'febecoop', true);   
+   
 }
