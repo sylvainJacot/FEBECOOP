@@ -59,6 +59,18 @@
                     object-fit: contain;
                     // @include shadow-a-pic;
                 }
+                .mediatheque-publication-star-item-content-pic-placeholder {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                        > svg {
+                            width: 30%;
+
+                            path {
+                                fill: $orange-3;
+                            }
+                        }
+                }
             }
             .mediatheque-publication-star-item-content {
                 display: flex;

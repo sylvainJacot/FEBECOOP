@@ -122,11 +122,19 @@ if (empty($meta_description)) {
                 </div>
             </div>
 
+            <form action="<?php bloginfo('url'); ?>/" method="get" class="nav-search nav-search-tablet" id="js-nav-search-tablet">
+            <label for="search" id="form-search-tablet-title"><?php pll_e('Rechercher');?></label>
+            <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
+            <input type="image" alt="Search" src="<?php bloginfo('template_url'); ?>/src/ASSETS/IMAGES/common/VECTOR/search-ic-orange.svg" />
+            <span class="nav-search-tablet-close-area" id="js-nav-search-tablet-close-area"><span></span></span>
+            </form>
+
+
             <div class="header-second-section-mobile header-second-section-mobile-federal" id="js-header-second-section-mobile">
                 <div class="header-second-section-mobile-wrapper header-second-section-mobile-wrapper-federal grid">
                     <form action="<?php bloginfo('url'); ?>/" method="get" class="nav-search nav-search-mobile">
                         <label for="search">Search in <?php echo home_url('/'); ?></label>
-                        <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
+                        <input type="text" name="s" id="search" placeholder="<?php pll_e('Rechercher');?>" value="<?php the_search_query(); ?>" />
                         <input type="image" alt="Search" src="<?php bloginfo('template_url'); ?>/src/ASSETS/IMAGES/common/VECTOR/search-ic-orange.svg" />
                     </form>
                     <?php get_template_part('src/TEMPLATES/Header/header-main-nav'); ?>
@@ -156,13 +164,6 @@ if (empty($meta_description)) {
                 </div>
             </div>
         </div>
-        <form action="<?php bloginfo('url'); ?>/" method="get" class="nav-search nav-search-tablet" id="js-nav-search-tablet">
- 
- <label for="search" id="form-search-tablet-title"><?php pll_e('Rechercher');?></label>
- <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
- <input type="image" alt="Search" src="<?php bloginfo('template_url'); ?>/src/ASSETS/IMAGES/common/VECTOR/search-ic-orange.svg" />
- <span class="nav-search-tablet-close-area" id="js-nav-search-tablet-close-area"><span></span></span>
-</form>
     </header>
     <form action="<?php bloginfo('url'); ?>/" method="get" class="nav-search nav-search-laptop" id="js-nav-search-laptop">
         <p class="nav-search-laptop-top-title">Rechercher et presser entrer</p>

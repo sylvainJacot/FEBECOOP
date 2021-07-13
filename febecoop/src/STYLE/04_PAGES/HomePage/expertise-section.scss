@@ -4,7 +4,7 @@ $semi-col-d : $dCol / 2;
 
 .expertise-section {
     position: relative;
-    margin-top: 106px;
+    margin-top: 160px;
     margin-bottom: 64px;
     @include tablet {
         margin-top: 180px;
@@ -22,7 +22,7 @@ $semi-col-d : $dCol / 2;
         display: block;
         width: 389px;
         height: 180px;
-        top: -62px;
+        top: -58px;
         left: -72px;
         background: url("../ASSETS/IMAGES/HOME/VECTOR/illu-expertise-mobile.svg") center no-repeat;
         background-size: contain;
@@ -136,7 +136,7 @@ $semi-col-d : $dCol / 2;
             position: relative;
             display: block;
             background: $white;
-            margin-top: 72px;
+            margin-top: 32px;
             margin-bottom: 40px;
             padding: 24px $mCol 32px $mCol;
             border-radius: 8px;

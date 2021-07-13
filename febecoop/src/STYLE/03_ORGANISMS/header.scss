@@ -138,7 +138,6 @@
 $header-m : 80px;
 
 header {
-    // height: $header-m;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
@@ -157,10 +156,25 @@ header {
         }
 
         .header-first-section {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 10px 0;
+            z-index: 3;
+
+            &:before {
+                position: absolute;
+                display: block;
+                content: "";
+                top: 0;
+                bottom: 0;
+                width: 100vw;
+                left: 50%;
+                transform: translateX(-50%);
+                background: $white;
+                z-index: -1;
+            }
 
             #Febecoop-logo {
                 >img {
@@ -208,14 +222,6 @@ header {
                     }
                 }
 
-
-                // .nav-search-tablet-close-area-active {
-                //     pointer-events: unset;
-                //     display: block;
-                //     opacity: 0.2;
-                //     z-index: 50;
-                //     @include trans-a;
-                // }
                 .nav-search-tablet-placeholder {
                     display: none;
                     @include tablet {
@@ -394,10 +400,17 @@ header {
                             @include list-item-children-arrow-cta;
 
                             .sub-menu {
-                                display: none;
+                                transform-origin: top;
+                                height: 0px;
+                                transform: scaleY(0);
+                                transition: all 0.3s ease-in-out;
 
                                 li {
+                                    transform-origin: top;
                                     @include sub-list-item;
+                                    transform: scaleY(0);
+                                    opacity: 0;
+                                    transition: all 0.0s ease-in-out;
 
                                 }
                                 > li {
@@ -406,6 +419,13 @@ header {
 
                                 @include tablet {
                                     display: block;
+                                    height: auto;
+                                    transform: scaleY(1);
+                                    li {
+                                        transform: scaleY(1);
+                                        opacity: 1;
+    
+                                    }
                                 }
                             }
 
@@ -426,9 +446,19 @@ header {
                                 }
 
                                 .sub-menu {
-                                    display: block;
+                                    height: auto;
                                     margin-top: 16px;
-
+                                    transform-origin: top;
+                                    transform: scaleY(1);
+                                    transition: all 0.3s ease-in-out;
+                                    
+                                    li {
+                                        transform-origin: top;
+                                        transform: scaleY(1);
+                                        opacity: 1;
+                                        transition: all 0.2s ease-in-out;
+                                        transition-delay: 0.1s;
+                                    }
 
                                 }
                             }
@@ -459,11 +489,18 @@ header {
                                 @include list-item-children-arrow-cta;
 
                                 .sub-menu {
-                                    display: none;
-
+                                    transform-origin: top;
+                                    height: 0px;
+                                    transform: scaleY(0);
+                                    transition: all 0.3s ease-in-out;
+    
                                     li {
+                                        transform-origin: top;
                                         @include sub-list-item;
-
+                                        transform: scaleY(0);
+                                        opacity: 0;
+                                        transition: all 0s ease-in-out;
+    
                                     }
                                     > li {
                                         padding: 16px 0px;
@@ -471,6 +508,13 @@ header {
 
                                     @include tablet {
                                         display: block;
+                                        height: auto;
+                                        transform: scaleY(1);
+                                        li {
+                                            transform: scaleY(1);
+                                            opacity: 1;
+        
+                                        }
                                     }
                                 }
 
@@ -491,10 +535,18 @@ header {
                                     }
 
                                     .sub-menu {
-                                        display: block;
+                                        height: auto;
                                         margin-top: 16px;
-                                        > li {
-                                            padding: 16px 0px;
+                                        transform-origin: top;
+                                        transform: scaleY(1);
+                                        transition: all 0.3s ease-in-out;
+                                        
+                                        li {
+                                            transform-origin: top;
+                                            transform: scaleY(1);
+                                            opacity: 1;
+                                            transition: all 0.2s ease-in-out;
+                                            transition-delay: 0.1s;
                                         }
                                     }
                                 }
@@ -509,13 +561,21 @@ header {
             position: absolute;
             opacity: 1;
             pointer-events: unset;
-            transition: all 0.6s ease(out-cubic);
+            transition: all 0.3s ease(out-cubic);
             transform: scaleY(1);
+
+            @include tablet {
+                transition: all 0.6s ease(out-cubic);
+            }
 
             .header-second-section-mobile-wrapper {
                 opacity: 1;
-                transition: all 0.2s ease-out;
-                transition-delay: 0.4s;
+                transition: all 0.1s ease-out;
+                transition-delay: 0.2s;
+                @include tablet {
+                    transition: all 0.2s ease-out;
+                    transition-delay: 0.4s;
+                }
             }
         }
 

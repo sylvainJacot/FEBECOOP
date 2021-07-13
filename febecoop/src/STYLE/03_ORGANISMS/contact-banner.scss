@@ -143,6 +143,7 @@
             }
         }
         > .cta-a {
+            padding: 24px 32px;
             @include tablet {
                 padding: 24px 40px;
                 margin-left: 8 * $tCol;

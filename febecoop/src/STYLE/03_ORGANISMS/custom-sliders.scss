@@ -187,10 +187,6 @@
 
     @include laptopS {
         height: 100%;
-    }
-
-
-    @include laptopS {
         display: flex;
         background: none;
         box-shadow: none;
@@ -244,7 +240,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 16px $mCol 80px $mCol;
+            padding: 24px $tCol 72px $tCol;
 
         @include tablet {
             padding: 24px $tCol 72px $tCol;

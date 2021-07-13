@@ -39,15 +39,17 @@ $intertitre-bottom-margin-t: 40px;
 }
 @mixin titre-header {
     @include hando-xl;
-    font-size: 28px;
-    line-height: 37px;
+    font-size: 7vw;
+    line-height: 9vw;
     color: $blue-1;
     display: inline-block;
     position: relative;
-    // text-decoration: underline;
-    // text-decoration-color: $yellow-1;
-    // display: inline;
-    // border-bottom: 1px solid $orange-1;
+
+    @media (min-width:500px) {
+        font-size: 35px;
+    line-height: 45px;
+    }
+
     span {
         background-image: linear-gradient(to right, $red-2 0%, $red-2 100%);
         background-repeat: repeat-x; 

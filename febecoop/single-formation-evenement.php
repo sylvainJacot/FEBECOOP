@@ -153,7 +153,7 @@ $end_date = get_field('ev-date-end');
             $link_target = $link['target'] ? $link['target'] : '_self';
         ?>
             <a class="form-type-a-footer" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
-                <p> 
+
                     <?php
                     $openspan = "<span>";
                     $openmainttitle = str_replace('(*(', $openspan, $link_title);
@@ -161,7 +161,7 @@ $end_date = get_field('ev-date-end');
                     echo $closemainttitle;
                     ?>
 
-                </p>
+
             </a>
         <?php endif; ?>
 

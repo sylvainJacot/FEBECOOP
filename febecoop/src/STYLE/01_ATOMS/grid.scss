@@ -49,7 +49,10 @@ $m-grid-size: #{$m-col*$m-col-count}vw;
 
 .grid, .d-grid, .l-grid, .t-grid, .m-grid {
     position: relative;
-    // background-color: $sec-col-10;
+    max-width: 500px;
+    @media (min-width:768px) {
+        max-width: unset;
+    }
 }
 
 .center {

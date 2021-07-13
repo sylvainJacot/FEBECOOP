@@ -27,6 +27,17 @@
                 max-width: 100%;
                 max-height: 100%;
             }
+            .illu-publication-detail-wrapper-placeholder {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                > svg {
+                    width: 30%;
+                    > path {
+                        fill: $blue-1-30;
+                    }
+                }
+            }
 
             @include tablet {
                 width: 4 * $tCol;
@@ -41,6 +52,7 @@
                 height: 250px; 
             }
         }
+
         .hero-section-type-f-content {
             padding: 48px 0;
             @include tablet {

@@ -1,0 +1,1 @@
+"use strict";var linksWithSubMenu=document.querySelectorAll(".header-second-section-mobile-wrapper .menu-header-main-menu-container #menu-header-main-menu .menu-item-has-children");console.log(linksWithSubMenu),linksWithSubMenu.forEach((function(e){e.addEventListener("click",(function(){e.classList.add("testlooouuul")}))}));

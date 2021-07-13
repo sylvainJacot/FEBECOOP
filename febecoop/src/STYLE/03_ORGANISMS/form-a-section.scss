@@ -173,17 +173,18 @@ $tab-nav-item-radio-size: 22px;
             display: block;
         }
         .form-type-a-footer {
-            p {
-                @include hando-b;
-                color: $blue-1;
-                font-size: 14px;
-                line-height: 26.62px;
-                @include tracking(25);
-                text-align: center;
-                @include laptopS {
-                    width: 14 * $tCol;
-                    margin: auto;
-                }
+            display: block;
+            @include hando-b;
+            color: $blue-1;
+            font-size: 14px;
+            line-height: 26.62px;
+            @include tracking(25);
+            text-align: center;
+            @include laptopS {
+                width: 14 * $tCol;
+                margin: auto;
+            }
+
 
                 > span {
                     color: $orange-1;
@@ -194,7 +195,7 @@ $tab-nav-item-radio-size: 22px;
                             color: $red-1
                     }
                 }
-            }
+
 
 
         }

@@ -16,7 +16,7 @@ $footer-inter-section-t: 32px;
     color: $blue-1;
     font-size: 14px;
     @include tracking(50);
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     @include tablet {
         font-size: 16px;
         line-height: 26px;
@@ -45,8 +45,12 @@ $footer-inter-section-t: 32px;
     @include hando-b;
     color: $blue-1;
     font-size: 13px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     @include tracking(50);
+
+    @include tablet {
+        margin-bottom: 16px;
+    }
 }
 
 @mixin footer-links {
@@ -137,7 +141,12 @@ footer {
         .coordonees-section {
                 margin-bottom: $footer-inter-section-m;
             .coordonees-item {
-                margin-bottom: 16px;
+                margin-bottom: 24px;
+
+                @include tablet {
+                    margin-bottom: 16px;
+                }
+
             .coordonees-item-province {
                 @include footer-province;
             }
@@ -157,7 +166,6 @@ footer {
                     width: 4 * $dCol;
                 }
                 a {
-
                     &:hover {
                         p {
                             color: $red-1;
@@ -167,7 +175,7 @@ footer {
                     }
                 p {
                     @include footer-paragraph-s;    
-                    @include trans-a;   
+                    @include trans-a;  
                 }
                  }
             }
@@ -185,10 +193,12 @@ footer {
                 }
                 p {
                     @include footer-paragraph-s;
+                    display: inline-block;
                 }
                 a {
                     @include footer-paragraph-s;
                     @include trans-a;
+                    display: inline-block;
                     &:hover {
                         color: $red-1;
                         @include trans-a;
@@ -302,7 +312,7 @@ footer {
                 @include footer-links;
                 color : $blue-1;
                 font-size: 10px;
-                margin: 12px 0;
+                margin: 40px 0 12px 0;
                 @include tablet {
                     margin: 0;
                 }
