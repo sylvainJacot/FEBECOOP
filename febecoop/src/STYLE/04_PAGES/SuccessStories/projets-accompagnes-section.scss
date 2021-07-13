@@ -44,28 +44,20 @@
                 grid-gap: $dCol;
                 margin-bottom: $dCol;
             }
-            .projet_accompagnes_loadmore {
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1;
-                bottom: calc(-53px - 40px);
-            } 
         }
-        > a {
-            margin: 40px auto 0 auto;
+        a:not(.card-type-b-item ) {
+            position: absolute;
+            bottom: calc(-53px - 32px);
+            left: 50%;
+            transform: translateX(-50%);
         }
-    }
-    .projets-navigation-links {
-        a {
-            @include cta-a;
+        .card-projet-accompagnes-container-fadeIn {
+            a {
+                @include fadeInLoadMore;
+            }
         }
     }
+
 }
 
 
-
-// .actualites-navigation-links {
-//     display: none;
-// }

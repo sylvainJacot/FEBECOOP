@@ -40,3 +40,11 @@
 @mixin sub-menu-close-items($time:0.1s) {
     transition: all $time ease(out-quint);
 }
+
+@mixin fadeInLoadMore {
+    animation: fadeIn 0.3s ease(ease-out-cubic);
+    @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(16px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
+}

@@ -58,7 +58,7 @@ global $wp_query;
 <!--PROJETS ACCOMPAGNES ==============
 =========================== -->
 <section class="projets-accompagnes-section">
-    <div class="projets-accompagnes-section-wrapper grid">
+    <div class="projets-accompagnes-section-wrapper grid" id="js-projets-accompagnes-section-wrapper">
 
         <div class="filtres-type-a-container projets-accompagnes-section-filtres js-filtres-type-a-container">
             <p class="filtres-type-a-title">Filtrer par</p>
@@ -70,21 +70,24 @@ global $wp_query;
             </ul>
         </div>
 
-        <main class="card-type-b-container card-projet-accompagnes-container" id="card-projet-accompagnes-container">
+        <main class="card-type-b-container card-projet-accompagnes-container card-projet-accompagnes-container-fadeIn">
 
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args =
                 array(
                     'post_type' => 'projet-accompagnes',
-                    'posts_per_page' => 6,
-                    'paged' => 1
+                    'status' => 'published', 
+                    'posts_per_page' => 3,
+                    'orderby'	=> 'post_date',
+                    'order'         => 'DESC',
+                    'paged' => $paged
                 );
-            $the_query = new WP_Query($args);
+            $loopProjetsAcc = new WP_Query($args);
             ?>
 
-            <?php if ($the_query->have_posts()) : ?>
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+            <?php if ($loopProjetsAcc->have_posts()) : ?>
+                <?php while ($loopProjetsAcc->have_posts()) : $loopProjetsAcc->the_post(); ?>
                     <a href="<?php the_permalink(); ?>" class="card-type-b-item">
                         <div class="card-type-b-pic-wrapper">
                             <?php
@@ -116,11 +119,13 @@ global $wp_query;
 
                 <?php endwhile; ?>
 
-                <a class="cta-a projet_accompagnes_loadmore"><?php pll_e('Voir plus');?></a>
-
 
             <?php endif; ?>
             <?php wp_reset_postdata(  );?>
+
+            <?php            
+            next_posts_link( ('<span class="cta-a" id="loadmore-projetsacc">Voir plus</span>'), $loopProjetsAcc->max_num_pages ); 
+            ?>
 
         </main>
 
@@ -133,35 +138,6 @@ global $wp_query;
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-
-
-
-<script>
-    $('.ajax-filtres-types-a-filtres-container li a').click(function(e) {
-
-        e.preventDefault(); // annule effet ou autre sur le clic
-
-        $('#card-projet-accompagnes-container .card-type-b-item').fadeOut(); // vire les anciens item 
-
-        var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
-        // alert(next_page)
-
-        $('.ajax-filtres-types-a-filtres-container li a').each(function() {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
-
-        $('.projets-accompagnes-section-wrapper').append(
-            $('#card-projet-accompagnes-container').load(next_page + '#card-projet-accompagnes-container .card-type-b-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
-        );
-
-        setTimeout(function() {
-            $('#card-projet-accompagnes-container .card-type-b-item').css('opacity', '1'); // effet etc a appliquer apres le chargement 
-        }, 500);
-
-    });
-</script>
 
 
 

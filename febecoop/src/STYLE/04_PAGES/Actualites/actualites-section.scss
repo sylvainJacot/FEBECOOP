@@ -49,15 +49,10 @@
         }
         .actualites-container-fadeIn {
             a {
-                animation: fadeIn 1s ease(ease-out-cubic);
+                @include fadeInLoadMore;
             }
         }
 
     }
 
-}
-
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(16px);}
-    to {opacity: 1; transform: translateY(0px);}
 }
