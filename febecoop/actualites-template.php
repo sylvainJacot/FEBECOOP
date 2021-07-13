@@ -85,18 +85,10 @@ $terms = get_terms('categories_actualites');
       <?php endif;
       wp_reset_postdata(); ?>
 
-<?php              
-next_posts_link( '<span class="cta-a" id="loadmore-actu">Load More</span>', $loopActus->max_num_pages ); 
+<?php            
+next_posts_link( ('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages ); 
 ?>
 
-
-          <!-- <?php
-          if (  $loopActus->max_num_pages > 1 ) :?>
-          <div class="js-pagination-actualites" id="js-pagination-actualites">
-           <?php  next_posts_link( __( 'Older Entries' ), $loopActus->max_num_pages );?>
-           </div>
-          <?php endif;?> -->
-          <!-- <button class="cta-a js-actualites_loadmore"  id="js-actualites_loadmore"><?php pll_e('Voir plus'); ?></button> -->
 
   </div>
 
