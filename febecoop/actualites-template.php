@@ -47,10 +47,14 @@ $terms = get_terms('categories_actualites');
       // set the "paged" parameter (use 'page' if the query is on a static front page)
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
+      
       $loopActus = new WP_Query(
         array(
           'post_type' => 'actualites',
-          'posts_per_page' => -1,
+          'status' => 'published', 
+          'posts_per_page' => 3,
+          'orderby'	=> 'post_date',
+          'order'         => 'DESC',
           'paged' => $paged
         )
       );
@@ -78,7 +82,7 @@ $terms = get_terms('categories_actualites');
 
         <?php
           if (  $loopActus->max_num_pages > 1 ) :?>
-            <a class="cta-a" id="js-actusloadmore"><?php pll_e('Voir plus'); ?></a>
+           <?php  next_posts_link( __( 'Older Entries' ), $loopActus->max_num_pages );?>
           <?php endif;?>
 
 
