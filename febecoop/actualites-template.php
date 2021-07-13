@@ -21,13 +21,16 @@ $terms = get_terms('categories_actualites');
 
       <div class="hero-section-type-g-content-filtres filtres-type-a-container js-filtres-type-a-container">
         <p class="filtres-type-a-title"><?php pll_e('Filtrer par'); ?></p>
+
         <ul class="filtres-types-a-filtres-container" id="js-filtres-types-a-filtres-container">
 
           <?php foreach ($terms as $tag) : ?>
             <?php $term_link = get_term_link($tag); ?>
             <li class="filtres-types-a-filtre"><a href="<?php echo esc_url($term_link); ?>"><?php echo $tag->name; ?></a></li>
           <?php endforeach; ?>
+
         </ul>
+
       </div>
 
     </div>
@@ -47,7 +50,7 @@ $terms = get_terms('categories_actualites');
       $loopActus = new WP_Query(
         array(
           'post_type' => 'actualites',
-          'posts_per_page' => 3,
+          'posts_per_page' => -1,
           'paged' => $paged
         )
       );
@@ -72,6 +75,12 @@ $terms = get_terms('categories_actualites');
 
 
         <?php endwhile; ?>
+
+        <?php
+          if (  $loopActus->max_num_pages > 1 ) :?>
+            <a class="cta-a" id="js-actusloadmore"><?php pll_e('Voir plus'); ?></a>
+          <?php endif;?>
+
 
         <!-- <a class="cta-a" id="actualites_loadmore"><?php pll_e('Voir plus'); ?></a> -->
 
