@@ -41,8 +41,8 @@ $terms = get_terms('categories_actualites');
 <!-- ACTUALITES ==============
 =========================== -->
 <section class="actualites-section">
-  <div class="actualites-section-wrapper grid">
-    <div class="actualites-container" id="js-actualites-container">
+  <div class="actualites-section-wrapper js-actualites-section-wrapper grid" id="js-actualites-section-wrapper">
+    <div class="actualites-container js-actualites-container" id="js-actualites-container">
       <?php
       // set the "paged" parameter (use 'page' if the query is on a static front page)
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -62,7 +62,7 @@ $terms = get_terms('categories_actualites');
       <?php if ($loopActus->have_posts()) : ?>
         <?php while ($loopActus->have_posts()) : $loopActus->the_post(); ?>
 
-          <a href="<?php the_permalink(); ?>" class="swiper-slide  card-type-b-item card-type-b-item-row-actu">
+          <a href="<?php the_permalink(); ?>" class="swiper-slide  card-type-b-item card-type-b-item-row-actu js-card-actus">
             <div class="card-type-b-pic-wrapper">
               <?php
               $image = get_field('actu-hero-image');
@@ -80,24 +80,31 @@ $terms = get_terms('categories_actualites');
 
         <?php endwhile; ?>
 
-        <?php
-          if (  $loopActus->max_num_pages > 1 ) :?>
-           <?php  next_posts_link( __( 'Older Entries' ), $loopActus->max_num_pages );?>
-          <?php endif;?>
 
-
-        <!-- <a class="cta-a" id="actualites_loadmore"><?php pll_e('Voir plus'); ?></a> -->
 
       <?php endif;
       wp_reset_postdata(); ?>
 
+<?php              
+next_posts_link( '<span class="cta-a" id="loadmore-actu">Load More</span>', $loopActus->max_num_pages ); 
+?>
 
-    </div>
+
+          <!-- <?php
+          if (  $loopActus->max_num_pages > 1 ) :?>
+          <div class="js-pagination-actualites" id="js-pagination-actualites">
+           <?php  next_posts_link( __( 'Older Entries' ), $loopActus->max_num_pages );?>
+           </div>
+          <?php endif;?> -->
+          <!-- <button class="cta-a js-actualites_loadmore"  id="js-actualites_loadmore"><?php pll_e('Voir plus'); ?></button> -->
+
+  </div>
+
 
 
   </div>
 
-  <!-- <a class="cta-a" id="loadmore">Voir plus</a> -->
+        
 
 </section>
 
