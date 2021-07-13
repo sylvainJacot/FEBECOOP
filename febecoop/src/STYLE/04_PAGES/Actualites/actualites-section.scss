@@ -40,26 +40,24 @@
             @include laptopS {
                 grid-gap: $dCol;
             }
-            > a {
-                opacity: 1 !important;
+            a:not(.card-type-b-item ) {
+                position: absolute;
+                bottom: calc(-53px - 32px);
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
-        .actualites_loadmore {
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-            bottom: calc(-53px - 40px);
+        .actualites-container-fadeIn {
+            a {
+                animation: fadeIn 1s ease(ease-out-cubic);
+            }
         }
 
     }
 
 }
 
-// .pagination-actualites {
-//     position: fixed;
-//     pointer-events: none;
-//     opacity: 0;
-// }
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(16px);}
+    to {opacity: 1; transform: translateY(0px);}
+}

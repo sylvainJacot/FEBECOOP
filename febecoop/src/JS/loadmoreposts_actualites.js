@@ -26,7 +26,7 @@ $('#js-actualites-section-wrapper').on('click', '#loadmore-actu', function(e){
     // alert(next_actu_page);
 
     $('#js-actualites-section-wrapper').append(
-      $('<div />').addClass('actualites-container').load(next_actu_page + ' #js-actualites-container a')
+      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' #js-actualites-container a')
     );
 
   });

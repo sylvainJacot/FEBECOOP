@@ -16,7 +16,7 @@ $terms = get_terms('categories_actualites');
   <div class="hero-section-type-g-wrapper grid">
     <div class="hero-section-type-g-content">
       <div class="hero-section-type-g-content-text">
-        <h1><span>Actualités</h1></span>
+        <h1><span><?php pll_e('Actualités');?></h1></span>
       </div>
 
       <div class="hero-section-type-g-content-filtres filtres-type-a-container js-filtres-type-a-container">
@@ -70,26 +70,10 @@ $terms = get_terms('categories_actualites');
       <?php endif;
       wp_reset_postdata(); ?>
 
-<?php              
-next_posts_link( '<span class="cta-a" id="loadmore-actu">Load More</span>' ); 
-?>
-
-
-          <!-- <?php
-          if (  $loopActus->max_num_pages > 1 ) :?>
-          <div class="js-pagination-actualites" id="js-pagination-actualites">
-           <?php  next_posts_link( __( 'Older Entries' ), $loopActus->max_num_pages );?>
-           </div>
-          <?php endif;?> -->
-          <!-- <button class="cta-a js-actualites_loadmore"  id="js-actualites_loadmore"><?php pll_e('Voir plus'); ?></button> -->
 
   </div>
 
-
-
   </div>
-
-        
 
 </section>
 

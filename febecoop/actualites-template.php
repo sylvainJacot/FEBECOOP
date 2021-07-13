@@ -52,7 +52,7 @@ $terms = get_terms('categories_actualites');
         array(
           'post_type' => 'actualites',
           'status' => 'published', 
-          'posts_per_page' => 3,
+          'posts_per_page' => 6,
           'orderby'	=> 'post_date',
           'order'         => 'DESC',
           'paged' => $paged
@@ -62,7 +62,7 @@ $terms = get_terms('categories_actualites');
       <?php if ($loopActus->have_posts()) : ?>
         <?php while ($loopActus->have_posts()) : $loopActus->the_post(); ?>
 
-          <a href="<?php the_permalink(); ?>" class="swiper-slide  card-type-b-item card-type-b-item-row-actu js-card-actus">
+          <a href="<?php the_permalink(); ?>" class="swiper-slide card-type-b-item card-type-b-item-row-actu js-card-actus">
             <div class="card-type-b-pic-wrapper">
               <?php
               $image = get_field('actu-hero-image');
@@ -85,18 +85,14 @@ $terms = get_terms('categories_actualites');
       <?php endif;
       wp_reset_postdata(); ?>
 
-<?php            
-next_posts_link( ('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages ); 
-?>
 
-
-  </div>
-
-
+      <?php            
+      next_posts_link( ('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages ); 
+      ?>
 
   </div>
 
-        
+  </div>
 
 </section>
 
