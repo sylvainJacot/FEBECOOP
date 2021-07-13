@@ -20,14 +20,17 @@ $terms = get_terms('categories_actualites');
       </div>
 
       <div class="hero-section-type-g-content-filtres filtres-type-a-container js-filtres-type-a-container">
-        <p class="filtres-type-a-title"><?php pll_e('Filtrer par');?></p>
+        <p class="filtres-type-a-title"><?php pll_e('Filtrer par'); ?></p>
+
         <ul class="filtres-types-a-filtres-container" id="js-filtres-types-a-filtres-container">
 
           <?php foreach ($terms as $tag) : ?>
             <?php $term_link = get_term_link($tag); ?>
             <li class="filtres-types-a-filtre"><a href="<?php echo esc_url($term_link); ?>"><?php echo $tag->name; ?></a></li>
           <?php endforeach; ?>
+
         </ul>
+
       </div>
 
     </div>
@@ -38,16 +41,20 @@ $terms = get_terms('categories_actualites');
 <!-- ACTUALITES ==============
 =========================== -->
 <section class="actualites-section">
-  <div class="actualites-section-wrapper grid">
-    <div class="actualites-container" id="actualites-container">
+  <div class="actualites-section-wrapper js-actualites-section-wrapper grid" id="js-actualites-section-wrapper">
+    <div class="actualites-container js-actualites-container" id="js-actualites-container">
       <?php
       // set the "paged" parameter (use 'page' if the query is on a static front page)
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
+      
       $loopActus = new WP_Query(
         array(
           'post_type' => 'actualites',
+          'status' => 'published', 
           'posts_per_page' => 3,
+          'orderby'	=> 'post_date',
+          'order'         => 'DESC',
           'paged' => $paged
         )
       );
@@ -55,56 +62,41 @@ $terms = get_terms('categories_actualites');
       <?php if ($loopActus->have_posts()) : ?>
         <?php while ($loopActus->have_posts()) : $loopActus->the_post(); ?>
 
-        <a href="<?php the_permalink(); ?>" class="swiper-slide  card-type-b-item card-type-b-item-row-actu">
-    <div class="card-type-b-pic-wrapper">
-        <?php
-        $image = get_field('actu-hero-image');
-        if (!empty($image)) : ?>
-            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-        <?php endif; ?>
-    </div>
-    <div class="card-type-b-content">
-        <p class="card-type-b-date"><?php echo get_the_date('d/m/Y'); ?></p>
-        <p class="card-type-b-chapeau"><?php the_title(); ?></p>
-        <p class="cta-c"><?php pll_e('Lire plus');?></p>
-    </div>
-</a>
+          <a href="<?php the_permalink(); ?>" class="swiper-slide  card-type-b-item card-type-b-item-row-actu js-card-actus">
+            <div class="card-type-b-pic-wrapper">
+              <?php
+              $image = get_field('actu-hero-image');
+              if (!empty($image)) : ?>
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+              <?php endif; ?>
+            </div>
+            <div class="card-type-b-content">
+              <p class="card-type-b-date"><?php echo get_the_date('d/m/Y'); ?></p>
+              <p class="card-type-b-chapeau"><?php the_title(); ?></p>
+              <p class="cta-c"><?php pll_e('Lire plus'); ?></p>
+            </div>
+          </a>
 
 
         <?php endwhile; ?>
 
-         <!-- <div class="pagination-actualites">
-        <?php
-                $big = 9999999; // need an unlikely integer
-                echo paginate_links( [
-
-                'base' => str_replace($big, '%#%', esc_url( get_pagenum_link( $big ))),
-                'format' => '?paged=%#%',
-                'current' => max( 1, get_query_var('paged') ),
-                'total' => $loopActus->max_num_pages,
-                'prev_text' => 'Previous',
-                'next_text' => 'Next',
-                ] );
-            ?>
-            </div> -->
-  
-              <div class="pagination-actualites">
-            <?php 
-             next_posts_link( '<span class="cta-a" id="actualites_loadmore">Voir plus</span>' ); 
-             ?>
-            </div>
-
-        <!-- <a class="cta-a" id="actualites_loadmore"><?php pll_e('Voir plus');?></a> -->
-
-      <?php endif; wp_reset_postdata();?>
 
 
-    </div>
+      <?php endif;
+      wp_reset_postdata(); ?>
+
+<?php            
+next_posts_link( ('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages ); 
+?>
 
 
   </div>
 
-  <!-- <a class="cta-a" id="loadmore">Voir plus</a> -->
+
+
+  </div>
+
+        
 
 </section>
 
@@ -115,59 +107,6 @@ $terms = get_terms('categories_actualites');
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-     
-$('#js-filtres-types-a-filtres-container a').click(function(e){
-
-    e.preventDefault(); // annule effet ou autre sur le clic
- 
-    var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
-    alert(next_page);
-
-    $('#actualites-container a').fadeOut(); // vire les anciens item 
- 
-    $('#js-filtres-types-a-filtres-container a').each(function(){ $(this).removeClass('active'); })
-    $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
-   
-    $('.actualites-section-wrapper').append(
-        $('#actualites-container').load(next_page + ' #actualites-container a') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
-    );
-
-    setTimeout(function() {
-        $('#actualites-container a').css('opacity', '1'); // effet etc a appliquer apres le chargement 
-    },500);
-          
-});
-</script>
-
-<script>
-  
-
-// $('#actualites_loadmore').click(function(e){
-
-
-
-//     console.log("hello");
-
-//     e.preventDefault(); // annule effet ou autre sur le clic
-
-//     var next_page_actu = $('.next').attr('href');
-
-//     alert(next_page_actu);
-
-//     $('.actualites-section-wrapper').append(
-//         $('#actualites-container').load(next_page_actu + ' #actualites-container a') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
-//     );
-
-//     setTimeout(function() {
-//         $('#actualites-container a').css('opacity', '1'); // effet etc a appliquer apres le chargement 
-//     },500);
-    
-          
-});
-
-</script>
-
 
 
 <?php

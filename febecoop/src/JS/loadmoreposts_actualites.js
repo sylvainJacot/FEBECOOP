@@ -1,19 +1,36 @@
-var page = 2;
-jQuery(function($) {
-    $('body').on('click', '.actualites_loadmore', function() {
-        var data = {
-            'action': 'load_posts_by_ajax',
-            'page': page,
-            'security': blog.security
-        };
- 
-        $.post(blog.ajaxurl, data, function(response) {
-            if($.trim(response) != '') {
-                $('.actualites-container').append(response);
-                page++;
-            } else {
-                $('.actualites_loadmore').hide();
-            }
-        });
-    });
-});
+// $('#js-actualites_loadmore').click(function(e){
+
+//     e.preventDefault();
+//     console.log('click');
+    
+
+//     var next_actu_page = $('.js-pagination-actualites a').attr('href');
+//     alert(next_actu_page);
+
+//     $('#js-actualites-section-wrapper').append(
+//       $('.js-actualites-container').load(next_actu_page + ' .js-actualites-container a')
+//     );
+
+//   });
+
+
+
+$('#js-actualites-section-wrapper').on('click', '#loadmore-actu', function(e){
+
+    e.preventDefault();
+    console.log('click');
+
+    $(this).parent().fadeOut();
+
+    var next_actu_page = $(this).parent().attr('href');
+    // alert(next_actu_page);
+
+    $('#js-actualites-section-wrapper').append(
+      $('<div />').addClass('actualites-container').load(next_actu_page + ' #js-actualites-container a')
+    );
+
+  });
+
+
+
+
