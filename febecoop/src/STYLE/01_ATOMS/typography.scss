@@ -39,8 +39,8 @@ $intertitre-bottom-margin-t: 40px;
 }
 @mixin titre-header {
     @include hando-xl;
-    font-size: 7vw;
-    line-height: 9vw;
+    font-size: 8vw;
+    line-height: 10vw;
     color: $blue-1;
     display: inline-block;
     position: relative;

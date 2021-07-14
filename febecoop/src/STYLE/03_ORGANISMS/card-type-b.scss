@@ -7,7 +7,7 @@
     height: auto;
     @include card-type-anime-a;
      &:not(:last-child) {
-        margin-bottom: 40px;
+        margin-bottom: $cb-space-m;
         @include tablet {
             margin-bottom: 0px;
         }

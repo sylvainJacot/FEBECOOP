@@ -20,8 +20,8 @@
         border-color: $orange-1 !important;
         box-shadow: none !important;
     }
-    &:-webkit-autofill {
-        background-color:transparent !important;
+    &:-webkit-autofill,&:-webkit-autofill:hover,&:-webkit-autofill:focus,&:-webkit-autofill:active {
+        -webkit-text-fill-color: $blue-1;
     }
     &[aria-invalid='true'] {
         border-color: $red-1 !important;

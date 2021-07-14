@@ -45,11 +45,21 @@
                 margin-bottom: $dCol;
             }
         }
-        a:not(.card-type-b-item ) {
+         a:not(.card-type-b-item):not(.filtres-types-a-filtre-link) {
             position: absolute;
-            bottom: calc(-53px - 32px);
+            bottom: calc(-53px - #{$cb-space-m});
             left: 50%;
             transform: translateX(-50%);
+
+            @include tablet {
+                bottom: calc(-53px - #{$cb-space-t});
+            }
+            @include laptopS {
+                bottom: calc(-53px - #{$cb-space-l});
+            }
+            @include laptopL {
+                bottom: calc(-53px - #{$cb-space-d});
+            }
         }
         .card-projet-accompagnes-container-fadeIn {
             a {

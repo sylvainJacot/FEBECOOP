@@ -1,3 +1,29 @@
+@mixin mobile-closing-sub-menu {
+
+}
+
+@mixin mobile-opening-sub-menu {
+    @include arrow-button-active;
+    a {
+        color: $blue-3;
+    }
+    ul {
+        height: auto;
+    margin-top: 16px;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: all 0.3s ease-in-out;
+    
+    li {
+        transform-origin: top;
+        transform: translateY(0px);
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        transition-delay: 0.2s;
+    }
+    }
+}
+
 @mixin span-menu {
     display: block;
     height: 2px;
@@ -60,7 +86,7 @@
 
     &:before {
         right: 11px;
-        top: 34px;
+        top: 35px;
 
         @include tablet {
             display: none;
@@ -333,6 +359,7 @@ header {
                     }
                     &::after {
                         bottom: 50%;
+                        top: 0;
                         transform: translateY(50%) scaleY(1);
                         opacity: 1;
                         transition: all 0.3s ease-out;
@@ -405,10 +432,12 @@ header {
                                 transform: scaleY(0);
                                 transition: all 0.3s ease-in-out;
 
+                                
+
                                 li {
                                     transform-origin: top;
                                     @include sub-list-item;
-                                    transform: scaleY(0);
+                                    transform: translateY(-8px);
                                     opacity: 0;
                                     transition: all 0.0s ease-in-out;
 
@@ -416,6 +445,7 @@ header {
                                 > li {
                                     padding: 16px 0px;
                                 }
+                                
 
                                 @include tablet {
                                     display: block;
@@ -431,7 +461,6 @@ header {
 
                             &:hover,
                             &:focus {
-                                @include arrow-button-active;
 
                                 @include tablet {
 
@@ -441,28 +470,12 @@ header {
                                     }
                                 }
 
-                                a {
-                                    color: $blue-3;
-                                }
-
-                                .sub-menu {
-                                    height: auto;
-                                    margin-top: 16px;
-                                    transform-origin: top;
-                                    transform: scaleY(1);
-                                    transition: all 0.3s ease-in-out;
-                                    
-                                    li {
-                                        transform-origin: top;
-                                        transform: scaleY(1);
-                                        opacity: 1;
-                                        transition: all 0.2s ease-in-out;
-                                        transition-delay: 0.1s;
-                                    }
-
-                                }
+                            }
+                            &.link-children-mobile-opened {
+                                @include mobile-opening-sub-menu;
                             }
                         }
+
 
                     }
                 }
@@ -497,7 +510,7 @@ header {
                                     li {
                                         transform-origin: top;
                                         @include sub-list-item;
-                                        transform: scaleY(0);
+                                        transform: translateY(-8px);
                                         opacity: 0;
                                         transition: all 0s ease-in-out;
     
@@ -534,21 +547,9 @@ header {
                                         color: $blue-3;
                                     }
 
-                                    .sub-menu {
-                                        height: auto;
-                                        margin-top: 16px;
-                                        transform-origin: top;
-                                        transform: scaleY(1);
-                                        transition: all 0.3s ease-in-out;
-                                        
-                                        li {
-                                            transform-origin: top;
-                                            transform: scaleY(1);
-                                            opacity: 1;
-                                            transition: all 0.2s ease-in-out;
-                                            transition-delay: 0.1s;
-                                        }
-                                    }
+                                }
+                                &.link-children-mobile-opened {
+                                    @include mobile-opening-sub-menu;
                                 }
                             }
                         }

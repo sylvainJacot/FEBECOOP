@@ -137,16 +137,16 @@ $semi-col-d : $dCol / 2;
             display: block;
             background: $white;
             margin-top: 32px;
-            margin-bottom: 40px;
-            padding: 24px $mCol 32px $mCol;
+            margin-bottom: $cb-space-m;
+            padding: 24px $mCol 72px $mCol;
             border-radius: 8px;
             z-index: 1;
 
             @include tablet {
                 display: flex;
                 margin-top: 48px;
-                margin-bottom: 40px;
-                padding: 48px 2 * $tCol;
+                margin-bottom: $cb-space-t;
+                padding: 48px 2 * $tCol 72px 2 * $tCol ;
                 border-radius: 16px;
                 justify-content: space-between;
                 align-items: center;
@@ -257,6 +257,15 @@ $semi-col-d : $dCol / 2;
                     margin-bottom: 32px;
                 }
 
+            }
+            .cta-c {
+                position: absolute;
+                bottom: 24px;
+
+                @include tablet {
+                    position: relative;
+                    bottom: unset;
+                }
             }
         }
         }

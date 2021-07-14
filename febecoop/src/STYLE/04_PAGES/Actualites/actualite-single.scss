@@ -33,17 +33,11 @@
         padding-bottom: $bbc-d + 190px;
     }
     .other-news-section-wrapper  {
-        > a {
+        .cta-b {
+            margin-top: $cb-space-m;
             @include tablet {
                 display: none;
             }
-        }
-        .swiper-container {
-           > .cta-b {
-               @include tablet {
-                   display: none;
-               }
-           }
         }
     }
 }

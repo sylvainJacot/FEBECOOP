@@ -16,7 +16,8 @@ $footer-inter-section-t: 32px;
     color: $blue-1;
     font-size: 14px;
     @include tracking(50);
-    margin-bottom: 10px;
+    line-height: 28px;
+    // margin-bottom: 10px;
     @include tablet {
         font-size: 16px;
         line-height: 26px;
@@ -126,6 +127,7 @@ footer {
                 }
             .newsletter-subtitle {
                 @include footer-paragraph;
+                line-height: 28px;
                 margin-bottom: 24px;
                 @include laptopL {
                     width: 8 * $lCol;
@@ -155,8 +157,9 @@ footer {
                     display: flex;
                 }
             .coordonees-item-coordonees {
-                margin-bottom: 16px;
+
                 @include tablet {
+                    margin-bottom: 16px;
                     width: 5 * $tCol;
                 }
                 @include laptopS {
@@ -239,6 +242,7 @@ footer {
             }
             .autres-sites-titre {
                 @include footer-paragraph;
+                line-height: 28px;
                 margin-bottom: $intertitre-bottom-margin - 16px;
                 @include laptopL {
                     width: 8 * $dCol;

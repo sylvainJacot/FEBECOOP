@@ -1,17 +1,17 @@
 .notes-pratiques-outils-loop-section {
-    padding-bottom: $bbc-m + 56px;
+    padding-bottom: $bbc-m + 96px;
     @include tablet {
-        padding-bottom: $bbc-t + 72px;
+        padding-bottom: $bbc-t + 112px;
     }
     @include laptopS {
         padding-bottom: $bbc-l + 88px;
     }
     @include laptopL {
-        padding-bottom: $bbc-d - 8px;
+        padding-bottom: $bbc-d + 40px;
     }
     .notes-pratiques-outils-loop-wrapper {
         @include tablet {
-            min-height: 600px;
+            min-height: 500px;
         }
         @include laptopS {
             display: flex;
@@ -33,6 +33,7 @@
                 text-transform: uppercase;
             }
             .filter-npoq-container {
+                margin-bottom: 40px;
                 a {
                     position: relative;
                     @include hando-b;
@@ -131,6 +132,20 @@
         a {
             margin-top: 32px;
         }
+        }   
+        > .cta-a {
+            position: absolute;
+            bottom: calc(-53px - 24px);
+            left: 50%;
+            transform: translateX(-50%);
+            @include laptopS {
+                transform: translateX(0);
+                left: 9 * $lCol;
+            }
+            @include laptopL {
+                left: 8 * $dCol;
+            }
+        }
     }
-    }
+
 }

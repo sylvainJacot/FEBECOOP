@@ -62,7 +62,7 @@
         }
 
         a:not(:last-child) {
-            margin-bottom: 32px;
+            margin-bottom: $cb-space-m;
         }
         @include tablet {
             display: grid;

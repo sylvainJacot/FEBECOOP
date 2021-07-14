@@ -47,13 +47,13 @@ $terms = get_terms('categories_actualites');
       // set the "paged" parameter (use 'page' if the query is on a static front page)
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-      
+
       $loopActus = new WP_Query(
         array(
           'post_type' => 'actualites',
-          'status' => 'published', 
+          'status' => 'published',
           'posts_per_page' => 6,
-          'orderby'	=> 'post_date',
+          'orderby'  => 'post_date',
           'order'         => 'DESC',
           'paged' => $paged
         )
@@ -86,11 +86,11 @@ $terms = get_terms('categories_actualites');
       wp_reset_postdata(); ?>
 
 
-      <?php            
-      next_posts_link( ('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages ); 
+      <?php
+      next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
       ?>
 
-  </div>
+    </div>
 
   </div>
 
@@ -106,45 +106,43 @@ $terms = get_terms('categories_actualites');
 
 <!-- LOAD MORE -->
 <script>
-$('#js-actualites-section-wrapper').on('click', '#loadmore-actu', function(e){
+  $('#js-actualites-section-wrapper').on('click', '#loadmore-actu', function(e) {
 
-e.preventDefault();
-console.log('click');
+    e.preventDefault();
+    console.log('click');
 
-$(this).parent().fadeOut();
+    $(this).parent().fadeOut();
 
-var next_actu_page = $(this).parent().attr('href');
-// alert(next_actu_page);
+    var next_actu_page = $(this).parent().attr('href');
+    // alert(next_actu_page);
 
-$('#js-actualites-section-wrapper').append(
-  $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' #js-actualites-container a')
-);
+    $('#js-actualites-section-wrapper').append(
+      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' #js-actualites-container a')
+    );
 
-});
-
+  });
 </script>
 
 <!-- FILTRES -->
 <script>
+  $('.filtres-types-a-filtre a').click(function(e) {
 
+    e.preventDefault(); // annule effet ou autre sur le clic
 
-$('.filtres-types-a-filtre a').click(function(e){
+    $('.actualites-container').fadeOut(); // vire les anciens item 
 
-e.preventDefault(); // annule effet ou autre sur le clic
+    var next_actucat_page = $(this).attr('href');
 
-$('.actualites-container').fadeOut(); // vire les anciens item 
-
-var next_actucat_page = $(this).attr('href');
-
-$('.filtres-types-a-filtre a').each(function(){ $(this).removeClass('active'); })
+    $('.filtres-types-a-filtre a').each(function() {
+      $(this).removeClass('active');
+    })
     $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
 
-$('#js-actualites-section-wrapper').append(
-  $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_page + ' #js-actualites-container a')
-);
-      
-});
+    $('#js-actualites-section-wrapper').append(
+      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_page + ' #js-actualites-container a')
+    );
 
+  });
 </script>
 
 

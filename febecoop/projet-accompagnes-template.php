@@ -8,7 +8,6 @@
 get_header();
 $pa_terms = get_terms('projet_accompagne_cat');
 // print_r($pa_terms);
-global $wp_query;
 ?>
 <section class="hero-section-type-b fiche-outils-hero-section" id="projets-accompagnes-hero-section">
     <picture class="hero-section-type-waves-container">
@@ -20,7 +19,7 @@ global $wp_query;
     <div class="hero-section-type-b-wrapper grid">
         <div class="hero-section-type-b-content">
             <div class="hero-section-type-b-content-text">
-                <p class="hero-section-type-b-content-toptitle"><?php pll_e('Sur le terrain');?></p>
+                <p class="hero-section-type-b-content-toptitle"><?php pll_e('Sur le terrain'); ?></p>
                 <h1><span>
                         <?php if (get_field('titre_hero')) :
                             $maintitle = get_field('titre_hero');
@@ -47,9 +46,9 @@ global $wp_query;
 <div class="hero-section-type-b-introduction-wrapper grid">
     <div class="hero-section-type-b-intro-content">
         <p><?php the_field('introduction-hero'); ?></p>
-        <?php if (get_field('ajout_de_petit_texte_a_lintroduction_')) :?>
-        <p class="hero-section-type-b-petite-intro"><?php the_field('texte_supplementaire_introduction');?></p>
-        <?php endif;?>
+        <?php if (get_field('ajout_de_petit_texte_a_lintroduction_')) : ?>
+            <p class="hero-section-type-b-petite-intro"><?php the_field('texte_supplementaire_introduction'); ?></p>
+        <?php endif; ?>
     </div>
 </div>
 
@@ -61,25 +60,25 @@ global $wp_query;
     <div class="projets-accompagnes-section-wrapper grid" id="js-projets-accompagnes-section-wrapper">
 
         <div class="filtres-type-a-container projets-accompagnes-section-filtres js-filtres-type-a-container">
-            <p class="filtres-type-a-title">Filtrer par</p>
+            <p class="filtres-type-a-title"><?php pll_e('Filtrer par'); ?></p>
             <ul class="filtres-types-a-filtres-container ajax-filtres-types-a-filtres-container">
-                <?php foreach ($pa_terms as $tag) : ?>
-                    <?php $term_link = get_term_link($tag); ?>
-                    <li class="filtres-types-a-filtre"><a href="<?php echo esc_url($term_link); ?>"><?php echo $tag->name; ?></a></li>
+                <?php foreach ($pa_terms as $patag) : ?>
+                    <?php $term_link = get_term_link($patag); ?>
+                    <li class="filtres-types-a-filtre"><a href="<?php echo esc_url($term_link); ?>" class="filtres-types-a-filtre-link"><?php echo $patag->name; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
 
-        <main class="card-type-b-container card-projet-accompagnes-container card-projet-accompagnes-container-fadeIn">
+        <main class="card-type-b-container card-projet-accompagnes-container card-projet-accompagnes-container-fadeIn" id="js-card-type-b-container">
 
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args =
                 array(
                     'post_type' => 'projet-accompagnes',
-                    'status' => 'published', 
+                    'status' => 'published',
                     'posts_per_page' => 3,
-                    'orderby'	=> 'post_date',
+                    'orderby'    => 'post_date',
                     'order'         => 'DESC',
                     'paged' => $paged
                 );
@@ -113,7 +112,7 @@ global $wp_query;
                                 <?php endwhile;
                                 endif; ?>
                             <?php endif; ?>
-                            <p class="cta-c"><?php pll_e('Lire plus');?></p>
+                            <p class="cta-c"><?php pll_e('Lire plus'); ?></p>
                         </div>
                     </a>
 
@@ -121,10 +120,10 @@ global $wp_query;
 
 
             <?php endif; ?>
-            <?php wp_reset_postdata(  );?>
+            <?php wp_reset_postdata(); ?>
 
-            <?php            
-            next_posts_link( ('<span class="cta-a" id="loadmore-projetsacc">Voir plus</span>'), $loopProjetsAcc->max_num_pages ); 
+            <?php
+            next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Voir plus</span>'), $loopProjetsAcc->max_num_pages);
             ?>
 
         </main>
@@ -146,7 +145,47 @@ global $wp_query;
 <?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner"); ?>
 
 
+<!-- LOAD MORE -->
+<script>
+    $('#js-projets-accompagnes-section-wrapper').on('click', '#loadmore-projetsacc', function(e) {
 
+        e.preventDefault();
+        console.log('click');
+
+        $(this).parent().fadeOut();
+
+        var next_actu_page = $(this).parent().attr('href');
+        // alert(next_actu_page);
+
+        $('#js-projets-accompagnes-section-wrapper').append(
+            $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(next_actu_page + ' .card-type-b-container a')
+        );
+
+    });
+</script>
+
+<!-- FILTRES -->
+<script>
+    $('.filtres-types-a-filtre-link').click(function(e) {
+
+        e.preventDefault(); // annule effet ou autre sur le clic
+
+        $('.card-type-b-container').fadeOut(); // vire les anciens item 
+
+        var next_actucat_page = $(this).attr('href');
+        // alert(next_actucat_page);
+
+        $('.filtres-types-a-filtre-link').each(function() {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
+
+        $('#js-projets-accompagnes-section-wrapper').append(
+            $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(next_actucat_page + ' .card-type-b-container a')
+        );
+
+    });
+</script>
 
 
 <?php

@@ -20,8 +20,6 @@ $terms_tags  = get_terms(
     ]
 );
 
-// print_r($terms_tags);
-
 ?>
 
 
@@ -75,14 +73,18 @@ $terms_tags  = get_terms(
         <aside class="filters-npo-questions-wrapper">
         <p class="filter-npoq-header"><?php pll_e('Filtrer par');?> :</p>
         <div class="filter-npoq-container">
-            <?php echo get_the_term_list( $post->ID, 'tags_notes_outils' ) ?>
+            <?php foreach ($terms_tags as $tag) : ?>
+                    <?php $term_link = get_term_link($tag); ?>
+                    <a href="<?php echo esc_url($term_link); ?>"><?php echo $tag->name; ?></a>
+            <?php endforeach; ?>
+
         </div>
         </aside>
 
 
 
         <div class="npo-items-wrapper">
-            <div class="npo-items-container" id="articles">
+            <div class="npo-items-container" id="js-npo-items-container">
             <!-- // LOOP NOTES PRATIQUES & OUTILS -->
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -95,10 +97,13 @@ $terms_tags  = get_terms(
             else : ?>
                 <span class="generic-content"><p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p></span>
             <?php endif; ?>
+            
+        </div>
+
         </div>
         <a href="<?php echo esc_url(home_url('/')); ?>notes-pratiques-outils" class="cta-a"><?php pll_e('Toutes les notes pratiques & outils');?></a>
-        </div>
     </div>
+
 </section>
 
 
@@ -113,27 +118,24 @@ $terms_tags  = get_terms(
 
 
 <script>
-
-// $('#articles').on('click', '.filter-npoq-container a', function(e) {
-
-     
+    
 $('.filter-npoq-container a').click(function(e){
 
     e.preventDefault(); // annule effet ou autre sur le clic
 
-    $('#articles a').fadeOut(); // vire les anciens item 
+    $('#js-npo-items-container a').fadeOut(); // vire les anciens item 
  
     var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
  
     $('.filter-npoq-container a').each(function(){ $(this).removeClass('active'); })
     $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
    
-    $('#articles').append(
-        $('<div />').load(next_page + ' #articles') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
+    $('#js-npo-items-container').append(
+        $('<div />').load(next_page + '#js-npo-items-container .npo-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
     );
 
     setTimeout(function() {
-        $('#articles a').css('opacity', '1'); // effet etc a appliquer apres le chargement 
+        $('#js-npo-items-container a').css('opacity', '1'); // effet etc a appliquer apres le chargement 
     },1000);
           
 });

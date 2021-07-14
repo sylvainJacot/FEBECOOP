@@ -458,9 +458,8 @@
                 box-shadow: none !important;
             }
 
-            &:-webkit-autofill {
-                background-color: transparent !important;
-                box-shadow: none !important;
+            &:-webkit-autofill,&:-webkit-autofill:hover,&:-webkit-autofill:focus,&:-webkit-autofill:active {
+                -webkit-text-fill-color: $blue-1;
             }
 
         }
