@@ -12,15 +12,15 @@
     margin-top: 16px;
     transform-origin: top;
     transform: scaleY(1);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
     
-    li {
-        transform-origin: top;
-        transform: translateY(0px);
-        opacity: 1;
-        transition: all 0.3s ease-in-out;
-        transition-delay: 0.2s;
-    }
+        li {
+            transform-origin: top;
+            transform: translateY(0px) scale(1);
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+            transition-delay: 0.1s;
+        }
     }
 }
 
@@ -430,9 +430,7 @@ header {
                                 transform-origin: top;
                                 height: 0px;
                                 transform: scaleY(0);
-                                transition: all 0.3s ease-in-out;
-
-                                
+                                transition: all 0.3s ease-in-out;               
 
                                 li {
                                     transform-origin: top;
@@ -454,7 +452,6 @@ header {
                                     li {
                                         transform: scaleY(1);
                                         opacity: 1;
-    
                                     }
                                 }
                             }
@@ -512,7 +509,7 @@ header {
                                         @include sub-list-item;
                                         transform: translateY(-8px);
                                         opacity: 0;
-                                        transition: all 0s ease-in-out;
+                                        transition: all 2s ease-in-out;
     
                                     }
                                     > li {

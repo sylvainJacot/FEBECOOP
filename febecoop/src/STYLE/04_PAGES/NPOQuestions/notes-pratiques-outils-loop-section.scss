@@ -10,6 +10,7 @@
         padding-bottom: $bbc-d + 40px;
     }
     .notes-pratiques-outils-loop-wrapper {
+        min-height: 500px;
         @include tablet {
             min-height: 500px;
         }
@@ -135,7 +136,7 @@
         }   
         > .cta-a {
             position: absolute;
-            bottom: calc(-53px - 24px);
+            bottom: calc(-53px - 40px);
             left: 50%;
             transform: translateX(-50%);
             @include laptopS {

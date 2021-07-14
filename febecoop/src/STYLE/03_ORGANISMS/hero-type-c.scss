@@ -45,19 +45,19 @@ $hstc-padding-top-l : 160px;
         }
         .hero-section-type-c-content {
             padding-top: 56px;
-            padding-bottom: 24px;
+            padding-bottom: calc(24px + 80px);
             @include tablet {
                 padding-top: 88px;
-                padding-bottom: 40px;
+                padding-bottom: calc(40px + 80px);
                 display: flex;
             }
             @include laptopS {
                 padding-top: 160px; 
                 padding-bottom: 200px;
-                width: 13 * $lCol;
+                width: 14 * $lCol;
             }
             @include laptopL{
-                width: 13 * $dCol;
+                width: 14 * $dCol;
             }
             position: relative;
             .pentagone-icons-wrapper {

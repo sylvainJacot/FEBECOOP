@@ -8,7 +8,7 @@ $cci-pad-t: 32px;
     @include shadow-a-nopic;
     position: relative;
     padding: $cci-pad-m $mCol $cci-pad-m * 2 $mCol;
-    margin-bottom: 40px;
+    margin-bottom: $cb-space-m;
 
     @include tablet {
         margin: 0;
