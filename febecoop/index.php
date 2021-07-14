@@ -5,7 +5,7 @@
  */
  get_header();
 ?>
-Test
+Index
 <?php
 get_footer();
 ?>

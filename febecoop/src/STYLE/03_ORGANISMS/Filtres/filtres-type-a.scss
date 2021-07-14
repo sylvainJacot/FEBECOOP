@@ -93,6 +93,9 @@
                 color: $white;
                 display: block;
             }
+            a.active {
+                color: $blue-1;
+            }
             &:not(:last-child) {
                 &:before {
                 position: absolute;

@@ -104,6 +104,49 @@ $terms = get_terms('categories_actualites');
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
+<!-- LOAD MORE -->
+<script>
+$('#js-actualites-section-wrapper').on('click', '#loadmore-actu', function(e){
+
+e.preventDefault();
+console.log('click');
+
+$(this).parent().fadeOut();
+
+var next_actu_page = $(this).parent().attr('href');
+// alert(next_actu_page);
+
+$('#js-actualites-section-wrapper').append(
+  $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' #js-actualites-container a')
+);
+
+});
+
+</script>
+
+<!-- FILTRES -->
+<script>
+
+
+$('.filtres-types-a-filtre a').click(function(e){
+
+e.preventDefault(); // annule effet ou autre sur le clic
+
+$('.actualites-container').fadeOut(); // vire les anciens item 
+
+var next_actucat_page = $(this).attr('href');
+
+$('.filtres-types-a-filtre a').each(function(){ $(this).removeClass('active'); })
+    $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
+
+$('#js-actualites-section-wrapper').append(
+  $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_page + ' #js-actualites-container a')
+);
+      
+});
+
+</script>
+
 
 <?php
 get_footer();

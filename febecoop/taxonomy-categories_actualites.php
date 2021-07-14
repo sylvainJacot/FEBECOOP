@@ -16,7 +16,7 @@ $terms = get_terms('categories_actualites');
   <div class="hero-section-type-g-wrapper grid">
     <div class="hero-section-type-g-content">
       <div class="hero-section-type-g-content-text">
-        <h1><span><?php pll_e('Actualités');?></h1></span>
+        <h1><span><?php the_field('titre_de_la_page'); ?></h1></span>
       </div>
 
       <div class="hero-section-type-g-content-filtres filtres-type-a-container js-filtres-type-a-container">
@@ -43,11 +43,25 @@ $terms = get_terms('categories_actualites');
 <section class="actualites-section">
   <div class="actualites-section-wrapper js-actualites-section-wrapper grid" id="js-actualites-section-wrapper">
     <div class="actualites-container js-actualites-container" id="js-actualites-container">
+      <?php
+      // set the "paged" parameter (use 'page' if the query is on a static front page)
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
+      
+      $loopActus = new WP_Query(
+        array(
+          'post_type' => 'actualites',
+          'status' => 'published', 
+          'orderby'	=> 'post_date',
+          'order'         => 'DESC',
+          'paged' => $paged
+        )
+      );
+      ?>
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
 
-          <a href="<?php the_permalink(); ?>" class="swiper-slide  card-type-b-item card-type-b-item-row-actu js-card-actus">
+          <a href="<?php the_permalink(); ?>" class="swiper-slide card-type-b-item card-type-b-item-row-actu js-card-actus">
             <div class="card-type-b-pic-wrapper">
               <?php
               $image = get_field('actu-hero-image');
@@ -71,6 +85,10 @@ $terms = get_terms('categories_actualites');
       wp_reset_postdata(); ?>
 
 
+      <?php            
+      next_posts_link( ('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages ); 
+      ?>
+
   </div>
 
   </div>
@@ -84,6 +102,49 @@ $terms = get_terms('categories_actualites');
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- LOAD MORE -->
+<script>
+$('#js-actualites-section-wrapper').on('click', '#loadmore-actu', function(e){
+
+e.preventDefault();
+console.log('click');
+
+$(this).parent().fadeOut();
+
+var next_actu_page = $(this).parent().attr('href');
+// alert(next_actu_page);
+
+$('#js-actualites-section-wrapper').append(
+  $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' #js-actualites-container a')
+);
+
+});
+
+</script>
+
+<!-- FILTRES -->
+<script>
+
+
+$('.filtres-types-a-filtre a').click(function(e){
+
+e.preventDefault(); // annule effet ou autre sur le clic
+
+$('.actualites-container').fadeOut(); // vire les anciens item 
+
+var next_actucat_page = $(this).attr('href');
+
+$('.filtres-types-a-filtre a').each(function(){ $(this).removeClass('active'); })
+    $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
+
+$('#js-actualites-section-wrapper').append(
+  $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_page + ' #js-actualites-container a')
+);
+      
+});
+
+</script>
 
 
 <?php
