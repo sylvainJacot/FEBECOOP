@@ -77,10 +77,9 @@
     top: -380px;
     @include shadow-search-tablet($blue-1-30);
     display: block;
-    z-index: 100;
     @include trans-b-b;
     padding: 56px 88px 80px 88px;
-    z-index: 0;
+    z-index: 1;
 
     label {
         display: block;
@@ -121,7 +120,6 @@
 .nav-search-tablet-active {
     top: 87px;
     @include trans-b;
-    z-index: 1;
 }
 .nav-search-tablet-close-area {
     display: flex;

@@ -8,18 +8,10 @@
         color: $blue-3;
     }
     ul {
-        height: auto;
-    margin-top: 16px;
-    transform-origin: top;
-    transform: scaleY(1);
-    transition: all 0.4s ease-in-out;
+        @include open-dropdown-container;
     
         li {
-            transform-origin: top;
-            transform: translateY(0px) scale(1);
-            opacity: 1;
-            transition: all 0.3s ease-in-out;
-            transition-delay: 0.1s;
+            @include open-dropdownItem;
         }
     }
 }
@@ -377,6 +369,7 @@ header {
             overflow-y: scroll;
             background: $blue-1;
             padding: 64px 0px;
+            padding-bottom: 120px;
             opacity: 0;
             pointer-events: none;
             transform-origin: top center;
@@ -427,17 +420,10 @@ header {
                             @include list-item-children-arrow-cta;
 
                             .sub-menu {
-                                transform-origin: top;
-                                height: 0px;
-                                transform: scaleY(0);
-                                transition: all 0.3s ease-in-out;               
-
+                                @include close-dropdown-container;
                                 li {
-                                    transform-origin: top;
+                                    @include close-dropdownItem;
                                     @include sub-list-item;
-                                    transform: translateY(-8px);
-                                    opacity: 0;
-                                    transition: all 0.0s ease-in-out;
 
                                 }
                                 > li {
@@ -470,6 +456,12 @@ header {
                             }
                             &.link-children-mobile-opened {
                                 @include mobile-opening-sub-menu;
+
+                                @include tablet {
+                                    .sub-menu {
+                                        margin-top: 0 !important;
+                                    }
+                                }
                             }
                         }
 
@@ -499,17 +491,11 @@ header {
                                 @include list-item-children-arrow-cta;
 
                                 .sub-menu {
-                                    transform-origin: top;
-                                    height: 0px;
-                                    transform: scaleY(0);
-                                    transition: all 0.3s ease-in-out;
+                                    @include close-dropdown-container;
     
                                     li {
-                                        transform-origin: top;
+                                        @include close-dropdownItem;
                                         @include sub-list-item;
-                                        transform: translateY(-8px);
-                                        opacity: 0;
-                                        transition: all 2s ease-in-out;
     
                                     }
                                     > li {
@@ -547,6 +533,11 @@ header {
                                 }
                                 &.link-children-mobile-opened {
                                     @include mobile-opening-sub-menu;
+                                    @include tablet {
+                                        .sub-menu {
+                                            margin-top: 0 !important;
+                                        }
+                                    }
                                 }
                             }
                         }

@@ -311,10 +311,13 @@
                             transform: translateY(-50%) rotate(0deg);
                             right: 8%;
                             @include trans-a;
-                            @media (min-width:1200px) {
+                            @media (min-width:1263px) {
+                                right: 4%;
+                            }
+                            @include laptopL {
                                 right: 9%;
                             }
-                            @media (min-width:1273px) {
+                            @media (min-width:1331px) {
                                 right: 4%;
                             }
                         }

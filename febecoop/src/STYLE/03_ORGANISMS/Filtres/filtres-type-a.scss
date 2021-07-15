@@ -42,7 +42,7 @@
             top: 50%;
             transform: translateY(-50%) rotate(-90deg);
             background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-white.svg") center no-repeat;
-            @include trans-a;
+            @include trans-a(0.1s);
         }
         &:before {
             position: absolute;
@@ -55,9 +55,9 @@
         }
     }
     .filtres-types-a-filtres-container {
-        display: none;
+        display: block;
         overflow-y: scroll;
-        // max-height: 400px;
+         @include close-dropdown-container;
 
         /* width */
         &::-webkit-scrollbar {
@@ -85,10 +85,12 @@
 
         .filtres-types-a-filtre {
             position: relative;
+            @include close-dropdownItem;
             a {
                 @include hando-b;
                 font-size: 13px;
-                line-height: 64px;
+                line-height: 24px;
+                padding: 16px 0px;
                 @include tracking(100);
                 color: $white;
                 display: block;
@@ -134,14 +136,26 @@
 
 .filtres-type-a-container-active {
     padding: 0px $mCol 24px $mCol;
+
+    .filtres-types-a-filtres-container {
+        @include open-dropdown-container;
+
+    .filtres-types-a-filtre {
+        @include open-dropdownItem;
+    }
+}
+
     @include tablet {
         padding: 0px 32px 24px 32px;
     }
+    
+
     .filtres-type-a-title {
         margin-bottom: 8px;
+
         &:after {
             transform: translateY(-50%) rotate(0deg); 
-            @include trans-a;
+            @include trans-a(0.1s);
         }
         &:before {
             display: block;

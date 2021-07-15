@@ -3,6 +3,7 @@ const HeaderMainMenuMobile = document.getElementById(
   "js-header-second-section-mobile"
 );
 const NavSearchTablet = document.getElementById("js-nav-search-tablet");
+let closeArea = document.getElementById('js-nav-search-tablet-close-area');
 const Header = document.getElementById("js-header");
 
 MenuButton.addEventListener("click", togglemenu);
@@ -20,5 +21,9 @@ function togglemenu() {
 
   if (NavSearchTablet.classList.contains("nav-search-tablet-active")) {
     NavSearchTablet.classList.remove("nav-search-tablet-active");
-  }
+    closeArea.classList.remove('nav-search-tablet-close-area-active');
+    } else {
+    searchTablet.classList.add('nav-search-tablet-active');
+    closeArea.classList.add('nav-search-tablet-close-area-active');
+}
 }

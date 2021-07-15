@@ -99,7 +99,6 @@ $terms_tags  = get_terms(
             <?php endif; ?>
             
         </div>
-
         </div>
         <a href="<?php echo esc_url(home_url('/')); ?>notes-pratiques-outils" class="cta-a"><?php pll_e('Toutes les notes pratiques & outils');?></a>
     </div>

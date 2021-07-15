@@ -211,7 +211,7 @@ get_header();
                 <div class="nos-formations-card-content">
                     <p class="nos-formations-card-content-text"><?php the_field('formations-text'); ?></p>
 
-                    <p class="cta-c">Voir les formations</p>
+                    <p class="cta-c"><?php pll_e('Voir les formations');?></p>
 
                 </div>
             </a>

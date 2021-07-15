@@ -11,7 +11,6 @@ linksWithSubMenuTop.forEach(link => {
 
 linksWithSubMenuBottom.forEach(linkb => {
     linkb.addEventListener('click', () => {
-        console.log('click bottom')
         linkb.classList.toggle('link-children-mobile-opened');
     })
 })
@@ -22,3 +21,15 @@ allMenuLinks.forEach(link => {
         link.style.color = 'red';
     })
 })
+
+function removeClassTablet() {
+
+
+    if (window.matchMedia("(min-width: 768px)").matches) { // If media query matches
+        linksWithSubMenuTop.forEach(link => {
+            link.classList.remove('link-children-mobile-opened');
+        })
+    } 
+  }
+
+window.addEventListener('resize', removeClassTablet) // Attach listener function on state changes

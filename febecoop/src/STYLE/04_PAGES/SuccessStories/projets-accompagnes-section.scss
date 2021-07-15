@@ -17,7 +17,7 @@
     .projets-accompagnes-section-filtres {
         position: absolute;
         left: 0px;
-        top: - $hstb-intro-h-m - 56px;
+        top: - $hstb-intro-h-m - 96px;
         @include tablet {
             top: - $hstb-intro-h-t - 56px;
         }
@@ -26,9 +26,17 @@
         display: flex;
         justify-content: end;
         flex-direction: column;
+        min-height: 420px;
+
+        @include tablet {
+            min-height: 520px;
+        }
+        @include laptopS {
+            min-height: 512px;
+        }
+
         .card-type-b-container {
             position: relative;
-            min-height: 374px;
             @include tablet {
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
@@ -40,9 +48,10 @@
                 grid-gap: $lCol;
                 margin-bottom: $lCol;
             }
-            @include laptopS {
+            @include laptopL {
                 grid-gap: $dCol;
                 margin-bottom: $dCol;
+
             }
         }
          a:not(.card-type-b-item):not(.filtres-types-a-filtre-link) {

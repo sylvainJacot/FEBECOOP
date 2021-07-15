@@ -77,7 +77,7 @@ $pa_terms = get_terms('projet_accompagne_cat');
                 array(
                     'post_type' => 'projet-accompagnes',
                     'status' => 'published',
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 6,
                     'orderby'    => 'post_date',
                     'order'         => 'DESC',
                     'paged' => $paged

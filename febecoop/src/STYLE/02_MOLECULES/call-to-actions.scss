@@ -432,7 +432,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     height: 10px;
     background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-orange.svg") center no-repeat;
     background-size: contain;
-    @include trans-a;
+    @include trans-a(0.1s);
 }
 
 @mixin arrow-button {
@@ -455,11 +455,18 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     &:before {
         transform: rotate(180deg);
         z-index: 1;
-        top: 35px;
-        @include trans-a;
+        top: 34px;
+        transform-origin: center;
+        @include trans-a(0.1s);
+        @include tablet {
+            display: none !important;
+        }
     }
     &:after {
         background: $white;
+        @include tablet {
+            display: none !important;
+        }
     }
 }
 

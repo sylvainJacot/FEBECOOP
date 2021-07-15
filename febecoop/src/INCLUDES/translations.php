@@ -55,6 +55,6 @@ if (function_exists('pll_register_string')) {
     pll_register_string("autres domaines d'expertises","autres domaines d'expertises", 'febecoop', true);   
     pll_register_string("Voir tous les domaines d’expertises","Voir tous les domaines d’expertises", 'febecoop', true);   
     pll_register_string("Actualités","Actualités", 'febecoop', true);   
-    pll_register_string("Rechercher","Rechercher", 'febecoop', true);   
-    
+    pll_register_string("Rechercher","Rechercher", 'febecoop', true);
+    pll_register_string("Voir les formations","Voir les formations", 'febecoop', true);    
 }
