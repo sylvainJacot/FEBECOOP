@@ -1,6 +1,7 @@
 <section class="notes-pratiques-outils-loop-section">
     <div class="notes-pratiques-outils-loop-wrapper grid">
 
+
         <aside class="filters-npo-questions-wrapper">
         <p class="filter-npoq-header"><?php pll_e('Filtrer par');?>:</p>
         <div class="filter-npoq-container">

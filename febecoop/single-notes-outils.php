@@ -17,7 +17,7 @@ get_header();
         <div class="hero-section-type-d-content">
 
             <div class="hero-section-type-d-content-text">
-                <p class="hero-section-type-d-content-toptitle"><?php pll_e('Notes pratiques & outils');?></p>
+                <p class="hero-section-type-d-content-toptitle"><?php pll_e('Notes pratiques & outils'); ?></p>
                 <h1><span><?php the_title(); ?></span></h1>
             </div>
 
@@ -43,10 +43,9 @@ get_header();
 <main class="main-note-outils-content grid">
     <div class="section-note-outils-content generic-content">
         <!-- // START contenu_flexible -->
-        <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main');?>
+        <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main'); ?>
         <?php get_template_part('./src/TEMPLATES/ShareSection/share-section-a');  ?>
-        <!-- END contenu_flexible -->
-        <a class="back-cta" onclick="history.back();"><?php pll_e('Retour');?></a>
+
     </div>
 
     <!-- ASIDE flexible ==============
@@ -75,8 +74,8 @@ get_header();
             wp_reset_postdata(); ?>
         </ul>
         <span class="nocaq-cta">
-        <a href="<?php echo esc_url(home_url('/')); ?>notes-pratiques-outils" class="cta-c"><?php pll_e('Voir toutes les notes pratiques & outils');?></a>
-            </span>
+            <a href="<?php echo esc_url(home_url('/')); ?>notes-pratiques-outils" class="cta-c"><?php pll_e('Voir tous les sujets'); ?></a>
+        </span>
 
     </aside>
 
@@ -85,7 +84,7 @@ get_header();
 
 <!-- CONTACT BANNER ==============
 =========================== -->
-<?php get_template_part( './src/TEMPLATES/ContactBanner/contact-banner-options' );?>
+<?php get_template_part('./src/TEMPLATES/ContactBanner/contact-banner-options'); ?>
 
 
 <?php

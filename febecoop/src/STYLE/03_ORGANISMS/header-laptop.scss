@@ -95,7 +95,7 @@
     &.current_page_item {
         a {
             color: $orange-1;
-            text-decoration: underline !important;
+            text-decoration: none !important;
         }
     }
 }
@@ -166,7 +166,7 @@
 
                         >a {
                             color: $orange-1;
-                            text-decoration: underline !important;
+                            text-decoration: none !important;
                         }
                     }
 
@@ -367,6 +367,12 @@
                                 pointer-events: unset;
                                 transition: all 0.2s ease-in-out;
                                 transition-delay: 0.1s;
+
+                                &.current-menu-item {
+                                    a {
+                                        color: $orange-1;
+                                    }
+                                }
                             }
                         }
                     }

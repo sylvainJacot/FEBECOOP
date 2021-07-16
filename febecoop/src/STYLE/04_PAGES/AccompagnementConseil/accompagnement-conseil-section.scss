@@ -34,6 +34,11 @@
     .accompagnement-conseils-aside-wrapper {
         display: flex;
         flex-direction: column;
+        @include laptopS {
+            position: sticky;
+            top: 24px;
+            height: fit-content;
+        }
     .accompagnement-conseils-aside {
         background-color: $orange-light;
         padding: 48px $mCol 32px $mCol;

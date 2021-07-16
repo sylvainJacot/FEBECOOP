@@ -76,7 +76,7 @@ $margin-flex-txt : 40px;
 }
 @mixin flex-link {
   color: $orange-1;
-  text-decoration: underline !important;
+  text-decoration: none !important;
   @include trans-a;
   &:hover {
     color: $red-1;

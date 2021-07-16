@@ -17,11 +17,11 @@ if (element) {
     el.addEventListener("click", function () {
         el.classList.toggle("contenu-accordeon-item-active");
 
-        element.forEach(function (ell, keyEll) {
-        if (key !== keyEll) {
-            ell.classList.remove("contenu-accordeon-item-active");
-        }
-        });
+        // element.forEach(function (ell, keyEll) {
+        // if (key !== keyEll) {
+        //     ell.classList.remove("contenu-accordeon-item-active");
+        // }
+        // });
     });
     });
 }

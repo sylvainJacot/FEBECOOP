@@ -21,6 +21,10 @@
         .filters-npo-questions-wrapper {
             @include laptopS{
                 width: 7 * $lCol;
+                position: sticky;
+                top: 24px;
+                height: fit-content;
+                margin-bottom: 40px;
             }
             @include laptopL {
                 width: 5 * $dCol;
@@ -34,6 +38,7 @@
                 text-transform: uppercase;
             }
             .filter-npoq-container {
+
                 margin-bottom: 40px;
                 a {
                     position: relative;
@@ -87,6 +92,7 @@
                 padding: 24px 3 * $mCol 24px $mCol;
                 border-radius: 8px;
                 margin-bottom: 16px;
+                @include trans-a(0.1s);
                 &:first-child{
                     margin-top: 0;
                 }
@@ -101,6 +107,11 @@
                 @include laptopS {
                     padding: 32px 3 * $lCol 32px $lCol;
                     margin-bottom: 24px;
+
+                    &:hover {
+                        background-color: $orange-3;
+                        @include trans-a;
+                    }
                 }
 
                 @include laptopL {

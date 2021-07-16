@@ -12,3 +12,33 @@ $cb-space-m: 48px;
 $cb-space-t: 48px;
 $cb-space-l: 48px;
 $cb-space-d: 48px;
+
+
+// Espaces pour les cartes avec icones/paragraphe/buttons
+// Card Padding
+@mixin padding-card-with-icone-m {
+    padding: 40px $mCol;
+}
+@mixin padding-card-with-icone-t {
+    padding: 48px $tCol 80px $tCol;
+}
+@mixin padding-card-with-icone-l {
+    padding: 64px $lCol 72px $lCol;
+}
+@mixin padding-card-with-icone-d {
+    padding: 64px $dCol 72px $dCol;
+}
+
+// Card Paragraph margin
+@mixin margin-paragraph-card-with-icone-m {
+    margin: 32px 0;
+}
+@mixin margin-paragraph-card-with-icone-t {
+    margin: 16px 0 16px 0px;
+}
+@mixin margin-paragraph-card-with-icone-l {
+    margin: 16px 0 16px 0px;
+}
+@mixin margin-paragraph-card-with-icone-d {
+    margin: 16px 0 16px 0px;
+}

@@ -33,6 +33,9 @@
             width: 7 * $lCol;
             padding: 24px 16px;
             height: fit-content;
+            position: sticky;
+            top: 24px;
+            margin-bottom: 190px;
         }
 
         @include laptopL {
