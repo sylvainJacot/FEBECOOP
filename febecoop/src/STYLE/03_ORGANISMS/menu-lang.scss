@@ -34,7 +34,7 @@
     justify-content: center;
     width: 100vw;
     align-items: center;
-    padding: 20px 0 72px 0;
+    padding: 20px 0 120px 0;
     background-color: $blue-5;
     position: relative;
     margin-top: 40px;
@@ -102,6 +102,7 @@
                     right: 8px;
                     top: calc(50% - 2px);
                     transform: translateY(-50%) rotate(-90deg);
+                    @include trans-a(0.1s);
                 }
 
                 &:before {
@@ -130,6 +131,14 @@
                 }
             }
             &:hover {
+
+                > a {
+                    &:after {
+                        transform: translateY(-50%) rotate(0deg);
+                        @include trans-a(0.1s);
+                    }
+                }
+
                 ul {
                     // max-height: 800px;
                     // @include trans-a;
