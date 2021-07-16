@@ -1,0 +1,59 @@
+$cci-pad-m: 48px;
+$cci-pad-t: 32px;
+
+.category-card-item {
+    display: block;
+    border-radius: 8px;
+    background-color: $white;
+    @include shadow-a-nopic;
+    position: relative;
+    padding: $cci-pad-m $mCol $cci-pad-m * 2 $mCol;
+    margin-bottom: 40px;
+
+    @include tablet {
+        margin: 0;
+        padding: $cci-pad-t $tCol $cci-pad-t * 2 $tCol;
+    }
+    @include laptopS {
+        padding: $cci-pad-t $lCol $cci-pad-t * 2 $lCol;
+    }
+    @include laptopL {
+        padding: $cci-pad-t $dCol $cci-pad-t * 2 $dCol;
+    }
+
+    .cci-header {
+        display: flex;
+        @include tablet {
+            flex-direction: column;
+        }
+        > h3 {
+            @include titre-category-card-item;
+            margin-left: $mCol;
+
+            @include tablet {
+                margin: 24px 0px 24px 0px;
+            }
+            @include laptopS {
+                margin: 32px 0px 24px 0px;
+            }
+            @include laptopL {
+                margin: 32px 0px 24px 0px;
+            }
+        }
+    }
+    .cci-content {
+        .cci-content-txt {
+            @include text-card;
+            margin-bottom: 46px;
+        }
+        .cta-flex-a {
+            position: absolute;
+            bottom: $cci-pad-m;
+            width: fit-content;
+
+            @include tablet {
+                bottom: $cci-pad-t;
+            }
+        }
+    }
+}

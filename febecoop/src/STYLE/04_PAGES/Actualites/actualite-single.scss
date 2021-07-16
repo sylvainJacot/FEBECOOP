@@ -34,7 +34,7 @@
     }
     .other-news-section-wrapper  {
         .cta-b {
-            margin-top: $cb-space-m;
+            margin-top: $cb-space-m - 16px;
             @include tablet {
                 display: none;
             }
@@ -42,15 +42,15 @@
     }
 }
 .other-news-succes-stories {
-    padding-bottom: $bbc-m;
+    padding-bottom: $bbc-m + 40px;
     @include tablet {
-        padding-bottom: $bbc-t;
+        padding-bottom: $bbc-t + 48px;
     }
     @include laptopS {
-        padding-bottom: $bbc-l;
+        padding-bottom: $bbc-l + 40px;
     }
     @include laptopL {
-        padding-bottom: $bbc-d;
+        padding-bottom: $bbc-d + 40px;
     }
     .other-news-succes-stories-mobile {
         @include laptopS {

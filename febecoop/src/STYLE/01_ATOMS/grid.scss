@@ -64,6 +64,47 @@ $m-grid-size: #{$m-col*$m-col-count}vw;
     margin-left: auto;
     margin-right: 0;
 }
+@media ( min-width: #{$phone-max + 1}px) {
+    .grid, .t-grid {
+        width: $t-grid-size;
+        margin: 0 auto;
+    }
+    .t-center {
+        position: relative;
+        margin: 0 auto;
+    }
+    .t-right {
+        position: relative;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    @for $i from 1 through $t-col-count - 1 {
+        .t-col-#{$i} {
+            width: #{$i*$t-col}px;
+        }
+    }
+}
+
+@media ( min-width: #{$tablet-max + 1}px){
+    .grid, .l-grid {
+        width: $l-grid-size;
+        margin: 0 auto;
+    }
+    .l-center {
+        position: relative;
+        margin: 0 auto;
+    }
+    .l-right {
+        position: relative;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    @for $i from 1 through $l-col-count - 1 {
+        .l-col-#{$i} {
+            width: #{$i*$l-col}px;
+        }
+    }
+}
 
 @media (min-width: #{$laptop-max + 1}px) {
     .grid, .d-grid {
@@ -86,47 +127,9 @@ $m-grid-size: #{$m-col*$m-col-count}vw;
     }
 }
 
-@media (max-width: #{$laptop-max}px) and (min-width: #{$tablet-max + 1}px) {
-    .grid, .l-grid {
-        width: $l-grid-size;
-        margin: 0 auto;
-    }
-    .l-center {
-        position: relative;
-        margin: 0 auto;
-    }
-    .l-right {
-        position: relative;
-        margin-left: auto;
-        margin-right: 0;
-    }
-    @for $i from 1 through $l-col-count - 1 {
-        .l-col-#{$i} {
-            width: #{$i*$l-col}px;
-        }
-    }
-}
 
-@media (max-width: #{$tablet-max}px) and (min-width: #{$phone-max + 1}px) {
-    .grid, .t-grid {
-        width: $t-grid-size;
-        margin: 0 auto;
-    }
-    .t-center {
-        position: relative;
-        margin: 0 auto;
-    }
-    .t-right {
-        position: relative;
-        margin-left: auto;
-        margin-right: 0;
-    }
-    @for $i from 1 through $t-col-count - 1 {
-        .t-col-#{$i} {
-            width: #{$i*$t-col}px;
-        }
-    }
-}
+
+
 
 
 @media (max-width: #{$phone-max}px) {

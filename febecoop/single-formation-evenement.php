@@ -29,10 +29,8 @@ get_header();
             <div class="evenement-formation-single-content-flex">
                 <!-- // START contenu_flexible -->
                 <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main'); ?>
+                <?php get_template_part('./src/TEMPLATES/ShareSection/share-section-a');  ?>
                 <!-- END contenu_flexible -->
-                <!-- SHARE ASIDE ==============
-        =========================== -->
-                <!-- <?php get_template_part('./src/TEMPLATES/ShareSection/share-section-a'); ?> -->
             </div>
 
             <?php

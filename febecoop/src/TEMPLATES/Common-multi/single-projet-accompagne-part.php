@@ -21,11 +21,13 @@ if( !empty( $image ) ): ?>
         <!-- // START contenu_flexible -->
         <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main');?>
         <!-- END contenu_flexible -->
-        <a class="back-cta" onclick="history.back();"><?php pll_e('Retour');?></a>
+
 
         <!-- SHARE ASIDE ==============
 =========================== -->
 <?php get_template_part( './src/TEMPLATES/ShareSection/share-section-a');?> 
+
+<a class="back-cta" onclick="history.back();"><?php pll_e('Retour');?></a>
 
     </div>
 

@@ -9,7 +9,7 @@
 <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-video-youtube'); ?>
 <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-titre-icone'); ?>
 <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-slider-images'); ?>
-<?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-share'); ?>
+
 
 <?php endwhile;
 endif; ?>

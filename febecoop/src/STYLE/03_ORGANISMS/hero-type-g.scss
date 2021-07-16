@@ -7,7 +7,7 @@ $hstg-img-h-d : 260px;
     background: $orange-light;
     position: relative;
     padding-top: 64px;
-    padding-bottom: 64px + $hstg-img-h-m;
+    padding-bottom: 64px + $hstg-img-h-m  + 120px;
 
     @include tablet {
         padding-top: 72px;

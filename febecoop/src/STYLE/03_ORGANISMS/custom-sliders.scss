@@ -153,6 +153,11 @@
     .cta-b {
         margin-top: $cb-space-m - 8px;
     }
+    .swiper-pagination-type-b {
+        @include tablet {
+            display: none;
+        }
+    }
 }
 // CONTAINER TYPE B (used for flexible swipers)
 .swiper-container-type-b {

@@ -439,10 +439,6 @@
             position: absolute;
             width: 40px;
             right: 88px;
-            // bottom: 120px;
-            // animation: bounce-reverse-search 1s linear;
-            // animation-fill-mode: forwards;
-
         }
 
         input[type=text] {
@@ -532,8 +528,72 @@
 }
 
 .nav-search-laptop-search-page {
+    display: block !important;
     position: relative;
-    top: unset !important;
+    z-index: 0;
+    width: 100vw;
+    background: $orange-light;
+    left: 0;
+    display: block;
+    z-index: 100;
+    @include trans-b-b;
+    padding: 64px;
+    z-index: 2;
+    top: -1px !important;
+
+    @include tablet {
+        padding: 106px 88px;
+    }
+
+    .nav-search-laptop-top-title {
+        @include top-titre-header;
+        margin-bottom: 24px;
+    }
+
+
+    label {
+        display: none;
+    }
+
+    input[type=image] {
+        position: absolute;
+        width: 32px;
+        right: 64px;
+        bottom: 86px;
+
+        @include tablet {
+            bottom: unset;
+            width: 40px;
+            right: 88px;
+        }
+    }
+
+    input[type=text] {
+        @include hando-xl;
+        color: $blue-1;
+        background: transparent;
+        font-size: 20px;
+        line-height: 70px;
+        width: 100%;
+        border-bottom: solid 1px $orange-1;
+        padding-right: 60px;
+        box-shadow: none !important;
+
+        @include tablet {
+            font-size: 45px;
+            line-height: 70px;
+        }
+
+        &:focus {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        &:-webkit-autofill,&:-webkit-autofill:hover,&:-webkit-autofill:focus,&:-webkit-autofill:active {
+            -webkit-text-fill-color: $blue-1;
+        }
+
+    }
 }
 .nav-search-laptop-search-page.nav-search-laptop-hover {
     @include laptopS {

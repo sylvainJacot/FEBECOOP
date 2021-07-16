@@ -28,6 +28,7 @@ get_header();
     <div class="main-flexible-page-content generic-content">
         <!-- // START contenu_flexible -->
     <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main');?>
+    <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-share'); ?>
         <!-- END contenu_flexible -->
     </div>
 

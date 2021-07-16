@@ -403,7 +403,7 @@ $postCountTransformer = $loopTransformer->post_count;
     </div>
 
     <!-- Pagination pour mobile -->
-    <div class="swiper-pagination-type-b js-swiper-pagination-type-b "></div>
+    <div class="swiper-pagination-type-b js-swiper-pagination-type-b"></div>
 
     <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>actualites"><?php pll_e('Tous les projets accompagnés'); ?></a>
 

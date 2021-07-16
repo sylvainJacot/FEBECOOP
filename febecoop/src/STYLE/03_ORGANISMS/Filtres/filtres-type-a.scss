@@ -4,15 +4,16 @@
 
 .filtres-type-a-container {
     width: 100%;
+    position: absolute;
     background: $orange-1;
     padding: 0px $mCol 0px $mCol;
     border-radius: 10px;
-    margin-top: 64px;
+    margin-top: 104px;
+    top: 0;
     z-index: 1;
     @include tablet {
         width: 8 * $tCol;
         padding: 0px 32px;
-        position: absolute;
         top: 0px;
         right: 0;
         margin-top: 0px;

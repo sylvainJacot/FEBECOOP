@@ -78,7 +78,7 @@
 
     &:before {
         right: 11px;
-        top: 35px;
+        top: 34px;
 
         @include tablet {
             display: none;
@@ -516,7 +516,7 @@ header {
 
                                 &:hover,
                                 &:focus {
-                                    @include arrow-button-active;
+                                    // @include arrow-button-active;
 
                                     @include tablet {
 
@@ -526,9 +526,9 @@ header {
                                         }
                                     }
 
-                                    a {
-                                        color: $blue-3;
-                                    }
+                                    // a {
+                                    //     color: $blue-3;
+                                    // }
 
                                 }
                                 &.link-children-mobile-opened {

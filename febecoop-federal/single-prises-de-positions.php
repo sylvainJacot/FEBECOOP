@@ -42,6 +42,7 @@ if( !empty( $image ) ): ?>
     <div class="section-actualite-content generic-content">
         <!-- // START contenu_flexible -->
     <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main');?>
+    <?php get_template_part( './src/TEMPLATES/ShareSection/share-section-a');?> 
         <!-- END contenu_flexible -->
     </div>
 

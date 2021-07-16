@@ -3,7 +3,7 @@ const ActualitesSwiper = new Swiper(".js-type-b-swiper", {
   direction: "horizontal",
   visibilityFullFit: true,
   slidesPerView: 1,
-  spaceBetween: 22,
+  spaceBetween: 16,
   centeredSlides: false,
   breakpoints: {
     768: {

@@ -36,18 +36,18 @@
         flex-direction: column;
     .accompagnement-conseils-aside {
         background-color: $orange-light;
-        padding: 48px $mCol;
+        padding: 48px $mCol 32px $mCol;
         border-radius: 8px;
         margin-bottom: 32px;
         @include tablet {
-            padding: 48px 2 * $tCol;
+            padding: 48px 2 * $tCol 32px 2 * $tCol;
         }
         @include laptopS {
-            padding: 40px 24px 24px 24px;
+            padding: 40px 24px 16px 24px;
             width: 7 * $lCol;
         }
         @include laptopL {
-            padding: 40px $dCol;
+            padding: 40px $dCol 24px $dCol;
             width: 7 * $dCol;
         }
         .accompagnement-conseils-aside-titre {
@@ -64,9 +64,9 @@
             line-height: 25px;
             @include tracking(25);
             color: $blue-3;
-            margin: 32px 0px;
+            margin: 8px 0px 8px 0px;
             @include laptopS {
-                margin: 16px 0px;
+                margin: 16px 0px 0px 0px;
             }
         }
         .accompagnement-conseils-aside-links {

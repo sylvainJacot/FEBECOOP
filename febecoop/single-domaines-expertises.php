@@ -44,6 +44,7 @@ get_header();
     <div class="expertise-contenu-main generic-content">
     <!-- // START contenu_flexible -->
     <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main');?>
+    <?php get_template_part('./src/TEMPLATES/ShareSection/share-section-a');  ?>
     <!-- END contenu_flexible -->
     </div>
     <aside class="expertise-contenu-aside">

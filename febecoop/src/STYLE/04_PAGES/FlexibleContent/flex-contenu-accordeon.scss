@@ -5,16 +5,19 @@ $fcai-w-l: 90%;
     .contenu-accordeon-item {
         position: relative;
         background: $blue-light;
-        padding: 32px $mCol;
+        padding: 32px 32px;
+        padding-bottom: 0px;
         margin-bottom: 24px;
         border-radius: 8px;
         cursor: pointer;
         @include tablet {
             padding: $tCol;
+            padding-bottom: 0px;
         }
         @include laptopS {
-            padding: 24px 32px;
+            padding: 24px 32px 0px 32px;
         }
+
 
         .cai-header {
             display: flex;
@@ -64,7 +67,7 @@ $fcai-w-l: 90%;
         }
     }
         .cai-contenu {
-            display: none;
+            @include close-dropdown-container;
             @include tablet {
                 width: 13 * $tCol;
             }
@@ -74,6 +77,7 @@ $fcai-w-l: 90%;
             p {
                 margin-bottom: 0px;
                 margin-top: 24px;
+                @include close-dropdownItem;
             }
         }
 
@@ -81,7 +85,11 @@ $fcai-w-l: 90%;
     .contenu-accordeon-item-active {
         @include trans-a;
         .cai-contenu {
-            display: block;
+            @include open-dropdown-container;
+            padding-bottom: 32px;
+            p {
+                @include open-dropdownItem;
+            }
         }
         .cai-header {
         .cai-ic {

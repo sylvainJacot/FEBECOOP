@@ -1,4 +1,5 @@
 .card-type-c-item {
+    display: block;
     width: 100%;
     background: $white;
     @include shadow-a-pic;
@@ -45,9 +46,10 @@
     }
     .card-type-c-item-content {
         padding: 16px;
+        padding: 24px $mCol 72px $mCol;
         @include tablet {
-            width: 7 * $tCol;
-            padding: 48px $tCol 48px 2 * $tCol;
+            width: 10 * $tCol;
+            padding: 48px 2 * $tCol 48px 2 * $tCol;
         }
         @include laptopS {
             width: 9 * $lCol;
@@ -70,6 +72,12 @@
             font-size: 18px;
             line-height: 28px;
             margin: 24px 0;
+        }
+        .cta-c {
+            position: absolute;
+            @include tablet {
+                position: relative;
+            }
         }
     }
 }

@@ -59,6 +59,7 @@ get_header();
         <div class="accompagnement-conseils-content generic-content">
             <!-- // START contenu_flexible -->
             <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main'); ?>
+
             <!-- END contenu_flexible -->
         </div>
         <div class="accompagnement-conseils-aside-wrapper">
@@ -114,10 +115,6 @@ get_header();
 
 </section>
 
-<!-- CONTACT BANNER ==============
-=========================== -->
-<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner-far-from-footer"); ?>
-
 
 <!-- SUCCESS STORIES ==============
 =========================== -->
@@ -126,6 +123,10 @@ get_header();
         <?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-loop-mobile'); ?>
         <?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-loop-laptop'); ?>
 </section>
+
+<!-- CONTACT BANNER ==============
+=========================== -->
+<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner"); ?>
 
 
 <?php
