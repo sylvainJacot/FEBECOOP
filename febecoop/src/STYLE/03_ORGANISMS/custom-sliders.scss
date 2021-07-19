@@ -99,6 +99,7 @@
 .slider-section-type-a  {
     padding-top: 56px;
     padding-bottom: $bbc-m + 64px;
+    overflow: hidden;
     @include tablet {
         padding-bottom: $bbc-t + 40px;
     }

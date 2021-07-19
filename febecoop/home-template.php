@@ -8,6 +8,7 @@
 get_header();
 ?>
 
+<div id="overflow" style="overflow-x: hidden;">
 <!-- HERO SECTION ==============
 =========================== -->
 <?php get_template_part("./src/TEMPLATES/Hero/hero-type-a"); ?>
@@ -71,7 +72,7 @@ get_header();
 
 </section>
 
-
+</div>
 
 
 <!-- INFORMATION SPECIFIQUE ==============

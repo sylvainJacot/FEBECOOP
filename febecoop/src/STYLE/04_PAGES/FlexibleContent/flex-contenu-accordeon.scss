@@ -11,19 +11,24 @@ $fcai-w-l: 90%;
         border-radius: 8px;
         cursor: pointer;
         @include trans-a;
+
         @include tablet {
             padding: $tCol;
             padding-bottom: 0px;
         }
         @include laptopS {
-            padding: 32px 32px 0px 32px;
+            padding: 32px 32px 0px 32px;   
+            @media (hover: hover) {     
+                &:hover {
+                    background: $blue-light-3;
+                    transition: none !important;
+                }
+            } 
         }
 
-        &:hover {
-            background: $blue-light-3;
-            transition: none !important;
-        }
+        @media (hover: hover) {
 
+        }
 
         .cai-header {
             display: flex;
@@ -91,8 +96,14 @@ $fcai-w-l: 90%;
 
     }
     .contenu-accordeon-item-active {
-        background: $blue-light !important;
-        @include trans-a;
+
+        @media (hover: hover) {
+            @include laptopS {
+                background: $blue-light !important;
+                @include trans-a;
+            }
+
+        }
         .cai-contenu {
             @include open-dropdown-container;
             padding-bottom: 32px;

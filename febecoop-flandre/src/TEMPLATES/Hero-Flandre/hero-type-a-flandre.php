@@ -1,3 +1,4 @@
+
 <section class="hero-section-type-a hero-section-type-a-flandre">
     <picture class="orange-wave-container">
     <source srcset="<?php echo get_template_directory_uri(  );?>/src/ASSETS/IMAGES/HOME/VECTOR/orange-wave-wallonia-desktop-flandre.svg" media="(min-width: 1300px)"/>

@@ -9,6 +9,7 @@ get_header();
 $pa_terms = get_terms('projet_accompagne_cat');
 // print_r($pa_terms);
 ?>
+<div class="overflow-x" style="overflow-x: hidden;">
 <section class="hero-section-type-b fiche-outils-hero-section" id="projets-accompagnes-hero-section">
     <picture class="hero-section-type-waves-container">
         <source srcset="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/NOTES-OUTILS/VECTOR/illu-wave-desktop.svg" media="(min-width: 1300px)" />
@@ -40,6 +41,7 @@ $pa_terms = get_terms('projet_accompagne_cat');
         </div>
     </div>
 </section>
+</div>
 
 <!-- HERO INTRO ==============
 =========================== -->

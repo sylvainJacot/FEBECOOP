@@ -246,18 +246,27 @@ $cta-newsletter-pseudo-arrow-size : 12px;
         padding: 32px $dCol 32px 2 * $dCol;
     }
 
-    &:before {
+    .donwload-icone {
         position: absolute;
         display: block;
         content: "";
         width: 38px;
         height: 38px;
-        background: url("../ASSETS/IMAGES/common/VECTOR/doc-to-download.svg") center no-repeat;
+        // background: url("../ASSETS/IMAGES/common/VECTOR/doc-to-download.svg") center no-repeat;
         background-size: contain;
         top: 50%;
         left: calc(38px - 16px);
         transform: translateY(-50%);
         @include trans-a;
+
+        > svg {
+            fill: $orange-1;
+
+            path {
+                fill: $orange-1;
+            }
+        }
+
         @include tablet {
             left: 45px;
         }
@@ -272,11 +281,19 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     &:hover {
         color: $red-1;
         background: $red-light;
-        @include trans-a;
+        transition: none !important;
+        // @include trans-a;
 
-        &:before {
-            background: url("../ASSETS/IMAGES/common/VECTOR/doc-to-download-red.svg") center no-repeat;
-            @include trans-a;
+        .donwload-icone {
+            // background: url("../ASSETS/IMAGES/common/VECTOR/doc-to-download-red.svg") center no-repeat;
+            transition: none !important;
+            > svg {
+                fill: $red-1;
+    
+                path {
+                    fill: $red-1;
+                }
+            }
         }
     }
 

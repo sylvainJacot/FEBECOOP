@@ -10,6 +10,7 @@ get_header();
 
 <!-- HERO SECTION ==============
 =========================== -->
+<div class="overflow-x" style="overflow-x: hidden;">
 <section class="hero-section-type-b" id="mediatheque-hero-section'">
     <picture class="hero-section-type-waves-container">
         <source srcset="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/NOTES-OUTILS/VECTOR/illu-wave-desktop.svg" media="(min-width: 1300px)" />
@@ -41,6 +42,7 @@ get_header();
         </div>
     </div>
 </section>
+</div>
 
 <!-- HERO INTRO ==============
 =========================== -->

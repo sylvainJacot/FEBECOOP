@@ -10,6 +10,7 @@ get_header();
 
 <!-- HERO SECTION ==============
 =========================== -->
+<div class="overflow-x" style="overflow: hidden;">
 <?php get_template_part("./src/TEMPLATES/Hero-Federal/hero-type-a-federal"); ?>
 
 <!-- DERNIERES ACTUALITES ==============
@@ -64,7 +65,7 @@ get_header();
         </div>
     </div>
 </section>
-
+</div>
 
 <!-- EXPERTISE ==============
 =========================== -->

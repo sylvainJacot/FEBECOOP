@@ -10,6 +10,7 @@ $npp-space-between-els-m: 32px;
 
 .nos-prises-positions-section {
     background-color: $blue-light;
+    overflow-x: hidden;
     @include tablet {
         padding-bottom: 88px;
     }

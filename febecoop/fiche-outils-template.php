@@ -8,7 +8,9 @@
 ?>
 <!-- HERO SECTION ==============
 =========================== -->
+<div class="overflow-x" style="overflow-x: hidden;">
 <section class="hero-section-type-b fiche-outils-hero-section" id="fiche-outils-hero-section'">
+
     <picture class="hero-section-type-waves-container">
     <source srcset="<?php echo get_template_directory_uri(  );?>/src/ASSETS/IMAGES/NOTES-OUTILS/VECTOR/illu-wave-desktop.svg" media="(min-width: 1300px)"/>
     <source srcset="<?php echo get_template_directory_uri(  );?>/src/ASSETS/IMAGES/NOTES-OUTILS/VECTOR/illu-wave-laptop.svg" media="(min-width: 1025px)"/>
@@ -36,7 +38,9 @@
             </a>
     </div>
     </div>
+   
 </section>
+</div>
 
 <!-- HERO INTRO ==============
 =========================== -->

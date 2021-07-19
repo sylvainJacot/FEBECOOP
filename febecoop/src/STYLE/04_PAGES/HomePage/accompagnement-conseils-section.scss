@@ -1,5 +1,10 @@
 .home-accompagnement-conseils-section {
+    padding-bottom: 58px;
+    @include laptopS {
+        padding-bottom: 88px;
+    }
     .home-accompagnement-conseils-section-wrapper {
+
         @include laptopL {
             padding: 0px $dCol;
         }

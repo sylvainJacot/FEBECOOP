@@ -9,6 +9,7 @@
 
 <!-- HERO SECTION ==============
 =========================== -->
+
 <section class="hero-section-type-h">
     <div class="hero-section-type-h-wrapper grid">
         <div class="hero-section-type-h-content">
@@ -19,6 +20,7 @@
         </div>
     </div>
 </section>
+
 
 
 <!-- MAIN MEMBERS  ==============

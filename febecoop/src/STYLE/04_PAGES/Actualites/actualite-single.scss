@@ -42,6 +42,7 @@
     }
 }
 .other-news-succes-stories {
+    overflow: hidden;
     padding-bottom: $bbc-m + 40px;
     @include tablet {
         padding-bottom: $bbc-t + 48px;

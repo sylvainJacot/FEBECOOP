@@ -1,4 +1,5 @@
 <section class="contact-banner-section">
+<div class="contact-banner-section-deco-lines"></div>
     <picture class="contact-banner-illu-container">
         <source srcset="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/common/VECTOR/illu-contact-banner.svg" media="(min-width: 1025px)" />
         <source srcset="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/common/VECTOR/illu-contact-banner-tablet.svg" media="(min-width: 768px)" />

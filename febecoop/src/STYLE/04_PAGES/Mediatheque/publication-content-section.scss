@@ -59,7 +59,9 @@
                 order: 2;
                 height: fit-content;
                 margin: unset;
-                margin-bottom: 0px;
+                top: 40px;
+                position: sticky;
+                margin-bottom: 80px;
             }
             @include laptopL{
                 padding: 48px $dCol;

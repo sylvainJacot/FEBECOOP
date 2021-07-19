@@ -7,7 +7,7 @@
         padding-bottom: $bbc-l + 88px;
     }
     @include laptopL {
-        padding-bottom: $bbc-d + 40px;
+        padding-bottom: $bbc-d + 160px;
     }
     .notes-pratiques-outils-loop-wrapper {
         min-height: 500px;
@@ -16,11 +16,12 @@
         }
         @include laptopS {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
         }
         .filters-npo-questions-wrapper {
             @include laptopS{
                 width: 7 * $lCol;
+                margin-right: 3 * $lCol;
                 position: sticky;
                 top: 24px;
                 height: fit-content;
@@ -28,6 +29,7 @@
             }
             @include laptopL {
                 width: 5 * $dCol;
+                margin-right: 3 * $dCol;
             }
             .filter-npoq-header {
                 @include hando-b;
@@ -92,7 +94,7 @@
                 padding: 24px 3 * $mCol 24px $mCol;
                 border-radius: 8px;
                 margin-bottom: 16px;
-                @include trans-a(0.1s);
+                @include trans-a(0.3s);
                 &:first-child{
                     margin-top: 0;
                 }
@@ -110,7 +112,8 @@
 
                     &:hover {
                         background-color: $orange-3;
-                        @include trans-a;
+                        transition: none !important;
+                        // @include trans-a;
                     }
                 }
 
