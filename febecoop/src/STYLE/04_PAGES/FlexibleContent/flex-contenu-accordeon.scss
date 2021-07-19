@@ -17,7 +17,7 @@ $fcai-w-l: 90%;
             padding-bottom: 0px;
         }
         @include laptopS {
-            padding: 32px 32px 0px 32px;   
+            padding: 24px 32px 0px 32px;   
             @media (hover: hover) {     
                 &:hover {
                     background: $blue-light-3;
@@ -26,9 +26,6 @@ $fcai-w-l: 90%;
             } 
         }
 
-        @media (hover: hover) {
-
-        }
 
         .cai-header {
             display: flex;
@@ -96,13 +93,12 @@ $fcai-w-l: 90%;
 
     }
     .contenu-accordeon-item-active {
-
-        @media (hover: hover) {
-            @include laptopS {
-                background: $blue-light !important;
-                @include trans-a;
-            }
-
+        @include laptopS {
+            @media (hover: hover) { 
+                    background: $blue-light !important;
+                    @include trans-a;
+                
+                }
         }
         .cai-contenu {
             @include open-dropdown-container;

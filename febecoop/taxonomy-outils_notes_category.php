@@ -129,8 +129,12 @@ $('.filter-npoq-container a').click(function(e){
     $("html").animate(
       {
         scrollTop: top
-      },
-      100 //speed
+      }, {
+        duration: 100,
+        specialEasing: {
+            top: 'easeOutCubic'
+        }
+    },
     );
 
     $('#js-npo-items-container a').fadeOut(); // vire les anciens item 
