@@ -49,13 +49,22 @@
                                 <a href="mailto:<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a><br />
                                 <a href="tel:<?php the_sub_field('telephone'); ?>"><?php the_sub_field('telephone'); ?></a>
                             </div>
+
                             </div>
+
+                            <?php
+                           if( get_sub_field('ajouter_un_bloc_de_donnees_supplementaire')) : ?>
+                                <div class="extra-infos">
+                                    <p><?php the_sub_field('contenu_supplementaire');?></p>
+                                </div>
+                            <?php endif; ?>
 
                         </div>
 
                     <?php endwhile; ?>
 
                 <?php endif; ?>
+
             </div>
 
             <div class="footer-socials">

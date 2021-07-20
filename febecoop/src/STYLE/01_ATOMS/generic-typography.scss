@@ -74,6 +74,24 @@ $margin-flex-txt : 40px;
   margin-bottom: $space-between-flex-items-l;
   @include tracking(25);
 }
+@mixin blockquote {
+  @include paragraph;
+  @include hando-b;
+  position: relative;
+  padding-left: 16px;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $orange-1;
+  }
+}
 @mixin flex-link {
   color: $orange-1;
   text-decoration: none !important;
@@ -147,6 +165,12 @@ $margin-flex-txt : 40px;
     }
     a {
       @include flex-link;
+    }
+
+  }
+  blockquote {
+    p {
+        @include blockquote;
     }
   }
 

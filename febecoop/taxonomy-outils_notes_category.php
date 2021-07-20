@@ -11,6 +11,7 @@ get_header();
 <?php
 
 // <!-- get the current taxonomy term -->
+
 $term = get_queried_object();
 $title = $term->name;
 $terms_tags  = get_terms(
@@ -19,7 +20,6 @@ $terms_tags  = get_terms(
         "hide_empty" => true
     ]
 );
-
 ?>
 
 
@@ -88,6 +88,7 @@ $terms_tags  = get_terms(
         <div class="npo-items-wrapper">
             <div class="npo-items-container" id="js-npo-items-container">
             <!-- // LOOP NOTES PRATIQUES & OUTILS -->
+
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                     <a href="<?php echo the_permalink() ?>" class="npo-item">

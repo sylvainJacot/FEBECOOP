@@ -6,6 +6,7 @@
 function tiny_mce_remove_unused_formats($init) {
 	// Add block format elements you want to show in dropdown
 	$init['block_formats'] = 'Paragraph=p;Titre 1=h3;Titre 2=h4;';
+    $init2['block_formats'] = 'Paragraph=p;Titre 1=h3;Titre 2=h4;';
 	return $init;
 }
 add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
@@ -20,6 +21,7 @@ function remove_tiny_mce_buttons_from_editor( $buttons ) {
         'aligncenter',
         'alignright',
         'wp_more', // read more link
+        // 'forecolor', // text color
         'spellchecker',
         'dfw', // distraction free writing mode
         'wp_adv', // kitchen sink toggle (if removed, kitchen sink will always display)

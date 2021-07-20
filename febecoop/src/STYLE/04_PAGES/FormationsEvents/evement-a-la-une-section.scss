@@ -44,6 +44,7 @@
                 @include shadow-a-pic;
                 border-radius: 8px;
                 overflow: hidden;
+                background-color: $white;
                 @include tablet {
                     height: 330px;
                 }

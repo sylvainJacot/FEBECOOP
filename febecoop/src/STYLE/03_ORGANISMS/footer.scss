@@ -135,10 +135,13 @@ footer {
         .coordonees-section {
 
             .coordonees-item {
-                margin-bottom: 16px;
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
             .coordonees-item-province {
                 @include footer-province;
             }
+
             .coordonees-item-content {
                 @include tablet {
                     display: flex;
@@ -300,3 +303,4 @@ footer {
     }
     }
 }
+

@@ -122,20 +122,18 @@ if( $featured_posts ): ?>
         <p class="evement-a-la-une-content-resume">
             <?php the_field('ev-resume');?>
         </p>
-
-        <a class="cta-a" href="<?php the_permalink(); ?>"><?php pll_e('Découvrez le programme');?></a>
     <?php endforeach; ?>
 
     <?php 
     // Reset the global post object so that the rest of the page works correctly.
     wp_reset_postdata(); ?>
-
-
+    <?php endif; ?>
+<a class="cta-a" href="<?php the_permalink(); ?>"><?php the_field('label_bouton_programme');?></a>
 </div>
         </div>
 </div>
 </section>
-<?php endif; ?>
+
 
 
 <!-- CATALOGUE DE FORMATIONS ==============
