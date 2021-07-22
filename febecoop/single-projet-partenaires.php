@@ -40,7 +40,7 @@ if( !empty( $image ) ): ?>
 
 <!--MAIN flexible ==============
 =========================== -->
-<main class="main-projet-accompagne-content grid">
+<main class="main-projet-accompagne-content main-projet-partenaire-content  grid">
     <div class="section-projet-accompagne-content generic-content">
         <!-- // START contenu_flexible -->
         <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main');?>
