@@ -7,17 +7,47 @@
 get_header();
 ?>
 
+
+<?php
+            $one_date = get_field('one-day');
+            $several_date = get_field('several-days');
+
+            $place = get_field('ev-localisation');
+            $price = get_field('ev-prix');
+
+            $hour_start_day = get_field('one-day-heure-start');
+            $hour_end_day = get_field('one-day-heure-end');
+
+            $hour_start_days = get_field('several-days-heure-start');
+            $hour_end_days = get_field('several-days-heure-end');
+
+    ?>
+
 <!-- HERO SECTION ==============
 =========================== -->
 <section class="hero-section-type-h">
     <div class="hero-section-type-h-wrapper grid">
+<?php if ($one_date || $several_date) { ?>
+
         <div class="hero-section-type-h-content">
             <div class="hero-section-type-h-content-text">
                 <p class="hero-section-type-h-content-toptitle"><?php pll_e('Formations & rencontres');?></p>
                 <h1><span><?php the_title(); ?></span></h1>
             </div>
         </div>
-    </div>
+
+<?php } else {?>
+
+        <div class="hero-section-type-h-content" id="hero-section-type-h-content-centered">
+            <div class="hero-section-type-h-content-text">
+                <p class="hero-section-type-h-content-toptitle"><?php pll_e('Formations & rencontres');?></p>
+                <h1><span><?php the_title(); ?></span></h1>
+            </div>
+        </div>
+
+
+<?php };?> 
+</div>
 </section>
 
 
@@ -33,27 +63,14 @@ get_header();
                 <!-- END contenu_flexible -->
             </div>
 
-            <?php
-            $one_date = get_field('one-day');
-            $several_date = get_field('several-days');
-
-            $place = get_field('ev-localisation');
-            $price = get_field('ev-prix');
-
-            $hour_start_day = get_field('one-day-heure-start');
-            $hour_end_day = get_field('one-day-heure-end');
-
-            $hour_start_days = get_field('several-days-heure-start');
-            $hour_end_days = get_field('several-days-heure-end');
-
-            ?>
-
+             <?php if ($one_date || $several_date) : ?>
             <aside class="evenement-formation-single-content-details">
                 <?php if ($one_date || $several_date || $place || $price) : ?>
                     <p class="efscd-titre"><?php pll_e('Détail évènement');?></p>
                     <div class="efscd-liste-details">
 
-                        <?php if ($one_date || $hour_start_day) : ?>
+                        <?php if ($one_date) { ?>
+
                             <div class="efscd-liste-detail-item">
                                 <span class="efscd-liste-detail-item-icone efscd-date-ic"></span>
                                 <p class="efscd-liste-detail-content">
@@ -61,9 +78,7 @@ get_header();
                                     <?php the_field('one-day-heure-start'); ?>-<?php the_field('one-day-heure-end'); ?>
                                 </p>
                             </div>
-                        <?php endif; ?>
-
-                        <?php if ($several_date  || $hour_start_days) : ?>
+                        <?php } elseif($several_date)  {?>
                             <div class="efscd-liste-detail-item">
                                 <span class="efscd-liste-detail-item-icone efscd-date-ic"></span>
                                 <p class="efscd-liste-detail-content"><?php pll_e('Du');?> <?php the_field('ev-date-start'); ?>
@@ -71,7 +86,13 @@ get_header();
                                     </br><?php the_field('several-days-heure-start'); ?>-<?php the_field('several-days-heure-end'); ?>
                                 </p>
                             </div>
-                        <?php endif; ?>
+
+                        <?php } else {?>
+                            <div class="efscd-liste-detail-item">
+                                <span class="efscd-liste-detail-item-icone efscd-date-ic"></span>
+                                <p class="efscd-liste-detail-content">Aucune date prévue</p>
+                            </div>
+                        <?php }?>
 
                         <?php if ($place) : ?>
                             <div class="efscd-liste-detail-item">
@@ -92,23 +113,26 @@ get_header();
                     </div>
                 <?php endif ?>
                 <div class="efscd-ctas">
-                    <?php if ($one_date || $hour_start_day) : ?>
+                    <?php if ($one_date  && !$several_date) { ?>
                         <?php get_template_part('./src/TEMPLATES/Addtocalendar/add-to-calendar'); ?>
                         <a class="cta-a" href="#formation-form-section"><?php pll_e("S'inscrire");?></a>
-                    <?php endif; ?>
 
-                    <?php if ($several_date  || $hour_start_days) : ?>
-                        <?php get_template_part('./src/TEMPLATES/Addtocalendar/add-to-calendar'); ?>
+                    <?php } elseif($several_date && !$one_date)  {?>
+
+               
                         <a class="cta-a" href="#formation-form-section"><?php pll_e("S'inscrire");?></a>
-                    <?php endif; ?>
 
-                    <?php if (!$one_date && !$hour_start_day && !$several_date && !$hour_start_days) : ?>
+                    <?php } else {?>
+
                         <a class="cta-a" href="#formation-form-section"><?php pll_e("S'informer");?></a>
-                    <?php endif; ?>
+
+                    <?php } ?>
+
 
 
                 </div>
             </aside>
+            <?php endif; ?>
 
         </div>
 
@@ -129,7 +153,7 @@ $end_date = get_field('ev-date-end');
 ?>
 
 
-<!-- if($one_day || $multi_days) : -->
+<?php if($one_day || $multi_days) {;?>
 <!-- FORM TYPE A ==============
 // =========================== -->
 <section class="formation-form-section form-section-type-a" id="formation-form-section">
@@ -168,7 +192,13 @@ $end_date = get_field('ev-date-end');
 
     </div>
 </section>
+<?php } else {;?>
 
+    <!-- CONTACT BANNER ==============
+=========================== -->
+<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner-options"); ?>
+
+<?php };?>
 
 
 <script type="text/javascript">

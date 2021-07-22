@@ -367,6 +367,8 @@ header {
             // max-height: calc(100vh - 88px);
             width: 100%;
             overflow-y: scroll;
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
             background: $blue-1;
             padding: 64px 0px;
             padding-bottom: 120px;
@@ -375,6 +377,8 @@ header {
             transform-origin: top center;
             transform: scaleY(0);
             transition: all 0.4s  ease(out-cubic);
+
+            &::-webkit-scrollbar { width: 0 !important }
 
             .header-second-section-mobile-wrapper {
                 opacity: 0;

@@ -16,7 +16,7 @@ $post_type = $post_type_obj->labels->singular_name;
         <div class="hero-section-type-e-content">
             <div class="hero-section-type-e-content-text">
                 <div class="hero-section-type-e-content-toptitle-wrapper">
-                <p class="hero-section-type-e-content-toptitle"><?php echo $post_type;?></p>
+                <p class="hero-section-type-e-content-toptitle"><?php echo $post_type;?> <span class="hero-section-type-e-content-date"><?php echo get_the_date('d/m/Y'); ?></span></p>
                 <p class="hero-section-type-e-content-date"><?php the_date('Y-m-d');?></p>
                 </div>
                 <h1><span><?php echo the_title(); ?></h1></span>
@@ -59,10 +59,10 @@ if( !empty( $image ) ): ?>
 <!--AUTRES ACTUALITES ==============
 =========================== -->
 <section class="other-news-section">
-    <div class="slider-wrapper-type-b  other-news-section-wrapper grid">
+    <div class="slider-wrapper-type-b  other-news-section-wrapper other-news-section-wrapper-mobile grid">
                 
                 <div class="slider-type-b-header">
-                <h3>Autres actualités</h3>
+                <h3><?php pll_e('Autres actualités');?></h3>
                 <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>actualites" ><?php pll_e('Toutes les actualités');?></a>
                 </div>
 
@@ -73,7 +73,7 @@ if( !empty( $image ) ): ?>
                         array(
                             'post_type' => 'actualites',
                             'orderby' => 'date',
-                            'posts_per_page' => -1
+                            'posts_per_page' =>3
                         )
                     );
                     ?>
@@ -98,6 +98,38 @@ if( !empty( $image ) ): ?>
                 </div>
                 <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>actualites" ><?php pll_e('Toutes les actualités');?></a>
     </div>
+    
+  <div class="slider-wrapper-type-b  other-news-section-wrapper other-news-section-wrapper-laptop grid">
+            
+            <div class="slider-type-b-header">
+            <h3><?php pll_e('Autres actualités');?></h3>
+            <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>actualites" ><?php pll_e('Toutes les actualités');?></a>
+            </div>
+
+            <div class="swiper-container slider-container-type-b js-type-b-swiper">
+            <div class="swiper-wrapper slider-wrapper-type-b">
+                <?php
+                $loop = new WP_Query(
+                    array(
+                        'category__in'   => wp_get_post_categories( $post->ID ),
+                        'post__not_in' => array(get_the_ID()),
+                        'post_type' => 'actualites',
+                        'orderby' => 'date',
+                        'posts_per_page' => 3
+                    )
+                );
+                ?>
+
+                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                <div class="swiper-slide swiper-slide-type-b">
+                <?php get_template_part('./src/TEMPLATES/Actualites/actualite-card');?>
+                </div>
+
+                <?php endwhile;
+                wp_reset_query(); ?>
+            </div>
+
+</div>
 </section>
 
 

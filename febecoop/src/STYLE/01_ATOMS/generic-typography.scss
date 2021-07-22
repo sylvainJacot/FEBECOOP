@@ -189,6 +189,7 @@ $margin-flex-txt : 40px;
 }
 .generic-content {
   @include generic-content;
+  overflow-x: hidden;
 }
 
 @mixin introduction-a {

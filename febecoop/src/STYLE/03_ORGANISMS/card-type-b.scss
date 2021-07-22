@@ -28,6 +28,12 @@
             @include trans-a;
         }
         @include tablet {
+            height: 193px;
+        }
+        @include laptopS {
+            height: 182px;
+        }
+        @include laptopL {
             height: 240px;
         }
     }

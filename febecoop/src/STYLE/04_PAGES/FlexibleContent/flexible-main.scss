@@ -95,6 +95,7 @@ $aqp-d: 32px;
         .noca-questions-wrapper {
             .nocaq-item {
                 position: relative;
+                @include trans-a;
                 a {
                     display: block;
                     @include hando-l;
@@ -118,7 +119,7 @@ $aqp-d: 32px;
 
                 &:hover {
                     background: $orange-light-2;
-                    @include trans-a;
+                    transition: none !important;
                 }
 
                 &:last-child {

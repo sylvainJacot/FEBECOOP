@@ -85,7 +85,7 @@ $hstc-padding-top-l : 160px;
             }
             h1 {
                 @include titre-header;
-                margin-bottom: 40px;
+
                 @include tablet {
                 }
                 @include laptopS {
@@ -95,12 +95,12 @@ $hstc-padding-top-l : 160px;
         }
         }
         .hero-section-type-c-content-no-pic {
-            padding-bottom: 88px;
+            padding-bottom: calc(88px +  (#{$hstc-intro-h-t}/2));
             @include tablet {
-                padding-bottom: 130px;
+                padding-bottom: calc(130px +  (#{$hstc-intro-h-t}/2));
             }
             @include laptopS {
-                padding-bottom: 200px;
+                padding-bottom: calc(200px +  (#{$hstc-intro-h-t}/2));
             }
         }
         .hero-section-type-c-content-no-shape {

@@ -72,14 +72,6 @@ get_header();
         }
 
 
-
-        // else if (!get_field('version_papier') && !get_field('papier-payant') && get_field('version_digitale')  && !get_field('digi-payant')) {
-
-        // echo get_template_part( './src/TEMPLATES/Publications/publi-digi-gratuit' );
-        //  }
-
-
-
         else if (!get_field('version_papier') && !get_field('papier-payant') && get_field('version_digitale')  && get_field('digi-payant')) {
             echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' );  
         }
@@ -96,7 +88,7 @@ get_header();
         }
 
         else {
-            echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' );  
+            // echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' );  
 
         };
         ?>
@@ -104,7 +96,14 @@ get_header();
     </main>
             <!-- SHARE ASIDE ==============
 =========================== -->
-    <?php get_template_part('./src/TEMPLATES/ShareSection/share-section-a'); ?>
+<?php 
+        if (get_field('version_papier')  || get_field('version_digitale')) {
+            echo get_template_part('./src/TEMPLATES/ShareSection/share-section-a');
+        } else {
+            echo get_template_part('./src/TEMPLATES/ShareSection/share-section-b');
+        }?>
+
+    
     </div>
 
 
@@ -159,17 +158,13 @@ get_header();
         /* SCENARIO 05 : Digitale gratuit par défaut */
 
         else {
-            echo get_template_part( './src/TEMPLATES/PublicationForm/top-section-publi-form' ); 
-            echo get_template_part( './src/TEMPLATES/Publications/publi-digi-gratuit' ); 
-            echo get_template_part( './src/TEMPLATES/PublicationForm/bottom-section-publi-form' );
+            // echo get_template_part( './src/TEMPLATES/PublicationForm/top-section-publi-form' ); 
+            // echo get_template_part( './src/TEMPLATES/Publications/publi-digi-gratuit' ); 
+            // echo get_template_part( './src/TEMPLATES/PublicationForm/bottom-section-publi-form' );
+            echo get_template_part( './src/TEMPLATES/ContactBanner/contact-banner-options' );
         };
         ?>
         
-
-
-
-
-
-<?php
-get_footer();
-?>
+        
+        
+<?php get_footer(); ?>

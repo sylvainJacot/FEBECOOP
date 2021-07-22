@@ -1,5 +1,5 @@
 
-<aside class="share-section-a ">
+<aside class="share-section-a share-section-a-centered">
 
 <?php $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
 <p class="share-title-a"><?php pll_e('Partager');?></p>

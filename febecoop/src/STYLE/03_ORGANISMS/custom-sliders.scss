@@ -101,7 +101,7 @@
     padding-bottom: $bbc-m + 64px;
     overflow: hidden;
     @include tablet {
-        padding-bottom: $bbc-t + 40px;
+        padding-bottom: -t + 40px;
     }
     @include laptopS {
         margin-top: 130px;
@@ -155,7 +155,7 @@
         margin-top: $cb-space-m - 8px;
     }
     .swiper-pagination-type-b {
-        @include tablet {
+        @include laptopS {
             display: none;
         }
     }
@@ -575,15 +575,24 @@ display: none;
             left: calc(50%);
             @include trans-a;
         }
+        &:after{
+            display: none;
+        }
     }
     .swiper-button-prev-c {
         &:before {
             transform: translate(-50%,-50%) rotate(90deg);
         }
+        &:after{
+            display: none;
+        }
     }
     .swiper-button-next-c {
         &:before {
             transform: translate(-50%,-50%) rotate(-90deg);
+        }
+        &:after{
+            display: none;
         }
     }
     

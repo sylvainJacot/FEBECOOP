@@ -3,7 +3,7 @@
                 
                 <div class="slider-type-b-header">
                 <h3><?php pll_e('Projets accompagnés');?></h3>
-                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>success-stories" ><?php pll_e('Tous les projets accompagnés');?></a>
+                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>projets-accompagnes" ><?php pll_e('Tous les projets accompagnés');?></a>
                 </div>
 
                 <div class="swiper-container slider-container-type-b js-type-b-swiper">
@@ -36,6 +36,6 @@
                     <div class="swiper-button-next swiper-button-next-type-a js-button-next-actus"></div>
                     </div>
                 </div>
-                <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>success-stories" ><?php pll_e('Tous les projets accompagnés');?></a>
+                <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>projets-accompagnes" ><?php pll_e('Tous les projets accompagnés');?></a>
     </div>
 </section>

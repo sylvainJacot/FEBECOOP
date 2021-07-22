@@ -51,7 +51,7 @@ get_header();
     <!-- ASIDE flexible ==============
 =========================== -->
     <aside class="note-outils-content-aside">
-        <div class="noca-title">Autres sujets</div>
+        <div class="noca-title"><?php pll_e('Autres sujets');?></div>
 
         <ul class="noca-questions-wrapper">
             <?php

@@ -12,15 +12,20 @@
 
 .publication-content-section {
     padding-top: 48px;
+    padding-bottom: $bbc-m + 40px;
     @include tablet {
         padding-top: 56px;
+        padding-bottom: $bbc-t;
     }
     @include laptopS {
         padding-top: 106px;
+        padding-bottom: $bbc-l;
     }
     @include laptopL{
         padding-top: 96px;
+        padding-bottom: $bbc-d;
     }
+
     .publication-content-main {
         display: flex;
         flex-direction: column;

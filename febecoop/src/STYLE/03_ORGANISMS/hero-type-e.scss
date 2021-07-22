@@ -32,6 +32,13 @@ $hste-img-h-d : 260px;
                     .hero-section-type-e-content-toptitle {
                         @include top-titre-header;
                         margin-right: 10px;
+
+                        .hero-section-type-e-content-date {
+                            @include hando-l;
+                            margin-left: 16px;
+                            color: $blue-1;
+                            opacity: .5;
+                        }
                     }
                     .hero-section-type-e-content-date {
 

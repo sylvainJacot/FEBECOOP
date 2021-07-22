@@ -43,3 +43,20 @@
         }
     }
 }
+
+.share-section-a-centered {
+    &:before {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        content: "";
+        background: $blue-light;
+        top: 0;
+        @include laptopS {
+            width: 14 * $lCol;
+        }
+        @include laptopL {
+            width: 12 * $dCol;
+        }
+    }
+}

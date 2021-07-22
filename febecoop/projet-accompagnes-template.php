@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Success stories
+ * Template Name: Projets accompagnes
  * 
  * 
  */

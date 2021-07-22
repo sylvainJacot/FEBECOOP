@@ -1,8 +1,10 @@
 .main-actualite-content {
     margin-top: 64px;
+    padding-bottom: 80px;
     @include tablet {
         margin-top: - 120px;
     }
+
     @include laptopL {
         margin-top: - 136px;
     }
@@ -40,6 +42,20 @@
             }
         }
     }
+    .other-news-section-wrapper-mobile {
+        @include laptopS {
+            display: none;
+        }
+    }
+    .other-news-section-wrapper-laptop {
+        display: none;
+
+
+
+        @include laptopS {
+            display: block;
+        }
+    }
 }
 .other-news-succes-stories {
     overflow: hidden;
@@ -69,5 +85,14 @@
             grid-template-columns: repeat(3, 7 * $dCol);
             grid-gap: $dCol;
         }
+    }
+}
+.other-succes-stories-single-success-story {
+    padding-bottom: 56px;
+    @include tablet {
+        padding-bottom: 80px;
+    }
+    @include laptopS {
+        padding-bottom: 106px;
     }
 }

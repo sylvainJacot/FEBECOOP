@@ -81,8 +81,8 @@
 
       <div class="card-type-a-content">
 
-      <?php if (get_field('resume')) : ?>
-                    <p class="card-type-a-content-txt"><?php the_field('resume') ?></p>
+      <?php if (get_field('decription-carte')) : ?>
+                    <p class="card-type-a-content-txt"><?php the_field('decription-carte') ?></p>
                 <?php else : ?>
 
                     <?php if (have_rows('contenu-flexible')) : while (have_rows('contenu-flexible')) : the_row(); ?>

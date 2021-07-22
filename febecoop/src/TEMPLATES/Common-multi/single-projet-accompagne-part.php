@@ -27,7 +27,7 @@ if( !empty( $image ) ): ?>
 =========================== -->
 <?php get_template_part( './src/TEMPLATES/ShareSection/share-section-a');?> 
 
-<a class="back-cta" onclick="history.back();"><?php pll_e('Retour');?></a>
+<!-- <a class="back-cta" onclick="history.back();"><?php pll_e('Retour');?></a> -->
 
     </div>
 
@@ -36,7 +36,14 @@ if( !empty( $image ) ): ?>
 
 <!-- CONTACT BANNER ==============
 =========================== -->
-<?php get_template_part( './src/TEMPLATES/ContactBanner/contact-banner-options' );?>
+<!-- <?php get_template_part( './src/TEMPLATES/ContactBanner/contact-banner-options' );?> -->
+
+<!-- SUCCESS STORIES ==============
+=========================== -->
+<section class="other-news-section other-succes-stories-single-success-story">
+    <div class="slider-wrapper-type-b  other-news-section-wrapper grid">
+        <?php get_template_part( './src/TEMPLATES/SuccessStories/success-stories-loop-mobile-single-projet-accompagne' );?>
+</section>
 
 
 

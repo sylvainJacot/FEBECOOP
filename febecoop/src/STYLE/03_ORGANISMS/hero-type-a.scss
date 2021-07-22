@@ -195,6 +195,22 @@
             top: -210px;
         }
     }
+
+    &:before {
+        @include laptopS {
+            bottom: -90px;
+        }
+        @include laptopL {
+            bottom: -110px;
+        }
+        @media (min-width: 1665px) {
+            bottom: -100px;
+        }
+        @media (min-width: 1875px) {
+            bottom: -60px;
+        }
+  
+    }
 }
 
 .hero-section-type-a-federal {
