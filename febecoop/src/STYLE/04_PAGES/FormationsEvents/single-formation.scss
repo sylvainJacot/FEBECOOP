@@ -1,10 +1,13 @@
 .evenement-formation-single-section{
+    margin-top: -64px;
     padding-bottom: $bbc-m ;
 
     @include tablet {
+        margin-top: -120px;
         padding-bottom: $bbc-t;
     }
     @include laptopS {
+        margin-top: -136px;
         padding-bottom: $bbc-l ;
     }
     @include laptopL {
@@ -13,7 +16,7 @@
 .evenement-formation-single-wrapper  {
     margin-bottom: 80px;
     .evenement-formation-single-content  {
-        padding-top: 80px;
+        overflow-x: unset !important;
         @include laptopS {
         display: flex;
         justify-content: center;
@@ -29,20 +32,20 @@
 
     }
     .evenement-formation-single-content-details {
-        padding: 32px 24px;
+        padding: 48px $mCol 48px $mCol;
         background: $orange-light;
         border-radius: 8px;
         margin-top: 40px;
 
         @include tablet {
-            padding: 64px 2 * $tCol;
+            padding: 48px 2 * $tCol 48px 2 * $tCol;
             margin-top: 80px;
         }
 
         @include laptopS {
             margin-top: 0;
             width: 7 * $lCol;
-            padding: 24px 16px;
+            padding: 40px 24px 40px 24px;
             height: fit-content;
             position: sticky;
             top: 24px;
@@ -51,7 +54,7 @@
         }
 
         @include laptopL {
-            padding: 24px $dCol;
+            padding: 40px $dCol 40px $dCol;
             width: 7 * $dCol;
             margin-left: 4 * $dCol;
         }
@@ -67,6 +70,7 @@
         }
         .efscd-liste-details {
             margin: 20px 0px;
+
             .efscd-liste-detail-item {
                 position: relative;
                 display: flex;
@@ -105,6 +109,9 @@
                     padding-left: 32px;
                 }
             }
+            > *:first-child {
+                padding-top: 0px;
+            }
         }
         .efscd-ctas {
             display: flex;
@@ -120,4 +127,18 @@
         }
     }
 }
+}
+
+.formation-form-section {
+    margin-top: - $bbc-m ;
+
+    @include tablet {
+        margin-top: - $bbc-t;
+    }
+    @include laptopS {
+        margin-top: - $bbc-l ;
+    }
+    @include laptopL {
+        margin-top: - $bbc-d ;
+    }
 }

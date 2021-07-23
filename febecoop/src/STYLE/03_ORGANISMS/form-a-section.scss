@@ -152,6 +152,7 @@ $tab-nav-item-radio-size: 22px;
                     transform: translateX(-50%);
                     bottom: 0;
                     background: $blue-light-2;
+                    opacity: 0.3;
 
                     @include laptopS {
                         width: 20 * $lCol;

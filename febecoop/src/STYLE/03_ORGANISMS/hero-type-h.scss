@@ -42,8 +42,52 @@
         }
         #hero-section-type-h-content-centered {
             .hero-section-type-h-content-text {
-                margin: auto;
+                // margin: auto;
             }
         }
+    }
+}
+
+.hero-section-type-h-formation {
+    padding-bottom: 64px;
+    @include tablet {
+    padding-bottom: 72px + $hste-img-h-t;
+        }
+        @include laptopS {
+            padding-bottom: 80px + $hste-img-h-t;
+        }
+        @include laptopL {
+            padding-bottom: 120px + $hste-img-h-t;
+        }
+}
+
+.hero-section-type-h-pic-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 336px;
+    margin: auto;
+    overflow: hidden;
+    background-color: $white;
+    @include tablet {
+        width: 17 * $tCol;
+        height: 390px;
+        transform: translateY(-$hste-img-h-t);
+    }
+    @include laptopS{
+        width: 23 * $lCol;
+        height: 466px;
+        transform: translateY(-$hste-img-h-l);
+    }
+    @include laptopL{
+        width: 21 * $dCol;
+        height: 600px;
+        transform: translateY(-$hste-img-h-d);
+    }
+    img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
     }
 }

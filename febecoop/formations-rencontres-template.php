@@ -124,20 +124,24 @@ if( $featured_posts ): ?>
         </p>
     <?php endforeach; ?>
 
-    <?php 
-    // Reset the global post object so that the rest of the page works correctly.
-    wp_reset_postdata(); ?>
-    <?php endif; ?>
+
 <a class="cta-a" href="<?php the_permalink(); ?>"><?php the_field('label_bouton_programme');?></a>
 </div>
         </div>
 </div>
 </section>
+<?php 
+    // Reset the global post object so that the rest of the page works correctly.
+    wp_reset_postdata(); ?>
+    <?php endif; ?>
 
 
 
 <!-- CATALOGUE DE FORMATIONS ==============
 =========================== -->
+<?php
+$featured_posts= get_field('evenements_formations');
+if( $featured_posts ): ?>
 <section class="catalogue-de-formations-section">
     <div class="catalogue-de-formations-wrapper grid">
         <div class="catalogue-de-formations-header">
@@ -151,9 +155,7 @@ if( $featured_posts ): ?>
 
         <div class="catalogue-de-formations-loop-container">
 
-            <?php
-            $featured_posts= get_field('evenements_formations');
-            if( $featured_posts ): ?>
+
 
             <?php foreach( $featured_posts as $post ): 
 
@@ -181,12 +183,13 @@ if( $featured_posts ): ?>
             <?php 
             // Reset the global post object so that the rest of the page works correctly.
             wp_reset_postdata(); ?>
-            <?php endif; ?>
+            
 
         </div>
 
     </div>
 </section>
+<?php endif; ?>
 
 
 <!-- CONTACT BANNER ==============

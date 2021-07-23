@@ -9,25 +9,18 @@ get_header();
 
 
 <?php
-            $one_date = get_field('one-day');
-            $several_date = get_field('several-days');
-
+            $date = get_field('ev_date');
+            $date_details = get_field('date_details');
             $place = get_field('ev-localisation');
             $price = get_field('ev-prix');
-
-            $hour_start_day = get_field('one-day-heure-start');
-            $hour_end_day = get_field('one-day-heure-end');
-
-            $hour_start_days = get_field('several-days-heure-start');
-            $hour_end_days = get_field('several-days-heure-end');
 
     ?>
 
 <!-- HERO SECTION ==============
 =========================== -->
-<section class="hero-section-type-h">
+<section class="hero-section-type-h hero-section-type-h-formation">
     <div class="hero-section-type-h-wrapper grid">
-<?php if ($one_date || $several_date) { ?>
+<?php if ($date ) { ?>
 
         <div class="hero-section-type-h-content">
             <div class="hero-section-type-h-content-text">
@@ -47,9 +40,16 @@ get_header();
 
 
 <?php };?> 
-</div>
-</section>
 
+                </div>
+</section>
+<div class="hero-section-type-h-pic-wrapper">
+                    <?php 
+                    $image = get_field('ev-image');
+                    if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <?php endif; ?>
+                </div>
 
 <!--MAIN flexible ==============
 =========================== -->
@@ -63,36 +63,32 @@ get_header();
                 <!-- END contenu_flexible -->
             </div>
 
-             <?php if ($one_date || $several_date) : ?>
+             <?php if ($date ) : ?>
             <aside class="evenement-formation-single-content-details">
-                <?php if ($one_date || $several_date || $place || $price) : ?>
+                <?php if ($date ) : ?>
                     <p class="efscd-titre"><?php pll_e('Détail évènement');?></p>
                     <div class="efscd-liste-details">
 
-                        <?php if ($one_date) { ?>
+                        <?php if ($date) : ?>
 
                             <div class="efscd-liste-detail-item">
                                 <span class="efscd-liste-detail-item-icone efscd-date-ic"></span>
                                 <p class="efscd-liste-detail-content">
-                                    <?php the_field('ev-date'); ?></br>
-                                    <?php the_field('one-day-heure-start'); ?>-<?php the_field('one-day-heure-end'); ?>
+                                    <?php the_field('ev_date'); ?>
                                 </p>
                             </div>
-                        <?php } elseif($several_date)  {?>
+                        <?php endif; ?>
+
+                        <?php if ($date_details) : ?>
                             <div class="efscd-liste-detail-item">
                                 <span class="efscd-liste-detail-item-icone efscd-date-ic"></span>
-                                <p class="efscd-liste-detail-content"><?php pll_e('Du');?> <?php the_field('ev-date-start'); ?>
-                                    </br> <?php pll_e('au');?> <?php the_field('ev-date-end'); ?>
-                                    </br><?php the_field('several-days-heure-start'); ?>-<?php the_field('several-days-heure-end'); ?>
+                                <p class="efscd-liste-detail-content">
+                                <?php the_field('date_details'); ?>
                                 </p>
                             </div>
 
-                        <?php } else {?>
-                            <div class="efscd-liste-detail-item">
-                                <span class="efscd-liste-detail-item-icone efscd-date-ic"></span>
-                                <p class="efscd-liste-detail-content">Aucune date prévue</p>
-                            </div>
-                        <?php }?>
+                         <?php endif; ?>
+
 
                         <?php if ($place) : ?>
                             <div class="efscd-liste-detail-item">
@@ -113,13 +109,7 @@ get_header();
                     </div>
                 <?php endif ?>
                 <div class="efscd-ctas">
-                    <?php if ($one_date  && !$several_date) { ?>
-                        <?php get_template_part('./src/TEMPLATES/Addtocalendar/add-to-calendar'); ?>
-                        <a class="cta-a" href="#formation-form-section"><?php pll_e("S'inscrire");?></a>
-
-                    <?php } elseif($several_date && !$one_date)  {?>
-
-               
+                    <?php if ($date) { ?>
                         <a class="cta-a" href="#formation-form-section"><?php pll_e("S'inscrire");?></a>
 
                     <?php } else {?>
@@ -143,17 +133,10 @@ get_header();
 
 
 
-<?php
-$one_day= get_field('one-day');
-$multi_days= get_field('several-days');
-
-$one_date = get_field('ev-date');
-$start_date = get_field('ev-date-start');
-$end_date = get_field('ev-date-end');
-?>
 
 
-<?php if($one_day || $multi_days) {;?>
+
+<?php if($date) {;?>
 <!-- FORM TYPE A ==============
 // =========================== -->
 <section class="formation-form-section form-section-type-a" id="formation-form-section">
@@ -194,14 +177,47 @@ $end_date = get_field('ev-date-end');
 </section>
 <?php } else {;?>
 
-    <!-- CONTACT BANNER ==============
-=========================== -->
-<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner-options"); ?>
+    <section class="formation-form-section form-section-type-a" id="formation-form-section">
+    <div class="form-section-type-a-wrapper grid">
+
+        <div class="form-type-a-header">
+            <p class="form-type-a-title"><?php pll_e('S’informer à propos l’événement/formation');?></p>
+            <p class="form-type-a-content"><?php the_field('sous-titre_formlulaire'); ?></p>
+        </div>
+        <div class="form-wrapper-item form-wrapper-item-active">
+            <?php echo FrmFormsController::get_form_shortcode(array('id' => 12, 'title' => false, 'description' => false)); ?>
+        </div>
+
+        <?php
+        $link = get_field('footer_formulaires', 'options');
+        if ($link) :
+            $link_url = $link['url'];
+            $link_title = $link['title'];
+            $link_target = $link['target'] ? $link['target'] : '_self';
+        ?>
+            <a class="form-type-a-footer" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+
+                    <?php
+                    $openspan = "<span>";
+                    $openmainttitle = str_replace('(*(', $openspan, $link_title);
+                    $closemainttitle = str_replace(')*)','</span>',$openmainttitle);
+                    echo $closemainttitle;
+                    ?>
+
+
+            </a>
+        <?php endif; ?>
+
+
+
+
+    </div>
+</section>
 
 <?php };?>
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     (function() {
         if (window.addtocalendar)
             if (typeof window.addtocalendar.start == "function") return;
@@ -218,7 +234,7 @@ $end_date = get_field('ev-date-end');
             h.appendChild(s);
         }
     })();
-</script>
+</script> -->
 
 
 

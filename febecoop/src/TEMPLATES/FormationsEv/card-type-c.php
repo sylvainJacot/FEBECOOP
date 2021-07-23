@@ -1,13 +1,8 @@
 <?php
-$one_day= get_field('one-day');
-$multi_days= get_field('several-days');
-
-$one_date = get_field('ev-date');
-$start_date = get_field('ev-date-start');
-$end_date = get_field('ev-date-end');
+$date = get_field('ev_date');
 
 
-if($one_day || $multi_days) :?>
+if($date) :?>
 <a class="card-type-c-item" href="<?php the_permalink(); ?>">
     <div class="card-type-c-item-pic-wrapper">
         <?php 
@@ -18,15 +13,7 @@ if($one_day || $multi_days) :?>
     </div>
     <div class="card-type-c-item-content">
         <p class="card-type-c-item-date">
-            <?php
-            if($one_day) {
-                echo $one_date ;
-            } elseif ($multi_days) {
-                echo "du $start_date au $end_date";
-            }
-            
-            ?>
-
+            <?php the_field('ev_date');?>
         </p>
 
         <h2 class="card-type-c-titre">
