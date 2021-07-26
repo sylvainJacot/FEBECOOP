@@ -389,6 +389,8 @@ height: auto;
     justify-content: center;
     align-items: center;
     @include max-heights-media;
+    border-radius: 16px;
+    overflow: hidden;
 
     > img {
         min-width: 100%;

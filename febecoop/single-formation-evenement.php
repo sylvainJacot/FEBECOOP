@@ -81,7 +81,7 @@ get_header();
 
                         <?php if ($date_details) : ?>
                             <div class="efscd-liste-detail-item">
-                                <span class="efscd-liste-detail-item-icone efscd-date-ic"></span>
+                                <span class="efscd-liste-detail-item-icone efscd-date-details-ic"></span>
                                 <p class="efscd-liste-detail-content">
                                 <?php the_field('date_details'); ?>
                                 </p>

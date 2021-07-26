@@ -2,7 +2,8 @@
 $date = get_field('ev_date');
 
 
-if($date) :?>
+if($date) :
+$count_ev++; ?>
 <a class="card-type-c-item" href="<?php the_permalink(); ?>">
     <div class="card-type-c-item-pic-wrapper">
         <?php 
@@ -23,4 +24,7 @@ if($date) :?>
 
     </div>
 </a> 
-<?php endif;?>
+<?php
+$new_count = $count_ev;
+
+endif;?>

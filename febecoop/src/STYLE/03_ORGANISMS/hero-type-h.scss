@@ -70,10 +70,12 @@
     margin: auto;
     overflow: hidden;
     background-color: $white;
+    border-radius: 0px 0px 16px 16px;
     @include tablet {
         width: 17 * $tCol;
         height: 390px;
         transform: translateY(-$hste-img-h-t);
+        border-radius:16px;
     }
     @include laptopS{
         width: 23 * $lCol;
@@ -81,7 +83,7 @@
         transform: translateY(-$hste-img-h-l);
     }
     @include laptopL{
-        width: 21 * $dCol;
+        width: 23 * $dCol;
         height: 600px;
         transform: translateY(-$hste-img-h-d);
     }

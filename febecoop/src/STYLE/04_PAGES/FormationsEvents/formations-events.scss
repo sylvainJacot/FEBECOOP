@@ -1,14 +1,11 @@
 .agenda-formations-section {
-    padding-bottom: $bbc-m;
-    @include tablet {
-        padding-bottom: $bbc-t;
-    }
+    padding-top: 24px;
+    padding-bottom: calc(72px + 24px);
+
     @include laptopS {
-        padding-bottom: $bbc-l;
+        padding-bottom: calc(80px + 24px);
     }
-    @include laptopL {
-        padding-bottom: $bbc-d;
-    }
+
     .agenda-formations-wrapper {
         margin: auto;
         @include laptopS {
@@ -45,8 +42,10 @@
             color: $blue-1;
             font-size: 15px;
             @include tracking(25);
-            width: 8 * $mCol;
-            display: contents;
+            width: 100%;
+            display: inherit;
+            margin: auto;
+            text-align: center;
         }
     }
 }

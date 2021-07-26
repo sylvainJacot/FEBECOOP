@@ -67,8 +67,8 @@
             )
             );
         
-            //  $count_ev = $loop->post_count;
-            //  print_r($count_ev)
+             $count_ev = 0;
+            //  print_r($loop);
             ?>
         <div class="agenda-formations-header" id="js-agenda-formations-header">
             <h2 class="agenda-formation-titre">
@@ -79,13 +79,48 @@
                 <?php if ($loop->have_posts()) :?>
                 <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
-                    <?php get_template_part( './src/TEMPLATES/FormationsEv/card-type-c' );?>
+
+
+                <?php
+                $date = get_field('ev_date');
+
+
+                if($date) :
+                $count_ev++; ?>
+                <a class="card-type-c-item" href="<?php the_permalink(); ?>">
+                    <div class="card-type-c-item-pic-wrapper">
+                        <?php 
+                        $image = get_field('ev-image');
+                        if( !empty( $image ) ): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php endif; ?>
+                    </div>
+                    <div class="card-type-c-item-content">
+                        <p class="card-type-c-item-date">
+                            <?php the_field('ev_date');?>
+                        </p>
+
+                        <h2 class="card-type-c-titre">
+                            <?php the_title();?>
+                        </h2>
+                        <p class="cta-c"><?php pll_e('En savoir plus');?></p>
+
+                    </div>
+                </a> 
+                <?php
+                $new_count = $count_ev;
+
+                endif;?>
+
 
                 <?php endwhile;
                 wp_reset_query(); ?>
+
+
+                <?php if ($count_ev === 0) :?>
+                    <p class="agenda-formation-empty-texte"><?php the_field('texte_si_aucun_evenement');?></p>
+                 <?php endif ;?>
                 
-                <?php else :?>
-                <p class="agenda-formation-empty-texte"><?php the_field('texte_si_aucun_evenement');?></p>
                 <?php endif;?>
 
 
@@ -123,9 +158,10 @@ if( $featured_posts ): ?>
             <?php the_field('ev-resume');?>
         </p>
     <?php endforeach; ?>
+    <?php endif; ?>
 
+<a class="cta-a" href="<?php the_permalink(); ?>"><?php pll_e('Découvrez le programme')?></a>
 
-<a class="cta-a" href="<?php the_permalink(); ?>"><?php the_field('label_bouton_programme');?></a>
 </div>
         </div>
 </div>
@@ -133,7 +169,7 @@ if( $featured_posts ): ?>
 <?php 
     // Reset the global post object so that the rest of the page works correctly.
     wp_reset_postdata(); ?>
-    <?php endif; ?>
+
 
 
 

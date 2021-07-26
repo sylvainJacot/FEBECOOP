@@ -33,6 +33,7 @@
 //=======================================
 .frm_form_field {
     margin: 0 !important;
+    position: relative;
     .frm_primary_label{
         @include frm-input-label;
     }

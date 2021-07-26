@@ -21,7 +21,7 @@
     <div class="hero-section-type-b-wrapper grid">
         <div class="hero-section-type-b-content">
             <div class="hero-section-type-b-content-text">
-            <p class="hero-section-type-b-content-toptitle">sur le terrain</p>
+            <p class="hero-section-type-b-content-toptitle"><?php pll_e('Sur le terrain'); ?></p>
             <h1><span>
                 <?php if ( get_field('titre_hero') ) : 
                     $maintitle = get_field('titre_hero'); 
@@ -70,7 +70,7 @@ $loop = new WP_Query(
     array(
         'post_type' => 'projet-partenaires',
         'orderby' => 'date',
-        'posts_per_page' => -1
+        'posts_per_page' => -1,
     )
 );
 ?>

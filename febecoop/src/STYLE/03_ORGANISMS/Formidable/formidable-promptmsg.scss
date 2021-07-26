@@ -24,10 +24,12 @@
 
 .frm_error{
     @include hando-b;
-    color: $blue-1;
     font-size: 14px;
     line-height: 26.62px;
     @include tracking(25);
     text-align: center;
     color: $red-1;
+    position: absolute;
+    top: 0;
+    right: 0;
 }

@@ -59,4 +59,8 @@ if (function_exists('pll_register_string')) {
     pll_register_string("Voir les formations", "Voir les formations", 'febecoop', true);
     pll_register_string("Autres sujets", "Autres sujets", 'febecoop', true);
     pll_register_string("Autres actualités", "Autres actualités", 'febecoop', true);
+    pll_register_string("Projet partenaire", "Projet partenaire", 'febecoop', true);
+    pll_register_string("Autres projets partenaires", "Autres projets partenaires", 'febecoop', true);
+    pll_register_string("Tous les projets partenaires", "Tous les projets partenaires", 'febecoop', true);
+    
 }

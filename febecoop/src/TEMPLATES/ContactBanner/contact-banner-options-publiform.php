@@ -3,7 +3,7 @@
     <picture class="contact-banner-illu-container">
         <source srcset="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/common/VECTOR/illu-contact-banner.svg" media="(min-width: 1025px)" />
         <source srcset="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/common/VECTOR/illu-contact-banner-tablet.svg" media="(min-width: 768px)" />
-        <img src="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/common/VECTOR/illu-contact-banner.svg" alt="example" />
+        <img src="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/common/VECTOR/illu-contact-banner-mobile.svg" alt="example" />
     </picture>
     <div class="contact-banner-section-wrapper">
 

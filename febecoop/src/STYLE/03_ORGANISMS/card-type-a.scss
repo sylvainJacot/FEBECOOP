@@ -63,10 +63,11 @@ $cci-pad-t: 32px;
         }
         .cta-flex-a {
             position: relative;
-            // bottom: $cci-pad-m;
-            width: fit-content;
+            // bottom: $cci-pad-m;;
+            width: 100%;
 
             @include tablet {
+                width: fit-content;
                 position: absolute;
                 bottom: 40px;
             }

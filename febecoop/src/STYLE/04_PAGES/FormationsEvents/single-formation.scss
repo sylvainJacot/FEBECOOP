@@ -14,7 +14,11 @@
         padding-bottom: $bbc-d ;
     }
 .evenement-formation-single-wrapper  {
+    margin-top: 128px;
     margin-bottom: 80px;
+    @include tablet {
+        margin-top: 0;
+    }
     .evenement-formation-single-content  {
         overflow-x: unset !important;
         @include laptopS {
@@ -23,10 +27,10 @@
         }
         .evenement-formation-single-content-flex {
             @include laptopS {
-                width: 14 * $lCol;
+                width: 19 * $lCol;
             }
             @include laptopL {
-                width: 12 * $dCol;
+                width: 15 * $dCol;
             }
         }
 
@@ -94,6 +98,10 @@
                 }
                 .efscd-date-ic{
                     background: url("../ASSETS/IMAGES/FORMATIONRENCONTRES/VECTOR/ic-ev-calendar.svg") center no-repeat;
+                    background-size: contain;
+                }
+                .efscd-date-details-ic {
+                    background: url("../ASSETS/IMAGES/FORMATIONRENCONTRES/VECTOR/ic-ev-info.svg") center no-repeat;
                     background-size: contain;
                 }
                 .efscd-place-ic {

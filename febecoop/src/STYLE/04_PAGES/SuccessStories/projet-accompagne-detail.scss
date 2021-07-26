@@ -24,15 +24,15 @@
 }
 
 .main-projet-partenaire-content {
-    padding-bottom: $bbc-m + 64px;
+    padding-bottom: 56px;
     @include tablet {
-        padding-bottom: $bbc-t + 40px;
+        padding-bottom:  56px;
     }
     @include laptopS {
         // margin-top: 130px;
-        padding-bottom: $bbc-l + 40px;
+        padding-bottom: 80px;
     }
     @include laptopL {
-        padding-bottom: $bbc-d + 40px;
+        padding-bottom: 106px;
     }
 }
