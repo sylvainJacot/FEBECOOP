@@ -3,7 +3,7 @@ $cci-pad-t: 32px;
 
 .card-type-a {
     display: block;
-    border-radius: 8px;
+    border-radius: $border-radius-small-picture;
     background-color: $white;
     @include shadow-a-nopic;
     position: relative;

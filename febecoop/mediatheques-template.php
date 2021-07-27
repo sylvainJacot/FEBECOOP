@@ -11,7 +11,7 @@ get_header();
 <!-- HERO SECTION ==============
 =========================== -->
 <div class="overflow-x" style="overflow-x: hidden;">
-<section class="hero-section-type-b" id="mediatheque-hero-section'">
+<section class="hero-section-type-b" id="mediatheque-hero-section">
     <picture class="hero-section-type-waves-container">
         <source srcset="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/NOTES-OUTILS/VECTOR/illu-wave-desktop.svg" media="(min-width: 1300px)" />
         <source srcset="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/NOTES-OUTILS/VECTOR/illu-wave-laptop.svg" media="(min-width: 1025px)" />
@@ -82,22 +82,22 @@ get_header();
                 while ($loop->have_posts()) : $loop->the_post(); ?>
 
                     <a class="mediatheque-publication-star-item" href="<?php echo get_permalink(); ?>">
-                    <div class="mediatheque-publication-star-item-content-pic">
+                    <!-- <div class="mediatheque-publication-star-item-content-pic"> -->
                         <?php
                         $image = get_field('publication-image-couverture');
                         if (!empty($image))  {?>
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <img src="<?php echo esc_url($image['url']); ?>" class="mediatheque-publication-star-item-content-pic" alt="<?php echo esc_attr($image['alt']); ?>" />
                             <?php } else { ?>
 
                                 
-                                <div class="mediatheque-publication-star-item-content-pic-placeholder">
+                                <!-- <div class="mediatheque-publication-star-item-content-pic-placeholder">
                                     <svg width="299" height="281" viewBox="0 0 299 281" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M264.959 0.349609H33.787C15.153 0.349609 0 15.4976 0 34.1536V246.615C0 265.249 15.153 280.381 33.787 280.381H264.958C283.592 280.381 298.729 265.249 298.729 246.615V34.1536C298.73 15.4976 283.593 0.349609 264.959 0.349609ZM193.174 50.6226C211.194 50.6226 225.808 65.2376 225.808 83.2566C225.808 101.276 211.193 115.891 193.174 115.891C175.149 115.891 160.54 101.276 160.54 83.2566C160.54 65.2376 175.149 50.6226 193.174 50.6226ZM254.363 249.149H49.039C40.026 249.149 36.012 242.628 40.075 234.583L96.081 123.653C100.139 115.609 107.873 114.891 113.35 122.048L169.666 195.644C175.143 202.802 184.716 203.411 191.052 196.998L204.829 183.047C211.16 176.634 220.488 177.428 225.655 184.809L261.33 235.768C266.487 243.16 263.376 249.149 254.363 249.149Z" fill="#010002"/>
                                     </svg>
-                                </div>
+                                </div> -->
 
                                 <?php }?>
-                    </div>
+                    <!-- </div> -->
 
                     <div class="mediatheque-publication-star-item-content">
                         <h3><?php the_title(); ?></h3>

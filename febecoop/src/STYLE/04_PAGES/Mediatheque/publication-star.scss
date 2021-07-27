@@ -26,37 +26,38 @@
             .mediatheque-publication-star-item-content-pic {
                 max-height: 230px;
                 max-width: 8 * $mCol;
-                min-height: 230px;
-                min-width: 8 * $mCol;
+                // min-height: 230px;
+                // min-width: 8 * $mCol;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
                 margin: 0 0 24px 0;
+                @include card-type-anime-a;
 
                 @include tablet {
                     max-width: 5 * $tCol;
                     min-width: 5 * $tCol;
                 }
                 @include laptopS {
-                    max-height: 280px;
+                    max-height: unset;
                     max-width: 6 * $lCol;
-                    min-height: 280px;
+                    // min-height: 280px;
                     min-width: 6 * $lCol;
                     margin: 0;
                 }
                 @include laptopL {
-                    max-height: 310px;
+                    // max-height: 310px;
                     max-width: 5 * $dCol;
-                    min-height: 310px;
+                    // min-height: 310px;
                     min-width: 5 * $dCol;
                 }
 
                 img {
-                    min-width: 100%;
-                    min-height: 100%;
-                    object-fit: contain;
+                    // min-width: 100%;
+                    // min-height: 100%;
+                    // object-fit: contain;
                     // @include shadow-a-pic;
                 }
                 .mediatheque-publication-star-item-content-pic-placeholder {
@@ -103,16 +104,17 @@
                     line-height: 26.6px;
                     @include tracking(25);
                     @include text-shave(3);
-                    margin: 16px 0px;
+                    margin: 8px 0px 16px 0px;
                     @include tablet {
-                        margin: 24px 0px;
+                        margin: 16px 0px 24px 0px;
                     }
                     @include laptopS {
-                        margin: 32px 0px; 
+                        margin: 8px 0px 16px 0px; 
                     }
                 }
                 .cta-a{
                     @include cta-a;
+                    margin: 0;
                     color: $white;
                 }
 

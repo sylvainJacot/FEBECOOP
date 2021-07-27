@@ -101,7 +101,7 @@ $hstb-intro-h-t : 96px;
     .hero-section-type-b-intro-content {
         background: $white;
         padding: 40px 24px;
-        border-radius: 8px;
+        border-radius: $border-radius-small-picture;
         transform: translateY(- $hstb-intro-h-m);
         @include shadow-a-nopic;
         @include tablet  {
@@ -376,6 +376,17 @@ $hstb-intro-h-t : 96px;
                 top: 270px;
                 right: 50px;
             }
+        }
+    }
+}
+
+
+#mediatheque-hero-section{
+    .hero-section-pic-wrapper {
+        height: 190px;
+        @include tablet {
+            width: 400px;
+            height: 400px;
         }
     }
 }

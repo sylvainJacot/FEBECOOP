@@ -104,7 +104,9 @@ $place = get_sub_field('lieu');
                         <div class="map-aside-coordonees-item-coordonees">
                             <p><?php the_sub_field('addresse'); ?></p>
                             <p><?php the_sub_field('localite'); ?></p>
-                            <p><span>T. </span><?php the_sub_field('telephone'); ?></p>
+
+
+                            <a href="tel:<?php the_sub_field('telephone'); ?>"><span>T. </span><?php the_sub_field('telephone'); ?></a><br/>
                             <a href="mailto:<?php the_sub_field('email'); ?>"><span>E. </span><?php the_sub_field('email'); ?></a>
                         </div>
 

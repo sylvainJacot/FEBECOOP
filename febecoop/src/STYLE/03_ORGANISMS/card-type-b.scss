@@ -1,7 +1,7 @@
 .card-type-b-item {
     display: block;
     background: $white;
-    border-radius: 8px;
+    border-radius: $border-radius-small-picture;
     overflow: hidden;
     position: relative;
     height: auto;
@@ -14,12 +14,15 @@
      }
     .card-type-b-pic-wrapper {
         width: 100%;
-        height: 205px;
+        height: 183px;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
         // border-radius: 0px 0px 8px 8px;
+        @media (min-width:500px) {
+            height: 333.33333333333px;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -28,18 +31,18 @@
             @include trans-a;
         }
         @include tablet {
-            height: 193px;
+            height: 192px;
         }
         @include laptopS {
-            height: 182px;
+            height: 181.73333333333px;
         }
         @include laptopL {
-            height: 240px;
+            height: 238px;
         }
     }
     .card-type-b-content {
         padding: 24px $mCol 72px $mCol;
-        border-radius: 8px;
+        border-radius: $border-radius-small-picture;
         @include tablet {
             padding: 24px $tCol 72px $tCol; 
         }

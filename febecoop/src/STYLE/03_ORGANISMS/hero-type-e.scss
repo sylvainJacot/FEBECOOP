@@ -65,23 +65,28 @@ $hste-img-h-d : 260px;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 336px;
+        height: 213.33333333333px;
         margin: auto;
         overflow: hidden;
+        border-radius: 0 0 $border-radius-big-picture $border-radius-big-picture;
         background-color: $white;
+        @media (min-width:500px) {
+            height: 333.33333333333px;
+        }
         @include tablet {
             width: 17 * $tCol;
-            height: 390px;
+            height: 408px;
             transform: translateY(-$hste-img-h-t);
+            border-radius:$border-radius-big-picture;
         }
         @include laptopS{
             width: 23 * $lCol;
-            height: 466px;
+            height: 613.33333333333px;
             transform: translateY(-$hste-img-h-l);
         }
         @include laptopL{
             width: 21 * $dCol;
-            height: 600px;
+            height: 714px;
             transform: translateY(-$hste-img-h-d);
         }
         img {

@@ -34,9 +34,7 @@ if( !empty( $image ) ): ?>
 </main>
 
 
-<!-- CONTACT BANNER ==============
-=========================== -->
-<!-- <?php get_template_part( './src/TEMPLATES/ContactBanner/contact-banner-options' );?> -->
+
 
 <!-- SUCCESS STORIES ==============
 =========================== -->
@@ -45,6 +43,10 @@ if( !empty( $image ) ): ?>
         <?php get_template_part( './src/TEMPLATES/SuccessStories/success-stories-loop-mobile-single-projet-accompagne' );?>
 </section>
 
+
+<!-- CONTACT BANNER ==============
+=========================== -->
+<?php get_template_part( './src/TEMPLATES/ContactBanner/contact-banner-options' );?> 
 
 
 <?php

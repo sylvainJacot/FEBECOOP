@@ -89,7 +89,8 @@ $semi-col-d : $dCol / 2;
                 height: 440px;
                 top: calc(50% + 50px);
                 right: -319px;
-                transform: translateX(-50%) translateY(-50%);
+                transform-origin: center;
+                transform: translateX(-50%) translateY(-50%) scale(0.8);
                 background: url("../ASSETS/IMAGES/HOME/VECTOR/illu-dots-publication.svg") center no-repeat;
                 background-size: contain;
                 z-index: 0;
@@ -100,6 +101,7 @@ $semi-col-d : $dCol / 2;
                 height: 430px;
                 top: calc(50% + 70px);
                 right: -320px;
+                transform: translateX(-50%) translateY(-50%) scale(1);
             
             }
         }

@@ -18,6 +18,7 @@
     &:focus,&:active {
         background-color:transparent !important;
         border-color: $orange-1 !important;
+        border-width: 2px !important;
         box-shadow: none !important;
     }
     &:-webkit-autofill,&:-webkit-autofill:hover,&:-webkit-autofill:focus,&:-webkit-autofill:active {
@@ -25,6 +26,7 @@
     }
     &[aria-invalid='true'] {
         border-color: $red-1 !important;
+        border-width: 2px !important;
         }
 }
 
@@ -66,5 +68,17 @@
         .frm_required {
             color: $blue-3;
         }
+    }
+}
+
+.frm_blank_field {
+    .frm_primary_label {
+       color: $blue-3 !important;
+    }
+}
+
+.vertical_radio {
+    .frm_error {
+        display: none;
     }
 }

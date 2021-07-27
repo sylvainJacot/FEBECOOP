@@ -71,8 +71,8 @@ $margin-flex-txt : 40px;
 @mixin paragraph {
   @include hando;
   color: $blue-2;
-  font-size: 15px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 28px;
   margin-bottom: $space-between-flex-items-l;
   @include tracking(25);
 }
@@ -192,11 +192,22 @@ $margin-flex-txt : 40px;
         @include blockquote;
     }
   }
-
+  h1 {
+    @include flex-titre-1;
+  }
+  h2 {
+    @include flex-titre-1;
+  }
   h3 {
     @include flex-titre-1;
   }
   h4 {
+    @include flex-titre-2;
+  }
+  h5 {
+    @include flex-titre-2;
+  }
+  h6 {
     @include flex-titre-2;
   }
   ol {

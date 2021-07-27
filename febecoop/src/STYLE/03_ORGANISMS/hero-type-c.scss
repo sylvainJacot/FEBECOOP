@@ -6,6 +6,7 @@ $hstc-padding-top-l : 160px;
 .hero-section-type-c {
     background: $orange-light;
     position: relative;
+    overflow-x: hidden;
 
     .hero-section-type-c-wrapper {
         position: relative;
@@ -117,7 +118,7 @@ $hstc-padding-top-l : 160px;
     .hero-section-type-b-intro-content {
         background: $white;
         padding: 40px 24px;
-        border-radius: 8px;
+        border-radius: $border-radius-small-picture;
         transform: translateY(- $hstc-intro-h-m);
         @include shadow-a-nopic;
         @include tablet  {

@@ -4,7 +4,7 @@
     background: $white;
     @include shadow-a-pic;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: $border-radius-big-picture;
     @include card-type-anime-a;
     &:not(:last-child){
         margin-bottom: 40px;

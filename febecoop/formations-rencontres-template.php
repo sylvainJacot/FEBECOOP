@@ -133,34 +133,36 @@
 
 <!-- EVENEMENT A LA UNE==============
 =========================== -->
-<?php
-$featured_posts = get_field('choisir_formationevenement');
-if( $featured_posts ): ?>
+
 <section class="evement-a-la-une-section">
 <div class="evement-a-la-une-section-wrapper grid">
     <div class="evement-a-la-une-section-content">
 
 
-    <?php foreach( $featured_posts as $post ): 
-        setup_postdata($post); ?>
-        <div class="evement-a-la-une-section-content-pic-wrapper">
+    <div class="evement-a-la-une-section-content-pic-wrapper">
         <?php 
-        $image = get_field('ev-image');
+        $image = get_field('programme_une_hero_image');
         if( !empty( $image ) ): ?>
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
         <?php endif; ?>
         </div>
             <div class="evement-a-la-une-section-content-text">
         <h2 class="evement-a-la-une-section-content-title">
-            <?php the_field('titre_de_la_formationevenement');?>
+            <?php the_field('programme_une_titre');?>
         </h2>
         <p class="evement-a-la-une-content-resume">
-            <?php the_field('ev-resume');?>
+            <?php the_field('programme_une_description');?>
         </p>
-    <?php endforeach; ?>
-    <?php endif; ?>
 
-<a class="cta-a" href="<?php the_permalink(); ?>"><?php pll_e('Découvrez le programme')?></a>
+<?php 
+$link = get_field('programme_une_bouton');
+if( $link ): 
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+    ?>
+    <a class="cta-a" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+<?php endif; ?>
 
 </div>
         </div>

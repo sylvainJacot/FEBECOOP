@@ -28,10 +28,7 @@ set_query_var('poo', $id);?>
 
 <!-- SUCCESS STORIES ==============
 =========================== -->
-<?php
-$id= 'success-stories-ec';
-set_query_var('poo', $id);?>
-<?php get_template_part('./src/TEMPLATES/SuccessStories/succes-stories-diapo');?>
+<?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-section');?>
 
 <!-- CONTACT BANNER ==============
 =========================== -->

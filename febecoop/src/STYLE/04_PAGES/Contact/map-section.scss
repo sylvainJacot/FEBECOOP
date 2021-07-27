@@ -107,6 +107,8 @@ $aside-width-d : calc(8 * #{$dCol});
                         height: 55px;
                         background: $white;
                         border-radius: 50%;
+                        transform:  translateY(0);
+                        @include trans-a;
                         > img {
                             position: absolute;
                             max-height: 24px;
@@ -121,10 +123,11 @@ $aside-width-d : calc(8 * #{$dCol});
                         }
 
                         &:hover {
+                            transform:  translateY(-4px);
+                            @include trans-a(0.15s);
                             > img {
-                                // max-height: 28px;
-                                // max-width: 28px;
-                                // @include trans-a;
+                                transform: translate(-50%,-60%) scale(1.05);
+                                @include trans-a(0.15s);
                             }
                         }
                     }

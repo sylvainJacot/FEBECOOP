@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 16px;
+    border-radius: $border-radius-small-picture;
     overflow: hidden;
     margin: $space-between-flex-items-m 0px;
     @include tablet {

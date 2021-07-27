@@ -48,6 +48,63 @@
         line-height: 22px;
     }
 }
+@mixin social-icon {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    width: 16px;
+    height: 16px;
+    &:not(:last-child){
+        margin-right: 16px;
+    }
+    @include laptopS {
+        width: $tmi-size-l;
+        height: $tmi-size-l;
+        border-radius: 50%;
+        border: 2px solid $white;
+        margin-right: 0px;
+        opacity: 1;
+        @include trans-a;
+        &:not(:last-child){
+            margin-right: 0px;
+            margin-bottom: 8px;
+        }
+
+        &:hover {
+            @include trans-a(0.1s);
+            background-size: 24px;
+        }
+    }
+}
+
+@mixin social-icons-custom {
+    .tmis-email {
+        background: url("../ASSETS/IMAGES/common/VECTOR/social-email.svg") center no-repeat;
+        background-size: 16px;
+        @include laptopS {
+            background: url("../ASSETS/IMAGES/common/VECTOR/social-email-white.svg") center no-repeat;
+            background-size: 20px;
+        }
+    }
+
+    .tmis-twitter {
+        background: url("../ASSETS/IMAGES/common/VECTOR/social-twitter.svg") center no-repeat;
+        background-size: 16px;
+        @include laptopS {
+            background: url("../ASSETS/IMAGES/common/VECTOR/social-twitter-white.svg") center no-repeat;
+            background-size: 20px;
+        }
+    }
+
+    .tmis-linkedin {
+        background: url("../ASSETS/IMAGES/common/VECTOR/social-linkedin.svg") center no-repeat;
+        background-size: 16px;
+        @include laptopS {
+            background: url("../ASSETS/IMAGES/common/VECTOR/social-linkedin-white.svg") center no-repeat;
+            background-size: 20px;
+        }
+    }
+}
 
 
 $tmi-card-h-l : 248px;
@@ -108,7 +165,7 @@ $tmi-size-l : 56px;
                             .team-member-item-picture  {
                                 &:before {
                                     @include laptopS {
-                                        opacity: 1;
+                                        opacity: 0.8;
                                         @include trans-a;
                                     }
                                 }
@@ -135,6 +192,11 @@ $tmi-size-l : 56px;
                                     transition-delay: 0.4s;
                                 }
                             }
+                            .team-member-item-content-socials-laptop {
+                                opacity: 1;
+                                transform: translate(-50%,-50%);
+                                @include trans-a;
+                            }
                         }
 
                         .team-member-item-picture {
@@ -157,7 +219,7 @@ $tmi-size-l : 56px;
                                 border-radius: unset;
                                 width: 100%;
                                 height: $tmi-card-h-l ;
-                                border-radius: 16px;
+                                border-radius: $border-radius-small-picture;
                                 overflow: hidden;
                             }
                             img {
@@ -196,8 +258,8 @@ $tmi-size-l : 56px;
                                 display: none;
                                 @include laptopS {
                                     display: flex;
-                                    width: 24px;
-                                    height: 24px;
+                                    width: 32px;
+                                    height: 32px;
                                     position: absolute;
                                     background: $yellow-1;
                                     z-index: 1;
@@ -217,11 +279,11 @@ $tmi-size-l : 56px;
                                             display: block;
                                             top: 50%;
                                             left: 50%;
-                                            width: 16px;
-                                            height: 16px;
+                                            width: 24px;
+                                            height: 24px;
                                             transform: translate(-50%,-50%);
                                             background: url("../ASSETS/IMAGES/common/VECTOR/ic-plus.svg") center no-repeat;
-                                            background-size: 8px;
+                                            background-size: 10px;
                                         }
         
     
@@ -267,68 +329,13 @@ $tmi-size-l : 56px;
                             .team-member-item-content-function {@include tm-function;}
 
                             .team-member-item-content-socials {
-                                display: flex;
-                                @include laptopS {
-                                    position: absolute;   
-                                    flex-direction: column;                                 flex-direction: column;
-                                    justify-content: center;
-                                    top: -228px;
-                                    left: 50%;
-                                    transform: translateX(-50%);
-                                }
                                 .team-member-item-social {
-                                    display: block;
-                                    font-size: 0;
-                                    line-height: 0;
-                                    width: 16px;
-                                    height: 16px;
-                                    &:not(:last-child){
-                                        margin-right: 16px;
-                                    }
-                                    @include laptopS {
-                                        margin: 0px;
-                                        width: $tmi-size-l;
-                                        height: $tmi-size-l;
-                                        border-radius: 50%;
-                                        border: 2px solid $white;
-                                        margin-right: 0px;
-                                        transform: translateY(16px);
-                                        opacity: 0;
-
-                                        &:not(:last-child){
-                                            margin-right: 0px;
-                                            margin-bottom: 8px;
-                                        }
-                                    }
+                                    @include social-icon;
                                 }
 
-                                .tmis-email {
-                                    background: url("../ASSETS/IMAGES/common/VECTOR/social-email.svg") center no-repeat;
-                                    background-size: 16px;
-                                    @include laptopS {
-                                        background: url("../ASSETS/IMAGES/common/VECTOR/social-email-white.svg") center no-repeat;
-                                        background-size: 20px;
-                                    }
-                                }
-
-                                .tmis-twitter {
-                                    background: url("../ASSETS/IMAGES/common/VECTOR/social-twitter.svg") center no-repeat;
-                                    background-size: 16px;
-                                    @include laptopS {
-                                        background: url("../ASSETS/IMAGES/common/VECTOR/social-twitter-white.svg") center no-repeat;
-                                        background-size: 20px;
-                                    }
-                                }
-
-                                .tmis-linkedin {
-                                    background: url("../ASSETS/IMAGES/common/VECTOR/social-linkedin.svg") center no-repeat;
-                                    background-size: 16px;
-                                    @include laptopS {
-                                        background: url("../ASSETS/IMAGES/common/VECTOR/social-linkedin-white.svg") center no-repeat;
-                                        background-size: 20px;
-                                    }
-                                }
+                                @include social-icons-custom;
                             }
+
                         }
                     }
                 }
@@ -336,7 +343,33 @@ $tmi-size-l : 56px;
         }
     }
 
+    .team-member-item-content-socials-mobile {
+        display: flex;
+        @include laptopS {
+            display: none;
+        }
+    }
+    .team-member-item-content-socials-laptop {
+        display: none;
+        @include laptopS {
+            display: flex;
+            position: absolute;
+            flex-direction: column;                                
+            justify-content: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-40%);
+            z-index: 2;
+            opacity: 0;
+        }
 
+        .team-member-item-social {
+            @include social-icon;
+        }
+        @include social-icons-custom;
+
+
+    }
 
 
 

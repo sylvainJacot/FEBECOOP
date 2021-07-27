@@ -37,20 +37,20 @@ $aqp-d: 32px;
     }
 
     .entreprenarit-coop-aside {
-        padding: 32px 0;
+        padding: 8px 0px 24px 0px;
         background: $orange-light;
         border-radius: 8px;
         margin-top: 40px;
 
         @include tablet {
-            padding: 64px 0;
+            padding: 8px 0px 24px 0px;
             margin-top: 80px;
         }
 
         @include laptopS {
             margin-top: 0;
             width: 7 * $lCol;
-            padding: 24px 0;
+            padding: 8px 0px 24px 0px;
             height: fit-content;
             position: sticky;
             top: 24px;
@@ -68,18 +68,18 @@ $aqp-d: 32px;
             color: $blue-1;
             @include tracking(100);
             text-transform: uppercase;
-            padding: 0 $aqp-m;
+            padding: 24px $aqp-m 16px $aqp-m;
 
             @include tablet {
-                padding: 0 $aqp-t;
+                padding: 32px $aqp-t 24px $aqp-t;
             }
 
             @include laptopS {
-                padding: 0 $aqp-l;
+                padding: 24px $aqp-l 16px $aqp-l;
             }
 
             @include laptopL {
-                padding: 0 $aqp-d;
+                padding: 24px $aqp-d 16px $aqp-d;
             }
         }
 

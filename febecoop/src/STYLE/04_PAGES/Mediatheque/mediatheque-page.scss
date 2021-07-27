@@ -131,14 +131,14 @@
                 @include laptopS {
                     &:hover {
                         background: $blue-light;
-                        padding-left: $lCol;
+                        padding-left: calc(#{$lCol} / 3);
                         padding-right: 0px;
                         @include trans-a;
                         &:before {
                             width: calc(100% - $lCol);
                         }
                         &:after {
-                            right: $lCol;
+                            right: calc(#{$lCol} / 3);
                             @include trans-a;
                         }
                     }

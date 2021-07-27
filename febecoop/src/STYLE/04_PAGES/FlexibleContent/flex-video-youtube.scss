@@ -71,7 +71,8 @@
     position: relative;
     padding-bottom: 56.25%;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: $border-radius-small-picture;
+    cursor: pointer;
     &:after {
         display: block;
         content: '';

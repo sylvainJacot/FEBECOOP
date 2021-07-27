@@ -133,10 +133,12 @@ $amsi-padding-verti-t : 80px;
         }
 
         .checkout-tm-item {
+            position: relative;
             background: $white;
             border-radius: 16px;
             padding: 40px $mCol;
             z-index: 1;
+            @include card-type-anime-a;
             &:not(:last-child) {
                 margin-bottom: 40px;
                 @include tablet {
@@ -180,11 +182,29 @@ $amsi-padding-verti-t : 80px;
                 line-height: 26.62px;
                 @include tracking(25);
                 margin: 24px 0px;
+                margin-bottom: calc(24px + 56px);
                 @include tablet {
                     margin: 32px 0px;
+                    margin-bottom: calc(32px + 56px);
                 }
                 @include laptopS {
 
+                }
+            }
+            .cta-a {
+                position: absolute;
+                bottom: 40px;
+                width: auto;
+                max-width: calc(100% - (2 * #{$mCol}) );
+                @include tablet {
+                    bottom: 48px; 
+                    max-width: calc(100% - (2 * #{$tCol}) );
+                }
+                @include laptopS {
+                    max-width: calc(100% - (#{$lCol}) );
+                }
+                @include laptopL {
+                    max-width: calc(100% - ( #{$dCol}) );
                 }
             }
         }

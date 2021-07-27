@@ -210,6 +210,16 @@ $tab-nav-item-radio-size: 22px;
 
 #contact-form-section {
     background: $white;
+    margin-top: 0;
+    @include tablet {
+        margin-top: 0;
+    }
+    @include laptopS {
+        margin-top: 0;
+    }
+    @include laptopL {
+        margin-top: 0;
+    }
 
     .form-section-type-a-wrapper {
         @include laptopS {

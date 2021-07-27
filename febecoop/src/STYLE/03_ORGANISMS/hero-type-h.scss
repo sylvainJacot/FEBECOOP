@@ -20,6 +20,9 @@
     }
 
     .hero-section-type-h-wrapper {
+        @include laptopL {
+            width: 21 * $dCol;
+        }
 
         .hero-section-type-h-content {
             display: flex;
@@ -75,7 +78,7 @@
         width: 17 * $tCol;
         height: 390px;
         transform: translateY(-$hste-img-h-t);
-        border-radius:16px;
+        border-radius:$border-radius-big-picture;
     }
     @include laptopS{
         width: 23 * $lCol;
@@ -83,7 +86,7 @@
         transform: translateY(-$hste-img-h-l);
     }
     @include laptopL{
-        width: 23 * $dCol;
+        width: 21 * $dCol;
         height: 600px;
         transform: translateY(-$hste-img-h-d);
     }
