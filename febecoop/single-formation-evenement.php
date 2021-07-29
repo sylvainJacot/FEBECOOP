@@ -8,6 +8,8 @@ get_header();
 ?>
 
 
+<!-- ICI SEULS LES IDS DES FORMULAIRES DOIVENT CHANGER PAR RAPPORT A LA FLANDRE -->
+
 <?php
             $date = get_field('ev_date');
             $date_details = get_field('date_details');
@@ -143,13 +145,13 @@ get_header();
     <div class="form-section-type-a-wrapper grid">
 
         <div class="form-type-a-header">
-            <p class="form-type-a-title"><?php pll_e('S’inscrire à l’événement/formation');?></p>
-            <p class="form-type-a-content"><?php the_field('sous-titre_formlulaire'); ?></p>
+            <p class="form-type-a-title"><?php the_field('titre_formulaire');?></p> 
+            <p class="form-type-a-content"><?php the_field('sous-titre_formulaire'); ?></p>
         </div>
         <div class="form-wrapper-item form-wrapper-item-active">
             <?php echo FrmFormsController::get_form_shortcode(array('id' => 10, 'title' => false, 'description' => false)); ?>
         </div>
-
+<!-- 
         <?php
         $link = get_field('footer_formulaires', 'options');
         if ($link) :
@@ -168,7 +170,7 @@ get_header();
 
 
             </a>
-        <?php endif; ?>
+        <?php endif; ?> -->
 
 
 
@@ -181,14 +183,14 @@ get_header();
     <div class="form-section-type-a-wrapper grid">
 
         <div class="form-type-a-header">
-            <p class="form-type-a-title"><?php pll_e('S’informer à propos l’événement/formation');?></p>
+        <p class="form-type-a-title"><?php the_field('titre_formulaire');?></p> 
             <p class="form-type-a-content"><?php the_field('sous-titre_formlulaire'); ?></p>
         </div>
         <div class="form-wrapper-item form-wrapper-item-active">
             <?php echo FrmFormsController::get_form_shortcode(array('id' => 12, 'title' => false, 'description' => false)); ?>
         </div>
 
-        <?php
+        <!-- <?php
         $link = get_field('footer_formulaires', 'options');
         if ($link) :
             $link_url = $link['url'];
@@ -206,7 +208,7 @@ get_header();
 
 
             </a>
-        <?php endif; ?>
+        <?php endif; ?> -->
 
 
 

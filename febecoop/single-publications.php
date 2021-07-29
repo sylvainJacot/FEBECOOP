@@ -158,10 +158,10 @@ get_header();
         /* SCENARIO 05 : Digitale gratuit par défaut */
 
         else {
-            // echo get_template_part( './src/TEMPLATES/PublicationForm/top-section-publi-form' ); 
-            // echo get_template_part( './src/TEMPLATES/Publications/publi-digi-gratuit' ); 
-            // echo get_template_part( './src/TEMPLATES/PublicationForm/bottom-section-publi-form' );
-            echo get_template_part( './src/TEMPLATES/ContactBanner/contact-banner-options' );
+            echo get_template_part( './src/TEMPLATES/PublicationForm/top-section-publi-form' ); 
+            echo get_template_part( './src/TEMPLATES/Publications/publi-digi-gratuit' ); 
+            echo get_template_part( './src/TEMPLATES/PublicationForm/bottom-section-publi-form' );
+            // echo get_template_part( './src/TEMPLATES/ContactBanner/contact-banner-options' );
         };
         ?>
         

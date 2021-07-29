@@ -6,9 +6,9 @@ $amsi-padding-verti-m : 56px;
 $amsi-padding-verti-t : 80px;
 
 .about-main-section {
-    padding-bottom: $hstb-intro-h-m;
+    // padding-bottom: $hstb-intro-h-m;
     @include tablet {
-        padding-bottom: $hstb-intro-h-t;
+        // padding-bottom: $hstb-intro-h-t;
     }
     .about-main-section-wrapper {
         @include laptopS {
@@ -99,7 +99,7 @@ $amsi-padding-verti-t : 80px;
         padding-bottom: $bbc-t + 96px;
     }
     @include laptopS {
-        margin-top: 144px;
+        margin-top: 72px;
         padding-bottom: $bbc-l + 144px;
     }
     @include laptopL {
@@ -146,7 +146,7 @@ $amsi-padding-verti-t : 80px;
                 }
             }
             @include tablet {
-                padding: 48px $tCol;
+                padding: 48px $tCol 64px $tCol;
                 width: 8 * $tCol;
             }
             @include laptopS {
@@ -194,11 +194,12 @@ $amsi-padding-verti-t : 80px;
             .cta-a {
                 position: absolute;
                 bottom: 40px;
-                width: auto;
+                width: 100%;
                 max-width: calc(100% - (2 * #{$mCol}) );
                 @include tablet {
                     bottom: 48px; 
                     max-width: calc(100% - (2 * #{$tCol}) );
+                    width: auto;
                 }
                 @include laptopS {
                     max-width: calc(100% - (#{$lCol}) );

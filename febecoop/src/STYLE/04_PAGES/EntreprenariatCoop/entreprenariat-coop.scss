@@ -1,7 +1,7 @@
-$aqp-m:$mCol;
-$aqp-t: 2 * $tCol;
-$aqp-l: 32px;
-$aqp-d: 32px;
+$aqp-m:0;
+$aqp-t: 0;
+$aqp-l: 0px;
+$aqp-d: 0px;
 
 .entreprenarit-coop-content{
     padding-top: 48px;
@@ -37,20 +37,20 @@ $aqp-d: 32px;
     }
 
     .entreprenarit-coop-aside {
-        padding: 8px 0px 24px 0px;
+        padding: $padding-aside-bloc-m;
         background: $orange-light;
         border-radius: 8px;
         margin-top: 40px;
 
         @include tablet {
-            padding: 8px 0px 24px 0px;
+            padding: $padding-aside-bloc-t;
             margin-top: 80px;
         }
 
         @include laptopS {
             margin-top: 0;
             width: 7 * $lCol;
-            padding: 8px 0px 24px 0px;
+            padding: $padding-aside-bloc-l;
             height: fit-content;
             position: sticky;
             top: 24px;
@@ -58,6 +58,7 @@ $aqp-d: 32px;
         }
 
         @include laptopL {
+            padding: $padding-aside-bloc-d;
             width: 7 * $dCol;
         }
 
@@ -68,18 +69,18 @@ $aqp-d: 32px;
             color: $blue-1;
             @include tracking(100);
             text-transform: uppercase;
-            padding: 24px $aqp-m 16px $aqp-m;
+            padding: 0px 0 16px 0;
 
             @include tablet {
-                padding: 32px $aqp-t 24px $aqp-t;
+                padding: 0px 0 24px 0;
             }
 
             @include laptopS {
-                padding: 24px $aqp-l 16px $aqp-l;
+                padding: 0px 0 16px 0;
             }
 
             @include laptopL {
-                padding: 24px $aqp-d 16px $aqp-d;
+                padding: 0px 0 16px 0;
             }
         }
 

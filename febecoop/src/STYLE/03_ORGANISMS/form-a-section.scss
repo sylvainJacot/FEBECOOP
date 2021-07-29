@@ -2,16 +2,19 @@ $tab-nav-item-radio-size: 22px;
 
 .form-section-type-a {
     background: $blue-light;
-    padding: 56px 0px 72px 0px;
+    padding: 56px 0px 0px 0px;
     @include tablet {
-        padding: 80px 0px 80px 0px;
+        padding: 80px 0px 0px 0px;
     }
     @include laptopS {
-        padding: 88px 0px 88px 0px;
+        padding: 88px 0px 0px 0px;
     }
     .form-section-type-a-wrapper {
+        @include laptopS {
+            width: 19 * $lCol;
+        }
         @include laptopL {
-            width: 17 * $dCol;
+            width: 15 * $dCol;
         }
         .form-type-a-header{
             @include tablet {
@@ -143,23 +146,23 @@ $tab-nav-item-radio-size: 22px;
                     margin-bottom: 64px;
                 }
                 &::after {
-                    position: absolute;
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 2px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    bottom: 0;
-                    background: $blue-light-2;
-                    opacity: 0.3;
+                    // position: absolute;
+                    // content: "";
+                    // display: block;
+                    // width: 100%;
+                    // height: 2px;
+                    // left: 50%;
+                    // transform: translateX(-50%);
+                    // bottom: 0;
+                    // background: $blue-light-2;
+                    // opacity: 0.3;
 
-                    @include laptopS {
-                        width: 20 * $lCol;
-                    }
-                    @include laptopL {
-                        width: 15 * $dCol;
-                    }
+                    // @include laptopS {
+                    //     width: 20 * $lCol;
+                    // }
+                    // @include laptopL {
+                    //     width: 15 * $dCol;
+                    // }
                 }
                 form {
                     .frm_form_fields {
@@ -174,6 +177,7 @@ $tab-nav-item-radio-size: 22px;
             display: block;
         }
         .form-type-a-footer {
+            position: relative;
             display: block;
             @include hando-b;
             color: $blue-1;
@@ -184,6 +188,31 @@ $tab-nav-item-radio-size: 22px;
             @include laptopS {
                 width: 14 * $tCol;
                 margin: auto;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 100%;
+                height: 2px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -48px;
+                background: $blue-light-2;
+                opacity: 0.2;
+
+                @include tablet {
+                    top: -64px;
+                }
+
+                @include laptopS {
+                    width: 20 * $lCol;
+                    top: -64px;
+                }
+                @include laptopL {
+                    width: 15 * $dCol;
+                }
             }
 
 
@@ -241,5 +270,13 @@ $tab-nav-item-radio-size: 22px;
        &:after {
             display: none;
         }
+    }
+}
+
+#publication-form-section {
+    padding-bottom: 72px;
+
+    @include laptopS {
+        padding-bottom: 88px;
     }
 }

@@ -1,4 +1,6 @@
 let socialItemB = document.querySelectorAll(".social-item-b");
+let itemSroute = document.querySelectorAll(".item-route");
+
 
 
 socialItemB.forEach((item) => {
@@ -8,6 +10,17 @@ socialItemB.forEach((item) => {
     };
     item.addEventListener("mouseover", function(){
         item.classList.add('social-item-b-hover');
+    });
+
+})
+
+itemSroute.forEach((item) => {
+
+    item.onanimationend = () => {
+        item.classList.remove('item-route-hover'); 
+    };
+    item.addEventListener("mouseover", function(){
+        item.classList.add('item-route-hover');
     });
 
 })

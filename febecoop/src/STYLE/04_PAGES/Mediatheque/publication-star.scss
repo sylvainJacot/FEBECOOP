@@ -20,7 +20,7 @@
             }
             @include laptopL {
                 width: 15 * $dCol;
-                padding: 48px 2 * $dCol 48px $dCol;
+                padding: 48px 2 * $dCol 48px 2 * $dCol;
                 margin: 0 auto 106px auto;
             }
             .mediatheque-publication-star-item-content-pic {
@@ -42,16 +42,16 @@
                 }
                 @include laptopS {
                     max-height: unset;
-                    max-width: 6 * $lCol;
+                    max-width: 5 * $lCol;
                     // min-height: 280px;
-                    min-width: 6 * $lCol;
+                    min-width: 5 * $lCol;
                     margin: 0;
                 }
                 @include laptopL {
                     // max-height: 310px;
-                    max-width: 5 * $dCol;
+                    max-width: 4 * $dCol;
                     // min-height: 310px;
-                    min-width: 5 * $dCol;
+                    min-width: 4 * $dCol;
                 }
 
                 img {
@@ -83,10 +83,10 @@
                     align-items:flex-start;
                 }
                 @include laptopS {
-                    padding-left: $lCol;
+                    padding-left: 1.5 * $lCol;
                 }
                 @include laptopL {
-                    padding-left: $dCol;  
+                    padding-left: 1.5 * $dCol;  
                 }
                 h3 {
                     @include hando-sb;
@@ -104,12 +104,12 @@
                     line-height: 26.6px;
                     @include tracking(25);
                     @include text-shave(3);
-                    margin: 8px 0px 16px 0px;
+                    margin: 16px 0px 24px 0px;
                     @include tablet {
-                        margin: 16px 0px 24px 0px;
+                        margin: 24px 0px 32px 0px;
                     }
                     @include laptopS {
-                        margin: 8px 0px 16px 0px; 
+                        margin:16px 0px 24px 0px; 
                     }
                 }
                 .cta-a{

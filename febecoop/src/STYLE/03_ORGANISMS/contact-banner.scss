@@ -188,7 +188,8 @@
 #contact-banner-section-formation {
     .contact-banner-illu-container {
         position: absolute;
-        top: - $bbc-m;
+        // top: - $bbc-m;
+        top: -180px;
         width: 310px;
         height: fit-content;
         left: 50%;

@@ -102,7 +102,9 @@ $aside-width-d : calc(8 * #{$dCol});
                     display: flex;
                     .item-route {
                         position: relative;
-                        display: block;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         width: 55px;
                         height: 55px;
                         background: $white;
@@ -110,25 +112,30 @@ $aside-width-d : calc(8 * #{$dCol});
                         transform:  translateY(0);
                         @include trans-a;
                         > img {
-                            position: absolute;
+                            // position: absolute;
                             max-height: 24px;
                             max-width: 24px;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%,-50%);
-                            @include trans-a;
+                            // top: 50%;
+                            // left: 50%;
+                            // transform: translate(-50%,-50%);
+                            // @include trans-a;
                         }
                         &:not(:last-child) {
                             margin-right: 8px;
                         }
 
-                        &:hover {
-                            transform:  translateY(-4px);
-                            @include trans-a(0.15s);
-                            > img {
-                                transform: translate(-50%,-60%) scale(1.05);
-                                @include trans-a(0.15s);
-                            }
+                        // &:hover {
+                        //     transform:  translateY(-4px);
+                        //     @include trans-a(0.15s);
+                        //     > img {
+                        //         transform: translate(-50%,-60%) scale(1.05);
+                        //         @include trans-a(0.15s);
+                        //     }
+                        // }
+                    }
+                    .item-route.item-route-hover {
+                        > img {
+                            animation: map-icon-bounce 1s ease-out;
                         }
                     }
                 }

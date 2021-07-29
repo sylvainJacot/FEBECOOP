@@ -93,8 +93,8 @@
                 }
                 .efscd-liste-detail-item-icone {
                     display: block;
-                    width: 24px;
-                    height: 24px;
+                    min-width: 24px;
+                    min-height: 24px;
                 }
                 .efscd-date-ic{
                     background: url("../ASSETS/IMAGES/FORMATIONRENCONTRES/VECTOR/ic-ev-calendar.svg") center no-repeat;

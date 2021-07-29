@@ -57,7 +57,7 @@
 
 <!--PROJETS ACCOMPAGNES ==============
 =========================== -->
-<section class="projets-accompagnes-section">
+<section class="projets-accompagnes-section projets-partenaires-section">
 <div class="projets-accompagnes-section-wrapper grid">
 
 
@@ -116,6 +116,11 @@ wp_reset_query(); ?>
 
 </div>
 </section>
+
+
+<!-- CONTACT BANNER ==============
+=========================== -->
+<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner"); ?>
 
 
 <?php

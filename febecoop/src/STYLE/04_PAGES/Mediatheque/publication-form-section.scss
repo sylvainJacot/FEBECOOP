@@ -141,24 +141,7 @@ $tab-nav-item-radio-size: 22px;
                     padding-bottom: 64px;
                     margin-bottom: 64px;
                 }
-                &::after {
-                    position: absolute;
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 2px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    bottom: 0;
-                    background: $blue-light-2;
 
-                    @include laptopS {
-                        width: 20 * $lCol;
-                    }
-                    @include laptopL {
-                        width: 15 * $dCol;
-                    }
-                }
                 form {
                     .frm_form_fields {
                         fieldset {

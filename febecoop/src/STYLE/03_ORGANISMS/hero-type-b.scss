@@ -143,6 +143,13 @@ $hstb-intro-h-t : 96px;
         line-height: 26.62px;
         color: $blue-3;
         @include tracking(25);
+        @include laptopS {
+            column-count: 2;
+            column-gap: $lCol;
+        }
+        @include laptopL {
+            column-gap: $dCol;
+        }
     }
 }
 }

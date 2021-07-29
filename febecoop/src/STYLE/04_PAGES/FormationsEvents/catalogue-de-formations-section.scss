@@ -21,16 +21,16 @@ $catalogue-de-formations-el-space-d : 114px;
     }
     .catalogue-de-formations-wrapper  {
         .catalogue-de-formations-header {
-            margin-bottom: $catalogue-de-formations-el-space-m;
+            margin-bottom: calc(#{$catalogue-de-formations-el-space-m} / 2);
             @include tablet {
-                margin-bottom: $catalogue-de-formations-el-space-t;
+                margin-bottom: calc(#{$catalogue-de-formations-el-space-t} / 2);
             }
             @include laptopS {
-                margin-bottom: $catalogue-de-formations-el-space-l;
+                margin-bottom: calc(#{$catalogue-de-formations-el-space-l} / 2);
                 width: 14 * $lCol;
             }
             @include laptopL {
-                margin-bottom: $catalogue-de-formations-el-space-d;
+                margin-bottom: calc(#{$catalogue-de-formations-el-space-d} / 2);
                 width: 13 * $dCol;
             }
             .titre-catalogue-formations {

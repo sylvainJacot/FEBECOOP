@@ -17,3 +17,13 @@ $margin-bottom-between-el-l: 48px;
 .frm_style_formidable-style.with_frm_style .frm_blank_field label, .frm_style_formidable-style.with_frm_style .frm_error {
     color: $red-1;
 }
+
+.frm_blank_field .frm_opt_container .frm_checkbox label{
+    color: $blue-3;
+
+    input {
+        &::before {
+            border: 2px solid $red-1;
+        }
+    }
+}

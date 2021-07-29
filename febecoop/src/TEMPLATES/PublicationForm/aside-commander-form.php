@@ -9,13 +9,13 @@
                     <div class="publication-detail-text-prix-container">
                         <?php if (get_field('papier-payant')) : ?>
 
-                        <p class="publication-detail-prix"><?php pll_e('Version papier');?>: <?php the_field('prix_version_papier');?>&#8364/  <?php pll_e('unité');?>(<?php pll_e('frais de port inclus');?>)</p>
+                        <p class="publication-detail-prix"><?php pll_e('Version papier');?>: <span><?php the_field('prix_version_papier');?>&#8364  (<?php pll_e('frais de port inclus');?>)</span></p>
 
                         <?php endif;?>
 
                         <?php if (get_field('digi-payant')) : ?>
 
-                        <p class="publication-detail-prix"><?php pll_e('Version digitale');?>: <?php the_field('prix_version_digitale');?>&#8364 </p>
+                        <p class="publication-detail-prix"><?php pll_e('Version digitale');?>: <span><?php the_field('prix_version_digitale');?>&#8364 </span></p>
                         
                         <?php endif;?>
                     </div>

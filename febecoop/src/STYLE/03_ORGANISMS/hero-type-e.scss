@@ -70,6 +70,7 @@ $hste-img-h-d : 260px;
         overflow: hidden;
         border-radius: 0 0 $border-radius-big-picture $border-radius-big-picture;
         background-color: $white;
+        @include shadow-b-nopic;
         @media (min-width:500px) {
             height: 333.33333333333px;
         }

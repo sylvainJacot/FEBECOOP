@@ -16,7 +16,15 @@ $cb-space-d: 48px;
 
 // Borders Radius pour les images
 $border-radius-small-picture : 8px;
-$border-radius-big-picture : 16px;
+$border-radius-big-picture : 8px;
+
+
+// Paddings aside blocs
+$padding-aside-bloc-m: 48px $mCol 32px $mCol; 
+$padding-aside-bloc-t: 48px 2 * $tCol 32px 2 * $tCol;           
+$padding-aside-bloc-l: 40px 24px 16px 24px; 
+$padding-aside-bloc-d: 40px $dCol 24px $dCol; 
+
 
 
 // Espaces pour les cartes avec icones/paragraphe/buttons

@@ -74,6 +74,7 @@
     overflow: hidden;
     background-color: $white;
     border-radius: 0px 0px 16px 16px;
+    @include shadow-b-nopic;
     @include tablet {
         width: 17 * $tCol;
         height: 390px;

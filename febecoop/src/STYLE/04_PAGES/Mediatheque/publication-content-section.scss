@@ -107,6 +107,10 @@
                         line-height: 18px;
                         @include tracking(25);
                         margin: 4px 0;
+
+                        > span {
+                            @include hando;
+                        }
                     }
                 }
                 .publication-detail-gratuit {

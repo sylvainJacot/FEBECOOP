@@ -203,3 +203,30 @@ $yAxisFibB : 0;
     72.57% { transform: matrix3d(0.994, 0, 0, 0, 0, 0.994, 0, 0, 0, 0, 1, 0, $xAxisFib, $yAxisFib, 0, 1); }
     100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, $xAxisFib, 0, 0, 1); } 
   }
+
+
+
+
+  $xAxisMib : 0;
+  $yAxisMib : 0;
+
+  @keyframes map-icon-bounce { 
+    0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    5.71% { transform: matrix3d(1.15, 0, 0, 0, 0, 1.15, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    7.61% { transform: matrix3d(1.172, 0, 0, 0, 0, 1.172, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    11.31% { transform: matrix3d(1.182, 0, 0, 0, 0, 1.182, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    11.41% { transform: matrix3d(1.182, 0, 0, 0, 0, 1.182, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    15.12% { transform: matrix3d(1.166, 0, 0, 0, 0, 1.166, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    17.02% { transform: matrix3d(1.153, 0, 0, 0, 0, 1.153, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    18.92% { transform: matrix3d(1.138, 0, 0, 0, 0, 1.138, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    22.62% { transform: matrix3d(1.107, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    22.72% { transform: matrix3d(1.106, 0, 0, 0, 0, 1.106, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    28.33% { transform: matrix3d(1.063, 0, 0, 0, 0, 1.063, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    30.23% { transform: matrix3d(1.051, 0, 0, 0, 0, 1.051, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    33.93% { transform: matrix3d(1.031, 0, 0, 0, 0, 1.031, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    45.15% { transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    50.25% { transform: matrix3d(0.992, 0, 0, 0, 0, 0.992, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    70.27% { transform: matrix3d(0.994, 0, 0, 0, 0, 0.994, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    72.57% { transform: matrix3d(0.994, 0, 0, 0, 0, 0.994, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); }
+    100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, $xAxisMib, $yAxisMib, 0, 1); } 
+  }

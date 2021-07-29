@@ -1,13 +1,13 @@
 .expertise-contenu-section {
     padding-bottom: $bbc-m;
     @include tablet {
-        padding-bottom: $bbc-t + 40px;
+        padding-bottom: $bbc-t + 16px;
     }
     @include laptopS {
-        padding-bottom: $bbc-l + 180px;
+        padding-bottom: 80px;
     }
     @include laptopL {
-        padding-bottom: $bbc-d + 190px;
+        padding-bottom: 80px;
     }
     .expertise-contenu-wrapper {
         @include laptopS {
@@ -23,20 +23,20 @@
             }
         }
         .expertise-contenu-aside {
-            padding: 32px 24px;
+            padding: $padding-aside-bloc-m;
             background: $orange-light;
             border-radius: 8px;
             margin-top: 40px;
     
             @include tablet {
-                padding: 64px 2 * $tCol;
+                padding: $padding-aside-bloc-t;
                 margin-top: 80px;
             }
     
             @include laptopS {
                 margin-top: 0;
                 width: 7 * $lCol;
-                padding: 24px 16px;
+                padding: $padding-aside-bloc-l;
                 height: fit-content;
                 position: sticky;
                 top: 24px;
@@ -44,7 +44,7 @@
             }
     
             @include laptopL {
-                padding: 24px $dCol;
+                padding: $padding-aside-bloc-d;
                 width: 8 * $dCol;
             }
             .expertise-contenu-aside-liste-links {
@@ -55,7 +55,7 @@
                     line-height: 24px;
                     @include tracking(100);
                     text-transform: uppercase;
-                    margin: 16px;
+                    margin-bottom: 16px;
                 }
                 .expertise-contenu-aside-link {
                     position: relative;

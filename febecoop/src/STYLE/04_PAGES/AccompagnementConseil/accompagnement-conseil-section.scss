@@ -1,16 +1,16 @@
 .accompagnement-conseils-contenu-section{
-    padding-bottom: $bbc-m + 40px;
+    padding-bottom: 40px;
     @include tablet {
-        padding-bottom: $bbc-t + 40px;
+        padding-bottom: 80px;
     }
     @include laptopS {
-        padding-bottom: $bbc-l + 10px;
+        padding-bottom: 72px;
     }
     @include laptopL {
-        padding-bottom: $bbc-d + 10px;
+        padding-bottom: 72px;
     }
     .accompagnement-conseils-contenu-main {
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
         @include laptopS {
             display: flex;
             justify-content: center;
@@ -41,18 +41,18 @@
         }
     .accompagnement-conseils-aside {
         background-color: $orange-light;
-        padding: 48px $mCol 32px $mCol;
+        padding: $padding-aside-bloc-m;
         border-radius: 8px;
         margin-bottom: 32px;
         @include tablet {
-            padding: 48px 2 * $tCol 32px 2 * $tCol;
+            padding: $padding-aside-bloc-t;
         }
         @include laptopS {
-            padding: 40px 24px 16px 24px;
+            padding: $padding-aside-bloc-l;
             width: 7 * $lCol;
         }
         @include laptopL {
-            padding: 40px $dCol 24px $dCol;
+            padding: $padding-aside-bloc-d;
             width: 7 * $dCol;
         }
         .accompagnement-conseils-aside-titre {
