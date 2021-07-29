@@ -64,6 +64,9 @@
         border: 1.5px solid $white;
         margin-right: 0px;
         opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include trans-a;
         &:not(:last-child){
             margin-right: 0px;
@@ -77,17 +80,31 @@
     }
 }
 
+@mixin social-ic-span {
+    @include laptopS {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+}
+
 @mixin social-icons-custom {
     .tmis-email {
+        span {
+         @include social-ic-span;
         background: url("../ASSETS/IMAGES/common/VECTOR/social-email.svg") center no-repeat;
         background-size: 16px;
         @include laptopS {
+
             background: url("../ASSETS/IMAGES/common/VECTOR/social-email-white.svg") center no-repeat;
             background-size: 20px;
         }
     }
+    }
 
     .tmis-twitter {
+        span {
+            @include social-ic-span;
         background: url("../ASSETS/IMAGES/common/VECTOR/social-twitter.svg") center no-repeat;
         background-size: 16px;
         @include laptopS {
@@ -95,14 +112,19 @@
             background-size: 20px;
         }
     }
+    }
 
     .tmis-linkedin {
+        span {
+            @include social-ic-span;
         background: url("../ASSETS/IMAGES/common/VECTOR/social-linkedin.svg") center no-repeat;
         background-size: 16px;
         @include laptopS {
+
             background: url("../ASSETS/IMAGES/common/VECTOR/social-linkedin-white.svg") center no-repeat;
             background-size: 20px;
         }
+    }
     }
 }
 
@@ -169,6 +191,10 @@ $tmi-size-l : 56px;
                                         @include trans-a;
                                     }
                                 }
+                                img {
+                                    transform: scale(1.05);
+                                    @include trans-a;
+                                }
                             }
                             .team-member-item-content .team-member-item-content-socials {
                                 .tmis-email {
@@ -198,6 +224,11 @@ $tmi-size-l : 56px;
                                 @include trans-a;
                             }
                         }
+                            .team-member-item-social-hover {
+                                > span {
+                                    animation: footer-icon-bounce-b 1s ease-out;
+                                }
+                            }
 
                         .team-member-item-picture {
                             overflow: hidden;
@@ -226,6 +257,7 @@ $tmi-size-l : 56px;
                                 min-width: 100%;
                                 min-height: 100%;
                                 object-fit: cover;
+                                @include trans-a;
                             }
                             &:after {
                                 @include laptopS {

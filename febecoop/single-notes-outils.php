@@ -59,6 +59,7 @@ get_header();
             $related = get_posts(array(
                 'category__in' => wp_get_post_categories($post->ID),
                 'numberposts' => 3,
+                'orderby' => 'rand',
                 'post_type' => 'notes-outils',
                 'post__not_in' => array($post->ID)
             ));

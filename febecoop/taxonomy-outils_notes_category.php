@@ -140,13 +140,51 @@ $('.filter-npoq-container a').click(function(e){
 
     $('#js-npo-items-container a').fadeOut(); // vire les anciens item 
  
+    var urlcourante = document.location.href; 
+
     var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
  
-    $('.filter-npoq-container a').each(function(){ $(this).removeClass('active'); })
-    $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
-    $('#js-npo-items-container').append(
+    // $('.filter-npoq-container a').each(function(){ $(this).removeClass('active'); 
+    
+    // })
+  // supprimer la classe active du vieux et met sur le nouveau
+
+//   $('.active').each(function(){
+//       $(this).removeClass('active');
+//   })
+
+    if ($(this).hasClass('active')) {
+
+    
+
+        $('#js-npo-items-container').append(
+        $('<div />').load(urlcourante + '#js-npo-items-container .npo-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
+        );
+
+        $('.active').each(function(){
+            $(this).removeClass('active');
+        })
+
+        $(this).removeClass('active');
+
+
+    } else {
+
+
+
+        $('#js-npo-items-container').append(
         $('<div />').load(next_page + '#js-npo-items-container .npo-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
-    );
+        );
+
+        $('.active').each(function(){
+            $(this).removeClass('active');
+        })
+
+        $(this).addClass('active');
+
+    }
+
+
 
     setTimeout(function() {
         $('#js-npo-items-container a').css('opacity', '1'); // effet etc a appliquer apres le chargement 

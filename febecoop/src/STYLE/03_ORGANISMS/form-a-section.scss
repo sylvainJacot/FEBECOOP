@@ -139,11 +139,11 @@ $tab-nav-item-radio-size: 22px;
             }
             .frm_forms {
                 position: relative;
-                padding-bottom: 48px;
-                margin-bottom: 48px;
+                // padding-bottom: 48px;
+                // margin-bottom: 48px;
                 @include tablet {
-                    padding-bottom: 64px;
-                    margin-bottom: 64px;
+                    // padding-bottom: 64px;
+                    // margin-bottom: 64px;
                 }
                 &::after {
                     // position: absolute;
@@ -185,10 +185,16 @@ $tab-nav-item-radio-size: 22px;
             line-height: 26.62px;
             @include tracking(25);
             text-align: center;
+            padding-bottom: 48px;
+
+            @include tablet {
+                padding-bottom: 64px;
+            }
+
             @include laptopS {
                 width: 14 * $tCol;
                 margin: auto;
-            }
+         }
 
             &::after {
                 position: absolute;
@@ -240,8 +246,10 @@ $tab-nav-item-radio-size: 22px;
 #contact-form-section {
     background: $white;
     margin-top: 0;
+    padding-bottom: 48px;
     @include tablet {
         margin-top: 0;
+        padding-bottom: 64px;
     }
     @include laptopS {
         margin-top: 0;
@@ -274,9 +282,26 @@ $tab-nav-item-radio-size: 22px;
 }
 
 #publication-form-section {
-    padding-bottom: 72px;
+    
+    .frm_forms {
+        form {
+            padding-bottom: 40px;
+            @include tablet {
+                padding-bottom: 56px;  
+            }
+        }
+    }
+}
 
-    @include laptopS {
-        padding-bottom: 88px;
+.single-formation-evenement {
+    #formation-form-section {
+        .frm_forms {
+            fieldset {
+                padding-bottom: 48px;
+                @include tablet {
+                    padding-bottom: 64px;  
+                }
+            }
+        }
     }
 }

@@ -46,20 +46,23 @@ $aqp-d: 0px;
     }
 
     .note-outils-content-aside {
-        padding: $padding-aside-bloc-m;
+        padding-top: $padEdge-aside-top-m; 
+        padding-bottom: $padEdge-aside-bottom-m;
         background: $orange-light;
         border-radius: 8px;
         margin-top: $space-between-flex-items-d;
 
         @include tablet {
-            padding: $padding-aside-bloc-t;
+            padding-top: $padEdge-aside-top-t; 
+            padding-bottom: $padEdge-aside-bottom-t;
             margin-top: $space-between-flex-items-d * 2;
         }
 
         @include laptopS {
             margin-top: 0;
             width: 7 * $lCol;
-            padding: $padding-aside-bloc-l;
+            padding-top: $padEdge-aside-top-l; 
+            padding-bottom: $padEdge-aside-bottom-l;
             height: fit-content;
             position:sticky;
             top: 24px;
@@ -67,7 +70,8 @@ $aqp-d: 0px;
         }
 
         @include laptopL {
-            padding: $padding-aside-bloc-d;
+            padding-top: $padEdge-aside-top-d; 
+            padding-bottom: $padEdge-aside-bottom-d;
             width: 7 * $dCol;
         }
 
@@ -78,18 +82,18 @@ $aqp-d: 0px;
             color: $blue-1;
             @include tracking(100);
             text-transform: uppercase;
-            padding: 0px $aqp-m 24px;
+            padding: 0px $padEdge-aside-right-m 24px $padEdge-aside-left-m;
 
             @include tablet {
-                padding: 0px $aqp-t 32px;
+                padding: 0px $padEdge-aside-right-t 32px $padEdge-aside-left-t;
             }
 
             @include laptopS {
-                padding: 0px $aqp-l 24px;
+                padding: 0px $padEdge-aside-right-l 24px $padEdge-aside-left-l;
             }
 
             @include laptopL {
-                padding: 0px $aqp-d 24px;
+                padding: 0px $padEdge-aside-right-d 24px $padEdge-aside-left-d;
             }
         }
 
@@ -104,17 +108,17 @@ $aqp-d: 0px;
                     line-height: 25px;
                     color: $blue-3;
                     @include tracking(25);
-                    padding: 24px $aqp-m;
+                    padding: 24px $padEdge-aside-right-m 24px $padEdge-aside-left-m;
                     @include tablet {
-                        padding: 32px $aqp-t;
+                        padding: 32px $padEdge-aside-right-t 32px $padEdge-aside-left-t;
                     }
     
                     @include laptopS {
-                        padding: 24px $aqp-l;
+                        padding: 24px $padEdge-aside-right-l 24px $padEdge-aside-left-l;
                     }
     
-                    @include laptopS {
-                        padding: 24px $aqp-d;
+                    @include laptopL {
+                        padding: 24px $padEdge-aside-right-d 24px $padEdge-aside-left-d;
                     }
                 }
 
@@ -150,18 +154,18 @@ $aqp-d: 0px;
 
         .nocaq-cta {
             display: block;
-            padding: 0 $aqp-m;
+            padding: 0px $padEdge-aside-right-m 0px $padEdge-aside-left-m;
 
             @include tablet {
-                padding: 0 $aqp-t;
+                padding: 0px $padEdge-aside-right-t 0px $padEdge-aside-left-t;
             }
 
             @include laptopS {
-                padding: 0 $aqp-l;
+                padding: 0px $padEdge-aside-right-l 0px $padEdge-aside-left-l;
             }
 
             @include laptopS {
-                padding: 0 $aqp-d;
+                padding: 0px $padEdge-aside-right-d 0px $padEdge-aside-left-d;
             }
         }
     }

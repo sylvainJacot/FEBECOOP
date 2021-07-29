@@ -97,7 +97,12 @@
     &:active {
         a {
             color: $orange-1;
+
+            @include tablet {
+                color: $blue-3;
+            }
         }
+
     }
 }
 

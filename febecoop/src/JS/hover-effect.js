@@ -1,5 +1,6 @@
 let socialItemB = document.querySelectorAll(".social-item-b");
 let itemSroute = document.querySelectorAll(".item-route");
+let itemsSocialsTeamMember = document.querySelectorAll(".team-member-item-social");
 
 
 
@@ -10,6 +11,17 @@ socialItemB.forEach((item) => {
     };
     item.addEventListener("mouseover", function(){
         item.classList.add('social-item-b-hover');
+    });
+
+})
+
+itemsSocialsTeamMember.forEach((item) => {
+
+    item.onanimationend = () => {
+        item.classList.remove('team-member-item-social-hover'); 
+    };
+    item.addEventListener("mouseover", function(){
+        item.classList.add('team-member-item-social-hover');
     });
 
 })

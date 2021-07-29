@@ -407,6 +407,36 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     }
 }
 
+@mixin reset-cta {
+    @include cta-b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    line-height: 12px;
+    padding: 24px $mCol;
+
+    @include tablet {
+        padding: 24px 32px;
+    }
+
+    &:after {
+        width: 12px;
+        height: 12px;
+        display: block;
+        content: "";
+        background: url("../ASSETS/IMAGES/common/VECTOR/ic-close-orange.svg") center no-repeat;
+        background-size: contain;
+        margin-left: 24px
+    }
+    &:hover {
+        &:after {
+            background: url("../ASSETS/IMAGES/common/VECTOR/ic-close-white.svg") center no-repeat;
+             background-size: contain;
+        }
+    }
+}
+
 .cta-a {
     @include cta-a; 
  }
@@ -435,6 +465,10 @@ $cta-newsletter-pseudo-arrow-size : 12px;
 
  .newsletter-cta {
      @include newsletter-cta;
+ }
+
+ .reset-cta {
+     @include reset-cta;
  }
 
 

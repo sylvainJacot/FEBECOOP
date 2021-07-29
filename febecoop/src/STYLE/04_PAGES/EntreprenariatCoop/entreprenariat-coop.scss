@@ -4,24 +4,24 @@ $aqp-l: 0px;
 $aqp-d: 0px;
 
 .entreprenarit-coop-content{
-    padding-top: 48px;
-    padding-bottom: $bbc-m;
+    // padding-top: 48px;
+    padding-bottom: calc(#{$bbc-m} / 2);
 
     @include tablet {
-        padding-top: 96px;
-        padding-bottom: $bbc-t;
+        // padding-top: 96px;
+        padding-bottom: calc(#{$bbc-t} / 2);
     }
 
     @include laptopS {
-        padding-top: 106px;
-        padding-bottom: $bbc-l;
+        // padding-top: 106px;
+        padding-bottom: calc(#{$bbc-l} / 2);
         display: flex;
         justify-content: space-between;
     }
 
     @include laptopL {
-        padding-top: 106px;
-        padding-bottom: $bbc-d;
+        // padding-top: 106px;
+        padding-bottom: calc(#{$bbc-d} / 2);
         padding-left: $dCol;
         padding-right: $dCol;
     }

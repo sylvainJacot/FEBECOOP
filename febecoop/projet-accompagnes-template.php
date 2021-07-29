@@ -71,6 +71,11 @@ $pa_terms = get_terms('projet_accompagne_cat');
             </ul>
         </div>
 
+
+
+        <p class="reset-cta reset-filter" style="display: none;"></p>
+
+
         <main class="card-type-b-container card-projet-accompagnes-container card-projet-accompagnes-container-fadeIn" id="js-card-type-b-container">
 
             <?php
@@ -176,6 +181,13 @@ $pa_terms = get_terms('projet_accompagne_cat');
 
         var next_actucat_page = $(this).attr('href');
         // alert(next_actucat_page);
+ 
+
+        $('.reset-cta').css('display', 'flex');
+
+        var newTexte = $(this).text();
+        $('.reset-cta').text(newTexte);
+ 
 
         $('.filtres-types-a-filtre-link').each(function() {
             $(this).removeClass('active');
@@ -184,6 +196,32 @@ $pa_terms = get_terms('projet_accompagne_cat');
 
         $('#js-projets-accompagnes-section-wrapper').append(
             $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(next_actucat_page + ' .card-type-b-container a')
+        );
+
+    });
+</script>
+
+
+<!-- FILTRES EFFACER -->
+<script>
+    $('.reset-cta').click(function(e) {
+
+        e.preventDefault(); // annule effet ou autre sur le clic
+
+        $('.card-type-b-container').fadeOut(); // vire les anciens item 
+
+        var urlcourante = document.location.href; 
+        var next_actucat_page = $(this).attr('href');
+ 
+        $(this).css('display', 'none');
+
+        $('.filtres-types-a-filtre-link').each(function() {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
+
+        $('#js-projets-accompagnes-section-wrapper').append(
+            $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(urlcourante + ' .card-type-b-container a')
         );
 
     });

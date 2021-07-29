@@ -57,6 +57,12 @@ get_header();
         <div class="publication-content generic-content">
             <!-- // START contenu_flexible -->
             <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main-publication');?>
+            <?php 
+        if (get_field('version_papier')  || get_field('version_digitale')) {
+            echo get_template_part('./src/TEMPLATES/ShareSection/share-section-a');
+        } else {
+            echo get_template_part('./src/TEMPLATES/ShareSection/share-section-b');
+        }?>
             <!-- END contenu_flexible -->
         </div>
 
@@ -92,16 +98,12 @@ get_header();
 
         };
         ?>
+        
 
     </main>
             <!-- SHARE ASIDE ==============
 =========================== -->
-<?php 
-        if (get_field('version_papier')  || get_field('version_digitale')) {
-            echo get_template_part('./src/TEMPLATES/ShareSection/share-section-a');
-        } else {
-            echo get_template_part('./src/TEMPLATES/ShareSection/share-section-b');
-        }?>
+
 
     
     </div>

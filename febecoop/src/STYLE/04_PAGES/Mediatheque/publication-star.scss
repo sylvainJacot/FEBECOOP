@@ -7,7 +7,7 @@
             border-radius: 16px;
             background: $blue-light;
             padding: 32px $mCol;
-            margin-bottom: 80px;
+            margin-bottom: 64px;
             @include tablet {
                 display: flex;
                 flex-direction: row;
@@ -16,12 +16,12 @@
             @include laptopS {
                 width: 19 * $lCol;
                 padding: 48px 2 * $lCol;
-                margin: 0 auto 80px auto;
+                margin: 0 auto 64px auto;
             }
             @include laptopL {
                 width: 15 * $dCol;
                 padding: 48px 2 * $dCol 48px 2 * $dCol;
-                margin: 0 auto 106px auto;
+                margin: 0 auto 80px auto;
             }
             .mediatheque-publication-star-item-content-pic {
                 max-height: 230px;

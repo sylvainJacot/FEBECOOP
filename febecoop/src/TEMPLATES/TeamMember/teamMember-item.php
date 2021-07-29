@@ -17,13 +17,13 @@ if ($image) {; ?>
 
             ?>
                 <?php if ($email) : ?>
-                    <a class="team-member-item-social tmis-email" href="mailto:<?php echo $email; ?>" target="_blank"><?php echo $email; ?></a>
+                    <a class="team-member-item-social tmis-email" href="mailto:<?php echo $email; ?>" target="_blank"><?php echo $email; ?><span></span></a>
                 <?php endif; ?>
                 <?php if ($twitter) : ?>
-                    <a class="team-member-item-social tmis-twitter" href="<?php echo $twitter; ?>" target="_blank">Twitter</a>
+                    <a class="team-member-item-social tmis-twitter" href="<?php echo $twitter; ?>" target="_blank">Twitter<span></span></a>
                 <?php endif; ?>
                 <?php if ($linkedin) : ?>
-                    <a class="team-member-item-social tmis-linkedin" href="<?php echo $linkedin; ?>" target="_blank">Linkedin</a>
+                    <a class="team-member-item-social tmis-linkedin" href="<?php echo $linkedin; ?>" target="_blank">Linkedin<span></span></a>
                 <?php endif; ?>
 
             <?php endwhile; ?>
@@ -62,13 +62,13 @@ if ($image) {; ?>
 
             ?>
                 <?php if ($email) : ?>
-                    <a class="team-member-item-social tmis-email" href="mailto:<?php echo $email; ?>" target="_blank"><?php echo $email; ?></a>
+                    <a class="team-member-item-social tmis-email" href="mailto:<?php echo $email; ?>" target="_blank"><?php echo $email; ?><span></span></a>
                 <?php endif; ?>
                 <?php if ($twitter) : ?>
-                    <a class="team-member-item-social tmis-twitter" href="<?php echo $twitter; ?>" target="_blank">Twitter</a>
+                    <a class="team-member-item-social tmis-twitter" href="<?php echo $twitter; ?>" target="_blank">Twitter<span></span></a>
                 <?php endif; ?>
                 <?php if ($linkedin) : ?>
-                    <a class="team-member-item-social tmis-linkedin" href="<?php echo $linkedin; ?>" target="_blank">Linkedin</a>
+                    <a class="team-member-item-social tmis-linkedin" href="<?php echo $linkedin; ?>" target="_blank">Linkedin<span></span></a>
                 <?php endif; ?>
 
             <?php endwhile; ?>
@@ -105,13 +105,13 @@ if ($image) {; ?>
 
             ?>
                 <?php if ($email) : ?>
-                    <a class="team-member-item-social tmis-email" href="mailto:<?php echo $email; ?>" target="_blank"><?php echo $email; ?></a>
+                    <a class="team-member-item-social tmis-email" href="mailto:<?php echo $email; ?>" target="_blank"><?php echo $email; ?><span></span></a>
                 <?php endif; ?>
                 <?php if ($twitter) : ?>
-                    <a class="team-member-item-social tmis-twitter" href="<?php echo $twitter; ?>" target="_blank">Twitter</a>
+                    <a class="team-member-item-social tmis-twitter" href="<?php echo $twitter; ?>" target="_blank">Twitter<span></span></a>
                 <?php endif; ?>
                 <?php if ($linkedin) : ?>
-                    <a class="team-member-item-social tmis-linkedin" href="<?php echo $linkedin; ?>" target="_blank">Linkedin</a>
+                    <a class="team-member-item-social tmis-linkedin" href="<?php echo $linkedin; ?>" target="_blank">Linkedin<span></span></a>
                 <?php endif; ?>
 
             <?php endwhile; ?>

@@ -99,23 +99,24 @@ $margin-flex-txt : 40px;
   text-decoration: none !important;
   @include trans-a;
   position: relative;
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: $orange-1;
-    bottom: -4px;
-    @include trans-a;
-  }
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   left: 0;
+  //   width: 0;
+  //   height: 1px;
+  //   background-color: $orange-1;
+  //   bottom: -4px;
+  //   @include trans-a;
+  // }
 
   &:hover {
-    &::after {
-      width: 100%;
-      @include trans-a;
-    }
+    text-decoration: underline !important;
+    // &::after {
+    //   width: 100%;
+    //   @include trans-a;
+    // }
 
   }
 
@@ -171,6 +172,7 @@ $margin-flex-txt : 40px;
       @include trans-a;
       &:hover {
         color: $red-1;
+        text-decoration: underline;
         @include trans-a;
       }
     }

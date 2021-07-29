@@ -20,10 +20,30 @@ $border-radius-big-picture : 8px;
 
 
 // Paddings aside blocs
-$padding-aside-bloc-m: 48px $mCol 32px $mCol; 
-$padding-aside-bloc-t: 48px 2 * $tCol 32px 2 * $tCol;           
-$padding-aside-bloc-l: 40px 24px 16px 24px; 
-$padding-aside-bloc-d: 40px $dCol 24px $dCol; 
+$padEdge-aside-top-m:48px;
+$padEdge-aside-right-m:$mCol;
+$padEdge-aside-bottom-m:32px;
+$padEdge-aside-left-m:$mCol;
+
+$padEdge-aside-top-t:48px;
+$padEdge-aside-right-t:2 * $tCol;
+$padEdge-aside-bottom-t:32px;
+$padEdge-aside-left-t:2 * $tCol;
+
+$padEdge-aside-top-l:40px;
+$padEdge-aside-right-l:24px;
+$padEdge-aside-bottom-l:16px;
+$padEdge-aside-left-l:24px;
+
+$padEdge-aside-top-d:40px;
+$padEdge-aside-right-d: $dCol;
+$padEdge-aside-bottom-d:24px;
+$padEdge-aside-left-d:$dCol;
+
+$padding-aside-bloc-m: $padEdge-aside-top-m $padEdge-aside-right-m $padEdge-aside-bottom-m $padEdge-aside-left-m; 
+$padding-aside-bloc-t: $padEdge-aside-top-t $padEdge-aside-right-t $padEdge-aside-bottom-t $padEdge-aside-left-t;           
+$padding-aside-bloc-l: $padEdge-aside-top-l $padEdge-aside-right-l $padEdge-aside-bottom-l $padEdge-aside-left-l; 
+$padding-aside-bloc-d: $padEdge-aside-top-d $padEdge-aside-right-d $padEdge-aside-bottom-d $padEdge-aside-left-d; 
 
 
 

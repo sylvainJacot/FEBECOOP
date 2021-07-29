@@ -12,7 +12,7 @@ $terms = get_terms('categories_actualites');
 
 <!-- HERO SECTION ==============
 =========================== -->
-<section class="hero-section-type-g">
+<section class="hero-section-type-g actualite-template-hero-section">
   <div class="hero-section-type-g-wrapper grid">
     <div class="hero-section-type-g-content">
       <div class="hero-section-type-g-content-text">
@@ -32,6 +32,8 @@ $terms = get_terms('categories_actualites');
         </ul>
 
       </div>
+
+      <p class="reset-cta reset-filter" style="display: none;"></p>
 
     </div>
   </div>
@@ -133,6 +135,11 @@ $terms = get_terms('categories_actualites');
 
     var next_actucat_page = $(this).attr('href');
 
+    $('.reset-cta').css('display', 'flex');
+
+    var newTexte = $(this).text();
+    $('.reset-cta').text(newTexte);
+
     $('.filtres-types-a-filtre a').each(function() {
       $(this).removeClass('active');
     })
@@ -144,6 +151,36 @@ $terms = get_terms('categories_actualites');
 
   });
 </script>
+
+
+<!-- FILTRES EFFACER-->
+<script>
+  $('.reset-cta').click(function(e) {
+
+    e.preventDefault(); // annule effet ou autre sur le clic
+
+    $('.actualites-container').fadeOut(); // vire les anciens item 
+
+    var urlcourante = document.location.href; 
+    var next_actucat_page = $(this).attr('href');
+
+    $(this).css('display', 'none');
+
+    $('.filtres-types-a-filtre a').each(function() {
+      $(this).removeClass('active');
+    })
+    $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
+
+    $('#js-actualites-section-wrapper').append(
+      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(urlcourante + ' #js-actualites-container a')
+    );
+
+  });
+</script>
+
+
+
+
 
 
 <?php

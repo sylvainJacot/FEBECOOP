@@ -38,8 +38,45 @@ $hstg-img-h-d : 260px;
                 }
             }
             .hero-section-type-g-content-filtres {
+                top: unset;
+                margin-top: 64px;
+                position: absolute;
 
+                @include tablet {
+                    margin-top: 0;
+                    top: 0;
+                    position: absolute;
+                }
+            }
+            .reset-filter {
+                position: relative;
+                margin-top: 100px;
+                margin-bottom: -96px;
+                @include tablet {
+                    margin-top: 96px;
+                    margin-bottom: -48px;
+                }
             }
         }
     }
+}
+
+
+.actualite-template-hero-section{
+    padding-bottom: 210px;
+
+        @include laptopS {
+        padding-bottom: 80px + $hste-img-h-l;
+    }
+    @include laptopL {
+        padding-bottom: 88px + $hste-img-h-d;
+    }
+
+.hero-section-type-g-content {
+    @include tablet {
+        align-items: unset !important;
+    }
+}
+
+
 }

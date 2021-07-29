@@ -75,6 +75,22 @@
                 @include fadeInLoadMore;
             }
         }
+        .reset-filter {
+            position: relative;
+            transform: translateY(-27px);
+            @include tablet {
+                transform: translateY(-42px);
+            }
+            @include laptopS {
+                transform: translateY(0px);
+                position: absolute;
+                top: -152px;
+                left: 321px;
+            }
+            @include laptopL {
+                left: 408px;
+            }
+        }
     }
 
 }

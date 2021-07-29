@@ -23,11 +23,11 @@
             @include laptopS {
                 margin-bottom: 0px;
                 width: 14 * $lCol;
-                margin-right: 2 * $lCol;
+                // margin-right: 2 * $lCol;
             }
             @include laptopL {
                 width: 12 * $dCol;
-                margin-right: 2 * $dCol; 
+                // margin-right: 2 * $dCol; 
             }
         }
     }
@@ -50,10 +50,12 @@
         @include laptopS {
             padding: $padding-aside-bloc-l;
             width: 7 * $lCol;
+            margin-left: 2 * $lCol;
         }
         @include laptopL {
             padding: $padding-aside-bloc-d;
             width: 7 * $dCol;
+            margin-left: 2 * $dCol;
         }
         .accompagnement-conseils-aside-titre {
             @include hando-b;

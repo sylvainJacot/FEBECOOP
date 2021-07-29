@@ -23,14 +23,14 @@
         overflow-x: unset !important;
         @include laptopS {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         }
         .evenement-formation-single-content-flex {
             @include laptopS {
-                width: 19 * $lCol;
+                width: 14 * $lCol;
             }
             @include laptopL {
-                width: 15 * $dCol;
+                width: 12 * $dCol;
             }
         }
 
@@ -54,13 +54,13 @@
             position: sticky;
             top: 24px;
             margin-bottom: 190px;
-            margin-left: $lCol;
+            // margin-left: $lCol;
         }
 
         @include laptopL {
             padding: 40px $dCol 40px $dCol;
             width: 7 * $dCol;
-            margin-left: 4 * $dCol;
+            // margin-left: 4 * $dCol;
         }
 
         .efscd-titre {
@@ -109,7 +109,7 @@
                     background-size: contain;
                 }
                 .efscd-price-ic {
-                    background: url("../ASSETS/IMAGES/FORMATIONRENCONTRES/VECTOR/ic-ev-price.svg") center no-repeat;
+                    background: url("../ASSETS/IMAGES/FORMATIONRENCONTRES/VECTOR/ic-ev-price-ticket.svg") center no-repeat;
                     background-size: contain;
                 }
                 .efscd-liste-detail-content {
@@ -148,5 +148,16 @@
     }
     @include laptopL {
         margin-top: - $bbc-d ;
+    }
+}
+
+#formation-form-section {
+    .frm_forms {
+        form {
+            padding-bottom: 48px;
+            @include tablet {
+                padding-bottom: 64px;
+            }
+        }
     }
 }

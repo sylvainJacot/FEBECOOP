@@ -2,15 +2,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: $bbc-m + 40px + 53px;
+    padding-bottom: $bbc-m + 50px + 53px;
     @include tablet {
-        padding-bottom: $bbc-t + 150px + 53px;
+        // padding-bottom: $bbc-t + 150px + 53px;
+        padding-bottom: $bbc-t + 150px;
     }
     @include laptopS {
-        padding-bottom: $bbc-l + 116px + 53px;
+        // padding-bottom: $bbc-l + 116px + 53px;
+        padding-bottom: $bbc-l + 116px;
     }
     @include laptopL {
-        padding-bottom: $bbc-d + 88px + 53px;
+        // padding-bottom: $bbc-d + 88px + 53px;
+        padding-bottom: $bbc-d -16px;
     }
     .actualites-section-wrapper {
         min-height: 400px;

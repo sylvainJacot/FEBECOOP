@@ -135,11 +135,11 @@ $tab-nav-item-radio-size: 22px;
             }
             .frm_forms {
                 position: relative;
-                padding-bottom: 48px;
-                margin-bottom: 48px;
+                // padding-bottom: 48px;
+                // margin-bottom: 48px;
                 @include tablet {
-                    padding-bottom: 64px;
-                    margin-bottom: 64px;
+                    // padding-bottom: 64px;
+                    // margin-bottom: 64px;
                 }
 
                 form {

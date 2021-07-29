@@ -151,7 +151,7 @@ get_header();
         <div class="form-wrapper-item form-wrapper-item-active">
             <?php echo FrmFormsController::get_form_shortcode(array('id' => 10, 'title' => false, 'description' => false)); ?>
         </div>
-<!-- 
+
         <?php
         $link = get_field('footer_formulaires', 'options');
         if ($link) :
@@ -170,7 +170,7 @@ get_header();
 
 
             </a>
-        <?php endif; ?> -->
+        <?php endif; ?>
 
 
 
