@@ -177,7 +177,7 @@ get_header();
             <?php endif; ?>
 
             </ul>
-            <a class="cta-c"><?php pll_e('Voir plus');?></a>
+            <a class="cta-c"><span><?php pll_e('Voir plus');?></span></a>
 
         </div>
     <?php endwhile; ?>
@@ -202,8 +202,6 @@ get_header();
 <script>
 
 let CtasLoadMore = document.querySelectorAll('.mediatheque-publications-categrory-item .cta-c');
-
-console.log(CtasLoadMore)
 
 CtasLoadMore.forEach((cta) => {
     let currentItems = 5;

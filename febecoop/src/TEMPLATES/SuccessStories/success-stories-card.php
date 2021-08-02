@@ -23,6 +23,6 @@
                     <?php endwhile;
                     endif; ?>
                 <?php endif; ?>
-        <p class="cta-c"><?php pll_e('Lire plus');?></p>
+        <p class="cta-c"><span><?php pll_e('Lire plus');?></span></p>
     </div>
 </a>

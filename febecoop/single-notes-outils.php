@@ -50,10 +50,10 @@ get_header();
 
     <!-- ASIDE flexible ==============
 =========================== -->
-    <aside class="note-outils-content-aside">
-        <div class="noca-title"><?php pll_e('Autres sujets');?></div>
+    <aside class="aside-wysiwyg">
+        <h3 class="aside-wysiwyg-title"><?php pll_e('Autres sujets');?></h3>
 
-        <ul class="noca-questions-wrapper">
+        <ul class="aside-wysiwyg-list-items-wrapper">
             <?php
 
             $related = get_posts(array(
@@ -66,7 +66,7 @@ get_header();
 
             if ($related) foreach ($related as $post) {
                 setup_postdata($post); ?>
-                <li class="nocaq-item">
+                <li class="aside-wysiwyg-list-item">
                     <?php the_post_thumbnail(); ?>
                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 
@@ -74,8 +74,8 @@ get_header();
             <?php }
             wp_reset_postdata(); ?>
         </ul>
-        <span class="nocaq-cta">
-            <a href="<?php echo esc_url(home_url('/')); ?>notes-pratiques-outils" class="cta-c"><?php pll_e('Voir tous les sujets'); ?></a>
+        <span class="aside-wysiwyg-cta">
+            <a class="cta-c" href="<?php echo esc_url(home_url('/')); ?>notes-pratiques-outils" class="cta-c"><span><?php pll_e('Voir tous les sujets'); ?></span></a>
         </span>
 
     </aside>

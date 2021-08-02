@@ -106,6 +106,7 @@ $tab-nav-item-radio-size: 22px;
                     }
                 }
 
+
             }
             .tab-nav-item-active {
                 color: $orange-1;
@@ -117,6 +118,11 @@ $tab-nav-item-radio-size: 22px;
                         height: 12px;
                         @include trans-a;
                     }
+                }
+                .tab-nav-item-parentheses {
+                    @include hando;
+                    color: red;
+                    opacity: 0.5;
                 }
             }
         }

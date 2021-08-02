@@ -64,7 +64,7 @@ $m-grid-size: #{$m-col*$m-col-count}vw;
     margin-left: auto;
     margin-right: 0;
 }
-@media ( min-width: #{$phone-max + 1}px) {
+@media ( min-width: #{$phone-max + 0}px) {
     .grid, .t-grid {
         width: $t-grid-size;
         margin: 0 auto;

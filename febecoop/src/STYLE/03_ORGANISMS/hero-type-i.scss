@@ -1,6 +1,7 @@
 .hero-section-type-i {
     background: $orange-light;
     position: relative;
+    overflow-x: hidden;
     .hero-section-type-waves-container {
         position: absolute;
         width: 100%;
@@ -13,6 +14,18 @@
         }
         @include laptopL {
             right: -400px;
+        }
+        @media (min-width:1900px) {
+            right: -500px;
+        }
+        @media (min-width:2100px) {
+            right: -600px;
+        }
+        @media (min-width:2300px) {
+            right: -700px;
+        }
+        @media (min-width:2500px) {
+            right: -800px;
         }
         > img {
             width: 100%;

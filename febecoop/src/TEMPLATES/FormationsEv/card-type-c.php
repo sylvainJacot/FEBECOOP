@@ -20,7 +20,7 @@ $count_ev++; ?>
         <h2 class="card-type-c-titre">
             <?php the_title();?>
         </h2>
-        <p class="cta-c"><?php pll_e('En savoir plus');?></p>
+        <p class="cta-c"><span><?php pll_e('En savoir plus');?></span></p>
 
     </div>
 </a> 

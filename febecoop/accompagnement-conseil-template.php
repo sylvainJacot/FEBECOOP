@@ -81,7 +81,7 @@ get_header();
                                         if ($link) : ?>
 
                                             <li class="accompagnement-conseils-aside-link-item">
-                                                <a class="cta-c" href="<?php echo esc_url($link); ?>"><?php echo get_sub_field('libelle_du_lien'); ?> </a>
+                                                <a class="cta-c" href="<?php echo esc_url($link); ?>"><span><?php echo get_sub_field('libelle_du_lien'); ?></span></a>
                                             </li>
 
                                         <?php endif; ?>
@@ -98,7 +98,7 @@ get_header();
                                             $link_target = $link['target'] ? $link['target'] : '_self';
                                         ?>
                                             <li class="accompagnement-conseils-aside-link-item">
-                                                <a class="cta-c" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                                                <a class="cta-c" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><span><?php echo esc_html($link_title); ?></span></a>
                                             </li>
                                         <?php endif; ?>
 

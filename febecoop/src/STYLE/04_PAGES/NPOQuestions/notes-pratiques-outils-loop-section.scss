@@ -78,6 +78,13 @@
                         right: 0;
                         transform: translateY(-50%);
                     }
+
+                    &:hover {
+                        &:before {
+                            background: url("../ASSETS/IMAGES/common/VECTOR/ic-close-orange-2.svg") center no-repeat;
+                            background-size: contain;
+                        }
+                    }
                 }
                 &:hover {
                     color: $orange-1;

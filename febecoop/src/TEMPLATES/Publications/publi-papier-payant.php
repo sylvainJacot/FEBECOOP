@@ -1,6 +1,6 @@
 
 <ul class="form-tabulations-wrapper">
-    <li class="tab-nav-item"><?php pll_e('Version papier');?> (<?php the_field('prix_version_papier');?>&#8364/<?php pll_e('unité');?>, <?php pll_e('frais de port inclus');?>)</li>
+    <li class="tab-nav-item"><?php pll_e('Version papier');?> <div class="tab-nav-item-parentheses">(<?php the_field('prix_version_papier');?>&#8364/<?php pll_e('unité');?>, <?php pll_e('frais de port inclus');?>)</div></li>
 </ul>
 
 

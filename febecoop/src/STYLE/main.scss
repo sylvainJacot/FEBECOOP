@@ -45,6 +45,7 @@
 @import"./03_ORGANISMS/Filtres/filtres-main.scss";
 @import"./03_ORGANISMS/form-a-section.scss";
 @import"./03_ORGANISMS/menu-lang.scss";
+@import "./03_ORGANISMS//Aside//aside-wysiwyg.scss";
 @import"./03_ORGANISMS/Footer/footer.scss";
 
 
@@ -100,4 +101,8 @@
     @include laptopL {
         padding-bottom: 64px
     }
+}
+
+.tab-nav-item-parentheses {
+    @include hando;
 }

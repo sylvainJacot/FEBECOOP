@@ -59,10 +59,12 @@
         display: block;
         overflow-y: scroll;
          @include close-dropdown-container;
+        max-height: 448px;
+        overflow-y: scroll;
 
         /* width */
         &::-webkit-scrollbar {
-          width: 8px;
+          width: 4px;
           height: 90%;
         }
         

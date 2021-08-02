@@ -103,7 +103,7 @@
                         <h2 class="card-type-c-titre">
                             <?php the_title();?>
                         </h2>
-                        <p class="cta-c"><?php pll_e('En savoir plus');?></p>
+                        <p class="cta-c"><span><?php pll_e('En savoir plus');?></span></p>
 
                     </div>
                 </a> 
@@ -211,7 +211,7 @@ if( $featured_posts ): ?>
                 </div>
                 <div class="card-type-b-content">
                     <p class="card-type-b-chapeau"><?php the_field('titre_de_la_formationevenement'); ?></p>
-                    <p class="cta-c"><?php pll_e('En savoir plus');?></p>
+                    <p class="cta-c"><span><?php pll_e('En savoir plus');?></span></p>
                 </div>
             </a>
 

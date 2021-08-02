@@ -13,6 +13,7 @@ get_header();
 // <!-- get the current taxonomy term -->
 $term = get_queried_object();
 $title = $term->name;
+
 $terms_tags  = get_terms(
     'tags_notes_outils',
     [

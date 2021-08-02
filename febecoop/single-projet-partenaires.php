@@ -60,7 +60,7 @@ if( !empty( $image ) ): ?>
                 
                 <div class="slider-type-b-header">
                 <h3><?php pll_e('Autres projets partenaires');?></h3> 
-                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>projets-partenaires" ><?php pll_e('Tous les projets partenaires');?></a>
+                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>projets-partenaires" ><span><?php pll_e('Tous les projets partenaires');?></span></a>
                 </div>
 
                 <div class="swiper-container slider-container-type-b js-type-b-swiper">
@@ -105,7 +105,7 @@ if( !empty( $image ) ): ?>
                         <?php endwhile;
                         endif; ?>
                         <?php endif;?>
-                        <p class="cta-c"><?php pll_e('Lire plus');?></p>
+                        <p class="cta-c"><span><?php pll_e('Lire plus');?></span></p>
                     </div>
                 </a>
                 </div>

@@ -37,11 +37,13 @@ $hstc-padding-top-l : 160px;
                 top: $hstc-padding-top-l + 40px;
             }
             @include laptopL {
-                width: 578px;
-                height: 312px;
+                width: 588px;
+                height: 382px;
                 top: 50%;
                 right: -280px;
                 transform: translateY(-50%);
+                background: url("../ASSETS/IMAGES/EXPERTISES/VECTOR/illu-hero-expertise-single-laptopl.svg") center no-repeat;
+                background-size: contain;
             }
         }
         .hero-section-type-c-content {
@@ -105,6 +107,12 @@ $hstc-padding-top-l : 160px;
             }
         }
         .hero-section-type-c-content-no-shape {
+            @include laptopS {
+                padding-top: 150px;
+            }
+            @include laptopL {
+                padding-top: 150px;
+            }
             .hero-section-type-c-content-text {
                 margin-left: 0px;
             }

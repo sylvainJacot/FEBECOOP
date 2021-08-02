@@ -58,7 +58,7 @@ $the_query = new WP_Query($args);
                     <?php endwhile;
                     endif; ?>
                 <?php endif; ?>
-                <p class="cta-c">Lire plus</p>
+                <p class="cta-c"><span><?php pll_e('Lire plus');?></span></p>
             </div>
         </a>
 

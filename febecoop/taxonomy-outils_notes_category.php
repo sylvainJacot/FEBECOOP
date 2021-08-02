@@ -13,15 +13,18 @@ get_header();
 // <!-- get the current taxonomy term -->
 
 $term = get_queried_object();
+$getterm = $term->slug; 
 
-$termID = $term->term_slug;
-
-print_r($termID);
+// print_r($getterm);
 
 $title = $term->name;
+
+// print_r($title);
+
 $terms_tags  = get_terms(
-    'tags_notes_outils',
     [  
+        "taxonomy" => 'tags_notes_outils',
+        "taxonomy_2" => $getterm,
         "hide_empty" => true,
     ],
 );
@@ -106,6 +109,8 @@ $terms_tags  = get_terms(
         <div class="npo-items-wrapper">
             <div class="npo-items-container" id="js-npo-items-container">
             <!-- // LOOP NOTES PRATIQUES & OUTILS -->
+
+                
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

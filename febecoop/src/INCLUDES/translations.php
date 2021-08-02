@@ -62,5 +62,6 @@ if (function_exists('pll_register_string')) {
     pll_register_string("Projet partenaire", "Projet partenaire", 'febecoop', true);
     pll_register_string("Autres projets partenaires", "Autres projets partenaires", 'febecoop', true);
     pll_register_string("Tous les projets partenaires", "Tous les projets partenaires", 'febecoop', true);
-    
+    pll_register_string("Voir toutes les expertises", "Voir toutes les expertises", 'febecoop', true);
+     
 }

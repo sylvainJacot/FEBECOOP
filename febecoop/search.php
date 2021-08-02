@@ -82,7 +82,7 @@ get_header();
 
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
         <p class="search-result-item-title"><?php the_title(); ?></p>
-        <p class="cta-c">Lire plus</p>
+        <p class="cta-c"><span><?php pll_e('Lire plus');?></span></p>
         </a>
     </li>   
 

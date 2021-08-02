@@ -63,7 +63,7 @@ if( !empty( $image ) ): ?>
                 
                 <div class="slider-type-b-header">
                 <h3><?php pll_e('Autres actualités');?></h3>
-                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>actualites" ><?php pll_e('Toutes les actualités');?></a>
+                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>actualites" ><span><?php pll_e('Toutes les actualités');?></span></a>
                 </div>
 
                 <div class="swiper-container slider-container-type-b js-type-b-swiper">
@@ -103,7 +103,7 @@ if( !empty( $image ) ): ?>
             
             <div class="slider-type-b-header">
             <h3><?php pll_e('Autres actualités');?></h3>
-            <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>actualites" ><?php pll_e('Toutes les actualités');?></a>
+            <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>actualites" ><span><?php pll_e('Toutes les actualités');?></span></a>
             </div>
 
             <div class="swiper-container slider-container-type-b js-type-b-swiper">

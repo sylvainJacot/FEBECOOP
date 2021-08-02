@@ -133,7 +133,7 @@ get_header();
             <div class="pi-content">
                 <p class="pi-titre"><?php the_field('publication-titre'); ?></p>
                 <p class="pi-desc"><?php the_field('publication-description'); ?></p>
-                    <p class="cta-c"><?php echo esc_html($link_publi_title); ?></p>
+                    <p class="cta-c"><span><?php echo esc_html($link_publi_title); ?></span></p>
                 <?php endif; ?>
             </div>
         </a>
@@ -165,7 +165,7 @@ get_header();
                     $link_title = $link['title'];
                     $link_target = $link['target'] ? $link['target'] : '_self';
                 ?>
-                    <a class="cta-d" id="last-news-cta" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                    <a class="cta-d" id="last-news-cta" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><span><?php echo esc_html($link_title); ?></span></a>
                 <?php endif; ?>
             </div>
 
@@ -212,7 +212,7 @@ get_header();
                 <div class="nos-formations-card-content">
                     <p class="nos-formations-card-content-text"><?php the_field('formations-text'); ?></p>
 
-                    <p class="cta-c"><?php pll_e('Voir les formations');?></p>
+                    <p class="cta-c"><span><?php pll_e('Voir les formations');?></span></p>
 
                 </div>
             </a>

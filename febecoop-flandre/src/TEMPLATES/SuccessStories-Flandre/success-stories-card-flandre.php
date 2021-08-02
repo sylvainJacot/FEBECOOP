@@ -8,6 +8,6 @@
 </div>
     <div class="card-type-b-content">
         <p class="card-type-b-chapeau"><?php the_title() ?></p>
-        <p class="cta-c">Lire plus</p>
+        <p class="cta-c"><span><?php pll_e('Lire plus');?></span></p>
     </div>
 </a>

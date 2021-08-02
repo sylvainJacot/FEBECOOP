@@ -53,7 +53,7 @@ get_header();
                 <div class="card-type-b-content">
                 <p class="card-type-b-date"><?php echo get_the_date('d/m/Y'); ?></p>
                 <p class="card-type-b-chapeau"><?php the_title(); ?></p>
-                <p class="cta-c"><?php pll_e('Lire plus');?></p>
+                <p class="cta-c"><span><?php pll_e('Lire plus');?></span></p>
                 </div>
         </a>
 

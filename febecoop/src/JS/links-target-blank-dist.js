@@ -1,0 +1,1 @@
+"use strict";$("a").each((function(){new RegExp("/"+window.location.host+"/").test(this.href)||$(this).attr("target","_blank")}));

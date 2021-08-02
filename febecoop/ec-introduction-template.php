@@ -17,8 +17,8 @@ set_query_var('poo', $id);?>
         <div class="ec-title"><?php pll_e("L'enprenariat coopératif");?></div>
 
         <ul class="ec-wrapper">
-        <li><a href="<?php echo esc_url(home_url('/')); ?>histoire" class="cta-c"><?php pll_e('Histoire');?></a></li>
-        <li><a href="<?php echo esc_url(home_url('/')); ?>les-7-principes" class="cta-c"><?php pll_e('Les 7 principes');?></a></li>
+        <li><a href="<?php echo esc_url(home_url('/')); ?>histoire" class="cta-c"><span><?php pll_e('Histoire');?></span></a></li>
+        <li><a href="<?php echo esc_url(home_url('/')); ?>les-7-principes" class="cta-c"><span><?php pll_e('Les 7 principes');?></span></a></li>
         </ul>
 
 

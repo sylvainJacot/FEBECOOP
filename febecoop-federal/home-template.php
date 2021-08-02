@@ -27,7 +27,7 @@ get_header();
                     $link_title = $link['title'];
                     $link_target = $link['target'] ? $link['target'] : '_self';
                 ?>
-                    <a class="cta-d" id="last-news-cta" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                    <a class="cta-d" id="last-news-cta" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><span><?php echo esc_html($link_title); ?></span></a>
                 <?php endif; ?>
             </div>
 
@@ -97,7 +97,7 @@ get_header();
                 $link_title = $link['title'];
                 $link_target = $link['target'] ? $link['target'] : '_self';
             ?>
-                <p class="cta-c"><?php echo esc_html($link_title); ?></p>
+                <p class="cta-c"><span><?php echo esc_html($link_title); ?></span></p>
             <?php endif; ?>
             </div>
         </a>
@@ -137,7 +137,7 @@ get_header();
             <a class="cta-a"><?php pll_e('En savoir plus');?></a>
 
         </div>
-        <a class=cta-d><?php pll_e('Toutes les prises de décisions');?></a>
+        <a class=cta-d><span><?php pll_e('Toutes les prises de décisions');?></span></a>
     </div>
 </section>
 

@@ -1,6 +1,19 @@
 $cta-newsletter-pseudo-el-size : 72px;
 $cta-newsletter-pseudo-arrow-size : 12px;
 
+@mixin cta-span-default {
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 2px), $orange-1 2px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.2s ease-out;
+    padding-bottom: 4px;
+}
+
+@mixin cta-span-hover {
+    background-size: 100% 100%;
+}
+
 // ================ CTAs ================
 // =======================================
 @mixin cta-a {
@@ -60,7 +73,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     @include hando-b;
     font-size: 12px;
     @include tracking(150);
-    line-height: 21px;
+    line-height: 25px;
     color: $orange-1;
     padding: 8px 0px 8px 24px;
     width: 100%;
@@ -84,16 +97,8 @@ $cta-newsletter-pseudo-arrow-size : 12px;
         transform: translateY(-50%) rotate(-90deg);
         @include trans-a;
     }
-    &:after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 0;
-        left: 24px;
-        bottom: 6px;
-        height: 2px;
-        background: $orange-1;
-        @include trans-a;
+    > span {
+        @include cta-span-default;
     }
 
     @include tablet {
@@ -105,10 +110,9 @@ $cta-newsletter-pseudo-arrow-size : 12px;
             left: 10px;
         }
         @include laptopS {
-            &:after {
-                width: calc(100% - 24px);
-                @include trans-a;
-            }
+            > span {
+                @include cta-span-hover; 
+              }
         }
     }
 }
@@ -125,16 +129,8 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     padding-left: 40px;
     height: fit-content;
 
-    &:after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 0;
-        left: 40px;
-        bottom: -1px;
-        height: 2px;
-        background: $orange-1;
-        @include trans-a;
+    > span {
+       @include cta-span-default;
     }
 
     &:before {
@@ -159,9 +155,9 @@ $cta-newsletter-pseudo-arrow-size : 12px;
         &:before {
             left: 8px;
         }
-        &:after {
-            width: calc(100% - 40px);
-        }
+        > span {
+            @include cta-span-hover;
+         }
     }
 }
 @mixin cta-e {
