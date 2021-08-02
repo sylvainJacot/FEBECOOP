@@ -99,25 +99,17 @@ $margin-flex-txt : 40px;
   text-decoration: none !important;
   @include trans-a;
   position: relative;
-  // &::after {
-  //   content: "";
-  //   display: block;
-  //   position: absolute;
-  //   left: 0;
-  //   width: 0;
-  //   height: 1px;
-  //   background-color: $orange-1;
-  //   bottom: -4px;
-  //   @include trans-a;
-  // }
-
+  > span {
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 1px), $orange-1 1px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.2s ease-out;
+  }
   &:hover {
-    text-decoration: underline !important;
-    // &::after {
-    //   width: 100%;
-    //   @include trans-a;
-    // }
-
+    > span {
+      background-size: 100% 100%;
+    }
   }
 
 }

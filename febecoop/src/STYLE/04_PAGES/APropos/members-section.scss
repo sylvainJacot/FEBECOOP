@@ -87,6 +87,7 @@
                     @include tablet {
                         display: flex;
                         justify-content: space-between;
+                        align-items: center;
                         padding: 48px 0px;
                     }
                     &:not(:last-child) {

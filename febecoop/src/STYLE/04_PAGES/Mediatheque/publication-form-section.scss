@@ -109,7 +109,7 @@ $tab-nav-item-radio-size: 22px;
             }
             .tab-nav-item-active {
                 color: $orange-1;
-                text-decoration: underline;
+                // text-decoration: underline;
                 .tab-nav-item-radio {
 
                     &:after {
@@ -175,3 +175,4 @@ $tab-nav-item-radio-size: 22px;
 
     }
 }
+

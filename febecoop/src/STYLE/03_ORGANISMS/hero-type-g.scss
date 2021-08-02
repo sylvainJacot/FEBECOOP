@@ -56,6 +56,14 @@ $hstg-img-h-d : 260px;
                     margin-top: 96px;
                     margin-bottom: -48px;
                 }
+                @include laptopS {
+                    position: absolute;
+                    top: -96px;
+                    right: 324px
+                }
+                @include laptopL {
+                    right: 408px
+                }
             }
         }
     }

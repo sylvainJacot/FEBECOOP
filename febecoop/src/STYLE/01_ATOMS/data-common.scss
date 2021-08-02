@@ -45,6 +45,22 @@ $padding-aside-bloc-t: $padEdge-aside-top-t $padEdge-aside-right-t $padEdge-asid
 $padding-aside-bloc-l: $padEdge-aside-top-l $padEdge-aside-right-l $padEdge-aside-bottom-l $padEdge-aside-left-l; 
 $padding-aside-bloc-d: $padEdge-aside-top-d $padEdge-aside-right-d $padEdge-aside-bottom-d $padEdge-aside-left-d; 
 
+// Largeur des contenus flex
+$largeur-flex-main-l: 14 * $lCol;
+$largeur-flex-main-d: 12 * $dCol;
+
+// Largeur des aside flex
+$largeur-aside-main-l: 7 * $lCol;
+$largeur-aside-main-d: 7 * $dCol;
+
+
+// Margin left des asides 
+$aside-main-margin-left-l : 2 * $lCol;
+$aside-main-margin-left-d : 2 * $dCol;
+
+
+
+
 
 
 // Espaces pour les cartes avec icones/paragraphe/buttons

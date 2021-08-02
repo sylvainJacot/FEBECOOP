@@ -11,10 +11,10 @@
     .section-actualite-content {
         margin: auto;
         @include laptopS {
-            width: 19 * $lCol;
+            width: $largeur-flex-main-l;
         }
         @include laptopL {
-            width: 15 * $dCol;
+            width: $largeur-flex-main-d;
         }
     }
 }

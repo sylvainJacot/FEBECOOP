@@ -62,7 +62,7 @@ get_header();
 
             <!-- END contenu_flexible -->
         </div>
-        <div class="accompagnement-conseils-aside-wrapper">
+        <div class="accompagnement-conseils-aside-wrapper"> 
             <?php if (have_rows('contenu_aside')) : ?>
                 <?php while (have_rows('contenu_aside')) : the_row();
                     $titre = get_sub_field('titre');

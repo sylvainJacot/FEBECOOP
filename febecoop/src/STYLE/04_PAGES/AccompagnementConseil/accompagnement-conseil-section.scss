@@ -22,11 +22,11 @@
             margin-bottom: 40px;
             @include laptopS {
                 margin-bottom: 0px;
-                width: 14 * $lCol;
+                width: $largeur-flex-main-l;
                 // margin-right: 2 * $lCol;
             }
             @include laptopL {
-                width: 12 * $dCol;
+                width: $largeur-flex-main-d;
                 // margin-right: 2 * $dCol; 
             }
         }
@@ -49,13 +49,13 @@
         }
         @include laptopS {
             padding: $padding-aside-bloc-l;
-            width: 7 * $lCol;
-            margin-left: 2 * $lCol;
+            width: $largeur-aside-main-l;
+            margin-left: $aside-main-margin-left-l;
         }
         @include laptopL {
             padding: $padding-aside-bloc-d;
-            width: 7 * $dCol;
-            margin-left: 2 * $dCol;
+            width: $largeur-aside-main-d;
+            margin-left: $aside-main-margin-left-d;
         }
         .accompagnement-conseils-aside-titre {
             @include hando-b;

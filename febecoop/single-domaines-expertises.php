@@ -54,7 +54,7 @@ get_header();
 
     $loop = new WP_Query(array(
     'post_type' => 'domaines-expertises', 
-    'posts_per_page' => 7,
+    'posts_per_page' => 3,
     'post__not_in' => array( get_the_ID())
     )); ?>
 <ul class="expertise-contenu-aside-liste-links">
@@ -65,7 +65,7 @@ get_header();
 </li>   
 <?php endwhile; ?>
     </ul>
-    <?php if($count_posts > 7) :?>
+    <?php if($count_posts > 3) :?>
         <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>expertises"><?php pll_e('Voir tous les domaines d’expertises');?></a>
     <?php endif;?>
     </aside>

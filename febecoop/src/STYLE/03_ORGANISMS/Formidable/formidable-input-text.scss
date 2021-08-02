@@ -36,6 +36,7 @@
 .frm_form_field {
     margin: 0 !important;
     position: relative;
+
     .frm_primary_label{
         @include frm-input-label;
     }
@@ -78,6 +79,12 @@
 }
 
 .vertical_radio {
+    margin-top: -24px !important;
+
+    @include laptopS {
+        margin-top: -48px !important;
+    }
+    
     .frm_error {
         display: none;
     }

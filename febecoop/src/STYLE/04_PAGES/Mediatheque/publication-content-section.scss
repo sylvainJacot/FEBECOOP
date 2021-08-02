@@ -12,18 +12,18 @@
 
 .publication-content-section {
     padding-top: 48px;
-    padding-bottom: $bbc-m + 40px;
+    padding-bottom: 56px;
     @include tablet {
         padding-top: 56px;
-        padding-bottom: $bbc-t;
+
     }
     @include laptopS {
         padding-top: 106px;
-        padding-bottom: $bbc-l;
+        padding-bottom: 80px;
     }
     @include laptopL{
         padding-top: 96px;
-        padding-bottom: $bbc-d;
+        padding-bottom: 88px;
     }
 
     .publication-content-main {
@@ -31,7 +31,7 @@
         flex-direction: column;
         @include laptopS {
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
         }
         @include laptopL {
             padding: 0 $lCol;
@@ -41,15 +41,15 @@
             margin: auto;
             @include laptopS {
                 order: 1;
-                width: 14 * $lCol;
+                width: $largeur-flex-main-l;
             }
             @include laptopL {
-                width: 12 * $dCol; 
+                width: $largeur-flex-main-d; 
             }
         }
         .publication-detail {
             order: 1;
-            background: $orange-light-2;
+            background: $orange-light;
             border-radius: 16px;
             padding: 40px $mCol;
             margin-bottom: 56px;
@@ -60,17 +60,19 @@
             }
             @include laptopS {
                 padding: 40px 20px;
-                width: 7 * $lCol;
                 order: 2;
                 height: fit-content;
                 margin: unset;
                 top: 40px;
                 position: sticky;
-                margin-bottom: 80px;
+                margin-bottom: 182px;
+                width: $largeur-aside-main-l;
+                margin-left: $aside-main-margin-left-l;
             }
             @include laptopL{
                 padding: 48px $dCol;
-                width: 7 * $dCol;
+                width: $largeur-aside-main-d;
+                margin-left: $aside-main-margin-left-d;
             }
             .publication-detail-titre {
                 @include hando-b;

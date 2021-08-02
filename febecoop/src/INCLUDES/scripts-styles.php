@@ -26,6 +26,8 @@ function febecoop_scripts() {
     wp_enqueue_script( "tabs-form-script", get_template_directory_uri(  ) . "/src/JS/tabulations-forms-dist.js", array(), rand(100000,200000), true);
     wp_enqueue_script( "toggle-filtre", get_template_directory_uri(  ) . "/src/JS/toggle-filtre-type-a-dist.js", array(), rand(100000,200000), true);
     wp_enqueue_script( "hover-effect", get_template_directory_uri(  ) . "/src/JS/hover-effect-dist.js", array(), rand(100000,200000), true);
+    wp_enqueue_script( "underline-link-effect", get_template_directory_uri(  ) . "/src/JS/underline-wysiwyg-dist.js", array(), rand(100000,200000), true);
+
 
     wp_enqueue_script( "form-download-effect", get_template_directory_uri(  ) . "/src/JS/form-download-file.js", array(), rand(100000,200000), true);
 

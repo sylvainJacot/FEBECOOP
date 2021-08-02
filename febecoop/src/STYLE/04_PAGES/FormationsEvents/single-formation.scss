@@ -23,14 +23,19 @@
         overflow-x: unset !important;
         @include laptopS {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        }
+        @include laptopL {
+            // width: 21 * $dCol;
         }
         .evenement-formation-single-content-flex {
             @include laptopS {
-                width: 14 * $lCol;
+                width: $largeur-flex-main-l;
             }
             @include laptopL {
-                width: 12 * $dCol;
+                width: $largeur-flex-main-d;
             }
         }
 
@@ -48,19 +53,19 @@
 
         @include laptopS {
             margin-top: 0;
-            width: 7 * $lCol;
             padding: 40px 24px 40px 24px;
             height: fit-content;
             position: sticky;
             top: 24px;
             margin-bottom: 190px;
-            // margin-left: $lCol;
+            width: $largeur-aside-main-l;
+            margin-left: $aside-main-margin-left-l;
         }
 
         @include laptopL {
             padding: 40px $dCol 40px $dCol;
-            width: 7 * $dCol;
-            // margin-left: 4 * $dCol;
+            width: $largeur-aside-main-d;
+            margin-left: $aside-main-margin-left-d;
         }
 
         .efscd-titre {

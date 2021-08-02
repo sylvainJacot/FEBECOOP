@@ -12,14 +12,16 @@
     .expertise-contenu-wrapper {
         @include laptopS {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            margin: 0 auto;
+            // justify-content: space-between;
             }
         .expertise-contenu-main {
             @include laptopS {
-                width: 14 * $lCol;
+                width: $largeur-flex-main-l;
             }
             @include laptopL {
-                width: 12 * $dCol;
+                width: $largeur-flex-main-d;
             }
         }
         .expertise-contenu-aside {
@@ -41,11 +43,13 @@
                 position: sticky;
                 top: 24px;
                 margin-bottom: 190px;
+                margin-left: $aside-main-margin-left-l;
             }
     
             @include laptopL {
                 padding: $padding-aside-bloc-d;
                 width: 8 * $dCol;
+                margin-left: $aside-main-margin-left-d;
             }
             .expertise-contenu-aside-liste-links {
                 .expertise-contenu-aside-liste-titre {

@@ -13,12 +13,17 @@ get_header();
 // <!-- get the current taxonomy term -->
 
 $term = get_queried_object();
+
+$termID = $term->term_slug;
+
+print_r($termID);
+
 $title = $term->name;
 $terms_tags  = get_terms(
     'tags_notes_outils',
-    [
-        "hide_empty" => true
-    ]
+    [  
+        "hide_empty" => true,
+    ],
 );
 ?>
 
@@ -71,8 +76,19 @@ $terms_tags  = get_terms(
     <div class="notes-pratiques-outils-loop-wrapper grid" id="js-notes-pratiques-outils-loop-wrapper">
 
 
+        <!-- Filtres mobile -->
+        <aside class="filtres-type-a-container filters-npo-questions-wrapper-mobile js-filtres-type-a-container">
+                <p class="filtres-type-a-title"><?php pll_e('Filtrer par'); ?></p>
+                <ul class="filtres-types-a-filtres-container ajax-filtres-types-a-filtres-container">
+                    <?php foreach ($terms_tags as $tag) : ?>
+                        <?php $term_link = get_term_link($tag); ?>
+                        <li class="filtres-types-a-filtre"><a href="<?php echo esc_url($term_link); ?>" class="filtres-types-a-filtre-link"><?php echo $tag->name; ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+        </aside>
 
-        <aside class="filters-npo-questions-wrapper">
+        <!-- Filtres laptop -->
+        <aside class="filters-npo-questions-wrapper filters-npo-questions-wrapper-laptop">
         <p class="filter-npoq-header"><?php pll_e('Filtrer par');?> :</p>
         <div class="filter-npoq-container">
             <?php foreach ($terms_tags as $tag) : ?>
@@ -82,6 +98,8 @@ $terms_tags  = get_terms(
 
         </div>
         </aside>
+
+        <p class="reset-cta reset-filter reset-filter-npo-mobile" style="display: none;"></p>
 
 
 
@@ -102,8 +120,9 @@ $terms_tags  = get_terms(
             <?php endif; ?>
             
         </div>
-        </div>
         <a href="<?php echo esc_url(home_url('/')); ?>notes-pratiques-outils" class="cta-a"><?php pll_e('Toutes les notes pratiques & outils');?></a>
+        </div>
+      
     </div>
 
 </section>
@@ -119,6 +138,7 @@ $terms_tags  = get_terms(
 
 
 
+<!-- FILTRES LAPTOP -->
 <script>
     
 $('.filter-npoq-container a').click(function(e){
@@ -143,15 +163,6 @@ $('.filter-npoq-container a').click(function(e){
     var urlcourante = document.location.href; 
 
     var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
- 
-    // $('.filter-npoq-container a').each(function(){ $(this).removeClass('active'); 
-    
-    // })
-  // supprimer la classe active du vieux et met sur le nouveau
-
-//   $('.active').each(function(){
-//       $(this).removeClass('active');
-//   })
 
     if ($(this).hasClass('active')) {
 
@@ -192,6 +203,96 @@ $('.filter-npoq-container a').click(function(e){
           
 });
 </script>
+
+
+<!-- FILTRES mobile -->
+<script>
+    $('.filtres-types-a-filtre-link').click(function(e) {
+
+        e.preventDefault(); // annule effet ou autre sur le clic
+
+        var topContainer = $("#js-notes-pratiques-outils-loop-wrapper").offset().top;
+        var top =  topContainer - 200
+        $("html").animate(
+        {
+            scrollTop: top
+        }, {
+            duration: 100,
+            specialEasing: {
+                top: 'easeOutCubic'
+            }
+        },
+        );
+
+        $('#js-npo-items-container a').fadeOut(); // vire les anciens item 
+
+        var urlcourante = document.location.href; 
+
+        var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
+ 
+
+        $('.reset-cta').css('display', 'flex');
+
+        var newTexte = $(this).text();
+        $('.reset-cta').text(newTexte);
+ 
+
+        $('.filtres-types-a-filtre-link').each(function() {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
+
+        $('#js-npo-items-container').append(
+        $('<div />').load(next_page + '#js-npo-items-container .npo-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
+        );
+        setTimeout(function() {
+        $('#js-npo-items-container a').css('opacity', '1'); // effet etc a appliquer apres le chargement 
+        },1000);
+
+    });
+</script>
+
+<!-- FILTRES EFFACER -->
+<script>
+    $('.reset-cta').click(function(e) {
+
+        e.preventDefault(); // annule effet ou autre sur le clic
+
+        var topContainer = $("#js-notes-pratiques-outils-loop-wrapper").offset().top;
+        var top =  topContainer - 200
+        $("html").animate(
+        {
+            scrollTop: top
+        }, {
+            duration: 100,
+            specialEasing: {
+                top: 'easeOutCubic'
+            }
+        },
+        );
+
+        $('#js-npo-items-container a').fadeOut(); // vire les anciens item 
+
+        var urlcourante = document.location.href; 
+        var next_actucat_page = $(this).attr('href');
+ 
+        $(this).css('display', 'none');
+
+        $('.filtres-types-a-filtre-link').each(function() {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
+
+        $('#js-npo-items-container').append(
+        $('<div />').load(urlcourante + '#js-npo-items-container .npo-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
+        );
+        setTimeout(function() {
+        $('#js-npo-items-container a').css('opacity', '1'); // effet etc a appliquer apres le chargement 
+        },1000);
+
+    });
+</script>
+
 
 <?php
 get_footer();

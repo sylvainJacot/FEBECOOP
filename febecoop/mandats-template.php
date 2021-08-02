@@ -102,7 +102,9 @@ foreach ( $terms as $term ):
                     <span><?php the_field('nm-nom');?>:</span>
                     <?php the_field('nm-description');?>
                 </p>
+                <?php if(get_field('nm-url')) : ?>
                 <a class="cta-e" href="https://<?php the_field('nm-url');?>" target="_blank"><?php the_field('nm-url');?></a>
+                <?php endif; ?>
             </div>
 
 

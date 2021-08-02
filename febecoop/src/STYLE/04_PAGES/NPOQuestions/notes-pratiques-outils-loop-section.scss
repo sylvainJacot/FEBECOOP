@@ -1,5 +1,6 @@
 .notes-pratiques-outils-loop-section {
     padding-bottom: $bbc-m + 96px;
+    padding-top: 80px;
     @include tablet {
         padding-bottom: $bbc-t + 112px;
     }
@@ -64,11 +65,48 @@
                 a.active {
                     color: $blue-1;
                     @include trans-a;
+
+                    &:before {
+                        position: absolute;
+                        display: block;
+                        content: "";
+                        width: 12px;
+                        height: 12px;
+                        background: url("../ASSETS/IMAGES/common/VECTOR/ic-close.svg") center no-repeat;
+                        background-size: contain;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                    }
                 }
                 &:hover {
                     color: $orange-1;
                     @include trans-a;
                 }
+            }
+        }
+        .filters-npo-questions-wrapper-mobile {
+            display: block;
+            margin-top: 0;
+            top: -110px;
+            @include tablet {
+                right: unset;
+                left: 0;
+            }
+            @include laptopS {
+                display: none;
+            }
+        }
+        .reset-filter-npo-mobile {
+            transform: translateY(-22px);
+            @include laptopS {
+                display: none !important;
+            }
+        }
+        .filters-npo-questions-wrapper-laptop {
+            display: none;
+            @include laptopS {
+                display: block;
             }
         }
         .npo-items-wrapper {

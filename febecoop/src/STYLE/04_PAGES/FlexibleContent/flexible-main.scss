@@ -25,7 +25,7 @@ $aqp-d: 0px;
         padding-top: 106px;
         padding-bottom: $bbc-l + 106px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     @include laptopL {
@@ -37,11 +37,11 @@ $aqp-d: 0px;
 
     .section-note-outils-content {
         @include laptopS {
-            width: 14 * $lCol;
+            width: $largeur-flex-main-l;
         }
 
         @include laptopL {
-            width: 12 * $dCol;
+            width: $largeur-flex-main-d;
         }
     }
 
@@ -60,19 +60,21 @@ $aqp-d: 0px;
 
         @include laptopS {
             margin-top: 0;
-            width: 7 * $lCol;
             padding-top: $padEdge-aside-top-l; 
             padding-bottom: $padEdge-aside-bottom-l;
             height: fit-content;
             position:sticky;
             top: 24px;
             margin-bottom: 185px;
+            width: $largeur-aside-main-l;
+            margin-left: $aside-main-margin-left-l;
         }
 
         @include laptopL {
             padding-top: $padEdge-aside-top-d; 
             padding-bottom: $padEdge-aside-bottom-d;
-            width: 7 * $dCol;
+            width: $largeur-aside-main-d;
+            margin-left: $aside-main-margin-left-d;
         }
 
         .noca-title {
@@ -164,7 +166,7 @@ $aqp-d: 0px;
                 padding: 0px $padEdge-aside-right-l 0px $padEdge-aside-left-l;
             }
 
-            @include laptopS {
+            @include laptopL {
                 padding: 0px $padEdge-aside-right-d 0px $padEdge-aside-left-d;
             }
         }

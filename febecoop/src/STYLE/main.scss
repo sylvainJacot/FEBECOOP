@@ -87,3 +87,17 @@
     @include trans-a; 
     }
 }
+
+
+.publication-commander-form{
+    padding-bottom: 56px;
+    @include tablet {
+        padding-bottom: 64px
+    }
+    @include laptopS {
+        padding-bottom: 48px;
+    }
+    @include laptopL {
+        padding-bottom: 64px
+    }
+}

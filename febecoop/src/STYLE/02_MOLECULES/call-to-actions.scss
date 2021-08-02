@@ -168,7 +168,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     @include hando;
     font-size: 10px;
     @include tracking(150);
-    line-height: 21px;
+    line-height: 24px;
     color: $orange-1;
     padding: 8px 0px 8px 24px;
     width: 100%;
@@ -178,6 +178,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     position: relative;
     display: block;
     text-align: left;
+    @include text-shave(1);
 
     &:before {
         position: absolute;
@@ -361,7 +362,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
         width: 10 * $dCol;
     }
     @include laptopL {
-        width: 7 * $lCol;
+        width: 9 * $lCol;
     }
 
 

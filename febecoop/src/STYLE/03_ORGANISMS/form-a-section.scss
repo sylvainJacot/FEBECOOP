@@ -112,7 +112,7 @@ $tab-nav-item-radio-size: 22px;
             }
             .tab-nav-item-active {
                 color: $orange-1;
-                text-decoration: underline;
+                // text-decoration: underline;
                 .tab-nav-item-radio {
 
                     &:after {
@@ -247,6 +247,7 @@ $tab-nav-item-radio-size: 22px;
     background: $white;
     margin-top: 0;
     padding-bottom: 48px;
+    padding-top: 0px !important;
     @include tablet {
         margin-top: 0;
         padding-bottom: 64px;

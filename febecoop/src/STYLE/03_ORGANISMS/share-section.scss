@@ -18,7 +18,11 @@
         margin: 64px 0;
     }
     @include laptopS {
-        margin: 40px 0;
+        margin: 40px auto;
+        width: $largeur-flex-main-l;
+    }
+    @include laptopL {
+       width: $largeur-flex-main-d;
     }
     .share-title-a {
         @include hando-b;
