@@ -1,0 +1,10 @@
+<input type="hidden" name="post_type[]" value="actualites" />
+    <input type="hidden" name="post_type[]" value="publications" />
+    <input type="hidden" name="post_type[]" value="projet-accompagnes" />
+    <input type="hidden" name="post_type[]" value="notes-outils" />
+    <input type="hidden" name="post_type[]" value="formation-evenement" />
+    <input type="hidden" name="post_type[]" value="projet-partenaires" />
+    <input type="hidden" name="post_type[]" value="domaines-expertises" />
+    <input type="hidden" name="post_type[]" value="team-members" />
+    <input type="hidden" name="post_type[]" value="nos-membres" />
+    <input type="hidden" name="post_type[]" value="nos-mandats" />

@@ -21,13 +21,11 @@ $title = $term->name;
 
 // print_r($title);
 
-$terms_tags  = get_terms(
-    [  
-        "taxonomy" => 'tags_notes_outils',
-        "taxonomy_2" => $getterm,
-        "hide_empty" => true,
-    ],
+$terms_tags  =  wp_get_object_terms(
+    $post->ID, 'tags_notes_outils'
 );
+
+// print_r($terms_tags);
 ?>
 
 
