@@ -6,15 +6,15 @@
 
 
 .flex-video {
-    padding: $space-between-flex-items-m  0px;
+    padding: $space-between-flex-items-m  0px 2 * $space-between-flex-items-m  0px;
     @include tablet {
-        padding: $space-between-flex-items-t  0px;
+        padding: $space-between-flex-items-t  0px 2 * $space-between-flex-items-t  0px;
     }
     @include laptopS {
-        padding: $space-between-flex-items-l  0px;
+        padding: $space-between-flex-items-l  0px 2 * $space-between-flex-items-l  0px;
     }
     @include laptopL {
-        padding: $space-between-flex-items-d  0px;
+        padding: $space-between-flex-items-d  0px 2 * $space-between-flex-items-d  0px;
     }
 }
 

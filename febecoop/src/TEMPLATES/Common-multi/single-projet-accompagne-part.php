@@ -15,9 +15,7 @@ if( !empty( $image ) ): ?>
 =========================== -->
 <main class="main-projet-accompagne-content grid">
     <div class="section-projet-accompagne-content generic-content">
-    <div class="flex-introduction-wrapper">
-    <!-- <p id="intro-a"><?php the_field('projet-description');?></p> -->
-    </div>
+
         <!-- // START contenu_flexible -->
         <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main');?>
         <!-- END contenu_flexible -->

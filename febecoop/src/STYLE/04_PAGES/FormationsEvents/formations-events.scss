@@ -1,7 +1,9 @@
 .agenda-formations-section {
-    padding-top: 24px;
-    padding-bottom: calc(72px + 24px);
 
+    padding-bottom: calc(56px);
+    @include tablet {
+        padding-bottom: 72px;
+    }
     @include laptopS {
         padding-bottom: calc(80px + 24px);
     }

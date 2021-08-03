@@ -75,12 +75,11 @@
             }
             .mediatheque-publication-star-item-content {
                 display: flex;
-                align-items: center;
+                align-items:flex-start;
                 flex-direction: column;
                 width: 100%;
                 @include tablet {
-                    padding-left: $tCol;
-                    align-items:flex-start;
+                    padding-left: $tCol;   
                 }
                 @include laptopS {
                     padding-left: 1.5 * $lCol;

@@ -68,7 +68,7 @@ $hste-img-h-d : 260px;
         height: 213.33333333333px;
         margin: auto;
         overflow: hidden;
-        border-radius: 0 0 $border-radius-big-picture $border-radius-big-picture;
+        border-radius: 0 0 0 0;
         background-color: $white;
         @include shadow-b-nopic;
         @media (min-width:500px) {

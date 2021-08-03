@@ -80,11 +80,12 @@ $hstb-intro-h-t : 96px;
                    width: 400px;
                    height: 430px;
                    top: 50%;
-                   right: -40px;
+                   right: 70px;
                    transform: translateY(-50%);
                 }
                 @include laptopL {
                     width: 440px;
+                    right: -40px;
                     right: 3 * $dCol;
                 }
                 img {
@@ -202,6 +203,9 @@ $hstb-intro-h-t : 96px;
                 width: 500px;
                 height: 410px;
             }
+            @include laptopS {
+                right: 0;
+            }
             @include laptopL {
                 right: 0;
             }
@@ -237,7 +241,7 @@ $hstb-intro-h-t : 96px;
                 width: 643px;
                 height: 433px;
                 top: 50%;
-                right: -190px;
+                right: -80px;
             }
             @include laptopL {
                 right: -80px;
@@ -271,7 +275,7 @@ $hstb-intro-h-t : 96px;
                     top: unset;
                     bottom: 0;
                     transform: translate(0, 0);
-                    right: -120px;
+                    right: 100px;
                 }
                 @include laptopL {
                     right: -22px;
@@ -308,6 +312,9 @@ $hstb-intro-h-t : 96px;
             bottom: -180px;
         }
         @include laptopS {
+            right: -10px;
+        }
+        @include laptopL {
             bottom: 0;
             right: -380px;
         }
@@ -324,8 +331,9 @@ $hstb-intro-h-t : 96px;
             }
             @include laptopS  {
                 transform: translateX(0) translateY(0);
-                top: 80px;
-                right: -240px;
+                height: 479px;
+                top: 40px;
+                right: 60px;
             }
             @include laptopL {
                 height: 550px;

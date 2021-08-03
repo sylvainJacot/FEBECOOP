@@ -9,12 +9,17 @@ let searchLaptopPlaceholder = document.getElementById('js-nav-search-laptop-plac
 let searchLaptop = document.getElementById('js-nav-search-laptop');
 let closeAreaL = document.getElementById('js-nav-search-laptop-close-area');
 
+let inPutTablet = document.querySelector('.nav-search-tablet #search');
+let inPutLaptop = document.querySelector('.nav-search-laptop #search');
+
+
 
 searchTabletPlaceholder.addEventListener('click', () => {
     if(searchTablet.classList.contains('nav-search-tablet-active')){
         searchTablet.classList.remove('nav-search-tablet-active');
         closeArea.classList.remove('nav-search-tablet-close-area-active');
     } else {
+        inPutTablet.focus();
         searchTablet.classList.add('nav-search-tablet-active');
         closeArea.classList.add('nav-search-tablet-close-area-active');
     }
@@ -33,6 +38,7 @@ searchLaptopPlaceholder.addEventListener('click', () => {
         searchLaptop.classList.remove('nav-search-laptop-active');
         closeAreaL.classList.remove('nav-search-laptop-close-area-active');
     } else {
+        inPutLaptop.focus();
         searchLaptop.classList.add('nav-search-laptop-active');
         closeAreaL.classList.add('nav-search-laptop-close-area-active');
     }
@@ -44,6 +50,7 @@ closeAreaL.addEventListener('click', () => {
         searchLaptop.classList.remove('nav-search-laptop-active');
         closeAreaL.classList.remove('nav-search-laptop-close-area-active');
     } else {
+        inPutLaptop.focus();
         searchLaptop.classList.add('nav-search-laptop-active');
         closeAreaL.classList.add('nav-search-laptop-close-area-active');
     }

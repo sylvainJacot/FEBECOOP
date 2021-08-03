@@ -17,7 +17,7 @@ get_header();
 
         <div class="hero-section-type-f-content">
 
-            <div class="illu-publication-detail-wrapper">
+            <!-- <div class="illu-publication-detail-wrapper"> -->
                 <?php
                 $image = get_field('publication-image-couverture');
                 if (!empty($image))  {?>
@@ -31,7 +31,7 @@ get_header();
                     </div>
 
                     <?php }?>
-            </div>
+            <!-- </div> -->
 
             <div class="hero-section-type-f-content-text">
                 <p class="hero-section-type-f-content-toptitle"><?php pll_e('Publication');?></p>

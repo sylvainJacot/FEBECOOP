@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: $bbc-m + 80px + 53px;
-    padding-top: $hstb-intro-h-m + 56px;
+    padding-bottom: $bbc-m + 80px;
+    padding-top: $hstb-intro-h-m ;
     @include tablet {
         padding-bottom: $bbc-t + 150px;
         padding-top: $hstb-intro-h-t + 56px;
@@ -17,7 +17,7 @@
     .projets-accompagnes-section-filtres {
         position: absolute;
         left: 0px;
-        top: - $hstb-intro-h-m - 146px;
+        top: - $hstb-intro-h-m - 136px;
         @include tablet {
             top: - $hstb-intro-h-t - 56px;
         }
@@ -53,10 +53,13 @@
                 margin-bottom: $dCol;
 
             }
+            .cta-a {
+                width: max-content;
+            }
         }
          a:not(.card-type-b-item):not(.filtres-types-a-filtre-link) {
             position: absolute;
-            bottom: calc(-53px - #{$cb-space-m});
+            bottom: calc(-53px);
             left: 50%;
             transform: translateX(-50%);
 

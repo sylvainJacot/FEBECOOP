@@ -103,6 +103,22 @@
     }
 }
 
+.tab-nav-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .tab-nav-item-parentheses {
     @include hando;
+    padding-left: 28px;
+    display: block;
+    width: 100%;
+    text-transform: lowercase;
+    @include tablet {
+        display: inline-block;
+        width: unset;
+    }
+    @include laptopS {
+        padding-left: 8px;
+    }
 }

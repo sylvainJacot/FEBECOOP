@@ -104,7 +104,10 @@
                 background-color: $blue-1-20;
             }
             .search-result-item-title {
-                margin-bottom: 24px
+                margin-bottom: 8px;
+                @include tablet {
+                    margin-bottom:24px;
+                }
             }
             a {
                 @include hando-sb;

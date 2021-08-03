@@ -64,7 +64,6 @@ $tab-nav-item-radio-size: 22px;
             .tab-nav-item {
                 position: relative;
                 display: flex;
-                align-items: center;
                 @include hando-b;
                 font-size: 13px;
                 line-height: 24px;
@@ -76,6 +75,7 @@ $tab-nav-item-radio-size: 22px;
 
                 @include tablet {
                     margin-bottom: 0px;
+                    align-items: center;
                 }
 
                 &:first-child {
@@ -118,11 +118,6 @@ $tab-nav-item-radio-size: 22px;
                         height: 12px;
                         @include trans-a;
                     }
-                }
-                .tab-nav-item-parentheses {
-                    @include hando;
-                    color: red;
-                    opacity: 0.5;
                 }
             }
         }

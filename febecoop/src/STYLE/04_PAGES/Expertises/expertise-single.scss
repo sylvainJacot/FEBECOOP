@@ -1,13 +1,13 @@
 .expertise-contenu-section {
-    padding-bottom: $bbc-m;
+    padding-bottom: 72px;
     @include tablet {
         padding-bottom: $bbc-t + 16px;
     }
     @include laptopS {
-        padding-bottom: 80px;
+        padding-bottom: 0px;
     }
     @include laptopL {
-        padding-bottom: 80px;
+        // padding-bottom: 80px;
     }
     .expertise-contenu-wrapper {
         @include laptopS {

@@ -3,10 +3,11 @@
     color: $blue-1;
     font-size: 22px;
     line-height: 28px;
-    margin-bottom: 24px;
+
     @include tablet {
         font-size: 24px;
         line-height: 37px; 
+        margin-bottom: 24px;
     }
     @include laptopS {
         font-size: 28px;
@@ -21,7 +22,7 @@
     @include hando-sb;
     color: $blue-1;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 20px;
     @include tablet {
         font-size: 18px;
     }
@@ -138,8 +139,10 @@ $tmi-card-h-l : 248px;
 $tmi-size-l : 56px;
 
 .team-members-section {
+    margin-top: -56px;
     padding-bottom: $bbc-m;
     @include tablet {
+        margin-top: 0px;
         padding-bottom: $bbc-t + 40px;
     }
     @include laptopS {
@@ -149,8 +152,12 @@ $tmi-size-l : 56px;
         padding-bottom: $bbc-d;
     }
         .team-members-row-item {
-            padding: 64px 0px;
+            padding: 40px 0px;
             background: $white;
+
+            @include tablet {
+                padding: 64px 0px;
+            }
 
             &:nth-child(even) {
                 background: $blue-light;
@@ -189,6 +196,9 @@ $tmi-size-l : 56px;
                                     display: none;
                                 }
                             }
+                        }
+                        &:last-child {
+                            padding: 40px 0px 0px 0px;
                         }
 
                         &:hover { 

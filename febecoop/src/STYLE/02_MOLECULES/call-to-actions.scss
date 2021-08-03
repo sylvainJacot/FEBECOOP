@@ -76,7 +76,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     line-height: 25px;
     color: $orange-1;
     padding: 8px 0px 8px 24px;
-    width: 100%;
+    width: auto;
     text-align: center;
     text-transform: uppercase;
     @include trans-a;
@@ -93,7 +93,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
         background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-orange.svg") center no-repeat;
         background-size: contain;
         left: 4px;
-        top: calc(50% - 2px);
+        top: calc(50% - 0px);
         transform: translateY(-50%) rotate(-90deg);
         @include trans-a;
     }
@@ -164,7 +164,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     @include hando;
     font-size: 10px;
     @include tracking(150);
-    line-height: 24px;
+    line-height: 30px;
     color: $orange-1;
     padding: 8px 0px 8px 24px;
     width: 100%;
@@ -185,7 +185,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
         background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-orange.svg") center no-repeat;
         background-size: contain;
         left: 4px;
-        top: calc(50% - 2px);
+        top: calc(50% - 0px);
         transform: translateY(-50%) rotate(-90deg);
         @include trans-a;
     }
@@ -410,7 +410,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     justify-content: space-between;
     align-items: center;
     text-align: left;
-    line-height: 12px;
+    line-height: 24px;
     padding: 24px $mCol;
 
     @include tablet {
@@ -501,9 +501,9 @@ $cta-newsletter-pseudo-arrow-size : 12px;
 @mixin arrow-button-active {
     @include arrow-button;
     &:before {
-        transform: rotate(180deg);
+        transform: translateY(-50%) rotate(180deg);
         z-index: 1;
-        top: 33px;
+        top: 34px;
         transform-origin: center;
         @include trans-a(0.1s);
         @include tablet {

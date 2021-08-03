@@ -6,8 +6,9 @@ $amsi-padding-verti-m : 56px;
 $amsi-padding-verti-t : 80px;
 
 .about-main-section {
-    // padding-bottom: $hstb-intro-h-m;
+    margin-top: -64px;
     @include tablet {
+        margin-top: 0px;
         // padding-bottom: $hstb-intro-h-t;
     }
     .about-main-section-wrapper {
