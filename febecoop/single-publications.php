@@ -157,14 +157,22 @@ get_header();
         }
 
 
-        /* SCENARIO 05 : Digitale gratuit par défaut */
+        /* SCENARIO 05 : Digitale gratuit */
 
-        else {
+        else if(!get_field('version_papier') && get_field('version_digitale')){
             echo get_template_part( './src/TEMPLATES/PublicationForm/top-section-publi-form' ); 
             echo get_template_part( './src/TEMPLATES/Publications/publi-digi-gratuit' ); 
             echo get_template_part( './src/TEMPLATES/PublicationForm/bottom-section-publi-form' );
             // echo get_template_part( './src/TEMPLATES/ContactBanner/contact-banner-options' );
-        };
+        }
+        
+
+        /* SCENARIO 06 : Si rien de coché*/
+        else {
+            echo get_template_part( './src/TEMPLATES/ContactBanner/contact-banner-options-publication-noform' );
+        }
+
+        ;
         ?>
         
         

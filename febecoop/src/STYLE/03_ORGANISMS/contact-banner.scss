@@ -236,3 +236,39 @@
         margin-top: $bbc-d + 40px;  
     }
 }
+
+
+#contact-banner-options-publication-noform {
+    margin-top: 180px;
+    @include tablet {
+        margin-top: 0px;
+    }
+    @include laptopS {
+        margin-top: 100px;
+    }
+}
+
+#contact-banner-equipe-template {
+    position: relative;
+    &::before {
+        position: absolute;
+        display: block;
+        content: "";
+        background-color: $blue-light;
+        width: 100vw;
+        height: $bbc-m;
+        top: -$bbc-m;
+        @include tablet {
+            height: $bbc-t * 2 ;
+            top: -$bbc-t * 2;
+        }
+        @include laptopS {
+            height: $bbc-l;
+            top: -$bbc-l;
+        }
+        @include laptopL {
+            height: $bbc-d;
+            top: -$bbc-d;
+        }
+    }
+}

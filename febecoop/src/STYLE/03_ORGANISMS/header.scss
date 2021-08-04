@@ -78,7 +78,7 @@
 
     &:before {
         right: 11px;
-        top: 30px;
+        top: 29px;
         // top: 50%;
         // transform: translateY(-50%);
 
@@ -132,7 +132,7 @@
         content: "";
         width: 8px;
         height: 2px;
-        top: 16px;
+        top: 23px;
         background: $blue-3;
 
         @include tablet {

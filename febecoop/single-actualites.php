@@ -71,9 +71,11 @@ if( !empty( $image ) ): ?>
                     <?php
                     $loop = new WP_Query(
                         array(
+                            'category__in'   => wp_get_post_categories( $post->ID ),
+                            'post__not_in' => array(get_the_ID()),
                             'post_type' => 'actualites',
                             'orderby' => 'date',
-                            'posts_per_page' =>3
+                            'posts_per_page' => 3
                         )
                     );
                     ?>
@@ -87,15 +89,9 @@ if( !empty( $image ) ): ?>
                     wp_reset_query(); ?>
                 </div>
                 <!-- Pagination pour mobile -->
-                <div class="swiper-pagination-type-b js-swiper-pagination-type-b "></div>
+                <div class="swiper-pagination-type-b js-swiper-pagination-type-b"></div>
 
-                <!-- Buttons pour laptop -->
-                <div class="swiper-buttons-wrapper swiper-buttons-type-b">
-                    <div class="swiper-button-prev swiper-button-prev-type-a js-button-prev-actus">
-                    </div>
-                    <div class="swiper-button-next swiper-button-next-type-a js-button-next-actus"></div>
-                    </div>
-                </div>
+
                 <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>actualites" ><?php pll_e('Toutes les actualités');?></a>
     </div>
     

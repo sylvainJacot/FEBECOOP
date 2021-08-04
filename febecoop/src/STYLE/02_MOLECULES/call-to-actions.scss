@@ -411,10 +411,10 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     align-items: center;
     text-align: left;
     line-height: 24px;
-    padding: 24px $mCol;
+    padding: 18px $mCol;
 
     @include tablet {
-        padding: 24px 32px;
+        padding: 18px 32px;
     }
 
     &:after {
@@ -503,7 +503,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     &:before {
         transform: translateY(-50%) rotate(180deg);
         z-index: 1;
-        top: 34px;
+        top: 33px;
         transform-origin: center;
         @include trans-a(0.1s);
         @include tablet {

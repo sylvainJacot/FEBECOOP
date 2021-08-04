@@ -25,4 +25,4 @@ $post_type = $post_type_obj->labels->singular_name;
     </div>
 </section>
 
-<?php get_template_part( './src/TEMPLATES/Common-multi/single-projet-accompagne-part' );?>
+<?php get_template_part( './src/TEMPLATES/Common-multi/single-projet-accompagne-part-nl' );?>

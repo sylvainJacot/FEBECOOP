@@ -1,0 +1,1 @@
+"use strict";var DownloadBtn=document.querySelector("#js-download-form"),SubmitBtn=document.querySelector("#submit-form-digi-gratuit");SubmitBtn&&SubmitBtn.addEventListener("click",function(){DownloadBtn.click()});

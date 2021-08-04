@@ -1,1 +1,1 @@
-"use strict";$("a").each((function(){new RegExp("/"+window.location.host+"/").test(this.href)||$(this).attr("target","_blank")}));
+"use strict";for(var links=document.querySelectorAll(".generic-content p a"),i=0;i<links.length;i++)links[i].hostname!=window.location.hostname&&(links[i].target="_blank");

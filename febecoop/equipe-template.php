@@ -63,6 +63,8 @@ get_header();
     <?php
     // Get all the categories
     $terms = get_terms('groupe_equipe');
+    $termsCount = count($terms);
+
 
     $members = new WP_Query(
         array(
@@ -143,7 +145,15 @@ get_header();
 
 <!-- CONTACT BANNER ==============
 =========================== -->
-<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner"); ?>
+
+<?php
+if ($termsCount % 2 === 0) {
+
+    get_template_part("./src/TEMPLATES/ContactBanner/contact-banner-equipe-template");
+
+} else {
+    get_template_part("./src/TEMPLATES/ContactBanner/contact-banner");
+};?>
 
 <?php
 get_footer();

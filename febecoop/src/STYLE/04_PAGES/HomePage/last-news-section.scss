@@ -255,19 +255,19 @@
 
 .last-success-stories-section-flandre {
     background-color: $orange-light;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: $bbc-m + 40px;
     margin-bottom: 0px;
     @include tablet {
-        padding-top: 96px;
+        padding-top: 24px;
         padding-bottom: $bbc-t + 150px;
     }
     @include laptopS {
-        padding-top: 120px;
+        padding-top: 24px;
         padding-bottom: $bbc-l + 116px;
     }
     @include laptopL {
-        padding-top: 176px;
+        padding-top: 64px;
         padding-bottom: $bbc-d + 88px;
     }
     .last-news-section-wrapper {

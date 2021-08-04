@@ -5,7 +5,7 @@
 </ul>
 
 
-<div class="form-wrapper-item form-wrapper-item-active publication-commander-form" id="tab-papier-buy">
+<div class="aform-wrapper-item-active publication-commander-form" id="tab-papier-buy">
 <?php echo FrmFormsController::get_form_shortcode(array('id' => 3, 'title' => false, 'description' => false)); ?>
 
 </div>

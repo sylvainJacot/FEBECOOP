@@ -1,5 +1,8 @@
 .main-members-mandats-section {
-
+    margin-top: -64px;
+    @include tablet {
+        margin-top: unset;
+    }
     .main-members-mandats-section-row {
         background: $white;
         padding: 64px 0px 64px;
@@ -44,6 +47,7 @@
 
             > .cta-b {
                 margin: 16px 0px;
+                margin-top: 80px;
             }
             .main-members-mandats-section-row-title {
                 @include hando-sb;

@@ -5,9 +5,9 @@
     align-items: center;
     border-radius: $border-radius-small-picture;
     overflow: hidden;
-    margin: $space-between-flex-items-m 0px;
+    margin: $space-between-flex-items-m * 2  0px;
     @include tablet {
-        margin: $space-between-flex-items-t  0px;
+        margin: $space-between-flex-items-t   0px;
     }
     @include laptopS {
         margin: $space-between-flex-items-l  0px;

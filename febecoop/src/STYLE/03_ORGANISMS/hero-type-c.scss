@@ -15,7 +15,7 @@ $hstc-padding-top-l : 160px;
         }
         .hero-section-type-c-illu {
             position: relative;
-            display: block;
+            display: none;
             width: 386px;
             height: 209px;
             bottom: 80px;
@@ -24,6 +24,7 @@ $hstc-padding-top-l : 160px;
             background: url("../ASSETS/IMAGES/EXPERTISES/VECTOR/illu-hero-expertise-single.svg") center no-repeat;
             background-size: contain;
             @include tablet {
+                display: block;
                 width: 17 * $tCol;
                 height: 333px;
             }
@@ -53,6 +54,7 @@ $hstc-padding-top-l : 160px;
                 padding-top: 88px;
                 padding-bottom: calc(88px + 96px);
                 display: flex;
+                align-items: center;
             }
             @include laptopS {
                 padding-top: 160px; 
@@ -64,9 +66,14 @@ $hstc-padding-top-l : 160px;
             }
             position: relative;
             .pentagone-icons-wrapper {
+                // display: none;
+                @include tablet {
+                    display: block;
+                    transform: translateY(20px);
+                }
                 @include laptopS {
                     transform-origin: top left;
-                    transform: scale(1.55);
+                    transform: scale(1.55) translateY(0);
                 }
                 @include laptopL {
                     transform: scale(1.65);

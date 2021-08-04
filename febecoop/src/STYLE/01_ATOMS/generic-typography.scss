@@ -210,6 +210,9 @@ $margin-flex-txt : 40px;
   ul {
     @include unordered-list;
   }
+  div {
+    @include paragraph;
+  }
 }
 .generic-content {
   @include generic-content;

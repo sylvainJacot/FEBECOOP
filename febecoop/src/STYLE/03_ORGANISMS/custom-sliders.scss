@@ -163,7 +163,7 @@
 // CONTAINER TYPE B (used for flexible swipers)
 .swiper-container-type-b {
     position: relative;
-    margin:  $space-between-flex-items-m 0px;
+    margin:  $space-between-flex-items-m 0px $space-between-flex-items-m * 3 0px;
     padding-bottom: $space-between-flex-items-t * 4;
 
     @include laptopS {
@@ -570,6 +570,7 @@ display: none;
         left: unset;
         right: unset;
         border: 2px solid $orange-1;
+        margin-bottom: 0px;
         &:before {
             position: absolute;
             content: "";

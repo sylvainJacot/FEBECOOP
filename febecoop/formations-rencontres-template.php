@@ -134,6 +134,12 @@
 <!-- EVENEMENT A LA UNE==============
 =========================== -->
 
+<?php 
+$titreProUne = get_field('programme_une_titre');
+$imageProUne = get_field('programme_une_hero_image');
+?>
+
+<?php if(!empty($titreProUne)) :?>
 <section class="evement-a-la-une-section">
 <div class="evement-a-la-une-section-wrapper grid">
     <div class="evement-a-la-une-section-content">
@@ -168,6 +174,7 @@ if( $link ):
         </div>
 </div>
 </section>
+<?php endif; ?>
 <?php 
     // Reset the global post object so that the rest of the page works correctly.
     wp_reset_postdata(); ?>

@@ -287,13 +287,13 @@ $semi-col-d : $dCol / 2;
 }
 
 .expertise-section-flandre {
-    margin-top: 150px;
+    margin-top: 80px;
     @include tablet {
-        margin-top: 210px;
+        margin-top: 150px;
     }
-    @include laptopS {
-        margin-top: 200px;
-    }
+    // @include laptopS {
+    //     margin-top: 200px;
+    // }
 }
 
 .expertise-section-federal {

@@ -60,6 +60,15 @@
     textarea {
         @include input-frm-default;
     }
+    .form-wrapper-item-title {
+        @include hando-b;
+        color: $blue-1;
+        font-size: 13px;
+        line-height: 24px;
+        @include tracking(100);
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
 
 }
 

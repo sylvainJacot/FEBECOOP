@@ -26,11 +26,6 @@ const ActualitesSwiper = new Swiper(".js-type-b-swiper", {
     clickable: 'true',
   },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".js-button-next-actus",
-    prevEl: ".js-button-prev-actus",
-  },
 });
 
 

@@ -199,6 +199,13 @@ $tmi-size-l : 56px;
                         }
                         &:last-child {
                             padding: 40px 0px 0px 0px;
+                            .team-member-item-picture {
+                                top: calc(50% + 20px);
+
+                                @include laptopS {
+                                    top: unset;
+                                }
+                            }
                         }
 
                         &:hover { 
@@ -345,6 +352,7 @@ $tmi-size-l : 56px;
     
                                 }
                             }
+
                         }
                         .team-member-item-picture-placeholder {
                             background-color: $blue-1-30;
