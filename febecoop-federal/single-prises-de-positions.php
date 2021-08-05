@@ -39,7 +39,7 @@ if( !empty( $image ) ): ?>
 <!--MAIN flexible ==============
 =========================== -->
 <main class="main-prises-de-position-content grid">
-    <div class="section-actualite-content generic-content">
+    <div class="section-prise-position generic-content">
         <!-- // START contenu_flexible -->
     <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main');?>
     <?php get_template_part( './src/TEMPLATES/ShareSection/share-section-a');?> 

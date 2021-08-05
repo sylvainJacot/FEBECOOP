@@ -290,6 +290,9 @@ footer {
             @include laptopL {
                 align-items: center;
             }
+            &::after {
+                display: none;
+            }
             .menu-footer-bottom-menu-container {
                 ul{
                     display: flex;

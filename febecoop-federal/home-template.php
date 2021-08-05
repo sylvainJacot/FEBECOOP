@@ -118,26 +118,65 @@ get_header();
 =========================== -->
 <section class="nos-prises-positions-section">
     <div class="nos-prises-positions-section-wrapper grid">
-        <div class="nos-prises-positions-pic-wrapper">
+        <?php 
+        $featured_posts = get_field('choisir_prise_de_position');
+        if( $featured_posts ): ?>
 
-        </div>
+        <?php foreach( $featured_posts as $post ): 
+
+        // Setup this post for WP functions (variable must be named $post).
+        setup_postdata($post); ?>
+                <div class="nos-prises-positions-pic-wrapper">
+                <?php 
+                $image = get_field('actu-hero-image');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
+                </div>
         <div class="nos-prises-positions-content">
             <h3 class="nos-prises-positions-content-top-titre">
-                Nos prises de position
+                <?php pll_e('Nos prises de position');?>
             </h3>
 
             <h2 class="nos-prises-positions-content-titre">
-                Lorem ipsum dolor sit amet
+                <?php the_title();?>
             </h2>
 
             <p class="nos-prises-positions-content-texte">
-                La fromagerie du Gros-Chêne, coopérative à finalité sociale depuis 1997, s’inscrit dans une démarche de développement durable...accorde une importance particulière à ... dimension humaine: producteurs, consommateurs et travailleurs, les intérêts de chacun sont pris en compte.
+            <?php 
+
+            if (get_field('resume_pour_la_home_page')) : ?>
+
+            <?php echo the_field('resume_pour_la_home_page');?>
+
+            <?php else : ?>
+
+                <?php if (have_rows('contenu-flexible')) : while (have_rows('contenu-flexible')) : the_row(); ?>
+                            <?php if (get_row_layout() == 'introduction-principale') :
+
+                                $txt = get_sub_field('introduction');
+                            ?>
+                                <p class="card-type-b-resume"><?php echo $txt; ?></p>
+
+                            <?php endif; ?>
+                    <?php endwhile;
+                    endif; ?>
+
+
+            <?php endif; ?>
             </p>
 
-            <a class="cta-a"><?php pll_e('En savoir plus');?></a>
+            <a class="cta-a" href="<?php the_permalink(); ?>"><?php pll_e('En savoir plus');?></a>
 
         </div>
-        <a class=cta-d><span><?php pll_e('Toutes les prises de décisions');?></span></a>
+    <?php endforeach; ?>
+
+    <?php 
+    // Reset the global post object so that the rest of the page works correctly.
+    wp_reset_postdata(); ?>
+<?php endif; ?>
+
+        <a class=cta-d><span><?php pll_e('Toutes les prises de positions');?></span></a>
     </div>
 </section>
 

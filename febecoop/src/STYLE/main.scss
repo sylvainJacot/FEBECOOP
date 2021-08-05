@@ -68,6 +68,7 @@
 @import"./04_PAGES/Contact/contact-page.scss";
 @import"./04_PAGES/FlexibleContent/flexible-main.scss";
 @import"./04_PAGES/PrisesPositions/prises-positions-loop-section.scss";
+@import"./04_PAGES/PrisesPositions/prise-position-single.scss";
 
 .post-page-link {
     display: block;
@@ -120,5 +121,21 @@
     }
     @include laptopS {
         padding-left: 8px;
+    }
+}
+
+// CORRECTIONS FORMULAIRES
+#tab-papier-free {
+    .frm_form_fields fieldset {
+        padding-bottom: 56px;
+        @include tablet {
+            padding-bottom: 64px
+        }
+        @include laptopS {
+            padding-bottom: 48px;
+        }
+        @include laptopL {
+            padding-bottom: 64px
+        }
     }
 }

@@ -49,35 +49,51 @@ get_header();
     <?php switch ($post_name) {;
 
 case "actualites";
-echo '<p class="search-result-item_tag" id="tag-actualites">' . $post_name . "</p>";
+echo '<p class="search-result-item_tag" id="tag-actualites">'; 
+echo pll_e("actualites");  
+echo '</p>';
 break;
 
 case "publications";
-echo '<p class="search-result-item_tag" id="tag-publications">' . $post_name . "</p>";
+echo '<p class="search-result-item_tag" id="tag-publications">';
+echo pll_e("publications");  
+echo '</p>';
 break;
 
 case "projet-accompagnes";
-echo '<p class="search-result-item_tag" id="tag-projet-accompagnes">' . $post_name . "</p>";
+echo '<p class="search-result-item_tag" id="tag-projet-accompagnes">';
+echo pll_e("projets accompagnés");  
+echo '</p>';
 break;
 
 case "notes-outils";
-echo '<p class="search-result-item_tag" id="tag-notes-outils">' . $post_name . "</p>";
+echo '<p class="search-result-item_tag" id="tag-notes-outils">';
+echo pll_e("notes-outils");  
+echo '</p>';
 break;
 
 case "projet-partenaires";
-echo '<p class="search-result-item_tag" id="tag-projet-partenaires">' . $post_name . "</p>";
+echo '<p class="search-result-item_tag" id="tag-projet-partenaires">';
+echo pll_e("projet-partenaires");  
+echo '</p>';
 break;
 
 case "formation-evenement";
-echo '<p class="search-result-item_tag" id="tag-formation-evenement">' . $post_name . "</p>";
+echo '<p class="search-result-item_tag" id="tag-formation-evenement">';
+echo pll_e("formation-evenement");  
+echo '</p>';
 break;
 
 case "domaines-expertises";
-echo '<p class="search-result-item_tag" id="tag-domaines-expertises">' . $post_name . "</p>";
+echo '<p class="search-result-item_tag" id="tag-domaines-expertises">';
+echo pll_e("domaines-expertises");  
+echo '</p>';
 break;
 
 default:
-echo '<p class="search-result-item_tag" id="tag-default">page</p>';
+echo '<p class="search-result-item_tag" id="tag-default">';
+echo pll_e("page");  
+echo '</p>';
 
 };?>
 

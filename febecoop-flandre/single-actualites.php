@@ -63,7 +63,7 @@ if( !empty( $image ) ): ?>
                 
                 <div class="slider-type-b-header">
                 <h3><?php pll_e('Autres actualités');?></h3>
-                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>actualites" ><span><?php pll_e('Toutes les actualités');?></span></a>
+                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>nieuws" ><span><?php pll_e('Toutes les actualités');?></span></a>
                 </div>
 
                 <div class="swiper-container slider-container-type-b js-type-b-swiper">
@@ -92,14 +92,14 @@ if( !empty( $image ) ): ?>
                 <div class="swiper-pagination-type-b js-swiper-pagination-type-b"></div>
 
 
-                <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>actualites" ><?php pll_e('Toutes les actualités');?></a>
+                <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>nieuws" ><?php pll_e('Toutes les actualités');?></a>
     </div>
     </div> 
   <div class="slider-wrapper-type-b  other-news-section-wrapper other-news-section-wrapper-laptop grid">
             
             <div class="slider-type-b-header">
             <h3><?php pll_e('Autres actualités');?></h3>
-            <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>actualites" ><span><?php pll_e('Toutes les actualités');?></span></a>
+            <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>nieuws" ><span><?php pll_e('Toutes les actualités');?></span></a>
             </div>
 
             <div class="swiper-container slider-container-type-b js-type-b-swiper">

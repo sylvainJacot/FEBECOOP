@@ -66,7 +66,7 @@ $terms = get_terms('categories_actualites');
         <a class="cta-a" id="actualites_loadmore"><?php pll_e('Voir plus');?></a>
 
       <?php endif; ?>
- -->
+
 
     </div>
 

@@ -79,11 +79,12 @@ $tab-nav-item-radio-size: 22px;
 
                 @include tablet {
                     margin-bottom: 0px;
+                    margin-right:  $lCol;
                 }
 
-                &:first-child {
+                &:last-child {
                     @include tablet {
-                        margin-right:  $lCol;
+                        margin-right:  0px;
                     }
                 }
                 .tab-nav-item-radio {

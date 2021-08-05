@@ -1,0 +1,14 @@
+.section-prise-position{
+    margin: auto;
+    margin-top: 40px;
+    @include tablet {
+        margin-top: -160px;
+    }
+    @include laptopS {
+        width: $largeur-flex-main-l;
+    }
+    @include laptopL {
+        width: $largeur-flex-main-d;
+        margin-top: -120px;
+    }
+}

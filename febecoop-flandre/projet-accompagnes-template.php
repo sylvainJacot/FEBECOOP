@@ -130,7 +130,7 @@ $pa_terms = get_terms('projet_accompagne_cat');
             <?php wp_reset_postdata(); ?>
 
             <?php
-            next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Meer zien</span>'), $loopProjetsAcc->max_num_pages);
+            next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Meer laden </span>'), $loopProjetsAcc->max_num_pages);
             ?>
 
         </main>

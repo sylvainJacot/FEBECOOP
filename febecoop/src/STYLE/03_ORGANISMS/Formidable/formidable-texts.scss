@@ -18,7 +18,8 @@
 
 @mixin frm-input-placeholder {
     @include hando-l;
-    color: $blue-3;
+    color: $blue-1;
+    opacity: 0.5;
     text-transform: uppercase;
 }
 

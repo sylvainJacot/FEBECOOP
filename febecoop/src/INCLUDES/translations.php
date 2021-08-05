@@ -46,7 +46,7 @@ if (function_exists('pll_register_string')) {
     pll_register_string('Voir tous les sujets', 'Voir tous les sujets', 'febecoop', true);
     pll_register_string('Toutes les notes pratiques & outils', 'Toutes les notes pratiques & outils', 'febecoop', true);
     pll_register_string('Publication', 'Publication', 'febecoop', true);
-    pll_register_string('Toutes les prises de décisions', 'Toutes les prises de décisions', 'febecoop', true);
+    pll_register_string('Toutes les prises de positions', 'Toutes les prises de positions', 'febecoop', true);
     pll_register_string('Aller sur le site', 'Aller sur le site', 'febecoop', true);
     pll_register_string('Nos prises de position', 'Nos prises de position', 'febecoop', true);
     pll_register_string('Toutes les formations', 'Toutes les formations', 'febecoop', true);
@@ -63,5 +63,12 @@ if (function_exists('pll_register_string')) {
     pll_register_string("Autres projets partenaires", "Autres projets partenaires", 'febecoop', true);
     pll_register_string("Tous les projets partenaires", "Tous les projets partenaires", 'febecoop', true);
     pll_register_string("Voir toutes les expertises", "Voir toutes les expertises", 'febecoop', true);
-     
+    pll_register_string("actualites", "actualites", 'febecoop', true);
+    pll_register_string("publications", "publications", 'febecoop', true);
+    pll_register_string("projets accompagnés", "projets accompagnés", 'febecoop', true);
+    pll_register_string("notes-outils", "notes-outils", 'febecoop', true);
+    pll_register_string("projet-partenaires", "projet-partenaires", 'febecoop', true);
+    pll_register_string("formation-evenement", "formation-evenement", 'febecoop', true);
+    pll_register_string("domaines-expertises", "domaines-expertises", 'febecoop', true);
+    pll_register_string("page", "page", 'febecoop', true);
 }

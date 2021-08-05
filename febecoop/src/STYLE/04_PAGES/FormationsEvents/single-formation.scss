@@ -78,13 +78,14 @@
             margin: 0px;
         }
         .efscd-liste-details {
-            margin: 20px 0px;
+            margin-top: 32px;
 
             .efscd-liste-detail-item {
                 position: relative;
                 display: flex;
                 align-items: center;
-                padding: 16px 0px;
+                padding: 24px 0px;
+                margin-bottom: 0px;
                 &:not(:last-child) {
                     &:before {
                     position: absolute;
@@ -129,6 +130,7 @@
         .efscd-ctas {
             display: flex;
             flex-direction: column;
+            margin-bottom: 0px;
             .addtocalendar {
                 margin-bottom: 16px;
             }

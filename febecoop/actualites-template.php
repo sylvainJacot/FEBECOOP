@@ -89,8 +89,9 @@ $terms = get_terms('categories_actualites');
 
 
       <?php
-      if $paged > 1 zepfojz pejfpo fjzepofjpzeojfpoze
+      if ($paged > 1) {
       next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
+      }
       ?>
 
     </div>

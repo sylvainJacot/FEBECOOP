@@ -170,7 +170,8 @@ get_header();
 
             ?>
             <li class="mediatheque-publications-categrory-item-link-item">
-                <a href="<?php echo $fichier; ?>"download="<?php echo $titrefichier;?>"><?php echo $titrefichier;?></a>
+                <!-- <a href="<?php echo $fichier; ?>"download="<?php echo $titrefichier;?>"><?php echo $titrefichier;?></a> -->
+                <a href="<?php echo $fichier; ?>" target="_blank"><?php echo $titrefichier;?></a>
             </li>
 
             <?php endwhile; ?>

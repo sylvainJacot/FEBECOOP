@@ -20,7 +20,7 @@ $npp-space-between-els-m: 32px;
     .nos-prises-positions-section-wrapper {
         position: relative;
         padding-top: $npp-pic-full-padding-top-m;
-        padding-bottom: $npp-space-between-els-m;
+        padding-bottom: $npp-space-between-els-m * 2;
         @include tablet {
             padding: 2 * $npp-space-between-els-m 2 * $tCol;
             padding-top: $npp-pic-full-padding-top-t;
@@ -133,6 +133,16 @@ $npp-space-between-els-m: 32px;
                 line-height: 26.62px;
                 @include tracking(25);
                 margin: $npp-space-between-els-m 0px;
+                @include text-shave(5);
+            }
+            .nos-prises-positions-content-texte {
+                @include hando-l;
+                color: $blue-3;
+                font-size: 14px;
+                line-height: 26.62px;
+                @include tracking(25);
+                margin: $npp-space-between-els-m 0px;
+                @include text-shave(5);
             }
 
         }

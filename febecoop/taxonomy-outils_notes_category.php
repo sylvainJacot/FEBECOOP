@@ -15,19 +15,20 @@ get_header();
 $term = get_queried_object();
 $getterm = $term->slug; 
 
-// print_r($getterm);
+
 
 $title = $term->name;
-
+$cat =  get_query_var('outils_notes_category');
 // print_r($title);
 
 $terms_tags  =  wp_get_object_terms(
-    $post->ID, 'tags_notes_outils'
+    $post->ID, array('tags_notes_outils')
 );
 
+
+// print_r($post);
 // print_r($terms_tags);
 ?>
-
 
 <!-- HERO SECTION ==============
 =========================== -->

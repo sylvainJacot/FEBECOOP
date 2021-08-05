@@ -58,8 +58,8 @@
             @include trans-a;
             a {
                 display: block;
-                @include hando-l;
-                font-size: 13px;
+                @include hando-b;
+                font-size: 14px;
                 line-height: 25px;
                 color: $blue-3;
                 @include tracking(25);

@@ -190,7 +190,7 @@ get_header();
             <?php echo FrmFormsController::get_form_shortcode(array('id' => 11, 'title' => false, 'description' => false)); ?>
         </div>
 
-        <?php
+        <!-- <?php
         $link = get_field('footer_formulaires', 'options');
         if ($link) :
             $link_url = $link['url'];
@@ -208,7 +208,7 @@ get_header();
 
 
             </a>
-        <?php endif; ?>
+        <?php endif; ?> -->
 
 
 
