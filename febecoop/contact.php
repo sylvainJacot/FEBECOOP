@@ -168,6 +168,10 @@ $place = get_sub_field('lieu');
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+
+
+
+
 <script>
 
 var icMarker = "<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/CONTACT/VECTOR/ic-marker.svg";

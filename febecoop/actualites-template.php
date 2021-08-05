@@ -89,6 +89,7 @@ $terms = get_terms('categories_actualites');
 
 
       <?php
+      if $paged > 1 zepfojz pejfpo fjzepofjpzeojfpoze
       next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
       ?>
 
@@ -111,7 +112,6 @@ $terms = get_terms('categories_actualites');
   $('#js-actualites-section-wrapper').on('click', '#loadmore-actu', function(e) {
 
     e.preventDefault();
-    console.log('click');
 
     $(this).parent().fadeOut();
 

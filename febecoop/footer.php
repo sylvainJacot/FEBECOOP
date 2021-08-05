@@ -95,6 +95,26 @@
 </footer>
 
 <?php wp_footer() ?>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+<script>
+
+
+jQuery(document).ready(function($){
+
+if (document.body.classList.contains("publications-template-default")) {
+    $(document).on( 'frmFormComplete', function( event, form, response ) {
+     let DownloadBtn = document.querySelector('#js-download-form');
+    DownloadBtn.click();
+});
+}
+});
+
+</script>
+
 </body>
 
 </html>
