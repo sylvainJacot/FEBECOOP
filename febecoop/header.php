@@ -170,7 +170,7 @@ if (empty($meta_description)) {
 </form>
     </header>
     <form action="<?php bloginfo('url'); ?>/" method="get" class="nav-search nav-search-laptop" id="js-nav-search-laptop">
-        <p class="nav-search-laptop-top-title">Rechercher et presser entrer</p>
+        <p class="nav-search-laptop-top-title"><?php pll_e('Rechercher et presser entrer');?></p>
         <label for="search">Search in <?php echo home_url('/'); ?></label>
         <?php get_template_part( './src/TEMPLATES/Search/search-custom-post-types' );?>
         <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />

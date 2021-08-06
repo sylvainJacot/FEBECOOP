@@ -212,6 +212,7 @@ $margin-flex-txt : 40px;
   }
   div {
     @include paragraph;
+    margin-bottom: 0px;
   }
 }
 .generic-content {

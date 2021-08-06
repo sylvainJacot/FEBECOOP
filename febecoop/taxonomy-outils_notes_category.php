@@ -25,9 +25,11 @@ $terms_tags  =  wp_get_object_terms(
     $post->ID, array('tags_notes_outils')
 );
 
+$terms_number = count($terms_tags);
 
 // print_r($post);
 // print_r($terms_tags);
+// print_r($terms_number);
 ?>
 
 <!-- HERO SECTION ==============
@@ -77,7 +79,7 @@ $terms_tags  =  wp_get_object_terms(
 <section class="notes-pratiques-outils-loop-section">
     <div class="notes-pratiques-outils-loop-wrapper grid" id="js-notes-pratiques-outils-loop-wrapper">
 
-
+        <?php if($terms_number > 1) : ?>
         <!-- Filtres mobile -->
         <aside class="filtres-type-a-container filters-npo-questions-wrapper-mobile js-filtres-type-a-container">
                 <p class="filtres-type-a-title"><?php pll_e('Filtrer par'); ?></p>
@@ -103,7 +105,7 @@ $terms_tags  =  wp_get_object_terms(
 
         <p class="reset-cta reset-filter reset-filter-npo-mobile" style="display: none;"></p>
 
-
+        <?php endif; ?>
 
         <div class="npo-items-wrapper">
             <div class="npo-items-container" id="js-npo-items-container">
@@ -162,7 +164,7 @@ $('.filter-npoq-container a').click(function(e){
     },
     );
 
-    $('#js-npo-items-container a').fadeOut(); // vire les anciens item 
+    $('#js-npo-items-container a').fadeOut(0); // vire les anciens item 
  
     var urlcourante = document.location.href; 
 
@@ -228,7 +230,7 @@ $('.filter-npoq-container a').click(function(e){
         },
         );
 
-        $('#js-npo-items-container a').fadeOut(); // vire les anciens item 
+        $('#js-npo-items-container a').fadeOut(0); // vire les anciens item 
 
         var urlcourante = document.location.href; 
 
@@ -275,7 +277,7 @@ $('.filter-npoq-container a').click(function(e){
         },
         );
 
-        $('#js-npo-items-container a').fadeOut(); // vire les anciens item 
+        $('#js-npo-items-container a').fadeOut(0); // vire les anciens item 
 
         var urlcourante = document.location.href; 
         var next_actucat_page = $(this).attr('href');

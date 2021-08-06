@@ -1,3 +1,6 @@
+$grid-size-m: 100vw - (2 * $mCol) + 2vw;
+$grid-size-m-ratio-3-2: ($grid-size-m / 3) * 2;
+
 .card-type-b-item {
     display: block;
     background: $white;
@@ -13,14 +16,15 @@
         }
      }
     .card-type-b-pic-wrapper {
-        width: 100%;
-        height: 183px;
+        width: $grid-size-m;
+        height: $grid-size-m-ratio-3-2;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
         // border-radius: 0px 0px 8px 8px;
         @media (min-width:500px) {
+            width: 100%;
             height: 333.33333333333px;
         }
         img {

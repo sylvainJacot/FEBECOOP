@@ -20,15 +20,21 @@
             margin-bottom: 64px;
         }
     }
+$grid-size-m: 100vw - (2 * $mCol) + 2vw;
+$grid-size-m-ratio-3-2: ($grid-size-m / 3) * 2;
 
     .card-type-c-item-pic-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 100%;
-        height: 206px;
+        width: $grid-size-m;
+        height: $grid-size-m-ratio-3-2;
         overflow: hidden;
+        @media (min-width:500px) {
+            width: 100%;
+            height: 333.33333333333px;
+        }
         > img {
             @include trans-a;
             min-width: 100%;

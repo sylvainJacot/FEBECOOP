@@ -106,6 +106,12 @@
         }
         .reset-filter-npo-mobile {
             transform: translateY(-22px);
+            @include tablet {
+                position: absolute;
+                top: -88px;
+                right: 0;
+                max-width: 300px;
+            }
             @include laptopS {
                 display: none !important;
             }

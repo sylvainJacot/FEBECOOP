@@ -64,15 +64,16 @@ $hste-img-h-d : 260px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 213.33333333333px;
+        width: 100vw;
+        height: 66.66vw;
         margin: auto;
         overflow: hidden;
         border-radius: 0 0 0 0;
         background-color: $white;
         @include shadow-b-nopic;
         @media (min-width:500px) {
-            height: 333.33333333333px;
+            width: 100%;
+            height: 66.66vw;
         }
         @include tablet {
             width: 17 * $tCol;

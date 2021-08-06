@@ -15,9 +15,13 @@
     }
 .evenement-formation-single-wrapper  {
     margin-top: 128px;
-    margin-bottom: 80px;
+    margin-bottom: 0px;
     @include tablet {
         margin-top: 0;
+        margin-bottom: 0px;
+    }
+    @include laptopS {
+        margin-bottom: 80px;
     }
     .evenement-formation-single-content  {
         overflow-x: unset !important;
@@ -45,6 +49,7 @@
         background: $orange-light;
         border-radius: 8px;
         margin-top: 40px;
+        margin-bottom: 80px;
 
         @include tablet {
             padding: 48px 2 * $tCol 48px 2 * $tCol;

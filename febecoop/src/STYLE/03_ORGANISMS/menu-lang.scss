@@ -26,6 +26,8 @@
 
     @include laptopS {
         @include hando-m;
+        font-size: 10px;
+        line-height: 18px;
     }
 }
 
@@ -95,12 +97,12 @@
                     display: block;
                     position: absolute;
                     content: "";
-                    width: 8px;
-                    height: 8px;
+                    width: 6px;
+                    height: 6px;
                     background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-orange.svg") center no-repeat;
                     background-size: contain;
                     right: 8px;
-                    top: calc(50% - 2px);
+                    top: calc(50% - 1px);
                     transform: translateY(-50%) rotate(-90deg);
                     @include trans-a(0.1s);
                 }

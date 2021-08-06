@@ -78,7 +78,7 @@ $fcai-w-l: 90%;
             margin-top: -24px;
             cursor: initial;
             @include tablet {
-                width: 13 * $tCol;
+                width: 17 * $tCol;
             }
             @include laptopS {
                 width: $fcai-w-l;

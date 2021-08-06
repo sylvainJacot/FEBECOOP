@@ -8,7 +8,8 @@
     @include tablet {
         padding-top: $padEdge-aside-top-t; 
         padding-bottom: $padEdge-aside-bottom-t;
-        margin-top: $space-between-flex-items-d * 2;
+        // margin-top: $space-between-flex-items-d * 2;
+        margin-top: 0px;
     }
 
     @include laptopS {

@@ -71,4 +71,8 @@ if (function_exists('pll_register_string')) {
     pll_register_string("formation-evenement", "formation-evenement", 'febecoop', true);
     pll_register_string("domaines-expertises", "domaines-expertises", 'febecoop', true);
     pll_register_string("page", "page", 'febecoop', true);
+    pll_register_string("Rechercher et presser entrer", "Rechercher et presser entrer", 'febecoop', true);  
+    pll_register_string("Aucun résultat", "Aucun résultat", 'febecoop', true);
+    pll_register_string("1 item trouvé", "1 item trouvé", 'febecoop', true);
+    pll_register_string(" items trouvés", " items trouvés", 'febecoop', true);
 }

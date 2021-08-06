@@ -59,10 +59,12 @@ $tab-nav-item-radio-size: 22px;
             @include tablet {
                 display: flex;
                 justify-content: center;
-                margin-bottom: $margin-bottom-between-el-m * 2;
+                margin: 0 auto $margin-bottom-between-el-m * 2 auto;
+                max-width: 14 * $tCol;
             }
             @include laptopS {
-                margin-bottom: $margin-bottom-between-el-l;
+                margin: 0 auto $margin-bottom-between-el-l auto;
+                max-width: unset;
             }
             .tab-nav-item {
                 position: relative;

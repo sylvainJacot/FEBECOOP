@@ -185,6 +185,10 @@
 // =========  SLIDES TYPES =========
 // ========= 
 
+$grid-size-slide-m: 100vw - (2 * $mCol) + 2vw;
+$grid-size-slide-m-ratio-3-2: ($grid-size-m / 3) * 2;
+
+
 // SLIDE TYPE A
 .swiper-slide-type-a {
     display: block;
@@ -203,15 +207,18 @@
         align-items: center;
     }
     .slider-pic-wrapper-type-a {
-        width: 100%;
-        height: 183px;
+        width: $grid-size-slide-m;
+        height: $grid-size-slide-m-ratio-3-2;
         overflow: visible;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 0 0 8px 8px;
         background-color: $white;
-
+        @media (min-width:500px) {
+            width: 100%;
+            height: 333.33333333333px;
+        }
         @include tablet {
             height: 192px;
         }

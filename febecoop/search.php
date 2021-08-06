@@ -15,7 +15,7 @@ get_header();
 =========================== -->
 <section class="search-results-section">
 <form  action="<?php bloginfo( 'url' ); ?>" method="get" class="nav-search nav-search-laptop nav-search-laptop-search-page" id="js-nav-search-laptop">
-<p class="nav-search-laptop-top-title">Rechercher et presser entrer</p>
+<p class="nav-search-laptop-top-title"><?php pll_e('Rechercher et presser entrer');?></p>
     <label for="search">Search in <?php echo home_url('/'); ?></label>
     <input type="text" name="s" id="search" value="<?php echo get_search_query(); ?>" />
     <?php get_template_part( './src/TEMPLATES/Search/search-custom-post-types' );?>
@@ -26,11 +26,19 @@ get_header();
 
     <?php 
     if ($wp_query->found_posts === 0 ) {
-    echo("<p class='search-results-total sa fade-up'>Aucun résultat</p>" ); 
+    echo '<p class="search-results-total sa fade-up">';
+    echo pll_e('Aucun résultat');
+    echo'</p>'; 
     } elseif ($wp_query->found_posts === 1) {
-        echo("<p class='search-results-total sa fade-up'>1 item trouvé</p>" ); 
+        echo '<p class="search-results-total sa fade-up">';
+        echo pll_e('1 item trouvé');
+        echo'</p>'; 
     } else {
-        echo("<p class='search-results-total sa fade-up'>$wp_query->found_posts items trouvés</p>" );  
+        echo '<p class="search-results-total sa fade-up">';
+        echo $wp_query->found_posts;
+        echo '&nbsp;';
+        echo pll_e(' items trouvés');
+        echo'</p>';  
     }
 
     ?>
@@ -42,6 +50,7 @@ get_header();
     $post_obj = get_post_type_object($post_type);
     $post_name = $post_obj->name;
     $post_label = $post_obj->label;
+    // print_r($post_name);
     ?>  
     <li class="search-result-item">
 
