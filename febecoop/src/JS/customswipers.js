@@ -1,10 +1,14 @@
 const ActualitesSwiper = new Swiper(".js-type-b-swiper", {
   // Optional parameters
-  direction: "horizontal",
+
   visibilityFullFit: true,
   slidesPerView: 1,
   spaceBetween: 16,
   centeredSlides: false,
+    // If we need pagination
+    pagination: {
+      el: ".js-swiper-pagination-type-b",
+    },
   breakpoints: {
     768: {
       spaceBetween: 36,
@@ -19,12 +23,7 @@ const ActualitesSwiper = new Swiper(".js-type-b-swiper", {
       slidesPerView: 3,
     },
   },
-  // If we need pagination
-  pagination: {
-    el: ".js-swiper-pagination-type-b",
-    type: 'bullets',
-    clickable: 'true',
-  },
+
 
 });
 

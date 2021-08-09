@@ -18,10 +18,18 @@ $termstagoutils = get_terms(  array(
     'hide_empty' => true,
 ) );
 
+$currentTax = get_queried_object();
+$currentTaxSlug = $currentTax->slug;
+
+$terms = get_the_terms( $post->ID, 'outils_notes_category' );
+
+print_r($termstagoutils);
 $terms_number = count($termstagoutils);
+
+
+$term = get_queried_object();
+$title = $term->name;
 // print_r($termstagoutils);
-
-
 ?>
 
 <!-- HERO SECTION ==============
@@ -160,13 +168,20 @@ $('.filter-npoq-container a').click(function(e){
 
     $('#js-npo-items-container a').fadeOut(0); // vire les anciens item 
  
+
+    var variableRecuperee = <?php echo json_encode($currentTaxSlug); ?>;
+
     var urlcourante = document.location.href; 
+    var urlRacine = window.location.origin;
+    var filterText = $(this).text();
+    var newUrl = urlRacine + '/outils_notes_category/' + variableRecuperee + '/' + '?tags_notes_outils=' + filterText;
 
     var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
+    // alert(newUrl);
+
+    // $(location).attr('href',newUrl);
 
     if ($(this).hasClass('active')) {
-
-    
 
         $('#js-npo-items-container').append(
         $('<div />').load(urlcourante + '#js-npo-items-container .npo-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
@@ -184,7 +199,7 @@ $('.filter-npoq-container a').click(function(e){
 
 
         $('#js-npo-items-container').append(
-        $('<div />').load(next_page + '#js-npo-items-container .npo-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
+        $('<div />').load(newUrl + '#js-npo-items-container .npo-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
         );
 
         $('.active').each(function(){
@@ -224,11 +239,20 @@ $('.filter-npoq-container a').click(function(e){
         },
         );
 
-        $('#js-npo-items-container a').fadeOut(0); // vire les anciens item 
+        $('#js-npo-items-container a').fadeOut(); // vire les anciens item 
+
+
+        var variableRecuperee = <?php echo json_encode($currentTaxSlug); ?>;
 
         var urlcourante = document.location.href; 
+        var urlRacine = window.location.origin;
+        var filterText = $(this).text();
+        var newUrl = urlRacine + '/outils_notes_category/' + variableRecuperee + '/' + '?tags_notes_outils=' + filterText;
 
         var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
+        // alert(newUrl);
+
+        // $(location).attr('href',newUrl);
  
 
         $('.reset-cta').css('display', 'flex');
@@ -243,7 +267,7 @@ $('.filter-npoq-container a').click(function(e){
         $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
 
         $('#js-npo-items-container').append(
-        $('<div />').load(next_page + '#js-npo-items-container .npo-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
+        $('<div />').load(newUrl + '#js-npo-items-container .npo-item') // charge la partie article de la page ciblée par le href, et les affiche dans le article de la page en cours
         );
         setTimeout(function() {
         $('#js-npo-items-container a').css('opacity', '1'); // effet etc a appliquer apres le chargement 
