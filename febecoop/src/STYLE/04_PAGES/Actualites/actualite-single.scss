@@ -97,3 +97,16 @@
     //     padding-bottom: 106px;
     // }
 }
+
+.other-news-succes-stories-top-footer {
+    padding-bottom: 56px !important;
+    @include tablet {
+        padding-bottom: 80px !important;
+    }
+    @include laptopS {
+        padding-bottom: 106px !important;
+    }
+    @include laptopL {
+        padding-bottom: 106px !important;
+    }
+}

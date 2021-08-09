@@ -323,8 +323,12 @@ $hstb-intro-h-t : 96px;
         .hero-section-pic-wrapper {
             height: 293px;
             position: absolute;
-            left: 50%;
+            left: 55%;
             transform: translateX(calc(-50% + 8px)) translateY(-29px);
+            @media (min-width:471px) {
+                height: 343px;
+                left: 55%;
+            }
             @include tablet {
                 height: 421px;
                 transform: translateX(calc(-50% + 8px)) translateY(-69px);

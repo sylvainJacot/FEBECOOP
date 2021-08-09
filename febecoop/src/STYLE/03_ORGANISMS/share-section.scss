@@ -15,7 +15,7 @@
         top: 0;
     }
     @include tablet {
-        margin: 64px 0;
+        margin: 32px 0 64px 0;
     }
     @include laptopS {
         margin: 40px auto;

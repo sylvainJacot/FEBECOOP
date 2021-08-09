@@ -18,9 +18,9 @@
 
 @mixin frm-input-placeholder {
     @include hando-l;
-    color: $blue-1;
-    opacity: 0.5;
-    text-transform: uppercase;
+    color: $blue-1 !important;
+    opacity: 0.5 !important;
+    text-transform: uppercase !important;
 }
 
 @mixin frm-checkbox-label {

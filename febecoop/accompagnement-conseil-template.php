@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-
+<!-- LA DIFFERENCE AVEC LE NL, C'EST QUE LA BANNER CONTACT ET SUCCESS STORIES SONT INVERSES -->
 
 <!-- HERO SECTION ==============
 =========================== -->
@@ -118,7 +118,7 @@ get_header();
 
 <!-- SUCCESS STORIES ==============
 =========================== -->
-<section class="other-news-section other-news-succes-stories">
+<section class="other-news-section other-news-succes-stories other-news-succes-stories-top-footer">
     <div class="slider-wrapper-type-b  other-news-section-wrapper grid">
         <?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-loop-mobile'); ?>
         <?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-loop-laptop'); ?>

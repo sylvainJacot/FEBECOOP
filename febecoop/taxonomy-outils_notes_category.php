@@ -10,26 +10,18 @@ get_header();
 <!-- ICI CEST LA PAGE AVANT RESULTATS -->
 <?php
 
-// <!-- get the current taxonomy term -->
 
-$term = get_queried_object();
-$getterm = $term->slug; 
+/////////////////////////////////
+
+$termstagoutils = get_terms(  array(
+    'taxonomy' => 'tags_notes_outils',
+    'hide_empty' => true,
+) );
+
+$terms_number = count($termstagoutils);
+// print_r($termstagoutils);
 
 
-
-$title = $term->name;
-$cat =  get_query_var('outils_notes_category');
-// print_r($title);
-
-$terms_tags  =  wp_get_object_terms(
-    $post->ID, array('tags_notes_outils')
-);
-
-$terms_number = count($terms_tags);
-
-// print_r($post);
-// print_r($terms_tags);
-// print_r($terms_number);
 ?>
 
 <!-- HERO SECTION ==============
@@ -84,7 +76,7 @@ $terms_number = count($terms_tags);
         <aside class="filtres-type-a-container filters-npo-questions-wrapper-mobile js-filtres-type-a-container">
                 <p class="filtres-type-a-title"><?php pll_e('Filtrer par'); ?></p>
                 <ul class="filtres-types-a-filtres-container ajax-filtres-types-a-filtres-container">
-                    <?php foreach ($terms_tags as $tag) : ?>
+                    <?php foreach ($termstagoutils as $tag) : ?>
                         <?php $term_link = get_term_link($tag); ?>
                         <li class="filtres-types-a-filtre"><a href="<?php echo esc_url($term_link); ?>" class="filtres-types-a-filtre-link"><?php echo $tag->name; ?></a></li>
                     <?php endforeach; ?>
@@ -95,7 +87,7 @@ $terms_number = count($terms_tags);
         <aside class="filters-npo-questions-wrapper filters-npo-questions-wrapper-laptop">
         <p class="filter-npoq-header"><?php pll_e('Filtrer par');?> :</p>
         <div class="filter-npoq-container">
-            <?php foreach ($terms_tags as $tag) : ?>
+            <?php foreach ($termstagoutils as $tag) : ?>
                     <?php $term_link = get_term_link($tag); ?>
                     <a href="<?php echo esc_url($term_link); ?>"><?php echo $tag->name; ?></a>
             <?php endforeach; ?>
@@ -111,9 +103,11 @@ $terms_number = count($terms_tags);
             <div class="npo-items-container" id="js-npo-items-container">
             <!-- // LOOP NOTES PRATIQUES & OUTILS -->
 
-                
 
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php
+
+
+            if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                     <a href="<?php echo the_permalink() ?>" class="npo-item">
                         <p><?php the_title(); ?></p>

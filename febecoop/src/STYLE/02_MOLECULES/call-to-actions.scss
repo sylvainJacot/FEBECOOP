@@ -503,7 +503,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     &:before {
         transform: translateY(-50%) rotate(180deg);
         z-index: 1;
-        top: 33px;
+        top: 32px;
         transform-origin: center;
         @include trans-a(0.1s);
         @include tablet {

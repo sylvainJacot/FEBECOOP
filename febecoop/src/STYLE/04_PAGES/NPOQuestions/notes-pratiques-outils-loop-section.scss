@@ -1,10 +1,12 @@
 .notes-pratiques-outils-loop-section {
     padding-bottom: $bbc-m + 96px;
-    padding-top: 80px;
+    // padding-top: 80px;
+    padding-top: 0px;
     @include tablet {
         padding-bottom: $bbc-t + 112px;
     }
     @include laptopS {
+        padding-top: 80px;
         padding-bottom: $bbc-l + 88px;
     }
     @include laptopL {
@@ -95,7 +97,9 @@
         .filters-npo-questions-wrapper-mobile {
             display: block;
             margin-top: 0;
-            top: -110px;
+            // top: -110px;
+            position: relative;
+            top: -40px;
             @include tablet {
                 right: unset;
                 left: 0;
@@ -108,7 +112,7 @@
             transform: translateY(-22px);
             @include tablet {
                 position: absolute;
-                top: -88px;
+                top: -18px;
                 right: 0;
                 max-width: 300px;
             }
