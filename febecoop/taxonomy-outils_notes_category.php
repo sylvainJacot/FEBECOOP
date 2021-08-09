@@ -15,7 +15,7 @@ get_header();
 
 $termstagoutils = get_terms(  array(
     'taxonomy' => 'tags_notes_outils',
-    'hide_empty' => true,
+    'hide_empty' => false,
 ) );
 
 $currentTax = get_queried_object();
@@ -23,7 +23,7 @@ $currentTaxSlug = $currentTax->slug;
 
 $terms = get_the_terms( $post->ID, 'outils_notes_category' );
 
-print_r($termstagoutils);
+// print_r($termstagoutils);
 $terms_number = count($termstagoutils);
 
 
@@ -95,10 +95,13 @@ $title = $term->name;
         <aside class="filters-npo-questions-wrapper filters-npo-questions-wrapper-laptop">
         <p class="filter-npoq-header"><?php pll_e('Filtrer par');?> :</p>
         <div class="filter-npoq-container">
+
             <?php foreach ($termstagoutils as $tag) : ?>
                     <?php $term_link = get_term_link($tag); ?>
                     <a href="<?php echo esc_url($term_link); ?>"><?php echo $tag->name; ?></a>
-            <?php endforeach; ?>
+            <?php endforeach; ?> 
+
+
 
         </div>
         </aside>
