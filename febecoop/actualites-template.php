@@ -35,6 +35,8 @@ $terms = get_terms('categories_actualites');
 
       <p class="reset-cta reset-filter" style="display: none;"></p>
 
+            fjf
+
     </div>
   </div>
 </section>
@@ -87,11 +89,10 @@ $terms = get_terms('categories_actualites');
       <?php endif;
       wp_reset_postdata(); ?>
 
-
       <?php
-      if ($paged > 1) {
+
       next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
-      }
+
       ?>
 
     </div>
@@ -117,7 +118,7 @@ $terms = get_terms('categories_actualites');
     $(this).parent().fadeOut();
 
     var next_actu_page = $(this).parent().attr('href');
-    // alert(next_actu_page);
+    alert(next_actu_page);
 
     $('#js-actualites-section-wrapper').append(
       $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' #js-actualites-container a')

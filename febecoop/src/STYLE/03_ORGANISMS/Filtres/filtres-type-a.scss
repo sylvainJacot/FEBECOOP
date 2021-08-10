@@ -61,6 +61,17 @@
          @include close-dropdown-container;
         max-height: 448px;
         overflow-y: scroll;
+        position: relative;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            bottom: 0px;
+            height: 10px;
+            width: 95%;
+            background: $orange-1;
+        }
 
         /* width */
         &::-webkit-scrollbar {

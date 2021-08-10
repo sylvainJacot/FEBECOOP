@@ -2,12 +2,14 @@ $flex-all-mb: 40px;
 
 $margin-flex-txt : 40px;
 
+$flex-items-yMargins : 16px;
+
 @mixin flex-titre-1 {
   @include hando-sb;
   color: $blue-1;
   font-size: 26px;
   line-height: 34px;
-  margin-bottom: $space-between-flex-items-l;
+  margin: $flex-items-yMargins 0px;
 
   @include tablet {
     font-size: 28px;
@@ -40,7 +42,7 @@ $margin-flex-txt : 40px;
   color: $blue-1;
   font-size: 22px;
   line-height: 28px;
-  margin-bottom: $space-between-flex-items-l;
+  margin: $flex-items-yMargins 0px;
 
   @include tablet {
     font-size: 24px;
@@ -73,7 +75,7 @@ $margin-flex-txt : 40px;
   color: $blue-2;
   font-size: 16px;
   line-height: 28px;
-  margin-bottom: $space-between-flex-items-l;
+  margin: $flex-items-yMargins 0px;
   @include tracking(25);
 }
 @mixin blockquote {
@@ -119,7 +121,7 @@ $margin-flex-txt : 40px;
 @mixin ordered-list {
   list-style: none;
   counter-reset: my-counter;
-  margin-bottom: $space-between-flex-items-l ;
+  margin: $flex-items-yMargins / 2  0px $flex-items-yMargins 0px ;
   li {
     @include paragraph;
     counter-increment: my-counter;
@@ -141,7 +143,7 @@ $margin-flex-txt : 40px;
   }
 }
 @mixin unordered-list {
-  margin-bottom: $space-between-flex-items-l ;
+  margin: $flex-items-yMargins / 2  0px $flex-items-yMargins 0px ;
   li {
     @include paragraph;
     margin-bottom: 0;
@@ -218,6 +220,11 @@ $margin-flex-txt : 40px;
 .generic-content {
   @include generic-content;
   overflow-y: hidden;
+  margin-top: - $flex-items-yMargins !important;
+
+  *:nth-last-child(2) {
+    margin-bottom: 0px;
+  }
 }
 
 @mixin introduction-a {

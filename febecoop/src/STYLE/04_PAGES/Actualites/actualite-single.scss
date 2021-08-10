@@ -99,14 +99,14 @@
 }
 
 .other-news-succes-stories-top-footer {
-    padding-bottom: 56px !important;
+    padding-bottom: $bbc-m + 56px !important;
     @include tablet {
-        padding-bottom: 80px !important;
+        padding-bottom: $bbc-t + 80px !important;
     }
     @include laptopS {
-        padding-bottom: 106px !important;
+        padding-bottom: $bbc-l +40px !important;
     }
     @include laptopL {
-        padding-bottom: 106px !important;
+        padding-bottom: $bbc-d + 40px !important;
     }
 }

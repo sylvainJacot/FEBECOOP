@@ -43,8 +43,19 @@
                 text-transform: uppercase;
             }
             .filter-npoq-container {
-
+                position: relative;
                 margin-bottom: 40px;
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    height: 4px;
+                    width: 100%;
+                    bottom: -1px;
+                    background: $white;
+                }
+
                 a {
                     position: relative;
                     @include hando-b;
