@@ -48,6 +48,10 @@
             display: inherit;
             margin: auto;
             text-align: center;
+
+            a {
+                @include flex-link;
+            }
         }
     }
 }

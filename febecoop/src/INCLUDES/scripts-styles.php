@@ -5,14 +5,19 @@ function febecoop_scripts() {
     // Styles
     // CDNS
     wp_enqueue_style( "swiper-css", "https://unpkg.com/swiper/swiper-bundle.min.css" );
+    
+   //  wp_enqueue_style( "fancybox-css", "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" );
     // Styles
     wp_enqueue_style( "main-style", get_template_directory_uri(  ) . "/src/STYLE/main.css" );
+   //  wp_enqueue_script( "fancybox-style", "/src/STYLE/CDN/fancybox.css");
+
 
 
     // Register Scripts
     // CDNS
     wp_enqueue_script( "swiper-script", "https://unpkg.com/swiper/swiper-bundle.min.js", array(), rand(100000,200000), true);
-    wp_enqueue_script( "axios-script", "https://unpkg.com/axios/dist/axios.min.js", array(), rand(100000,200000), true);
+
+   
 
     // Scripts
     wp_enqueue_script( "customswiper-script", get_template_directory_uri(  ) . "/src/JS/customswipers-dist.js", array(), rand(100000,200000), true);
@@ -30,6 +35,7 @@ function febecoop_scripts() {
 
     wp_enqueue_script( "blank-target", get_template_directory_uri(  ) . "/src/JS/links-target-blank-dist.js", array(), rand(100000,200000), true);
 
+   //  wp_enqueue_script( "fancybox-script", "/src/JS/CDN/fancybox.js", array(), rand(100000,200000), true);
 
     wp_enqueue_script( "form-download-effect", get_template_directory_uri(  ) . "/src/JS/form-download-file.js", array(), rand(100000,200000), true);
 

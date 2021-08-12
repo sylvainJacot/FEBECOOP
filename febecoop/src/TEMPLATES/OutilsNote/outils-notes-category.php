@@ -46,7 +46,7 @@ $terms  = get_terms(
 
         <div class="card-type-a-content">
             <p class="card-type-a-content-txt"><?php echo $desc; ?></p>
-            <p class="cta-flex-a"><?php pll_e('En savoir plus');?></p>
+            <p class="cta-flex-a"><span><?php pll_e('En savoir plus');?></span></p>
         </div>
 
     </a>

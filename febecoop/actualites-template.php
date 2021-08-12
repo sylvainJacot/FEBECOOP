@@ -6,6 +6,9 @@
  * 
  */
 get_header();
+
+// DIFFRENCE AVEC LE NL? LE "VOIR PLUS"
+
 // <!-- get the current taxonomy term -->
 $terms = get_terms('categories_actualites');
 ?>
@@ -34,9 +37,6 @@ $terms = get_terms('categories_actualites');
       </div>
 
       <p class="reset-cta reset-filter" style="display: none;"></p>
-
-            fjf
-
     </div>
   </div>
 </section>
@@ -50,9 +50,7 @@ $terms = get_terms('categories_actualites');
       <?php
       // set the "paged" parameter (use 'page' if the query is on a static front page)
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-
-      $loopActus = new WP_Query(
+      $args =
         array(
           'post_type' => 'actualites',
           'status' => 'published',
@@ -60,9 +58,13 @@ $terms = get_terms('categories_actualites');
           'orderby'  => 'post_date',
           'order'         => 'DESC',
           'paged' => $paged
-        )
-      );
+        );
+        
+      $loopActus = new WP_Query($args);
+      
       ?>
+
+
       <?php if ($loopActus->have_posts()) : ?>
         <?php while ($loopActus->have_posts()) : $loopActus->the_post(); ?>
 
@@ -88,7 +90,7 @@ $terms = get_terms('categories_actualites');
       wp_reset_postdata(); ?>
 
       <?php
-      next_posts_link(('<span class="cta-a" id="loadmore-actu">first load more</span>'), $loopActus->max_num_pages);
+      next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
       ?>
 
     </div>
@@ -117,11 +119,12 @@ $terms = get_terms('categories_actualites');
 
 
     $('#js-actualites-section-wrapper').append(
-      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_page + ' #js-actualites-container a')
+      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' .js-actualites-container a')
     );
 
   });
 </script>
+ 
 
 <!-- FILTRES -->
 <script>
@@ -132,6 +135,7 @@ $terms = get_terms('categories_actualites');
     $('.actualites-container').fadeOut(); // vire les anciens item 
 
     var next_actucat_page = $(this).attr('href');
+
 
     $('.reset-cta').css('display', 'flex');
 
@@ -170,7 +174,7 @@ $terms = get_terms('categories_actualites');
     $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
 
     $('#js-actualites-section-wrapper').append(
-      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(urlcourante + ' #js-actualites-container a')
+      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(urlcourante + ' .js-actualites-container a')
     );
 
   });

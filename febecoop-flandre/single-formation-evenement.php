@@ -181,36 +181,9 @@ get_header();
 </section>
 <?php } else {;?>
 
-    <section class="formation-form-section form-section-type-a" id="formation-form-section">
-    <div class="form-section-type-a-wrapper grid">
-
-        <div class="form-type-a-header">
-        <p class="form-type-a-title"><?php the_field('titre_formulaire');?></p> 
-            <p class="form-type-a-content"><?php the_field('sous-titre_formlulaire'); ?></p>
-        </div>
-        <div class="form-wrapper-item form-wrapper-item-active">
-            <?php echo FrmFormsController::get_form_shortcode(array('id' => 11, 'title' => false, 'description' => false)); ?>
-        </div>
-
-        <!-- <?php
-        $link = get_field('footer_formulaires', 'options');
-        if ($link) :
-            $link_url = $link['url'];
-            $link_title = $link['title'];
-            $link_target = $link['target'] ? $link['target'] : '_self';
-        ?>
-            <a class="form-type-a-footer" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
-
-                    <?php
-                    $openspan = "<span>";
-                    $openmainttitle = str_replace('(*(', $openspan, $link_title);
-                    $closemainttitle = str_replace(')*)','</span>',$openmainttitle);
-                    echo $closemainttitle;
-                    ?>
-
-
-            </a>
-        <?php endif; ?> -->
+<!-- CONTACT BANNER ==============
+=========================== -->
+<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner-formation-single"); ?>
 
 
 

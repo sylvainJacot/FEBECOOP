@@ -12,7 +12,6 @@ get_header();
 
 ;?>
 
-<?php get_template_part('./src/TEMPLATES/test');?>
 
 <div id="overflow" style="overflow-x: hidden;">
 <!-- HERO SECTION ==============

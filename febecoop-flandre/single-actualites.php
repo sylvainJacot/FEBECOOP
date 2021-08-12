@@ -16,7 +16,7 @@ $post_type = $post_type_obj->labels->singular_name;
         <div class="hero-section-type-e-content">
             <div class="hero-section-type-e-content-text">
                 <div class="hero-section-type-e-content-toptitle-wrapper">
-                <p class="hero-section-type-e-content-toptitle"><?php echo $post_type;?> <span class="hero-section-type-e-content-date"><?php echo get_the_date('d/m/Y'); ?></span></p>
+                <p class="hero-section-type-e-content-toptitle"><?php pll_e('Actualités');?> <span class="hero-section-type-e-content-date"><?php echo get_the_date('d/m/Y'); ?></span></p>
                 <p class="hero-section-type-e-content-date"><?php the_date('Y-m-d');?></p>
                 </div>
                 <h1><span><?php echo the_title(); ?></h1></span>

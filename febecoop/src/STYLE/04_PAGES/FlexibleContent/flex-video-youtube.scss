@@ -275,3 +275,75 @@ min-height: 20px;
     animation: rotation 0.25s ease;
 }
 }
+
+
+.flex-video-container {
+    display: block;
+    margin: $flex-items-yMargins  0px  $flex-items-yMargins * 2  0px;
+    position: relative;
+    @include tablet {
+        margin: $flex-items-yMargins * 1.5 0px  $flex-items-yMargins * 4  0px;
+        
+    }
+    @include laptopS {
+        margin: $flex-items-yMargins * 2 0px  $flex-items-yMargins * 4  0px;
+    }
+    @include laptopL {
+        margin: $flex-items-yMargins * 2 0px  $flex-items-yMargins * 4  0px;
+    }
+
+    @include shadow-a-pic;
+
+    &:after {
+        display: block;
+        content: '';
+        background: url("../ASSETS/IMAGES/common/VECTOR/play.svg") center no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 60px;
+        height: 60px;
+        z-index: 44;
+
+    }
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $blue-1;
+        z-index: 44;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        opacity: 0.3;
+
+    }
+
+    .flex-video-thumbnail-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: $border-radius-small-picture;
+        padding-bottom: 56.25%;
+
+        .flex-video-thumbnail{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%) scale(1.05);
+            transform: translate(-50%,-50%) scale(1.05);
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+
+}

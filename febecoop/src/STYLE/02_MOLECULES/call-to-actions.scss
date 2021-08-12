@@ -93,7 +93,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
         background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-orange.svg") center no-repeat;
         background-size: contain;
         left: 4px;
-        top: calc(50% - 0px);
+        top: calc(50% - 2px);
         transform: translateY(-50%) rotate(-90deg);
         @include trans-a;
     }
@@ -142,7 +142,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
         background: url("../ASSETS/IMAGES/common/VECTOR/full-arrow-orange.svg") center no-repeat;
         background-size: contain;
         left: 0;
-        top: 7px;
+        top: 11px;
         transform: translateY(-50%);
         @include trans-a;
     }

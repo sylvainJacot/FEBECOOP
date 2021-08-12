@@ -5,6 +5,9 @@
  * 
  */
  get_header();
+
+// DIFFERENCE AVEC LE NL, LIEN POUR LA NEWSLETTER DANS PUBLICATION STAR
+
 ?>
 
 

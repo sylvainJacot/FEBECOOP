@@ -1,18 +1,21 @@
 <?php
 
 /**
- * 
+ * Template Name: Actualites
  * 
  * 
  */
 get_header();
+
+// DIFFRENCE AVEC LE NL? LE "VOIR PLUS"
+
 // <!-- get the current taxonomy term -->
 $terms = get_terms('categories_actualites');
 ?>
 
 <!-- HERO SECTION ==============
 =========================== -->
-<section class="hero-section-type-g">
+<section class="hero-section-type-g actualite-template-hero-section">
   <div class="hero-section-type-g-wrapper grid">
     <div class="hero-section-type-g-content">
       <div class="hero-section-type-g-content-text">
@@ -33,6 +36,7 @@ $terms = get_terms('categories_actualites');
 
       </div>
 
+      <p class="reset-cta reset-filter" style="display: none;"></p>
     </div>
   </div>
 </section>
@@ -42,34 +46,34 @@ $terms = get_terms('categories_actualites');
 =========================== -->
 <section class="actualites-section">
   <div class="actualites-section-wrapper js-actualites-section-wrapper grid" id="js-actualites-section-wrapper">
-    <div class="actualites-container js-actualites-container" id="js-actualites-container">
+    <div class="actualites-container js-actualites-container">
       <?php
       // set the "paged" parameter (use 'page' if the query is on a static front page)
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-      
-      $args = 
+      $args =
         array(
           'post_type' => 'actualites',
           'status' => 'published',
-          'posts_per_page' => -1,
+          'posts_per_page' => 6,
           'orderby'  => 'post_date',
           'order'         => 'DESC',
           'paged' => $paged
         );
-      $loopProjetsAccfsfsdfs = new WP_Query($args);
+        
+      $loopActus = new WP_Query($args);
+      
       ?>
 
-      <?php if ($loopProjetsAccfsfsdfs->have_posts()) : ?>
-          <?php while ($loopProjetsAccfsfsdfs->have_posts()) : $loopProjetsAccfsfsdfs->the_post(); ?>
 
+      <?php if ($loopActus->have_posts()) : ?>
+        <?php while ($loopActus->have_posts()) : $loopActus->the_post(); ?>
 
           <a href="<?php the_permalink(); ?>" class="swiper-slide card-type-b-item card-type-b-item-row-actu js-card-actus">
             <div class="card-type-b-pic-wrapper">
               <?php
               $image = get_field('actu-hero-image');
               if (!empty($image)) : ?>
-                <img loading="lazy"  src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
               <?php endif; ?>
             </div>
             <div class="card-type-b-content">
@@ -82,17 +86,14 @@ $terms = get_terms('categories_actualites');
 
         <?php endwhile; ?>
 
-
-
       <?php endif;
       wp_reset_postdata(); ?>
 
-
-<?php
-      next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
+      <?php
+      next_posts_link(('<span class="cta-a" id="loadmore-actu">Meer tonen</span>'), $loopActus->max_num_pages);
       ?>
 
-  </div>
+    </div>
 
   </div>
 
@@ -117,7 +118,6 @@ $terms = get_terms('categories_actualites');
     var next_actu_page = $(this).parent().attr('href');
 
 
-
     $('#js-actualites-section-wrapper').append(
       $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' .js-actualites-container a')
     );
@@ -135,7 +135,7 @@ $terms = get_terms('categories_actualites');
     $('.actualites-container').fadeOut(); // vire les anciens item 
 
     var next_actucat_page = $(this).attr('href');
-    alert(next_actucat_page);
+
 
     $('.reset-cta').css('display', 'flex');
 
@@ -148,7 +148,7 @@ $terms = get_terms('categories_actualites');
     $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
 
     $('#js-actualites-section-wrapper').append(
-      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_page + ' .js-actualites-container a')
+      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_page + ' #js-actualites-container a')
     );
 
   });
@@ -179,6 +179,12 @@ $terms = get_terms('categories_actualites');
 
   });
 </script>
+
+
+
+
+
+
 <?php
 get_footer();
 ?>

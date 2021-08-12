@@ -272,3 +272,22 @@
         }
     }
 }
+
+#contact-banner-section-formation-single {
+    .contact-banner-illu-container {
+        top: -180.5px; 
+        @include tablet {
+            top: -64px;
+        }
+        @include laptopS {
+            top: -172px;
+        }
+        @include laptopL {
+            top: -190px;
+        }
+    }
+    
+    @include laptopS {
+        margin-top: -80px;
+    }
+}

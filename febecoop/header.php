@@ -28,6 +28,12 @@ if (empty($meta_description)) {
     <link rel="preload" as="font" type="font/woff2" href="<?php echo get_template_directory_uri(); ?>/src/ASSETS/FONTS/HANDO/Hando-Bold.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="<?php echo get_template_directory_uri(); ?>/src/ASSETS/FONTS/HANDO/Hando-Regular.woff2" crossorigin>
 
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta charset="utf-8">
@@ -177,3 +183,5 @@ if (empty($meta_description)) {
         <input type="image" alt="Search" class="js-nav-icon-search-laptop" src="<?php bloginfo('template_url'); ?>/src/ASSETS/IMAGES/common/VECTOR/search-ic-orange.svg" />
         <span class="nav-search-laptop-close-area" id="js-nav-search-laptop-close-area"><span></span></span>
     </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>

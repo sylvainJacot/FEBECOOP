@@ -14,7 +14,15 @@
             <h3 class="newsletter-title"><?php the_field('newsletter-titre', 'option'); ?></h3>
             <div class="newsletter-section-content">
                 <p class="newsletter-subtitle"><?php the_field('newsletter-texte', 'option'); ?></p>
-                <a class="newsletter-cta" href="#"><?php the_field('newsletter-cta', 'option'); ?></a>
+                <?php 
+                $link = get_field('newsletter-cta', 'option');
+                if( $link ): 
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                    <a class="newsletter-cta" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                <?php endif; ?>
             </div>
         </div>
 

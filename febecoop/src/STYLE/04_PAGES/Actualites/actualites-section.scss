@@ -59,6 +59,9 @@
                     bottom: calc(-53px - #{$cb-space-d});
                 }
             }
+            .cta-a {
+                width: max-content;
+            }
         }
         .actualites-container-fadeIn {
             a {

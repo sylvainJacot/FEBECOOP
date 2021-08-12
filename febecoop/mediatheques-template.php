@@ -6,6 +6,9 @@
  * 
  */
 get_header();
+
+// DIFFERENCE AVEC LE NL? PAS DE TOP TITLE
+
 ?>
 
 <!-- HERO SECTION ==============
