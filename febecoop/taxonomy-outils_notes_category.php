@@ -175,12 +175,16 @@ foreach ($terms as $term) : ?>
 
                 <?php
 
-$papa = 0;
+                $ArrayTerms = [];
 
                 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                         <?php $PostID = get_the_ID(); 
                         $PostTerms = wp_get_post_terms( $PostID, 'tags_notes_outils');
+                        $countPostTerms = count($PostTerms);
+
+                        array_push($ArrayTerms, $countPostTerms);
+                        $totalCountPostTerms = max($ArrayTerms);
                         ?>
 
                         <a href="<?php echo the_permalink() ?>" class="npo-item">
@@ -189,7 +193,7 @@ $papa = 0;
 
                             <?php 
                             foreach ($PostTerms as $term) : ?>
-                            <?php $term_link = get_term_link($term); $papa++; ?>
+                            <?php $term_link = get_term_link($term); ?>
 
                             <style>
                                 <?php echo ".$term->slug"; ?> {
@@ -205,9 +209,9 @@ $papa = 0;
                     <span class="generic-content">
                         <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
                     </span>
-                <?php endif;  //echo $papa; 
+                <?php endif;
 
-                if ( $papa > 1 ) {
+                if ( $totalCountPostTerms > 1 ) {
 
                 } else {
                     ?>

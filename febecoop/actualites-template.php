@@ -46,7 +46,7 @@ $terms = get_terms('categories_actualites');
 =========================== -->
 <section class="actualites-section">
   <div class="actualites-section-wrapper js-actualites-section-wrapper grid" id="js-actualites-section-wrapper">
-    <div class="actualites-container js-actualites-container" id="js-actualites-container">
+    <div class="actualites-container js-actualites-container">
       <?php
       // set the "paged" parameter (use 'page' if the query is on a static front page)
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -84,15 +84,11 @@ $terms = get_terms('categories_actualites');
 
         <?php endwhile; ?>
 
-
-
       <?php endif;
       wp_reset_postdata(); ?>
 
       <?php
-
-      next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
-
+      next_posts_link(('<span class="cta-a" id="loadmore-actu">first load more</span>'), $loopActus->max_num_pages);
       ?>
 
     </div>
@@ -118,10 +114,10 @@ $terms = get_terms('categories_actualites');
     $(this).parent().fadeOut();
 
     var next_actu_page = $(this).parent().attr('href');
-    alert(next_actu_page);
+
 
     $('#js-actualites-section-wrapper').append(
-      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' #js-actualites-container a')
+      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_page + ' #js-actualites-container a')
     );
 
   });

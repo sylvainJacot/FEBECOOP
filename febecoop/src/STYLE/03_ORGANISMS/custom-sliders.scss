@@ -480,11 +480,11 @@ display: none;
     bottom: $space-between-flex-items-t * 2;
     transform: translateX(-50%) translateY($space-between-flex-items-t / 2);
     @include laptopS {
-        bottom: $space-between-flex-items-l * 2;
+        bottom: 56px;
         transform: translateX(-50%) translateY($space-between-flex-items-l / 2);
     }
     @include laptopL {
-        bottom: $space-between-flex-items-d  * 2;
+        bottom: 72px;
         transform: translateX(-50%) translateY($space-between-flex-items-d / 2);
     }
     .swiper-pagination-current {

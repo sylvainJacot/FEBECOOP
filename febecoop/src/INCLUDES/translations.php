@@ -75,4 +75,6 @@ if (function_exists('pll_register_string')) {
     pll_register_string("Aucun résultat", "Aucun résultat", 'febecoop', true);
     pll_register_string("1 item trouvé", "1 item trouvé", 'febecoop', true);
     pll_register_string(" items trouvés", " items trouvés", 'febecoop', true);
+    pll_register_string("xyz", "xyz", 'febecoop', true);
+    
 }

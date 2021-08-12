@@ -6,17 +6,17 @@
 
 
 .flex-video {
-    padding: $space-between-flex-items-m  0px 2 * $space-between-flex-items-m  0px;
+    padding: $flex-items-yMargins  0px  $flex-items-yMargins * 3  0px;
     margin-bottom: 0px !important;
     @include tablet {
-        padding: $space-between-flex-items-t  0px 2 * $space-between-flex-items-t  0px;
+        padding: $flex-items-yMargins * 1.5 0px  $flex-items-yMargins * 4  0px;
         
     }
     @include laptopS {
-        padding: $space-between-flex-items-l  0px 2 * $space-between-flex-items-l  0px;
+        padding: $flex-items-yMargins * 2 0px  $flex-items-yMargins * 4  0px;
     }
     @include laptopL {
-        padding: $space-between-flex-items-d  0px 2 * $space-between-flex-items-d  0px;
+        padding: $flex-items-yMargins * 2 0px  $flex-items-yMargins * 5  0px;
     }
     .video-cont {
         @include shadow-a-pic;
@@ -132,12 +132,10 @@
 }
 
 
-.video-open {
-display: block;
-}
 
 .video-player {
 position: fixed;
+display: block;
 top: 0;
 left: 0;
 right: 0;
@@ -146,8 +144,10 @@ width: 100%;
 height: 100%;
 z-index: 9999999999999999;
 opacity: 0;
-transform: translate(-250%, -250%);
+transform: translate(0);
 transition: transform 0s ease 0.5s, opacity 0.5s ease-in-out 0s;
+margin: 0 !important;
+pointer-events: none;
 .video-close {
     position: absolute;
     top: 0;
@@ -159,6 +159,7 @@ transition: transform 0s ease 0.5s, opacity 0.5s ease-in-out 0s;
     background: $orange-light;
     opacity: 1;
     z-index: 2;
+    margin: 0 !important;
 }
 }
 
@@ -169,7 +170,7 @@ left: 0;
 right: 0;
 // bottom: 45vh; 
 padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
-// transform: scale(0.925);
+transform: scale(1) translateY(-50%);
 z-index: 3;
 }
 
@@ -205,6 +206,7 @@ max-height: 100vh;
     opacity: 1;
     transform: translate(0);
     transition: transform 0s ease 0s, opacity 0.5s ease-in-out 0s;
+    pointer-events:visible;
 
     .video-box { 
         transform: scale(1) translateY(-50%);

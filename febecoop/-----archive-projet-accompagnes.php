@@ -78,48 +78,9 @@ $pa_terms = get_terms('projet_accompagne_cat');
 
         <main class="card-type-b-container card-projet-accompagnes-container card-projet-accompagnes-container-fadeIn" id="js-card-type-b-container">
 
-            <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;?>
-
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
-                    <a href="<?php the_permalink(); ?>" class="card-type-b-item">
-                        <div class="card-type-b-pic-wrapper">
-                            <?php
-                            $image = get_field('projet-image-hero');
-                            if (!empty($image)) : ?>
-                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                            <?php endif; ?>
-                        </div>
-                        <div class="card-type-b-content">
-                            <p class="card-type-b-chapeau"><?php the_title() ?></p>
-                            <?php if (get_field('projet-description')) : ?>
-                                <p class="card-type-b-resume"><?php the_field('projet-description') ?></p>
-                            <?php else : ?>
-
-                                <?php if (have_rows('contenu-flexible')) : while (have_rows('contenu-flexible')) : the_row(); ?>
-                                        <?php if (get_row_layout() == 'introduction-principale') :
-
-                                            $txt = get_sub_field('introduction');
-                                        ?>
-                                            <p class="card-type-b-resume"><?php echo $txt; ?></p>
-
-                                        <?php endif; ?>
-                                <?php endwhile;
-                                endif; ?>
-                            <?php endif; ?>
-                            <p class="cta-c"><span><?php pll_e('Lire plus'); ?></span></p>
-                        </div>
-                    </a>
-
-                <?php endwhile; ?>
-
-
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
 
             <?php
-            next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Voir plus</span>'), $loopProjetsAcc->max_num_pages);
+            next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Hello from archive</span>'), $loopProjetsAcc->max_num_pages);
             ?>
 
         </main>
