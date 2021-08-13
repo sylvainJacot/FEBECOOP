@@ -2,6 +2,21 @@
 // ========= FITLRE TYPE A  =========
 // ========= 
 
+.bouton-exemple-Steven {
+    color :red;
+    width: 500px;
+    margin-bottom: 16px;
+
+    @include tablet {
+        color: violet;
+        margin-bottom: 32px;
+    }
+    @include laptopS {
+        color: green;
+    }
+}
+
+
 .filtres-type-a-container {
     width: 100%;
     position: absolute;
@@ -14,7 +29,6 @@
     @include tablet {
         width: 8 * $tCol;
         padding: 0px 32px;
-        top: 0px;
         right: 0;
         margin-top: 0px;
     }
@@ -64,13 +78,13 @@
         position: relative;
 
         &::after {
-            display: block;
-            position: absolute;
-            content: "";
-            bottom: 0px;
-            height: 10px;
-            width: 95%;
-            background: $orange-1;
+            // display: block;
+            // position: absolute;
+            // content: "";
+            // bottom: 0px;
+            // height: 10px;
+            // width: 95%;
+            // background: $orange-1;
         }
 
         /* width */

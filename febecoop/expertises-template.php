@@ -97,7 +97,7 @@
                     endif; ?>
                 <?php endif; ?>
 
-          <p class="cta-flex-a"><?php pll_e('En savoir plus');?></p>
+          <p class="cta-flex-a"><span><?php pll_e('En savoir plus');?></span></p>
       </div>
         </a>
 

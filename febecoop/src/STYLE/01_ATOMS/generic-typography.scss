@@ -2,7 +2,7 @@ $flex-all-mb: 40px;
 
 $margin-flex-txt : 40px;
 
-$flex-items-yMargins : 16px;
+$flex-items-yMargins : 24px;
 
 @mixin flex-titre-1 {
   @include hando-sb;
@@ -42,7 +42,7 @@ $flex-items-yMargins : 16px;
   color: $blue-1;
   font-size: 22px;
   line-height: 28px;
-  margin: $flex-items-yMargins 0px;
+  margin: $flex-items-yMargins 0px; 
 
   @include tablet {
     font-size: 24px;
@@ -121,11 +121,10 @@ $flex-items-yMargins : 16px;
 @mixin ordered-list {
   list-style: none;
   counter-reset: my-counter;
-  margin: $flex-items-yMargins / 2  0px $flex-items-yMargins 0px ;
   li {
     @include paragraph;
     counter-increment: my-counter;
-    margin-bottom: 0;
+    margin: 0px 0px $flex-items-yMargins 0px ;
 
     &:before {
       @include hando-b;
@@ -143,10 +142,10 @@ $flex-items-yMargins : 16px;
   }
 }
 @mixin unordered-list {
-  margin: $flex-items-yMargins / 2  0px $flex-items-yMargins 0px ;
+
   li {
     @include paragraph;
-    margin-bottom: 0;
+    margin: 0px  0px $flex-items-yMargins 0px ;
     position: relative;
     padding-left: 40px;
 
@@ -222,7 +221,7 @@ $flex-items-yMargins : 16px;
   overflow-y: hidden;
   margin-top: - $flex-items-yMargins !important;
 
-  *:nth-last-child(2) {
+  > *:nth-last-child(2) {
     margin-bottom: 0px;
   }
 }

@@ -5,7 +5,7 @@
             $link_title = $link['title'];
             $link_target = $link['target'] ? $link['target'] : '_self';
             ?>
-                        <a class="form-type-a-footer" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                        <a class="form-type-a-footer" href="mailto:<?php echo $link_url; ?>" target="<?php echo esc_attr($link_target); ?>">
 
 <?php
 $openspan = "<span>";
@@ -21,4 +21,6 @@ echo $closemainttitle;
 
     </div>
 </section>
+
+
 

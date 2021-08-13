@@ -17,14 +17,15 @@
     margin-top: 128px;
     margin-bottom: 0px;
     @include tablet {
-        margin-top: 0;
+        margin-top: -160px;
         margin-bottom: 0px;
     }
     @include laptopS {
+        margin-top: 0px;
         margin-bottom: 80px;
     }
     .evenement-formation-single-content  {
-        overflow-x: unset !important;
+        overflow: initial;
         display: flex;
         justify-content: center;
         flex-direction: column-reverse;
@@ -39,6 +40,7 @@
         .evenement-formation-single-content-flex {
             @include laptopS {
                 width: $largeur-flex-main-l;
+                margin-top: 0px;
             }
             @include laptopL {
                 width: $largeur-flex-main-d;
@@ -50,8 +52,8 @@
         padding: 48px $mCol 48px $mCol;
         background: $orange-light;
         border-radius: 8px;
-        margin-top: 40px;
-        margin-bottom: 40px;
+        // margin-top: 40px;
+        // margin-bottom: 40px;
 
         @include tablet {
             padding: 48px 2 * $tCol 48px 2 * $tCol;
@@ -66,6 +68,7 @@
             top: 24px;
             width: $largeur-aside-main-l;
             margin-left: $aside-main-margin-left-l;
+            margin-bottom: 210px;
         }
 
         @include laptopL {
@@ -92,6 +95,7 @@
                 align-items: center;
                 padding: 24px 0px;
                 margin-bottom: 0px;
+                margin-top: 0px;
                 &:not(:last-child) {
                     &:before {
                     position: absolute;
