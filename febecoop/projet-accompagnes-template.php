@@ -84,7 +84,7 @@ $pa_terms = get_terms('projet_accompagne_cat');
                 array(
                     'post_type' => 'projet-accompagnes',
                     'status' => 'published',
-                    'posts_per_page' => 6,
+                    'posts_per_page' => 3,
                     'orderby'    => 'post_date',
                     'order'         => 'DESC',
                     'paged' => $paged
@@ -130,7 +130,9 @@ $pa_terms = get_terms('projet_accompagne_cat');
             <?php wp_reset_postdata(); ?>
 
             <?php
-            next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Voir plus</span>'), $loopProjetsAcc->max_num_pages);
+                if($paged <= 1) {
+                next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Voir plus</span>'), $loopProjetsAcc->max_num_pages);
+                }
             ?>
 
         </main>
@@ -179,7 +181,7 @@ $pa_terms = get_terms('projet_accompagne_cat');
         $('.card-type-b-container').fadeOut(); // vire les anciens item 
 
         var next_actucat_page = $(this).attr('href');
-        // alert(next_actucat_page);
+        alert(next_actucat_page);
  
 
         $('.reset-cta').css('display', 'flex');

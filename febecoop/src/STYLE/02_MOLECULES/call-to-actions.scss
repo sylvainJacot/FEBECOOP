@@ -255,6 +255,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
         left: calc(38px - 16px);
         transform: translateY(-50%);
         @include trans-a;
+        margin: 0;
 
         > svg {
             fill: $orange-1;
@@ -560,4 +561,10 @@ $cta-newsletter-pseudo-arrow-size : 12px;
 }
 .button-arrow {
     @include button-arrow;
+}
+
+#prise-pos-fede-cta{
+    &::before {
+        top: 7px;
+    }
 }

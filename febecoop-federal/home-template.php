@@ -176,7 +176,7 @@ get_header();
     wp_reset_postdata(); ?>
 <?php endif; ?>
 
-        <a class=cta-d><span><?php pll_e('Toutes les prises de positions');?></span></a>
+        <a class="cta-d" id="prise-pos-fede-cta"><span><?php pll_e('Toutes les prises de positions');?></span></a>
     </div>
 </section>
 

@@ -52,7 +52,7 @@ $terms = get_terms('categories_actualites');
         array(
           'post_type' => 'actualites',
           'status' => 'published',
-          'posts_per_page' => -1,
+          'posts_per_page' => 3,
           'orderby'  => 'post_date',
           'order'         => 'DESC',
           'paged' => $paged
@@ -88,7 +88,7 @@ $terms = get_terms('categories_actualites');
       wp_reset_postdata(); ?>
 
 
-<?php
+      <?php
       next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
       ?>
 

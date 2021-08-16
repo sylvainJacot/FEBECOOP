@@ -271,9 +271,11 @@ foreach ($terms as $term) : ?>
         var urlcourante = document.location.href;
         var urlRacine = window.location.origin;
         var filterText = $(this).text();
+        var filterTextCleaned = filterText.replace(/\s/g,"-");
+
         
         // URL VERSION EN LIGNE
-        var newUrl = RacineSiteRecuperee + '/outils_notes_category/' + variableRecuperee + '/' + '?tags_notes_outils=' + filterText;
+        var newUrl = RacineSiteRecuperee + '/outils_notes_category/' + variableRecuperee + '/' + '?tags_notes_outils=' + filterTextCleaned;
 
         // URL POUR LOCAL
         // var newUrl = urlRacine +  '/outils_notes_category/' + variableRecuperee + '/' + '?tags_notes_outils=' + filterText;
@@ -352,9 +354,10 @@ foreach ($terms as $term) : ?>
         var urlcourante = document.location.href;
         var urlRacine = window.location.origin;
         var filterText = $(this).text();
+        var filterTextCleaned = filterText.replace(/\s/g,"-");
         
         // URL VERSION EN LIGNE
-        var newUrl = RacineSiteRecuperee + '/outils_notes_category/' + variableRecuperee + '/' + '?tags_notes_outils=' + filterText;
+        var newUrl = RacineSiteRecuperee + '/outils_notes_category/' + variableRecuperee + '/' + '?tags_notes_outils=' + filterTextCleaned;
         
         // URL POUR LOCAL
         // var newUrl = urlRacine +  '/outils_notes_category/' + variableRecuperee + '/' + '?tags_notes_outils=' + filterText;

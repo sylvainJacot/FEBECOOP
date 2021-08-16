@@ -164,5 +164,13 @@
 
         }
      }
+     .mediatheque-publications-categrory-item:only-child {
+        @include laptopS {
+            width: 19 * $lCol;
+        }
+        @include laptopL {
+           width: 15 * $dCol;
+       }
+    }
  }   
 }

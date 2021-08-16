@@ -78,9 +78,59 @@ $pa_terms = get_terms('projet_accompagne_cat');
 
         <main class="card-type-b-container card-projet-accompagnes-container card-projet-accompagnes-container-fadeIn" id="js-card-type-b-container">
 
+            <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $args =
+                array(
+                    'post_type' => 'projet-accompagnes',
+                    'status' => 'published',
+                    'posts_per_page' => 3,
+                    'orderby'    => 'post_date',
+                    'order'         => 'DESC',
+                    'paged' => $paged
+                );
+            $loopProjetsAcc = new WP_Query($args);
+            ?>
+
+            <?php if ($loopProjetsAcc->have_posts()) : ?>
+                <?php while ($loopProjetsAcc->have_posts()) : $loopProjetsAcc->the_post(); ?>
+                    <a href="<?php the_permalink(); ?>" class="card-type-b-item">
+                        <div class="card-type-b-pic-wrapper">
+                            <?php
+                            $image = get_field('projet-image-hero');
+                            if (!empty($image)) : ?>
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <?php endif; ?>
+                        </div>
+                        <div class="card-type-b-content">
+                            <p class="card-type-b-chapeau"><?php the_title() ?></p>
+                            <?php if (get_field('projet-description')) : ?>
+                                <p class="card-type-b-resume"><?php the_field('projet-description') ?></p>
+                            <?php else : ?>
+
+                                <?php if (have_rows('contenu-flexible')) : while (have_rows('contenu-flexible')) : the_row(); ?>
+                                        <?php if (get_row_layout() == 'introduction-principale') :
+
+                                            $txt = get_sub_field('introduction');
+                                        ?>
+                                            <p class="card-type-b-resume"><?php echo $txt; ?></p>
+
+                                        <?php endif; ?>
+                                <?php endwhile;
+                                endif; ?>
+                            <?php endif; ?>
+                            <p class="cta-c"><span><?php pll_e('Lire plus'); ?></span></p>
+                        </div>
+                    </a>
+
+                <?php endwhile; ?>
+
+
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
 
             <?php
-            next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Hello from archive</span>'), $loopProjetsAcc->max_num_pages);
+            next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Voir plus</span>'), $loopProjetsAcc->max_num_pages);
             ?>
 
         </main>
@@ -107,12 +157,11 @@ $pa_terms = get_terms('projet_accompagne_cat');
     $('#js-projets-accompagnes-section-wrapper').on('click', '#loadmore-projetsacc', function(e) {
 
         e.preventDefault();
-        console.log('click');
 
         $(this).parent().fadeOut();
 
         var next_actu_page = $(this).parent().attr('href');
-        // alert(next_actu_page);
+
 
         $('#js-projets-accompagnes-section-wrapper').append(
             $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(next_actu_page + ' .card-type-b-container a')
@@ -130,7 +179,7 @@ $pa_terms = get_terms('projet_accompagne_cat');
         $('.card-type-b-container').fadeOut(); // vire les anciens item 
 
         var next_actucat_page = $(this).attr('href');
-        // alert(next_actucat_page);
+        alert(next_actucat_page);
  
 
         $('.reset-cta').css('display', 'flex');

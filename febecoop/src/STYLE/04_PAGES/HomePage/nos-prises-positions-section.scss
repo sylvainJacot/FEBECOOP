@@ -13,20 +13,22 @@ $npp-space-between-els-m: 32px;
     overflow-x: hidden;
     @include tablet {
         padding-bottom: 88px;
+        overflow: visible;
     }
     @include laptopS {
         padding: 128px 0;
     }
     .nos-prises-positions-section-wrapper {
         position: relative;
-        padding-top: $npp-pic-full-padding-top-m;
+        // padding-top: $npp-pic-full-padding-top-m;
         padding-bottom: $npp-space-between-els-m * 2;
         @include tablet {
-            padding: 2 * $npp-space-between-els-m 2 * $tCol;
-            padding-top: $npp-pic-full-padding-top-t;
+            padding: 0 2 * $tCol 2 * $npp-space-between-els-m 2 * $tCol;
+            // padding-top: $npp-pic-full-padding-top-t;
         }
         @include laptopS {
             padding: 80px 0;
+            position: relative;
         }
         &::before {
             @include tablet {
@@ -39,42 +41,71 @@ $npp-space-between-els-m: 32px;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
+                
             }
             @include laptopS {
                 transform: translate(0,-50%);
                 left: unset;
                 right: - 7 * $lCol;
+                z-index: 2;
+            }
+        }
+        &:after {
+            @include laptopS {
+                position: absolute;
+                display: block;
+                content: "";
+                width: 560px;
+                height: 530px;
+                background: url("../ASSETS/IMAGES/HOME/VECTOR/illu-dots-slider.svg") center no-repeat;
+                background-size: contain;
+                z-index: 1;
+                top: -58px;
+                left: -220px;
             }
         }
         .nos-prises-positions-pic-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: $npp-pic-height-m;
-            left: 50%;
-            transform: translateX(-50%) translateY(- $npp-pic-full-padding-top-m);
-            width: 100vw;
+            width: $grid-size-slide-m;
+            height: $grid-size-slide-m-ratio-3-2;
+            // left: 50%;
+            // transform: translateX(-50%) translateY(- $npp-pic-full-padding-top-m);
+            // transform: translateX(-50%) translateY(0px);
             background-color: $orange-light;
-            position: absolute;
+            // position: absolute;
+            margin-bottom: 40px;
+            border-radius: 8px;
             overflow: hidden;
             @include shadow-a-pic;
 
+            @media (min-width:500px) {
+                width: 100%;
+                height: 333.33333333333px;
+            }
+
             @include tablet {
-                height: $npp-pic-height-t;
-                transform: translateX(-50%) translateY(- $npp-pic-full-padding-top-t);
+                // height: $npp-pic-height-t;
+                // transform: translateX(-50%) translateY(- $npp-pic-full-padding-top-t);
+                position: relative;
+                height: 312px;
+                top: -40px;
+                margin-bottom: 0px;
             }
             @include laptopS {
+                position: absolute;
                 width: 15 * $lCol;
-                height: 430px;
-                border-radius: 8px;
+                height: 400px;
                 top: 50%;
-                transform: translateX(0) translateY(- 50%);
-                left: - 4 * $lCol;
+                transform: translateX(- 3 * $lCol) translateY(-50%);
+                z-index: 3;
             }
             @include laptopL {
-                height: 450px;
-                width: 15 * $dCol;
-                left: - 4 * $dCol;
+                width: 13 * $dCol;
+                height: 434px;
+                left:  -1 * $dCol;
+                transform: translateX(0)  translateY(-50%);
             }
 
             > img {
@@ -86,9 +117,11 @@ $npp-space-between-els-m: 32px;
         .nos-prises-positions-content {
             margin-bottom: $npp-space-between-els-m;
             position: relative;
+            
             @include laptopS {
                 width: 9 * $lCol;
                 margin-left: 14 * $lCol;
+                z-index: 2;
             }
             @include laptopL {
                 width: 9 * $dCol;
@@ -149,6 +182,7 @@ $npp-space-between-els-m: 32px;
         .cta-d {
             @include laptopS {
                 margin-left: 14 * $lCol;
+                z-index: 2;
             }
             @include laptopL {
                 margin-left: 14 * $dCol;

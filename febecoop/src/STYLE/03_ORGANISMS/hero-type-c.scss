@@ -6,7 +6,7 @@ $hstc-padding-top-l : 160px;
 .hero-section-type-c {
     background: $orange-light;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 
     .hero-section-type-c-wrapper {
         position: relative;
@@ -25,17 +25,22 @@ $hstc-padding-top-l : 160px;
             background-size: contain;
             @include tablet {
                 display: block;
-                width: 17 * $tCol;
-                height: 333px;
+                width: 672px;
+                height: 403px;
+                bottom: -15px;
+                background: url("../ASSETS/IMAGES/EXPERTISES/VECTOR/illu-hero-expertise-single-laptopl.svg") center no-repeat;
+                background-size: contain;
             }
             @include laptopS {
                 position: absolute;
                 bottom: unset;
-                width: 452px;
-                height: 244px;
+                width: 582px;
+                height: 374px;
                 left: unset;
-                right: -400px;
-                top: $hstc-padding-top-l + 40px;
+                right: -460px;
+                top: $hstc-padding-top-l - 24px;
+                background: url("../ASSETS/IMAGES/EXPERTISES/VECTOR/illu-hero-expertise-single-laptopl.svg") center no-repeat;
+                background-size: contain;
             }
             @include laptopL {
                 width: 588px;
@@ -43,8 +48,7 @@ $hstc-padding-top-l : 160px;
                 top: 50%;
                 right: -280px;
                 transform: translateY(-50%);
-                background: url("../ASSETS/IMAGES/EXPERTISES/VECTOR/illu-hero-expertise-single-laptopl.svg") center no-repeat;
-                background-size: contain;
+
             }
         }
         .hero-section-type-c-content {
@@ -52,7 +56,7 @@ $hstc-padding-top-l : 160px;
             padding-bottom: calc(56px + 80px);
             @include tablet {
                 padding-top: 88px;
-                padding-bottom: calc(88px + 96px);
+                padding-bottom: calc(88px + 0px);
                 display: flex;
                 align-items: center;
             }

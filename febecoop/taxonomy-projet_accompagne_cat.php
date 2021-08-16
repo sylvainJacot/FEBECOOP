@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Success stories
+ * 
  * 
  * 
  */
@@ -9,6 +9,7 @@ get_header();
 $pa_terms = get_terms('projet_accompagne_cat');
 // print_r($pa_terms);
 ?>
+<div class="overflow-x" style="overflow-x: hidden;">
 <section class="hero-section-type-b fiche-outils-hero-section" id="projets-accompagnes-hero-section">
     <picture class="hero-section-type-waves-container">
         <source srcset="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/NOTES-OUTILS/VECTOR/illu-wave-desktop.svg" media="(min-width: 1300px)" />
@@ -40,6 +41,7 @@ $pa_terms = get_terms('projet_accompagne_cat');
         </div>
     </div>
 </section>
+</div>
 
 <!-- HERO INTRO ==============
 =========================== -->
@@ -69,6 +71,11 @@ $pa_terms = get_terms('projet_accompagne_cat');
             </ul>
         </div>
 
+
+
+        <p class="reset-cta reset-filter" style="display: none;"></p>
+
+
         <main class="card-type-b-container card-projet-accompagnes-container card-projet-accompagnes-container-fadeIn" id="js-card-type-b-container">
 
             <?php
@@ -77,6 +84,7 @@ $pa_terms = get_terms('projet_accompagne_cat');
                 array(
                     'post_type' => 'projet-accompagnes',
                     'status' => 'published',
+                    'posts_per_page' => 3,
                     'orderby'    => 'post_date',
                     'order'         => 'DESC',
                     'paged' => $paged
@@ -84,8 +92,8 @@ $pa_terms = get_terms('projet_accompagne_cat');
             $loopProjetsAcc = new WP_Query($args);
             ?>
 
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
+            <?php if ($loopProjetsAcc->have_posts()) : ?>
+                <?php while ($loopProjetsAcc->have_posts()) : $loopProjetsAcc->the_post(); ?>
                     <a href="<?php the_permalink(); ?>" class="card-type-b-item">
                         <div class="card-type-b-pic-wrapper">
                             <?php
@@ -122,7 +130,9 @@ $pa_terms = get_terms('projet_accompagne_cat');
             <?php wp_reset_postdata(); ?>
 
             <?php
-            next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Voir plus</span>'), $loopProjetsAcc->max_num_pages);
+                if($paged <=  1) {
+                next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Voir plus</span>'), $loopProjetsAcc->max_num_pages);
+                }
             ?>
 
         </main>
@@ -149,12 +159,11 @@ $pa_terms = get_terms('projet_accompagne_cat');
     $('#js-projets-accompagnes-section-wrapper').on('click', '#loadmore-projetsacc', function(e) {
 
         e.preventDefault();
-        console.log('click');
 
         $(this).parent().fadeOut();
 
         var next_actu_page = $(this).parent().attr('href');
-        // alert(next_actu_page);
+
 
         $('#js-projets-accompagnes-section-wrapper').append(
             $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(next_actu_page + ' .card-type-b-container a')
@@ -173,6 +182,13 @@ $pa_terms = get_terms('projet_accompagne_cat');
 
         var next_actucat_page = $(this).attr('href');
         alert(next_actucat_page);
+ 
+
+        $('.reset-cta').css('display', 'flex');
+
+        var newTexte = $(this).text();
+        $('.reset-cta').text(newTexte);
+ 
 
         $('.filtres-types-a-filtre-link').each(function() {
             $(this).removeClass('active');
@@ -181,6 +197,32 @@ $pa_terms = get_terms('projet_accompagne_cat');
 
         $('#js-projets-accompagnes-section-wrapper').append(
             $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(next_actucat_page + ' .card-type-b-container a')
+        );
+
+    });
+</script>
+
+
+<!-- FILTRES EFFACER -->
+<script>
+    $('.reset-cta').click(function(e) {
+
+        e.preventDefault(); // annule effet ou autre sur le clic
+
+        $('.card-type-b-container').fadeOut(); // vire les anciens item 
+
+        var urlcourante = document.location.href; 
+        var next_actucat_page = $(this).attr('href');
+ 
+        $(this).css('display', 'none');
+
+        $('.filtres-types-a-filtre-link').each(function() {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
+
+        $('#js-projets-accompagnes-section-wrapper').append(
+            $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(urlcourante + ' .card-type-b-container a')
         );
 
     });
