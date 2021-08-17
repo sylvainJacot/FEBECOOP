@@ -1,13 +1,13 @@
 .flex-introduction-wrapper {
-  margin: $flex-items-yMargins 0px;
+  margin: 0px 0px $flex-items-yMargins * 1.5 0px !important;
 
   @include tablet {
-    margin: $flex-items-yMargins  0px;
+    margin: 0px 0px $flex-items-yMargins * 1.5  0px !important;
   }
   @include laptopS {
-    margin: $flex-items-yMargins * 2 0px;
+    margin: 0px 0px $flex-items-yMargins * 3 0px !important;
   }
   @include laptopL {
-    margin: $flex-items-yMargins * 2 0px;
+    margin: 0px 0px $flex-items-yMargins * 3 0px !important;
   }
 }

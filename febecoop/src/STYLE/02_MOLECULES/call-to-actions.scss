@@ -228,6 +228,7 @@ $cta-newsletter-pseudo-arrow-size : 12px;
     @include tracking(100);
     text-transform: uppercase;
     @include trans-a;
+    margin: $flex-items-yMargins * 1.5 0;
 
     @media (min-width:500px) {
         padding: 32px $mCol 32px 2 * $mCol;
@@ -455,7 +456,6 @@ $cta-newsletter-pseudo-arrow-size : 12px;
  }
  .flex-download-cta {
      @include flex-download-cta;
-     margin-bottom: $flex-all-mb;
  }
  .back-cta {
     @include back-cta;

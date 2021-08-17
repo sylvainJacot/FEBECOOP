@@ -85,6 +85,12 @@
             top: - $bbc-d;
             width: 510px;
         }
+        @media (min-width:1600px) {
+            $full-grid-cbic : 23 * $dCol;
+            $full-grid-cbic-no-margins: calc(100vw - #{$full-grid-cbic});
+            $full-grid-cbic-no-margin: calc(#{$full-grid-cbic-no-margins} / 2);
+            left: calc(#{$full-grid-cbic-no-margin});
+        }
     }
     .contact-banner-section-wrapper {
         padding: 40px 0 56px 0px;

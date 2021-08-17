@@ -166,10 +166,10 @@
      }
      .mediatheque-publications-categrory-item:only-child {
         @include laptopS {
-            width: 19 * $lCol;
+            width: 15 * $lCol;
         }
         @include laptopL {
-           width: 15 * $dCol;
+           width: 11 * $dCol;
        }
     }
  }   

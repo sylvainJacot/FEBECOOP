@@ -195,7 +195,19 @@
             top: -210px;
         }
     }
+    .hero-section-type-a-content {
+                h1 {
+                    @include laptopS {
+                        font-size: 40px;
+                        line-height: 49px;
+                    }
+                    @include laptopL {
+                        font-size: 41px !important;
+                        line-height: 50px !important;
+                    }
+                }
 
+    }
     &:before {
         @include laptopS {
             bottom: -90px;

@@ -163,16 +163,16 @@
 // CONTAINER TYPE B (used for flexible swipers)
 .swiper-container-type-b {
     position: relative;
-    margin:  $space-between-flex-items-m 0px $space-between-flex-items-m * 3 0px;
-    padding-bottom: $space-between-flex-items-t * 4;
+    margin:  $flex-items-yMargins * 2 0px $flex-items-yMargins * 2  0px !important;
+    padding-bottom: 80px;
 
     @include laptopS {
-        margin:  $space-between-flex-items-l 0px;
-        padding-bottom: $space-between-flex-items-l * 4;
+        margin:  $flex-items-yMargins * 2 0px !important;
+        padding-bottom: 80px;
     }
     @include laptopL {
-        margin:  $space-between-flex-items-d 0px;
-        padding-bottom: $space-between-flex-items-d * 4;
+        margin:  $flex-items-yMargins * 2 0px !important;
+        padding-bottom: 96px;
     }
     &:after {
         @include bottom-divider-pseudo-el;
@@ -478,14 +478,14 @@ display: none;
     width: fit-content;
     left: 50%;
     bottom: $space-between-flex-items-t * 2;
-    transform: translateX(-50%) translateY($space-between-flex-items-t / 2);
+    transform: translateX(-50%) translateY(27px);
     @include laptopS {
         bottom: 56px;
-        transform: translateX(-50%) translateY($space-between-flex-items-l / 2);
+        transform: translateX(-50%) translateY(32px);
     }
     @include laptopL {
         bottom: 72px;
-        transform: translateX(-50%) translateY($space-between-flex-items-d / 2);
+        transform: translateX(-50%) translateY(40px);
     }
     .swiper-pagination-current {
         @include hando-b;
@@ -558,14 +558,15 @@ display: none;
     left: 50%;
     display: flex;
     justify-content: space-between;
-    bottom: $space-between-flex-items-t * 2;
+    bottom: $space-between-flex-items-t * 1.5;
     transform: translateX(-50%) translateY($space-between-flex-items-t );
+    margin-top: 0px;
     @include laptopS {
-        bottom: $space-between-flex-items-l * 2;
+        bottom: $space-between-flex-items-l * 1.5;
         transform: translateX(-50%) translateY($space-between-flex-items-l );
     }
     @include laptopL {
-        bottom: $space-between-flex-items-d * 2;
+        bottom: $space-between-flex-items-d * 1.5;
         transform: translateX(-50%) translateY($space-between-flex-items-d );
     }
     .swiper-button-prev-c,

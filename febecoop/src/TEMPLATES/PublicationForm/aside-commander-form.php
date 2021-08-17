@@ -9,7 +9,7 @@
                     <div class="publication-detail-text-prix-container">
                         <?php if (get_field('papier-payant')) : ?>
 
-                        <p class="publication-detail-prix"><?php pll_e('Version papier');?>: <span><?php the_field('prix_version_papier');?>&#8364  (<?php pll_e('frais de port inclus');?>)</span></p>
+                        <p class="publication-detail-prix"><?php pll_e('Version papier');?>: <span><?php the_field('prix_version_papier');?>&#8364  <br/>(<?php pll_e('frais de port inclus');?>)</span></p>
 
                         <?php endif;?>
 

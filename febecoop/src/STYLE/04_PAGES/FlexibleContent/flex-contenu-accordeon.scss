@@ -1,11 +1,11 @@
 
 $fcai-w-l: 90%;
 .flex-contenu-accordeon-wrapper {
-    argin: $flex-items-yMargins 0px;
+    // margin: $flex-items-yMargins * 1.5 0px;
     .contenu-accordeon-item {
         position: relative;
         background: $blue-light;
-        margin-bottom: 24px;
+        margin: $flex-items-yMargins * 1.5 0px;
         border-radius: 8px;
         cursor: pointer;
         @include trans-a;

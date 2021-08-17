@@ -95,7 +95,7 @@ $terms = get_terms('categories_actualites');
 
       <?php
       if($paged <= 1) {
-      next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
+      next_posts_link(('<span class="cta-a" id="loadmore-actu">Meer tonen</span>'), $loopActus->max_num_pages);
       }
       ?>
 
@@ -142,7 +142,6 @@ $terms = get_terms('categories_actualites');
     $('.actualites-container').fadeOut(); // vire les anciens item 
 
     var next_actucat_page = $(this).attr('href');
-    // alert(next_actucat_page);
 
 
     $('.reset-cta').css('display', 'flex');

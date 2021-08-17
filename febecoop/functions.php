@@ -19,21 +19,35 @@ require_once(__DIR__ .'/src/INCLUDES/google-api.php');
 require_once(__DIR__ .'/src/INCLUDES/custom-admin-login-page.php');
 require_once(__DIR__ .'/src/INCLUDES/remove-login-error.php');
 require_once(__DIR__ .'/src/INCLUDES/translations.php');
+// require_once(__DIR__ .'/src/INCLUDES/fixe-404-taxonomy-pagination.php');
 
 
-function my_pagination_rewrite() {
-    add_rewrite_rule('actualites/page/?([0-9]{1,})/?$', 'index.php?category_name=actualites&paged=$matches[1]', 'top');
+
+
+function generate_taxonomy_rewrite_rules( $wp_rewrite ) {
+
+$rules = array();
+
+$post_types = get_post_types( array( 'public' => true, '_builtin' => false ), 'objects' );
+$taxonomies = get_taxonomies( array( 'public' => true, '_builtin' => false ), 'objects' );
+
+foreach ( $post_types as $post_type ) {
+    $post_type_name = $post_type->name;
+    $post_type_slug = $post_type->rewrite['slug'];
+
+    foreach ( $taxonomies as $taxonomy ) {
+        if ( $taxonomy->object_type[0] == $post_type_name ) {
+            $terms = get_categories( array( 'type' => $post_type_name, 'taxonomy' => $taxonomy->name, 'hide_empty' => 0 ) );
+            foreach ( $terms as $term ) {
+                $rules[$post_type_slug . '/' . $term->slug . '/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug;
+                $rules[$post_type_slug . '/' . $term->slug . '/page/?([0-9]{1,})/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug . '&paged=' . $wp_rewrite->preg_index( 1 );
+            }
+        }
+    }
 }
-add_action('init', 'my_pagination_rewrite');
 
+$wp_rewrite->rules = $rules + $wp_rewrite->rules;
 
-function remove_page_from_query_string($query_string)
-{ 
-    if ($query_string['name'] == 'page' && isset($query_string['page'])) {
-        unset($query_string['name']);
-        $query_string['paged'] = $query_string['page'];
-    }      
-    return $query_string;
 }
-add_filter('request', 'remove_page_from_query_string');
 
+add_action('generate_rewrite_rules', 'generate_taxonomy_rewrite_rules');

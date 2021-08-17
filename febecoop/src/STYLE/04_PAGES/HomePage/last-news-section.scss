@@ -202,6 +202,9 @@
                     }
                 }
                 @include laptopS {
+                    > p {
+                        color: $white;
+                    }
                     #last-news-cta {
                         color: $orange-1;
                         &:before {
@@ -214,9 +217,9 @@
                 }
                 @media (min-width:1900px) {
                     #last-news-cta {
-                        color: $white;
+                        color: $orange-1;
                         &:before {
-                            background: url(../ASSETS/IMAGES/common/VECTOR/full-arrow-white.svg) center no-repeat;
+                            background: url(../ASSETS/IMAGES/common/VECTOR/full-arrow-orange.svg) center no-repeat;
                         }
                         &:after {
                             background-color: $white;

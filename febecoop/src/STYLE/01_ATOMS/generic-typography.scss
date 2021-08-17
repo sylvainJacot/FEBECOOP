@@ -124,7 +124,7 @@ $flex-items-yMargins : 24px;
   li {
     @include paragraph;
     counter-increment: my-counter;
-    margin: 0px 0px $flex-items-yMargins 0px ;
+    margin: 0px 0px $flex-items-yMargins / 2 0px ;
 
     &:before {
       @include hando-b;
@@ -145,7 +145,7 @@ $flex-items-yMargins : 24px;
 
   li {
     @include paragraph;
-    margin: 0px  0px $flex-items-yMargins 0px ;
+    margin: 0px  0px $flex-items-yMargins / 2 0px ;
     position: relative;
     padding-left: 40px;
 
@@ -218,7 +218,7 @@ $flex-items-yMargins : 24px;
 }
 .generic-content {
   @include generic-content;
-  overflow-y: hidden;
+  overflow: hidden;
   margin-top: - $flex-items-yMargins !important;
 
   > *:nth-last-child(2) {

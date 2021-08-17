@@ -279,17 +279,17 @@
 
 .flex-video-container {
     display: block;
-    margin: $flex-items-yMargins  0px  $flex-items-yMargins * 2  0px;
+    margin: $flex-items-yMargins * 2 0px  $flex-items-yMargins * 2  0px !important;
     position: relative;
     @include tablet {
-        margin: $flex-items-yMargins * 1.5 0px  $flex-items-yMargins * 4  0px;
+        margin: $flex-items-yMargins * 2 0px  $flex-items-yMargins * 2  0px !important;
         
     }
     @include laptopS {
-        margin: $flex-items-yMargins * 2 0px  $flex-items-yMargins * 4  0px;
+        margin: $flex-items-yMargins * 2 0px  $flex-items-yMargins * 2  0px !important;
     }
     @include laptopL {
-        margin: $flex-items-yMargins * 2 0px  $flex-items-yMargins * 4  0px;
+        margin: $flex-items-yMargins * 2 0px  $flex-items-yMargins * 2  0px !important;
     }
 
     @include shadow-a-pic;
@@ -334,6 +334,7 @@
         overflow: hidden;
         border-radius: $border-radius-small-picture;
         padding-bottom: 56.25%;
+        margin-top: 0px;
 
         .flex-video-thumbnail{
             position: absolute;
@@ -347,7 +348,16 @@
             width: 100%;
             height: 100%;
             object-position: center;
+            @include trans-a;
         }
+
+        &:hover {
+            .flex-video-thumbnail{
+                -webkit-transform: translate(-50%,-50%) scale(1.1);
+                transform: translate(-50%,-50%) scale(1.1);
+                @include trans-a;
+        }
+    }
     }
 
 }

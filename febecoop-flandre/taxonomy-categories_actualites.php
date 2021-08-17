@@ -1,7 +1,7 @@
 <?php
 
 /**
- *
+ * 
  * 
  * 
  */
@@ -53,12 +53,28 @@ $terms = get_terms('categories_actualites');
     <div class="actualites-container js-actualites-container">
       <?php
       // set the "paged" parameter (use 'page' if the query is on a static front page)
-      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+      // $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
+      if ( get_query_var('paged') ) {
+
+        $paged = get_query_var('paged');
+        
+        } elseif ( get_query_var('page') ) {
+        
+        $paged = get_query_var('page');
+        
+        } else {
+        
+           $paged = 1;
+        
+        }
+        
+
       $args =
         array(
           'post_type' => 'actualites',
           'status' => 'published',
-          'posts_per_page' => 6,
+          'posts_per_page' => -1,
           'orderby'  => 'post_date',
           'order'         => 'DESC',
           'paged' => $paged
@@ -94,7 +110,7 @@ $terms = get_terms('categories_actualites');
       wp_reset_postdata(); ?>
 
       <?php
-      if($paged <= 1) {
+      if($paged >= 1) {
       next_posts_link(('<span class="cta-a" id="loadmore-actu">Meer tonen</span>'), $loopActus->max_num_pages);
       }
       ?>
@@ -115,18 +131,16 @@ $terms = get_terms('categories_actualites');
 
 <!-- LOAD MORE -->
 <script>
-  $('#js-actualites-section-wrapper').on('click', '#loadmore-actu', function(e) {
+  $('.js-actualites-section-wrapper').on('click', '#loadmore-actu', function(e) {
 
     e.preventDefault();
 
     $(this).parent().fadeOut();
 
     var next_actu_page = $(this).parent().attr('href');
-    alert(next_actu_page);
+    console.log(next_actu_page);
 
-
-
-    $('#js-actualites-section-wrapper').append(
+    $('.js-actualites-section-wrapper').append(
       $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' .js-actualites-container a')
     );
 
@@ -142,23 +156,30 @@ $terms = get_terms('categories_actualites');
 
     $('.actualites-container').fadeOut(); // vire les anciens item 
 
-    var next_actucat_page = $(this).attr('href');
-    // alert(next_actucat_page);
+    var next_actucat_pageeee = $(this).attr('href');
+    console.log(next_actucat_pageeee);
 
 
     $('.reset-cta').css('display', 'flex');
+    console.log("reset-cta display flex")
 
     var newTexte = $(this).text();
     $('.reset-cta').text(newTexte);
+
+    console.log("newTexte")
 
     $('.filtres-types-a-filtre a').each(function() {
       $(this).removeClass('active');
     })
     $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
 
-    $('#js-actualites-section-wrapper').append(
-      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_page + ' #js-actualites-container a')
+    console.log("filtre actif")
+
+    $('.js-actualites-section-wrapper').append(
+      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_pageeee + ' .js-actualites-container a')
     );
+
+    console.log("contenu chargé")
 
   });
 </script>
@@ -182,7 +203,7 @@ $terms = get_terms('categories_actualites');
     })
     $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
 
-    $('#js-actualites-section-wrapper').append(
+    $('.js-actualites-section-wrapper').append(
       $('<div />').addClass('actualites-container actualites-container-fadeIn').load(urlcourante + ' .js-actualites-container a')
     );
 
