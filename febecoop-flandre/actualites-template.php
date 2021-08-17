@@ -7,7 +7,11 @@
  */
 get_header();
 
-// DIFFRENCE AVEC LE NL? LE "VOIR PLUS"
+// DIFFRENCE AVEC LE NL? LE "VOIR PLUS" EN MEER TONEN
+
+// Checker 
+// archive-actualites.php
+//taxonomy-categories_actualites.php
 
 // <!-- get the current taxonomy term -->
 $terms = get_terms('categories_actualites');
@@ -90,7 +94,9 @@ $terms = get_terms('categories_actualites');
       wp_reset_postdata(); ?>
 
       <?php
-      next_posts_link(('<span class="cta-a" id="loadmore-actu">Meer tonen</span>'), $loopActus->max_num_pages);
+      if($paged <= 1) {
+      next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
+      }
       ?>
 
     </div>
@@ -118,6 +124,7 @@ $terms = get_terms('categories_actualites');
     var next_actu_page = $(this).parent().attr('href');
 
 
+
     $('#js-actualites-section-wrapper').append(
       $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' .js-actualites-container a')
     );
@@ -135,6 +142,7 @@ $terms = get_terms('categories_actualites');
     $('.actualites-container').fadeOut(); // vire les anciens item 
 
     var next_actucat_page = $(this).attr('href');
+    // alert(next_actucat_page);
 
 
     $('.reset-cta').css('display', 'flex');
