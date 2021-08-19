@@ -283,6 +283,11 @@ $tab-nav-item-radio-size: 22px;
             display: none;
         }
     }
+    .with_frm_style .vertical_radio .frm_checkbox label, .with_frm_style .vertical_radio .frm_radio label {
+       @include laptopS {
+        margin-top: 16px;
+       }
+    }
 }
 
 #publication-form-section {
@@ -307,5 +312,18 @@ $tab-nav-item-radio-size: 22px;
                 }
             }
         }
+        .with_frm_style .vertical_radio .frm_checkbox label, .with_frm_style .vertical_radio .frm_radio label {
+            @include laptopS {
+                margin-top: 16px;
+               }
+        }
+    }
+}
+
+.single-publications{
+    .with_frm_style .vertical_radio .frm_checkbox label, .with_frm_style .vertical_radio .frm_radio label {
+        @include laptopS {
+            margin-top: 16px;
+           }
     }
 }

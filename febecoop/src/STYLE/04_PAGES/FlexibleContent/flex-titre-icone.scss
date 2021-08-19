@@ -3,7 +3,7 @@
     align-items: center;
     margin: $space-between-flex-items-d + $space-between-flex-items-m 0px $space-between-flex-items-t;
     @include laptopS {
-        margin: $space-between-flex-items-d * 3 0px $space-between-flex-items-l;
+        margin: $space-between-flex-items-d * 1 0px $space-between-flex-items-l;
     }
     h2 {
         @include hando-sb;

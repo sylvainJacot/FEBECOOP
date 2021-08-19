@@ -221,9 +221,9 @@ $flex-items-yMargins : 24px;
   overflow: hidden;
   margin-top: - $flex-items-yMargins !important;
 
-  > *:nth-last-child(2) {
-    margin-bottom: 0px;
-  }
+  // > *:nth-last-child(2) {
+  //   margin-bottom: 0px;
+  // }
 }
 
 @mixin introduction-a {
