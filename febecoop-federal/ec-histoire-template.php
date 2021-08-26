@@ -29,13 +29,10 @@ set_query_var('poo', $id);?>
 
 </main>
 
-<!-- SUCCESS STORIES ==============
-=========================== -->
-<?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-section');?>
-
 <!-- CONTACT BANNER ==============
 =========================== -->
-<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner"); ?>
+<?php get_template_part("../febecoop/src/TEMPLATES/ContactBanner/contact-banner-options-publiform"); ?>
+
 
 <?php
 get_footer();

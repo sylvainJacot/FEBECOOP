@@ -5,6 +5,9 @@
  * 
  */
  get_header();
+
+// DIFFERENCE AVEC LE FEDERAL, PAS DE SUCCESS STORIES EN BAS
+
 ?>
 
 <?php
