@@ -1,22 +1,18 @@
-<?php 
-        $link = get_field('footer_formulaires','options');
-        if( $link ): 
-            $link_url = $link['url'];
-            $link_title = $link['title'];
-            $link_target = $link['target'] ? $link['target'] : '_self';
-            ?>
-                        <a class="form-type-a-footer" href="mailto:<?php echo $link_url; ?>" target="<?php echo esc_attr($link_target); ?>">
-
 <?php
-$openspan = "<span>";
-$openmainttitle = str_replace('(*(', $openspan, $link_title);
-$closemainttitle = str_replace(')*)','</span>',$openmainttitle);
-echo $closemainttitle;
-?>
+        $label = get_field('footer_formulaires', 'options');
+        $link = get_field('footer_formulaire_lien', 'options');
+        ?>
+            <a class="form-type-a-footer"  href="mailto:<?php echo$link; ?>">
+
+                    <?php
+                    $openspan = "<span>";
+                    $openmainttitle = str_replace('(*(', $openspan, $label);
+                    $closemainttitle = str_replace(')*)','</span>',$openmainttitle);
+                    echo $closemainttitle;
+                    ?>
 
 
-</a>
-        <?php endif; ?>
+            </a>
 
 
     </div>

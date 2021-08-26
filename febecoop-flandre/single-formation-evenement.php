@@ -58,75 +58,73 @@ get_header();
 <section class="evenement-formation-single-section">
     <main class="evenement-formation-single-wrapper grid">
         <div class="evenement-formation-single-content generic-content">
-
-
-        <?php if ($date ) : ?>
-        <aside class="evenement-formation-single-content-details">
-            <?php if ($date ) : ?>
-                <p class="efscd-titre"><?php pll_e('Détail évènement');?></p>
-                <div class="efscd-liste-details">
-
-                    <?php if ($date) : ?>
-
-                        <div class="efscd-liste-detail-item">
-                            <span class="efscd-liste-detail-item-icone efscd-date-ic"></span>
-                            <p class="efscd-liste-detail-content">
-                                <?php the_field('ev_date'); ?>
-                            </p>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if ($date_details) : ?>
-                        <div class="efscd-liste-detail-item">
-                            <span class="efscd-liste-detail-item-icone efscd-date-details-ic"></span>
-                            <p class="efscd-liste-detail-content">
-                            <?php the_field('date_details'); ?>
-                            </p>
-                        </div>
-
-                        <?php endif; ?>
-
-
-                    <?php if ($place) : ?>
-                        <div class="efscd-liste-detail-item">
-                            <span class="efscd-liste-detail-item-icone efscd-place-ic"></span>
-                            <p class="efscd-liste-detail-content"><?php the_field('ev-localisation'); ?>
-                            </p>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if ($price) : ?>
-                        <div class="efscd-liste-detail-item">
-                            <span class="efscd-liste-detail-item-icone efscd-price-ic"></span>
-                            <p class="efscd-liste-detail-content"><?php the_field('ev-prix'); ?>
-                            </p>
-                        </div>
-                    <?php endif; ?>
-
-                </div>
-            <?php endif ?>
-            <div class="efscd-ctas">
-                <?php if ($date) { ?>
-                    <a class="cta-a" href="#formation-form-section"><?php pll_e("S'inscrire");?></a>
-
-                <?php } else {?>
-
-                    <a class="cta-a" href="#formation-form-section"><?php pll_e("S'informer");?></a>
-
-                <?php } ?>
-
-
-
-            </div>
-        </aside>
-        <?php endif; ?>
-
             <div class="evenement-formation-single-content-flex">
                 <!-- // START contenu_flexible -->
                 <?php get_template_part('./src/TEMPLATES/FlexibleContent/flex-main'); ?>
                 <?php get_template_part('./src/TEMPLATES/ShareSection/share-section-a');  ?>
                 <!-- END contenu_flexible -->
             </div>
+
+             <?php if ($date ) : ?>
+            <aside class="evenement-formation-single-content-details">
+                <?php if ($date ) : ?>
+                    <p class="efscd-titre"><?php pll_e('Détail évènement');?></p>
+                    <div class="efscd-liste-details">
+
+                        <?php if ($date) : ?>
+
+                            <div class="efscd-liste-detail-item">
+                                <span class="efscd-liste-detail-item-icone efscd-date-ic"></span>
+                                <p class="efscd-liste-detail-content">
+                                    <?php the_field('ev_date'); ?>
+                                </p>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if ($date_details) : ?>
+                            <div class="efscd-liste-detail-item">
+                                <span class="efscd-liste-detail-item-icone efscd-date-details-ic"></span>
+                                <p class="efscd-liste-detail-content">
+                                <?php the_field('date_details'); ?>
+                                </p>
+                            </div>
+
+                         <?php endif; ?>
+
+
+                        <?php if ($place) : ?>
+                            <div class="efscd-liste-detail-item">
+                                <span class="efscd-liste-detail-item-icone efscd-place-ic"></span>
+                                <p class="efscd-liste-detail-content"><?php the_field('ev-localisation'); ?>
+                                </p>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if ($price) : ?>
+                            <div class="efscd-liste-detail-item">
+                                <span class="efscd-liste-detail-item-icone efscd-price-ic"></span>
+                                <p class="efscd-liste-detail-content"><?php the_field('ev-prix'); ?>
+                                </p>
+                            </div>
+                        <?php endif; ?>
+
+                    </div>
+                <?php endif ?>
+                <div class="efscd-ctas">
+                    <?php if ($date) { ?>
+                        <a class="cta-a" href="#formation-form-section"><?php pll_e("S'inscrire");?></a>
+
+                    <?php } else {?>
+
+                        <a class="cta-a" href="#formation-form-section"><?php pll_e("S'informer");?></a>
+
+                    <?php } ?>
+
+
+
+                </div>
+            </aside>
+            <?php endif; ?>
 
         </div>
 
@@ -155,24 +153,21 @@ get_header();
         </div>
 
         <?php
-        $link = get_field('footer_formulaires', 'options');
-        if ($link) :
-            $link_url = $link['url'];
-            $link_title = $link['title'];
-            $link_target = $link['target'] ? $link['target'] : '_self';
+        $label = get_field('footer_formulaires', 'options');
+        $link = get_field('footer_formulaire_lien', 'options');
         ?>
-            <a class="form-type-a-footer"  href="mailto:<?php echo $link_url; ?>"  target="<?php echo esc_attr($link_target); ?>">
+            <a class="form-type-a-footer"  href="mailto:<?php echo$link; ?>">
 
                     <?php
                     $openspan = "<span>";
-                    $openmainttitle = str_replace('(*(', $openspan, $link_title);
+                    $openmainttitle = str_replace('(*(', $openspan, $label);
                     $closemainttitle = str_replace(')*)','</span>',$openmainttitle);
                     echo $closemainttitle;
                     ?>
 
 
             </a>
-        <?php endif; ?>
+
 
 
 
@@ -181,9 +176,7 @@ get_header();
 </section>
 <?php } else {;?>
 
-<!-- CONTACT BANNER ==============
-=========================== -->
-<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner-formation-single"); ?>
+<?php get_template_part( '../febecoop/src/TEMPLATES/ContactBanner/contact-banner-formation-single' );?>
 
 
 
