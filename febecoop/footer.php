@@ -123,6 +123,8 @@ if (document.body.classList.contains("publications-template-default")) {
 
 </script>
 
+<script src="<?php echo get_template_directory_uri() ?>/src/JS/ajax.js"></script>
+
 
 </body>
 

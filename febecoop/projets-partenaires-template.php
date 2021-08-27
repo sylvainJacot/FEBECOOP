@@ -58,63 +58,80 @@
 <!--PROJETS ACCOMPAGNES ==============
 =========================== -->
 <section class="projets-accompagnes-section projets-partenaires-section">
-<div class="projets-accompagnes-section-wrapper grid">
+    <div class="projets-accompagnes-section-wrapper grid">
+        <div class="actualites-container card-type-b-container js-actualites-container">
 
+        <?php
 
-<main 
-class="card-type-b-container"
-">
+        if ( get_query_var('paged') ) {
 
-<?php
-$loop = new WP_Query(
-    array(
-        'post_type' => 'projet-partenaires',
-        'orderby' => 'date',
-        'posts_per_page' => -1,
-    )
-);
-?>
+          $paged = get_query_var('paged');
+          
+          } elseif ( get_query_var('page') ) {
+          
+          $paged = get_query_var('page');
+          
+          } else {
+          
+             $paged = 1;
+          
+          }
 
-<?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-<a href="<?php the_permalink(); ?>" class="card-type-b-item">
-<div class="card-type-b-pic-wrapper">
-    <?php
-    $image = get_field('projet-image-hero');
-    if (!empty($image)) : ?>
-        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-    <?php endif; ?>
-</div>
-    <div class="card-type-b-content">
-        <p class="card-type-b-chapeau"><?php the_title() ?></p>
-        <?php if(get_field('projet-part-resume')) :?>
-        <p class="card-type-b-resume"><?php the_field('projet-part-resume') ?></p>
-        <?php else :?>
-
-        <?php if (have_rows('contenu-flexible')) : while (have_rows('contenu-flexible')) : the_row(); ?>   
-        <?php if(get_row_layout() == 'introduction-principale') : 
-
-        $txt = get_sub_field('introduction');
+        $loop = new WP_Query(
+            array(
+                'post_type' => 'projet-partenaires',
+                'orderby' => 'date',
+                'posts_per_page' => 6,
+                'paged' => $paged
+            )
+        );
         ?>
-        <p class="card-type-b-resume"><?php echo $txt;?></p>
 
-        <?php endif;?>
+        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+        <a href="<?php the_permalink(); ?>" class="card-type-b-item">
+            <div class="card-type-b-pic-wrapper">
+                <?php
+                $image = get_field('projet-image-hero');
+                if (!empty($image)) : ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
+            </div>
+            <div class="card-type-b-content">
+                <p class="card-type-b-chapeau"><?php the_title() ?></p>
+                <?php if(get_field('projet-part-resume')) :?>
+                <p class="card-type-b-resume"><?php the_field('projet-part-resume') ?></p>
+                <?php else :?>
+
+                <?php if (have_rows('contenu-flexible')) : while (have_rows('contenu-flexible')) : the_row(); ?>   
+                <?php if(get_row_layout() == 'introduction-principale') : 
+
+                $txt = get_sub_field('introduction');
+                ?>
+                <p class="card-type-b-resume"><?php echo $txt;?></p>
+
+                <?php endif;?>
+                <?php endwhile;
+                endif; ?>
+                <?php endif;?>
+                <p class="cta-c"><span><?php pll_e('Lire plus');?></span></p>
+            </div>
+        </a>
+
         <?php endwhile;
-        endif; ?>
-        <?php endif;?>
-        <p class="cta-c"><span><?php pll_e('Lire plus');?></span></p>
+        wp_reset_postdata(); ?>
+
+
+
+        <?php 
+        if($paged >= 1) {
+        next_posts_link(('<span class="cta-a" id="loadmore-actu">'.pll__('Voir plus').'</span>'), $loop->max_num_pages);
+        }
+        ?>
+
+
+        </div>
     </div>
-</a>
-
-<?php endwhile;
-wp_reset_query(); ?>
-
-</main>
-
-
-        <!-- <a class="cta-a" id="js-load-more">Load more</a> -->
-
-</div>
 </section>
 
 

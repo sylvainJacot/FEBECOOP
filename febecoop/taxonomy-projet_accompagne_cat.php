@@ -78,22 +78,8 @@ $pa_terms = get_terms('projet_accompagne_cat');
 
         <main class="card-type-b-container card-projet-accompagnes-container card-projet-accompagnes-container-fadeIn" id="js-card-type-b-container">
 
-            <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            $args =
-                array(
-                    'post_type' => 'projet-accompagnes',
-                    'status' => 'published',
-                    'posts_per_page' => 3,
-                    'orderby'    => 'post_date',
-                    'order'         => 'DESC',
-                    'paged' => $paged
-                );
-            $loopProjetsAcc = new WP_Query($args);
-            ?>
-
-            <?php if ($loopProjetsAcc->have_posts()) : ?>
-                <?php while ($loopProjetsAcc->have_posts()) : $loopProjetsAcc->the_post(); ?>
+              <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
                     <a href="<?php the_permalink(); ?>" class="card-type-b-item">
                         <div class="card-type-b-pic-wrapper">
                             <?php
@@ -124,15 +110,8 @@ $pa_terms = get_terms('projet_accompagne_cat');
                     </a>
 
                 <?php endwhile; ?>
-
-
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
-
-            <?php
-                if($paged <=  1) {
+            <?php endif; 
                 next_posts_link(('<span class="cta-a" id="loadmore-projetsacc">Voir plus</span>'), $loopProjetsAcc->max_num_pages);
-                }
             ?>
 
         </main>
@@ -144,89 +123,12 @@ $pa_terms = get_terms('projet_accompagne_cat');
 
 </section>
 
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-
-
 <!-- CONTACT BANNER ==============
 =========================== -->
 <?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner"); ?>
 
 
-<!-- LOAD MORE -->
-<script>
-    $('#js-projets-accompagnes-section-wrapper').on('click', '#loadmore-projetsacc', function(e) {
 
-        e.preventDefault();
-
-        $(this).parent().fadeOut();
-
-        var next_actu_page = $(this).parent().attr('href');
-
-
-        $('#js-projets-accompagnes-section-wrapper').append(
-            $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(next_actu_page + ' .card-type-b-container a')
-        );
-
-    });
-</script>
-
-<!-- FILTRES -->
-<script>
-    $('.filtres-types-a-filtre-link').click(function(e) {
-
-        e.preventDefault(); // annule effet ou autre sur le clic
-
-        $('.card-type-b-container').fadeOut(); // vire les anciens item 
-
-        var next_actucat_page = $(this).attr('href');
-        alert(next_actucat_page);
- 
-
-        $('.reset-cta').css('display', 'flex');
-
-        var newTexte = $(this).text();
-        $('.reset-cta').text(newTexte);
- 
-
-        $('.filtres-types-a-filtre-link').each(function() {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
-
-        $('#js-projets-accompagnes-section-wrapper').append(
-            $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(next_actucat_page + ' .card-type-b-container a')
-        );
-
-    });
-</script>
-
-
-<!-- FILTRES EFFACER -->
-<script>
-    $('.reset-cta').click(function(e) {
-
-        e.preventDefault(); // annule effet ou autre sur le clic
-
-        $('.card-type-b-container').fadeOut(); // vire les anciens item 
-
-        var urlcourante = document.location.href; 
-        var next_actucat_page = $(this).attr('href');
- 
-        $(this).css('display', 'none');
-
-        $('.filtres-types-a-filtre-link').each(function() {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
-
-        $('#js-projets-accompagnes-section-wrapper').append(
-            $('<main />').addClass('card-type-b-container card-projet-accompagnes-container-fadeIn').load(urlcourante + ' .card-type-b-container a')
-        );
-
-    });
-</script>
 
 
 <?php

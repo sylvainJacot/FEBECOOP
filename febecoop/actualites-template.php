@@ -111,7 +111,7 @@ $terms = get_terms('categories_actualites');
 
       <?php
       if($paged >= 1) {
-      next_posts_link(('<span class="cta-a" id="loadmore-actu">Voir plus</span>'), $loopActus->max_num_pages);
+      next_posts_link(('<span class="cta-a" id="loadmore-actu">'.pll__('Voir plus').'</span>'), $loopActus->max_num_pages);
       }
       ?>
 
@@ -121,99 +121,9 @@ $terms = get_terms('categories_actualites');
 
 </section>
 
-
 <!-- CONTACT BANNER ==============
 =========================== -->
 <?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner"); ?>
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-<!-- LOAD MORE -->
-<script>
-  $('.js-actualites-section-wrapper').on('click', '#loadmore-actu', function(e) {
-
-    e.preventDefault();
-
-    $(this).parent().fadeOut();
-
-    var next_actu_page = $(this).parent().attr('href');
-    console.log(next_actu_page);
-
-    $('.js-actualites-section-wrapper').append(
-      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actu_page + ' .js-actualites-container a')
-    );
-
-  });
-</script>
- 
-
-<!-- FILTRES -->
-<script>
-  $('.filtres-types-a-filtre a').click(function(e) {
-
-    e.preventDefault(); // annule effet ou autre sur le clic
-
-    $('.actualites-container').fadeOut(); // vire les anciens item 
-
-    var next_actucat_pageeee = $(this).attr('href');
-    console.log(next_actucat_pageeee);
-
-
-    $('.reset-cta').css('display', 'flex');
-    console.log("reset-cta display flex")
-
-    var newTexte = $(this).text();
-    $('.reset-cta').text(newTexte);
-
-    console.log("newTexte")
-
-    $('.filtres-types-a-filtre a').each(function() {
-      $(this).removeClass('active');
-    })
-    $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
-
-    console.log("filtre actif")
-
-    $('.js-actualites-section-wrapper').append(
-      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(next_actucat_pageeee + ' .js-actualites-container a')
-    );
-
-    console.log("contenu chargé")
-
-  });
-</script>
-
-
-<!-- FILTRES EFFACER-->
-<script>
-  $('.reset-cta').click(function(e) {
-
-    e.preventDefault(); // annule effet ou autre sur le clic
-
-    $('.actualites-container').fadeOut(); // vire les anciens item 
-
-    var urlcourante = document.location.href; 
-    var next_actucat_page = $(this).attr('href');
-
-    $(this).css('display', 'none');
-
-    $('.filtres-types-a-filtre a').each(function() {
-      $(this).removeClass('active');
-    })
-    $(this).addClass('active'); // supprimer la classe active du vieux et met sur le nouveau
-
-    $('.js-actualites-section-wrapper').append(
-      $('<div />').addClass('actualites-container actualites-container-fadeIn').load(urlcourante + ' .js-actualites-container a')
-    );
-
-  });
-</script>
-
-
-
-
-
 
 <?php
 get_footer();
