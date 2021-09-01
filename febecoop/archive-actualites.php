@@ -74,7 +74,7 @@ $terms = get_terms('categories_actualites');
         array(
           'post_type' => 'actualites',
           'status' => 'published',
-          'posts_per_page' => 6,
+          'posts_per_page' => 18,
           'orderby'  => 'post_date',
           'order'         => 'DESC',
           'paged' => $paged

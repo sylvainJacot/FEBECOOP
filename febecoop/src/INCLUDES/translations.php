@@ -14,7 +14,7 @@ if (function_exists('pll_register_string')) {
     pll_register_string('Version papier', 'Version papier', 'febecoop', true);
     pll_register_string('Version digitale', 'Version digitale', 'febecoop', true);
     pll_register_string('S’inscrire à l’événement/formation', 'S’inscrire à l’événement/formation', 'febecoop', true);
-    pll_register_string("L'entreprenariat coopératif", "S’inscrire à l’événement/formation", 'febecoop', true);
+    pll_register_string("L'entrepreneuriat coopératif", "L'entrepreneuriat coopératif", 'febecoop', true);
     pll_register_string('Notes pratiques & outils', 'Notes pratiques & outils', 'febecoop', true);
     pll_register_string("Sur le terrain", "Sur le terrain", 'febecoop', true);
     pll_register_string("Tous les outils et notes pratiques", "Tous les outils et notes pratiques", 'febecoop', true);

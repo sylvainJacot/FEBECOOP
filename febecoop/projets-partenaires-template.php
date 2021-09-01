@@ -81,7 +81,7 @@
             array(
                 'post_type' => 'projet-partenaires',
                 'orderby' => 'date',
-                'posts_per_page' => 6,
+                'posts_per_page' => -1,
                 'paged' => $paged
             )
         );

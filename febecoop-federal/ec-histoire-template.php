@@ -17,7 +17,7 @@ set_query_var('poo', $id);?>
     <!-- ASIDE flexible ==============
 =========================== -->
 <aside class="entreprenarit-coop-aside">
-        <div class="ec-title"><?php pll_e("L'enprenariat coopératif");?></div>
+<div class="ec-title"><?php pll_e("L'entrepreneuriat coopératif");?></div>
 
         <ul class="ec-wrapper">
         <li><a href="<?php echo esc_url(home_url('/')); ?>introduction" class="cta-c"><span><?php pll_e('Introduction');?></span></a></li>
