@@ -176,7 +176,16 @@ get_header();
     wp_reset_postdata(); ?>
 <?php endif; ?>
 
-        <a class="cta-d" id="prise-pos-fede-cta"><span><?php pll_e('Toutes les prises de positions');?></span></a>
+        <!-- <a class="cta-d" id="prise-pos-fede-cta"><span><?php pll_e('Toutes les prises de positions');?></span></a> -->
+                <?php 
+        $link = get_field('bouton_prises_de_positions');
+        if( $link ): 
+            $link_url = $link['url'];
+            $link_title = $link['title'];
+            $link_target = $link['target'] ? $link['target'] : '_self';
+            ?>
+            <a class="cta-d" id="prise-pos-fede-cta" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><span><?php echo esc_html( $link_title ); ?></span></a>
+        <?php endif; ?>
     </div>
 </section>
 

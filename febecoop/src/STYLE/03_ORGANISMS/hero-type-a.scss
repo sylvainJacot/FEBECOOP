@@ -253,3 +253,27 @@
         }
     }
 }
+
+.hero-section-type-a-landing {
+    .orange-wave-container, .hero-section-type-a-flandre .orange-wave-container {
+        @include laptopS {
+            width: 1480px;
+            bottom: unset;         
+            top: -80px;
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5) translateX(70px);
+
+        }
+        @include laptopL {
+            top: -160px;
+            transform: scale(1.2) translateX(0px);
+        }
+            @media (min-width:1600px) {
+                top: 130px;
+                transform: scale(1.8) translateX(120px) rotate(5deg);
+            }
+                @media (min-width:1875px) {
+                    transform: scale(1.8) translateX(260px) rotate(5deg);
+                }
+    }
+}

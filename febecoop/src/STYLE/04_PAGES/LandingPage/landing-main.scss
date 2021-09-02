@@ -1,0 +1,202 @@
+@import"./landing-hero.scss";
+@import"./landing-header.scss";
+@import"./landing-footer.scss";
+
+.section_landing-main {
+    padding-bottom: 126px;
+    @include tablet {
+        padding-bottom: 173px;
+    }
+    @include laptopL {
+        padding-bottom: 245px;
+    }
+    .section_landing-main-grid {
+
+        > h1 {
+            display: block;
+            @include hando-sb;
+            color: $white;
+            font-size: 22px;
+            line-height: 28px;
+            text-align: center;          
+             margin: 100px auto;
+
+            @include tablet {
+                font-size: 24px;
+                line-height: 30px;
+                margin: 150px auto;
+                width: 14 * $tCol;
+            }
+
+            @include laptopS {
+                font-size: 28px;
+                line-height: 40px;
+                margin: 80px auto;
+                width: 15 * $lCol;
+            }
+
+            @include laptopL {
+                font-size: 30px;
+                line-height: 42px;
+                width: 13 * $dCol;
+            }
+        }
+
+        .slm-cards-wrapper {
+            margin-top: 72px;
+            @include tablet {
+                border-radius: 8px;
+                background: $white;
+            }
+            @include tablet {
+                @include shadow-b-nopic;
+                // padding: 0px 2 * $tCol;
+            }
+            @include laptopS {
+                display: flex;
+                padding: 96px 0px;
+            }
+            @include laptopL {
+
+            }
+            .slm-card-item{
+                display: block;
+                border-radius: 8px;
+                width: 100%;
+                background: $white;
+                padding: 40px $mCol;
+                margin-bottom: 32px;
+                @include shadow-a-nopic;
+                position: relative;
+                &:not(:last-child){
+                    &:after {
+                        display: none;
+                        @include tablet {
+                            @include bottom-divider-pseudo-el;
+                            width: calc(100% - 4 * #{$tCol});
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        @include laptopS {
+                            left: unset;
+                            transform: unset;
+                            width: 1px;
+                            height: 100%;
+                            right: 0;
+                        }
+                    }
+                }
+
+                @include tablet{
+                    padding: 40px 0px 48px 0px;
+                    box-shadow: none;
+                }
+                @include laptopS {
+                    margin-bottom: 0px;
+                    padding: 0px $lCol;
+                }
+                @include laptopL {
+                    padding: 0px $dCol;
+                }
+                &:first-child {
+                    @include tablet {
+                        padding-top: 80px;
+                    }
+                    @include laptopS {
+                        padding: 0px $lCol;
+                    }
+                    @include laptopL {
+                        padding: 0px $dCol;
+                    }
+                }
+                &:last-child {
+                    @include tablet {
+                        padding-bottom: 80px;
+                    }
+                    @include laptopS {
+                        padding: 0px $lCol;
+                    }
+                    @include laptopL {
+                        padding: 0px $dCol;
+                    }
+                }
+
+                .slm-card-item-content {
+                    @include tablet {
+                        width:100%;
+                        padding: 0 2 * $tCol;
+                    }
+                    @include laptopS {
+                        width: unset;
+                        padding: 0px;
+                    }
+                    > h2 {
+                        @include hando-xb;
+                        color: $blue-1;
+                        font-size: 20px;
+                        line-height: 24px;
+                        width: 5 * $mCol;
+                        @include tablet {
+                            width: 11 * $tCol;
+                            margin: 0;
+                            // padding-left: 4 * $tCol - 20px;
+                        }
+                        @include laptopS {
+                            width: unset;
+                            padding: 0px;
+                            font-size: 23px;
+                            line-height: 27.6px;
+                        }
+                    }
+                    .slm-card-item-content-desc {
+                        margin: 32px 0px;
+                        @include hando-l;
+                        color: $blue-2;
+                        font-size: 13px;
+                        line-height: 23px;
+                        @include tracking(25);
+                        @include tablet {
+                            line-height: 25px;
+                            margin: 16px 0 32px 0px;
+                        }
+                        @include laptopS {
+                            margin: 32px 0 40px 0px;
+                            margin-bottom: 96px;
+                        }
+                        @include laptopL {
+                            font-size: 14px;
+                            line-height: 26.62px;
+                        }
+                    }
+                    .cta-b {
+                        @include laptopS {
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+                &:nth-child(1) {
+                    .slm-card-item-content {
+                    h2 {
+                       color: $blue-3;
+                   }
+                }
+               }
+               &:nth-child(2) {
+                .slm-card-item-content {
+                    h2 {
+                       color: $red-2;
+                   }
+                }
+               }
+               &:nth-child(3) {
+                .slm-card-item-content {
+                    h2 {
+                       color: $yellow-1;
+                   }
+                }
+               }
+            }
+        }
+    }
+}
