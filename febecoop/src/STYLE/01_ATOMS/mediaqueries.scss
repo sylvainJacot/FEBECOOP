@@ -11,3 +11,9 @@
 @mixin laptopVL {
     @media (min-width: 1800px) { @content; }
 }
+
+@mixin firefox {
+    @-moz-document url-prefix() {
+        @content;
+    }
+}

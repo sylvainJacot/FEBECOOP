@@ -31,7 +31,7 @@
                 <?php the_field('texte', 'options');?>
             </h2>
 
-            <a href="<?php echo esc_url(home_url('/')); ?>" class="cta-a"><?php pll_e("Page d'acceuil");?></a>
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="cta-a">Home</a>
 
             </div>
 

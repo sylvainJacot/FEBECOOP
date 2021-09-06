@@ -154,3 +154,120 @@
             }
     }
 }
+
+.menu-lang-landing {
+    display: flex;
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    background: $white;
+    margin-top: 0;
+    position: relative;
+    transform: translateY(2px);
+
+    a {
+        &:hover {
+            color: $orange-1 !important;
+        }
+    }
+
+    &:before {
+        display: block;
+        position: absolute;
+        content: "";
+        background: $blue-light-2;
+        top: 50%;
+        height: 32px;
+        width: 1px;
+        left: -16px;
+        transform: translateY(-50%);
+    }
+        > a {
+            position: relative;
+            display: block;
+            font-family: "Hando b" !important;
+            font-size: 13px !important;
+            line-height: 16px !important;
+            letter-spacing: 0.1em;
+            color: $blue-1 !important;
+
+            @include laptopS {
+                font-family: "Hando b" !important;
+                font-size: 13px !important;
+                line-height: 16px !important;
+                letter-spacing: 0.1em;
+                color: $blue-1 !important;
+            }
+            &:after {
+                display: block;
+                position: absolute;
+                content: "";
+                width: 6px;
+                height: 6px;
+                background: url("../ASSETS/IMAGES/common/VECTOR/simple-arrow-orange.svg") center no-repeat;
+                background-size: contain;
+                right: 8px;
+                top: calc(50% - 1px);
+                transform: translateY(-50%) rotate(-90deg);
+                @include trans-a(0.1s);
+            }
+
+            &:before {
+                display: none;
+            }
+        }
+        ul {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: $white;
+            z-index: 99;
+            flex-direction: column;
+            top: 100%;
+            @include trans-a;
+            @include close-dropdown-container;
+
+            
+            li {
+                 @include close-dropdownItem;    
+                
+                  a {
+                   display: block;
+                   color: $blue-1;
+                   font-family: "Hando b" !important;
+                   font-size: 13px !important;
+                   line-height: 16px !important;
+                   letter-spacing: 0.1em;
+                   color: $blue-1 !important;
+       
+                   @include laptopS {
+                       font-family: "Hando b" !important;
+                       font-size: 13px !important;
+                       line-height: 16px !important;
+                       letter-spacing: 0.1em;
+                       color: $blue-1 !important;
+                   }
+                 }
+            }
+        }
+        &:hover {
+
+            > a {
+                &:after {
+                    transform: translateY(-50%) rotate(0deg);
+                    @include trans-a(0.1s);
+                }
+            }
+
+            ul {
+                // max-height: 800px;
+                // @include trans-a;
+                @include open-dropdown-container;
+                margin-top: 0 !important;
+
+                li {
+                    @include open-dropdownItem; 
+                }
+            }
+        }
+}

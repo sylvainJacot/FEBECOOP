@@ -388,6 +388,7 @@ header {
             }
         }
 
+
         .header-second-section-mobile {
             display: block;
             position: fixed;
@@ -608,6 +609,9 @@ header {
             }
         }
     }
+    .header-wrapper-landing {
+        padding: 8px 0px !important;
+    }
 
 }
 
@@ -669,4 +673,12 @@ header {
         top: 10px;
         transform: rotate(-45deg);
       }
+}
+
+
+
+.header-first-section-landing {
+    @include laptopS  {
+        width: 100% !important;
+    }
 }

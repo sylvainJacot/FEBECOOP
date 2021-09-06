@@ -94,24 +94,23 @@ if (empty($meta_description)) {
 <body <?php body_class(''); ?> class="body-active">
 
     <header id="js-header">
-        <div class="header-wrapper">
-            <div class="header-first-section grid">
+        <div class="header-wrapper header-wrapper-landing">
+            <div class="header-first-section  header-first-section-landing grid">
                 <a id="Febecoop-logo" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/common/VECTOR/logo_Febecoop.svg" alt="Febecoop logo" /></a>
 
 
 
-            <div class="menu-lang menu-lang-laptop" id="js-menu-lang">
-                <?php 
-                $languages = pll_the_languages(array('raw' => 1)); ?>
-                <a href="#"><?php echo pll_current_language(); ?><?php get_template_part( '/src/assets/images/common/svg/icons/arrow' );?></a>
+            <div class="menu-lang menu-lang-laptop menu-lang-landing" id="js-menu-lang">
+
+            <? $lang = get_field('lang');?>                                                                                
+            <a href="#"><?php echo $lang; ?><?php get_template_part( '/src/assets/images/common/svg/icons/arrow' );?></a>
                 <ul>
-                    <?php
-                    foreach ($languages as $lang) :
-                    if($lang['slug'] != pll_current_language()):
-                        echo '<li><a href ="' . $lang['url'] .'" hreflang = "' . $lang['slug'] . '">' . $lang['slug'] . '</a></li>';
-                    endif;
-                    endforeach;
-                    ?>
+                    <li>
+                        <? if ($lang === "fr") : ?>
+                        <a href="https://dev.atelierdesign.be/FEBECOOP-MULTI/landing/?page_id=45">nl</a></li>
+                        <? else : ?>
+                        <a href="https://dev.atelierdesign.be/FEBECOOP-MULTI/landing/">fr</a></li>   
+                        <? endif ?> 
                 </ul>
             </div>
 

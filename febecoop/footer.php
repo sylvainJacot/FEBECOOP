@@ -75,6 +75,7 @@
 
             </div>
 
+            <? if (have_rows('reseaux_sociaux', 'option')) : ?>
             <div class="footer-socials">
                 <p class="social-titre"><?php the_field('social-titre', 'option'); ?></p>
                 <div class="footer-socials-wrapper">
@@ -83,6 +84,7 @@
                     <?php endwhile; ?>
                 </div>
             </div>
+            <? endif ?>
         </div>
 
         <div class="autres-sites-febecoop">

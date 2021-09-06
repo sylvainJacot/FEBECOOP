@@ -44,6 +44,7 @@ get_header();
 
 <!-- MAIN ==============
 =========================== -->
+<span class="anchor" id="intro-section"></span>
 <section class="section_landing-main">
 <div class="section_landing-main-grid grid">
 
