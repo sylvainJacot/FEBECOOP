@@ -17,12 +17,30 @@ set_query_var('poo', $id);?>
     <!-- ASIDE flexible ==============
 =========================== -->
 <aside class="entreprenarit-coop-aside">
-        <div class="ec-title"><?php pll_e("L'enprenariat coopératif");?></div>
+        <div class="ec-title"><?php pll_e("L'entrepreneuriat coopératif");?></div>
 
-        <ul class="ec-wrapper">
+        <!-- <ul class="ec-wrapper">
         <li><a href="<?php echo esc_url(home_url('/')); ?>introduction" class="cta-c"><span><?php pll_e('Introduction');?></span></a></li>
         <li><a href="<?php echo esc_url(home_url('/')); ?>histoire" class="cta-c"><span><?php pll_e('Histoire');?></span></a></li>
-        </ul>
+        </ul> -->
+
+        <?php
+        $featured_posts = get_field('related_pages');
+        if( $featured_posts ): ?>
+            <ul class="ec-wrapper">
+            <?php foreach( $featured_posts as $post ): 
+
+                // Setup this post for WP functions (variable must be named $post).
+                setup_postdata($post); ?>
+                <li>
+                    <a href="<?php the_permalink(); ?>" class="cta-c"><span><?php the_title(); ?></span></a>
+                </li>
+            <?php endforeach; ?>
+            </ul>
+            <?php 
+            // Reset the global post object so that the rest of the page works correctly.
+            wp_reset_postdata(); ?>
+        <?php endif; ?>
 
 
     </aside>

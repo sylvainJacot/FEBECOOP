@@ -10,7 +10,7 @@
     <div class="hero-section-type-b-wrapper grid">
         <div class="hero-section-type-b-content">
             <div class="hero-section-type-b-content-text">
-            <p class="hero-section-type-b-content-toptitle"><?php pll_e("L'entreprenariat coopératif");?></p>
+            <p class="hero-section-type-b-content-toptitle"><?php pll_e("L'entrepreneuriat coopératif");?></p>
             <h1><span>
                 <?php if ( get_field('titre_hero') ) : 
                     $maintitle = get_field('titre_hero'); 

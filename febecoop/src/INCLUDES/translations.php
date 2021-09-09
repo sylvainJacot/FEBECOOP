@@ -25,9 +25,9 @@ if (function_exists('pll_register_string')) {
     pll_register_string("Page d'accueil", "Page d'accueil", 'febecoop', true);
     pll_register_string("Accompagnements & conseils", "Accompagnements & conseils", 'febecoop', true);
     pll_register_string("L'enprenariat coopératif", "L'enprenariat coopératif", 'febecoop', true);
-    pll_register_string('Introduction', 'Introduction', 'febecoop', true);
-    pll_register_string('Les 7 principes', 'Les 7 principes', 'febecoop', true);
-    pll_register_string('Histoire', 'Histoire', 'febecoop', true);
+    // pll_register_string('Introduction', 'Introduction', 'febecoop', true);
+    // pll_register_string('Les 7 principes', 'Les 7 principes', 'febecoop', true);
+    // pll_register_string('Histoire', 'Histoire', 'febecoop', true);
     pll_register_string('À propos', 'À propos', 'febecoop', true);
     pll_register_string('Réalisé par AD', 'Réalisé par AD', 'febecoop', true);
     pll_register_string('Découvrez le programme', 'Découvrez le programme', 'febecoop', true);
@@ -76,5 +76,6 @@ if (function_exists('pll_register_string')) {
     pll_register_string("1 item trouvé", "1 item trouvé", 'febecoop', true);
     pll_register_string(" items trouvés", " items trouvés", 'febecoop', true);
     pll_register_string("xyz", "xyz", 'febecoop', true);
-    
+    pll_register_string("Page d'acceuil", "Page d'acceuil", 'febecoop', true);
+     
 }
