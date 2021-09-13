@@ -176,5 +176,35 @@ get_header();
         ?>
 
 
+<script type="text/javascript">
+
+// WALLONIE
+// Digi gratuit
+var input = document.getElementById("field_6702i");
+// Digi payant
+var input2 = document.getElementById("field_mgmpa");
+// Papier gratuit
+var input3 = document.getElementById("field_941i4");
+// Papier payant
+var input4 = document.getElementById("field_23s3i");
+
+
+if(input) {
+    input.setAttribute('value','<?php the_title(); ?>');
+}
+
+if(input2) {
+    input2.setAttribute('value','<?php the_title(); ?>');
+}
+if(input3) {
+    input3.setAttribute('value','<?php the_title(); ?>');
+}
+if(input4) {
+    input4.setAttribute('value','<?php the_title(); ?>');
+}
+
+
+</script>
+
         
 <?php get_footer(); ?>
