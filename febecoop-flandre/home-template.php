@@ -10,7 +10,7 @@ get_header();
 
 <!-- HERO SECTION ==============
 =========================== -->
-<div class="overflow-x" style="overflow-x: hidden;">
+<div class="overflow-x" >
 <?php get_template_part("./src/TEMPLATES/Hero-Flandre/hero-type-a-flandre"); ?>
 
 <!-- DERNIERES ACTUALITES ==============

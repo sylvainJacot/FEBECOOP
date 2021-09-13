@@ -59,7 +59,17 @@ get_header();
         ?>
         <a href="<? the_sub_field('bouton'); ?>"class="slm-card-item">
         <div class="slm-card-item-content">
-                            <h2><? the_sub_field('titre'); ?></h2>
+
+
+
+                            <h2>        
+                            <?php if (get_sub_field('titre')) :
+                $maintitle = get_sub_field('titre');
+                $openmainttitle = str_replace('*break*', '<br/>', $maintitle);
+                echo $openmainttitle;
+            else : the_title();
+            endif; ?>
+                             </h2>
                             <p class="slm-card-item-content-desc"><? the_sub_field('description'); ?></p>
                             <p class="cta-b">Aller vers le site</p>
                         </div>    

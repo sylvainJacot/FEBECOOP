@@ -194,6 +194,13 @@
             transform: translateX(-50px);
             top: -210px;
         }
+        @media (min-width:1900px) {
+            width: 2530px;
+            transform: translateX(-60px) rotate(
+                10deg
+                );
+           top: -240px;
+        }
     }
     .hero-section-type-a-content {
                 h1 {
