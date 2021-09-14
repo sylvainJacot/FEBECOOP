@@ -82,7 +82,7 @@ $terms = get_terms( array(
     <!-- ON RECUPERE LES POSTS EN FONCTION DE LA CATEGORY COURANTE -->
         <?php
         $thiscat = get_queried_object_id();
-        $loopNotesOutils = new WP_Query(
+        $loopNotesOutils = new WP_Query( 
             array(
                 'post_type' => 'veelgestelde-vragen',
                 'status' => 'published',
@@ -273,13 +273,12 @@ foreach ($terms as $term) : ?>
         var filterText = $(this).text();
         var filterTextCleaned = filterText.replace(/\s/g,"-");
 
-        
+
         // URL VERSION EN LIGNE
-        var newUrl = RacineSiteRecuperee + '/outils_notes_category/' + variableRecuperee + '/' + '?tags_vragen=' + filterTextCleaned;
+        var newUrl = RacineSiteRecuperee + '/vragen_categorie/' + variableRecuperee + '/' + '?tags_vragen=' + filterTextCleaned;
 
         // URL POUR LOCAL
-        // var newUrl = urlRacine +  '/outils_notes_category/' + variableRecuperee + '/' + '?tags_vragen=' + filterText;
-
+        // var newUrl = urlRacine +  '/vragen_categorie/' + variableRecuperee + '/' + '?tags_vragen=' + filterText;
 
         var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
         ;
@@ -357,10 +356,10 @@ foreach ($terms as $term) : ?>
         var filterTextCleaned = filterText.replace(/\s/g,"-");
         
         // URL VERSION EN LIGNE
-        var newUrl = RacineSiteRecuperee + '/outils_notes_category/' + variableRecuperee + '/' + '?tags_vragen=' + filterTextCleaned;
+        var newUrl = RacineSiteRecuperee + '/vragen_categorie/' + variableRecuperee + '/' + '?tags_vragen=' + filterTextCleaned;
         
         // URL POUR LOCAL
-        // var newUrl = urlRacine +  '/outils_notes_category/' + variableRecuperee + '/' + '?tags_vragen=' + filterText;
+        // var newUrl = urlRacine +  '/vragen_categorie/' + variableRecuperee + '/' + '?tags_vragen=' + filterText;
 
         var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
 

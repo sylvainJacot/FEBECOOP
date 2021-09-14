@@ -280,7 +280,6 @@ foreach ($terms as $term) : ?>
         // URL POUR LOCAL
         // var newUrl = urlRacine +  '/outils_notes_category/' + variableRecuperee + '/' + '?tags_notes_outils=' + filterText;
 
-
         var next_page = $(this).attr('href'); // recuperer lien de la page a afficher
         ;
 

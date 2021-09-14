@@ -58,7 +58,7 @@
 =========================== -->
 <section class="categories-outils-notes-section">
 <div class="categories-outils-notes-section-wrapper grid">
-<?php get_template_part( './src/TEMPLATES/OutilsNote/outils-notes-category' );?>
+<?php get_template_part( './src/TEMPLATES/OutilsNote/vragen_categorie' );?>
 </div>
 </section>
 
