@@ -503,8 +503,8 @@ header {
                 }
 
                 .top-nav-section {
-                    .menu-header-top-menu-container {
-                        #menu-header-top-menu {
+                    > div {
+                        > ul {
                             @include tablet {
                                 width: 7 * $tCol;
                             }

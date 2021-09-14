@@ -69,7 +69,7 @@ get_header();
             <?php
 
             $args = array(
-                'post_type' => 'publications',
+                'post_type' => 'publicaties',
                 'posts_per_page' => -1,
                 'orderby' => 'date',
                 'paged' => $paged,

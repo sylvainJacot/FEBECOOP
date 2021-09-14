@@ -63,11 +63,25 @@ echo pll_e("actualites");
 echo '</p>';
 break;
 
+
+case "nieuwsfeed";
+echo '<p class="search-result-item_tag" id="tag-actualites">'; 
+echo pll_e("actualites");  
+echo '</p>';
+break;
+
 case "publications";
 echo '<p class="search-result-item_tag" id="tag-publications">';
 echo pll_e("publications");  
 echo '</p>';
 break;
+
+case "praktijkverhaal";
+echo '<p class="search-result-item_tag" id="tag-projet-accompagnes">';
+echo pll_e("projets accompagnés");  
+echo '</p>';
+break;
+
 
 case "projet-accompagnes";
 echo '<p class="search-result-item_tag" id="tag-projet-accompagnes">';
@@ -93,7 +107,19 @@ echo pll_e("formation-evenement");
 echo '</p>';
 break;
 
+case "workshops-en-events";
+echo '<p class="search-result-item_tag" id="tag-formation-evenement">';
+echo pll_e("formation-evenement");  
+echo '</p>';
+break;
+
 case "domaines-expertises";
+echo '<p class="search-result-item_tag" id="tag-domaines-expertises">';
+echo pll_e("domaines-expertises");  
+echo '</p>';
+break;
+
+case "kenniscentrum";
 echo '<p class="search-result-item_tag" id="tag-domaines-expertises">';
 echo pll_e("domaines-expertises");  
 echo '</p>';

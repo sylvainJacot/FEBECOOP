@@ -24,7 +24,7 @@ function remove_tiny_mce_buttons_from_editor( $buttons ) {
         // 'forecolor', // text color
         'spellchecker',
         'dfw', // distraction free writing mode
-        'wp_adv', // kitchen sink toggle (if removed, kitchen sink will always display)
+        // 'wp_adv', // kitchen sink toggle (if removed, kitchen sink will always display)
     );
     foreach ( $buttons as $button_key => $button_value ) {
         if ( in_array( $button_value, $remove_buttons ) ) {
@@ -43,7 +43,7 @@ function remove_tiny_mce_buttons_from_kitchen_sink( $buttons ) {
         'alignjustify',
         'forecolor', // text color
         'pastetext', // paste as text
-        'removeformat', // clear formatting
+        // 'removeformat', // clear formatting
         'charmap', // special characters
         'outdent',
         'indent',

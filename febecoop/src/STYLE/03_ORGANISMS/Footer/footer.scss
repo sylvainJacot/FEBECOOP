@@ -293,7 +293,7 @@ footer {
             &::after {
                 display: none;
             }
-            .menu-footer-bottom-menu-container {
+            > div {
                 ul{
                     display: flex;
                     flex-direction: column;

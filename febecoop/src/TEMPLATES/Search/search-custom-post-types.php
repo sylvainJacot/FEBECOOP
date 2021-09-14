@@ -8,3 +8,8 @@
     <input type="hidden" name="post_type[]" value="team-members" />
     <input type="hidden" name="post_type[]" value="nos-membres" />
     <input type="hidden" name="post_type[]" value="nos-mandats" />
+    <input type="hidden" name="post_type[]" value="nieuwsfeed" />
+    <input type="hidden" name="post_type[]" value="kenniscentrum" />
+    <input type="hidden" name="post_type[]" value="praktijkverhaal" />
+    <input type="hidden" name="post_type[]" value="workshops-en-events" />
+    <input type="hidden" name="post_type[]" value="veelgestelde-vragen" />

@@ -72,7 +72,7 @@ $terms = get_terms('categories_actualites');
 
       $args =
         array(
-          'post_type' => 'actualites',
+          'post_type' => 'Nieuwsfeed', 
           'status' => 'published',
           'posts_per_page' => 6,
           'orderby'  => 'post_date',

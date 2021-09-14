@@ -73,7 +73,7 @@ if( !empty( $image ) ): ?>
                         array(
                             'category__in'   => wp_get_post_categories( $post->ID ),
                             'post__not_in' => array(get_the_ID()),
-                            'post_type' => 'actualites',
+                            'post_type' => 'nieuwsfeed',
                             'orderby' => 'date',
                             'posts_per_page' => 3
                         )
@@ -109,7 +109,7 @@ if( !empty( $image ) ): ?>
                     array(
                         'category__in'   => wp_get_post_categories( $post->ID ),
                         'post__not_in' => array(get_the_ID()),
-                        'post_type' => 'actualites',
+                        'post_type' => 'nieuwsfeed',
                         'orderby' => 'date',
                         'posts_per_page' => 3
                     )

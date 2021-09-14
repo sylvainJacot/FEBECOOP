@@ -27,7 +27,7 @@ $cci-pad-t: 32px;
         align-items: center;
         @include tablet {
             flex-direction: column;
-            align-items: end;
+            align-items: start;
         }
         > h3 {
             @include titre-card-type-a;

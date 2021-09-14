@@ -36,7 +36,7 @@ get_header();
                 <?php
                 $loop = new WP_Query(
                     array(
-                        'post_type' => 'actualites',
+                        'post_type' => 'nieuwsfeed',
                         'orderby' => 'date',
                         'posts_per_page' => 3
                     )
