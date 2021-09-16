@@ -393,8 +393,8 @@ $padding-search-mobile : calc((100% - (11 * #{$mCol})) / 2);
 
     }
     .header-second-section-bottom-federal {
-        .menu-header-main-menu-container {
-            .menu {
+        > div {
+            ul {
                 > li {
                     &:nth-last-child(-n+2) {
                         a {
