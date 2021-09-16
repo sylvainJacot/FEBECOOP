@@ -2,7 +2,7 @@
     <div class="form-section-type-a-wrapper grid">
 
     <div class="form-type-a-header">
-    <?php if(!get_field('version_papier') && !get_field('papier-payant') && get_field('version_digitale') || !get_field('version_digitale') ) {?>
+    <?php if(!get_field('version_papier') && !get_field('papier-payant') && !get_field('digi-payant') ) {?>
         <p class="form-type-a-title"><?php pll_e('Télécharger');?></p>
                 <?php } else {?> 
 
