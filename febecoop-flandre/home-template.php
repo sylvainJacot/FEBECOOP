@@ -197,7 +197,7 @@ get_header();
                 <?php
                 $loop = new WP_Query(
                     array(
-                        'post_type' => 'projet-accompagnes',
+                        'post_type' => 'praktijkverhaal',
                         'orderby' => 'date',
                         'posts_per_page' => 2
                     )

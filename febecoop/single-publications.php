@@ -75,7 +75,6 @@ get_header();
 
         else if (get_field('version_papier') && get_field('papier-payant') && !get_field('version_digitale')  && !get_field('digi-payant')) {
             echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' ); 
-            echo "ça marche"; 
         }
 
 

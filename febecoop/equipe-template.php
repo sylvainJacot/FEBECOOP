@@ -6,6 +6,7 @@
  * 
  */
 get_header();
+
 ?>
 
 
@@ -65,10 +66,11 @@ get_header();
     $terms = get_terms('groupe_equipe');
     $termsCount = count($terms);
 
-
+    // echo $lang;
     $members = new WP_Query(
         array(
             'post_type' => ' team-members',
+            // 'lang'           => $lang, 
             'showposts' => -1,
         )
     );
@@ -85,6 +87,7 @@ get_header();
                 array(
                     'post_type' => ' team-members',
                     'showposts' => -1,
+                    'lang'           => $lang, 
                     'tax_query' => array(
                         array(
                             'taxonomy'  => 'groupe_equipe',
@@ -95,7 +98,6 @@ get_header();
                 )
             );
     ?>
-
             <div class="team-members-row-item">
                 <div class="team-members-row-item-container grid">
                     <p class="team-members-row-item-title"><?php echo $term->name; ?></p>

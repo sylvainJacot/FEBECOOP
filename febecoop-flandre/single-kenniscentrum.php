@@ -155,17 +155,17 @@ get_header();
                 
                 <div class="slider-type-b-header">
                 <h3><?php pll_e('Projets accompagnés');?></h3> 
-                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>projets-accompagnes" ><span><?php pll_e('Tous les projets accompagnés');?></span></a>
+                <a class="cta-d" href="<?php echo esc_url(home_url('/')); ?>praktijkverhalen" ><span><?php pll_e('Tous les projets accompagnés');?></span></a>
                 </div>
 
                 <div class="swiper-container slider-container-type-b js-type-b-swiper">
                 <div class="swiper-wrapper slider-wrapper-type-b">
-                    <?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-loop-single-expertise');?>
+                    <?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-loop-single-expertise-NL');?>
                 </div>
                 <!-- Pagination pour mobile -->
                 <div class="swiper-pagination-type-b js-swiper-pagination-type-b "></div>
 
-                <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>projets-accompagnes" ><?php pll_e('Tous les projets accompagnés');?></a>
+                <a class="cta-b" href="<?php echo esc_url(home_url('/')); ?>praktijkverhalen" ><?php pll_e('Tous les projets accompagnés');?></a>
     </div>
 </section>
 

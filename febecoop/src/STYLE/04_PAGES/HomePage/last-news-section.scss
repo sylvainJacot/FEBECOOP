@@ -217,12 +217,23 @@
                 }
                 @media (min-width:1900px) {
                     #last-news-cta {
+                        color: $white;
+                        &:before {
+                            background: url(../ASSETS/IMAGES/common/VECTOR/full-arrow-white.svg) center no-repeat;
+                        }
+                        &:after {
+                            background-color: $white;
+                        }
+                    }
+                }
+                @media (min-width:2350px) {
+                    #last-news-cta {
                         color: $orange-1;
                         &:before {
                             background: url(../ASSETS/IMAGES/common/VECTOR/full-arrow-orange.svg) center no-repeat;
                         }
                         &:after {
-                            background-color: $white;
+                            background-color: $orange-1;
                         }
                     }
                 }
