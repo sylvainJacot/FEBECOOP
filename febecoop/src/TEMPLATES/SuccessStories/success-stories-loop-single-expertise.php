@@ -1,15 +1,16 @@
-<?php
-$featured_posts = get_field('projets_choisis');
 
-if ($featured_posts) : ?>
+<? $featured_projects = get_field('projets_choisis'); 
 
-    <?php $featured_posts_count = count($featured_posts); ?>
+if($featured_projects) : ?>
+
+    <?php $featured_projects_count = count($featured_projects); ?>
+
     <!-- START 1 POST SELECTED -- IF ONLY 1 POST SELECTED -->
-    <?php if ($featured_posts_count === 1) : ?>
+    <?php if ($featured_projects_count === 1) : ?>
 
-        <?php foreach ($featured_posts as $prjet) :
-            $prjet_terms = get_the_terms($prjet, 'projet_accompagne_cat');
-            setup_postdata($prjet); ?>
+        <?php foreach ($featured_projects as $post) :
+            $post_terms = get_the_terms($post, 'projet_accompagne_cat');
+            setup_postdata($post); ?>
             <div class="swiper-slide">
                 <?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-card'); ?>
             </div>
@@ -20,12 +21,13 @@ if ($featured_posts) : ?>
         $loop2posts = new WP_Query(
             array(
                 'post_type' => 'projet-accompagnes',
-                'post__not_in' =>  array(get_the_ID($featured_posts)),
+                'post__not_in' =>  array(get_the_ID($featured_projects)),
                 'orderby' => 'rand',
+                'order'    => 'ASC',
                 'posts_per_page' => 2,
                 'tax_query' => [
                     'taxonomy'  => 'projet_accompagne_cat',
-                    'terms' =>  array($prjet_terms->slug),
+                    'terms' =>  array($post_terms->slug),
                     'field'     => 'slug'
                 ]
             )
@@ -51,11 +53,11 @@ if ($featured_posts) : ?>
 
 
         <!-- START 2 POST SELECTED -- IF ONLY 2 POSTS SELECTED -->
-    <?php elseif ($featured_posts_count === 2) : ?>
+    <?php elseif ($featured_projects_count === 2) : ?>
 
-        <?php foreach ($featured_posts as $prjet) :
-            $prjet_terms = get_the_terms($prjet, 'projet_accompagne_cat');
-            setup_postdata($prjet); ?>
+        <?php foreach ($featured_projects as $post) :
+            $post_terms = get_the_terms($post, 'projet_accompagne_cat');
+            setup_postdata($post); ?>
             <div class="swiper-slide">
                 <?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-card'); ?>
             </div>
@@ -66,12 +68,13 @@ if ($featured_posts) : ?>
         $loop1post = new WP_Query(
             array(
                 'post_type' => 'projet-accompagnes',
-                'post__not_in' =>  array(get_the_ID($featured_posts)),
+                'post__not_in' =>  array(get_the_ID($featured_projects)),
                 'orderby' => 'rand',
+                'order'    => 'ASC',
                 'posts_per_page' => 1,
                 'tax_query' => [
                     'taxonomy'  => 'projet_accompagne_cat',
-                    'terms' =>  array($prjet_terms->slug),
+                    'terms' =>  array($post_terms->slug),
                     'field'     => 'slug'
                 ]
             )
@@ -98,9 +101,9 @@ if ($featured_posts) : ?>
         <!-- START 2 POST SELECTED -- IF ONLY 2 POSTS SELECTED -->
     <?php else : ?>
 
-        <?php foreach ($featured_posts as $prjet) :
-            $prjet_terms = get_the_terms($prjet, 'projet_accompagne_cat');
-            setup_postdata($prjet); ?>
+        <?php foreach ($featured_projects as $post) :
+            $post_terms = get_the_terms($post, 'projet_accompagne_cat');
+            setup_postdata($post); ?>
             <div class="swiper-slide">
                 <?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-card'); ?>
             </div>
@@ -120,6 +123,7 @@ if ($featured_posts) : ?>
         array(
             'post_type' => 'projet-accompagnes',
             'orderby' => 'rand',
+            'order'    => 'ASC',
             'posts_per_page' => 3,
         )
     );

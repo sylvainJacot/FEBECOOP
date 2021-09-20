@@ -8,6 +8,7 @@
 get_header();
 ?>
 
+
 <!-- HERO SECTION ==============
 =========================== -->
 <section class="hero-section-type-c">
@@ -70,13 +71,13 @@ get_header();
         <?php endforeach; ?>
 
         <?php 
-        $loop2 = new WP_Query(array(
+        $asideExpertLoop2 = new WP_Query(array(
         'post_type' => 'domaines-expertises', 
         'posts_per_page' => 2,
         'post__not_in' => array( get_the_ID())
         )); ?>
 
-        <?php while ($loop2->have_posts()) : $loop2->the_post(); ?>
+        <?php while ($asideExpertLoop2->have_posts()) : $asideExpertLoop2->the_post(); ?>
         <li class="aside-wysiwyg-list-item"> 
             <a href="<?php the_permalink();?>"><?php the_title();?></a>
         </li>   
@@ -96,12 +97,12 @@ get_header();
         <?php endforeach; ?>
 
         <?php 
-        $loop1 = new WP_Query(array(
+        $asideExpertLoop1 = new WP_Query(array(
         'post_type' => 'domaines-expertises', 
         'posts_per_page' => 1,
         'post__not_in' => array( get_the_ID())
         )); ?>
-        <?php while ($loop1->have_posts()) : $loop1->the_post(); ?>
+        <?php while ($asideExpertLoop1->have_posts()) : $asideExpertLoop1->the_post(); ?>
         <li class="aside-wysiwyg-list-item"> 
             <a href="<?php the_permalink();?>"><?php the_title();?></a>
         </li>   
@@ -122,24 +123,22 @@ get_header();
 <?php else : ?>
 
         <?php 
-        $loop = new WP_Query(array(
+        $asideExpertLoop = new WP_Query(array(
         'post_type' => 'domaines-expertises', 
         'posts_per_page' => 3,
         'post__not_in' => array( get_the_ID())
         )); ?>
-        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+        <?php while ($asideExpertLoop->have_posts()) : $asideExpertLoop->the_post(); ?>
         <li class="aside-wysiwyg-list-item"> 
             <a href="<?php the_permalink();?>"><?php the_title();?></a>
         </li>   
         <?php endwhile;     wp_reset_query(); ?>
 
     
-    <?php 
-    // Reset the global post object so that the rest of the page works correctly.
-    wp_reset_postdata(); ?>
+
     <?php endif; ?> 
     </ul>   
-
+    <?php  wp_reset_postdata(); ?>
         <span class="aside-wysiwyg-cta">
         <a class="cta-c" href="<?php echo esc_url(home_url('/')); ?>expertises"><span><?php pll_e('Voir toutes les expertises');?></span></a>
         </span>
@@ -147,6 +146,9 @@ get_header();
     </aside>
     </div>
 </section>
+
+
+
 
 <!-- SUCCESS STORIES ==============
 =========================== -->
@@ -160,6 +162,7 @@ get_header();
 
                 <div class="swiper-container slider-container-type-b js-type-b-swiper">
                 <div class="swiper-wrapper slider-wrapper-type-b">
+                
                     <?php get_template_part('./src/TEMPLATES/SuccessStories/success-stories-loop-single-expertise');?>
                 </div>
                 <!-- Pagination pour mobile -->

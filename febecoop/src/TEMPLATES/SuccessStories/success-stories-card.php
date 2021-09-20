@@ -1,3 +1,4 @@
+
 <a href="<?php the_permalink(); ?>" class="card-type-b-item">
 <div class="card-type-b-pic-wrapper">
     <?php
