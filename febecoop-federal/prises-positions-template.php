@@ -68,7 +68,7 @@ get_header();
 
 <!-- CONTACT BANNER ==============
 =========================== -->
-<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner"); ?>
+<?php get_template_part("./src/TEMPLATES/ContactBanner/contact-banner-options"); ?>
 
 
 <?php
