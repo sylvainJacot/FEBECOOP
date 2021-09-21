@@ -77,5 +77,6 @@ if (function_exists('pll_register_string')) {
     pll_register_string(" items trouvés", " items trouvés", 'febecoop', true);
     pll_register_string("xyz", "xyz", 'febecoop', true);
     pll_register_string("Page d'acceuil", "Page d'acceuil", 'febecoop', true);
-     
+    pll_register_string("Aller vers le site", "Aller vers le site", 'febecoop', true);
+        
 }
