@@ -13,7 +13,7 @@
     get_template_part("./src/TEMPLATES/Header/logo-footer")
     ?>
         <div class="footer-main-wrapper">
-        <div class="newsletter-section">
+        <!-- <div class="newsletter-section">
             <h3 class="newsletter-title"><?php the_field('newsletter-titre', 'option'); ?></h3>
             <div class="newsletter-section-content">
                 <p class="newsletter-subtitle"><?php the_field('newsletter-texte', 'option'); ?></p>
@@ -27,7 +27,7 @@
                     <a class="newsletter-cta" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
                 <?php endif; ?>
             </div>
-        </div>
+        </div> -->
 
         <div class="coordonnees-socials-wrapper">
 
