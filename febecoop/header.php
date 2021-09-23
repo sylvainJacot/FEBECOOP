@@ -103,7 +103,7 @@ if (empty($meta_description)) {
     <header id="js-header">
         <div class="header-wrapper">
             <div class="header-first-section grid">
-                <a id="Febecoop-logo" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/common/VECTOR/logo_WB_HD.png" alt="Febecoop logo" /></a>
+                <a id="Febecoop-logo" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/common/VECTOR/logo_WB_HD.svg" alt="Febecoop logo" /></a>
 
                 <div class="header-first-section-right-section">
                     <div class="header-socials-wrapper socials-header-tablet">

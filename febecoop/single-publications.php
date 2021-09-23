@@ -196,7 +196,6 @@ var input3 = document.getElementById("field_941i4");
 // Papier payant
 var input4 = document.getElementById("field_23s3i");
 
-
 if(input) {
     input.setAttribute('value','<?php the_title(); ?>');
 }
@@ -210,6 +209,41 @@ if(input3) {
 if(input4) {
     input4.setAttribute('value','<?php the_title(); ?>');
 }
+
+
+
+// FEDERAL
+// Papier payant
+var input5 = document.getElementById("field_mf1ok");
+
+if(input5) {
+    input5.setAttribute('value','<?php the_title(); ?>');
+}
+
+// Digi payant
+var input6 = document.getElementById("field_fxxxr");
+
+if(input6) {
+    input6.setAttribute('value','<?php the_title(); ?>');
+}
+
+
+// Papier gratuit
+var input7 = document.getElementById("field_cxhij");
+
+if(input7) {
+    input7.setAttribute('value','<?php the_title(); ?>');
+}
+
+
+// Digi gratuit
+var input8 = document.getElementById("field_whlkt");
+
+if(input8) {
+    input8.setAttribute('value','<?php the_title(); ?>');
+}
+
+
 
 
 </script>
