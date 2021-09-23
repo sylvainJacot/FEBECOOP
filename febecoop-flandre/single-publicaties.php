@@ -67,25 +67,34 @@ get_header();
         </div>
 
 
+        <!-- Publication Papier gratuite -->
+
         <?php
         if (get_field('version_papier') && !get_field('papier-payant') && !get_field('version_digitale')  && !get_field('digi-payant')) {
             echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' );            
         }
 
 
+        // Publication Papier payante
+
         else if (get_field('version_papier') && get_field('papier-payant') && !get_field('version_digitale')  && !get_field('digi-payant')) {
             echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' );  
         }
 
+        // Publication Digitale payant
 
         else if (!get_field('version_papier') && !get_field('papier-payant') && get_field('version_digitale')  && get_field('digi-payant')) {
             echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' );  
         }
             
 
+        // Publication Papier et digitale gratuite 
 
         else if (get_field('version_papier') && !get_field('papier-payant') && get_field('version_digitale')  && !get_field('digi-payant')) {
             echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' );  
+
+
+        // Publication Papier et digitale payante 
 
         }
 
@@ -93,8 +102,14 @@ get_header();
             echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' );  
         }
 
+        // Publication Digitale gratuite
+
+        else if (!get_field('version_papier') && !get_field('papier-payant') && get_field('version_digitale')  && !get_field('digi-payant')) {
+            echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' );  
+        }
+
         else {
-            echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' ); 
+            // echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' ); 
         };
         ?>
         
