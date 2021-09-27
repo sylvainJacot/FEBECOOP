@@ -5,7 +5,7 @@
 
                 <?php if (get_field('digi-payant') && get_field('papier-payant')) {;?>
 
-
+                       
 
                 <div class="publication-detail-prix-container">
                     <div class="publication-detail-prix-icone"></div>
@@ -16,7 +16,7 @@
 
                         <?php endif;?>
 
-                        <?php if (get_field('digi-payant')) : ?>
+                        <?php if (get_field('version_digitale') && get_field('digi-payant')) : ?>
 
                         <p class="publication-detail-prix"><?php pll_e('Version digitale');?>: <span><?php the_field('prix_version_digitale');?>&#8364 </span></p>
                         

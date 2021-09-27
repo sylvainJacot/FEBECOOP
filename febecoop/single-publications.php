@@ -77,7 +77,7 @@ get_header();
 
         // Publication Papier payante
 
-        else if (get_field('version_papier') && get_field('papier-payant') && !get_field('version_digitale')  && !get_field('digi-payant')) {
+        else if (get_field('version_papier') && get_field('papier-payant')) {
             echo get_template_part( './src/TEMPLATES/PublicationForm/aside-commander-form' );  
         }
 
@@ -135,7 +135,7 @@ get_header();
 
         /* SCENARIO 01 : Papier payant */
 
-        if (get_field('version_papier') && get_field('papier-payant') && !get_field('version_digitale')  && !get_field('digi-payant')) {
+        if (get_field('version_papier') && get_field('papier-payant')) {
             echo get_template_part( './src/TEMPLATES/PublicationForm/top-section-publi-form' );            
             echo get_template_part( './src/TEMPLATES/Publications/publi-papier-payant' );
             echo get_template_part( './src/TEMPLATES/PublicationForm/bottom-section-publi-form' ); 
