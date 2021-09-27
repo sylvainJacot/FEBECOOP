@@ -80,6 +80,13 @@ get_header();
             <p><?php the_field('exp-paragraphe'); ?></p>
         </div>
 
+        <?php $link = get_field('publication-bouton');
+            if ($link) :
+                $link_url = $link['url'];
+                $link_title = $link['title'];
+                $link_target = $link['target'] ? $link['target'] : '_self';
+            ?>
+
         <a class="publication-item-container" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" >
             <div class="pi-pic-wrapper">
             <?php
@@ -91,12 +98,7 @@ get_header();
             <div class="pi-content">
             <p class="pi-titre"><?php the_field('publication-titre'); ?></p>
             <p class="pi-desc"><?php the_field('publication-description'); ?></p>
-            <?php $link = get_field('publication-bouton');
-            if ($link) :
-                $link_url = $link['url'];
-                $link_title = $link['title'];
-                $link_target = $link['target'] ? $link['target'] : '_self';
-            ?>
+
                 <p class="cta-c"><span><?php echo esc_html($link_title); ?></span></p>
             <?php endif; ?>
             </div>
