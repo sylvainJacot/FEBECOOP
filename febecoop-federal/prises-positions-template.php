@@ -33,7 +33,7 @@ get_header();
 
       $loop = new WP_Query(
         array(
-          'post_type' => 'prises-de-positions',
+          'post_type' => 'our-views',
           'posts_per_page' => -1,
         )
       );
