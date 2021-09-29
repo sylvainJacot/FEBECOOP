@@ -564,7 +564,12 @@ $cta-newsletter-pseudo-arrow-size : 12px;
 }
 
 #prise-pos-fede-cta{
+    margin-top: 32px;
+    display: block;
+    @include tablet {
+        margin-top: 32px;
+    }
     &::before {
-        top: 7px;
+        top: 11px;
     }
 }

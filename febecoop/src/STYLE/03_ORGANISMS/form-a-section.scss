@@ -213,12 +213,12 @@ $tab-nav-item-radio-size: 22px;
                 opacity: 0.2;
 
                 @include tablet {
-                    top: -64px;
+                    // top: -64px;
                 }
 
                 @include laptopS {
                     width: 20 * $lCol;
-                    top: -64px;
+                    // top: -64px;
                 }
                 @include laptopL {
                     width: 15 * $dCol;

@@ -8,7 +8,11 @@
 }
 
 .last-news-section {
-    margin-bottom: 72px;
+    padding-bottom: 64px;
+
+    @include laptop {
+        padding-bottom: 88px;
+    }
 
     .last-news-section-wrapper {
         @include laptopS {

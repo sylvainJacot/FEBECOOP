@@ -135,10 +135,10 @@ $npp-space-between-els-m: 32px;
                 color: $red-1;
                 margin: 0 auto $intertitre-bottom-margin auto;
                 @include tablet {
-                    margin: 0 auto 56px auto;
+                    margin: 0 auto 32px auto;
                 }
                 @include laptopS {
-                    margin: 0 auto 64px auto;
+                    margin: 0 auto 32px auto;
                 }
             }
             > h2 {

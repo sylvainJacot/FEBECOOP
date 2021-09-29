@@ -120,6 +120,12 @@ get_header();
 =========================== -->
 <section class="nos-prises-positions-section">
     <div class="nos-prises-positions-section-wrapper grid">
+            <?php 
+                $link = get_field('bouton_prises_de_positions');
+                $link_url = $link['url'];
+                $link_title = $link['title'];
+                $link_target = $link['target'] ? $link['target'] : '_self';
+            ?>
         <?php 
         $featured_posts = get_field('choisir_prise_de_position');
         if( $featured_posts ): ?>
@@ -128,13 +134,16 @@ get_header();
 
         // Setup this post for WP functions (variable must be named $post).
         setup_postdata($post); ?>
-                <div class="nos-prises-positions-pic-wrapper">
+
+
+
+                <a class="nos-prises-positions-pic-wrapper" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                 <?php 
                 $image = get_field('actu-hero-image');
                 if( !empty( $image ) ): ?>
                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                 <?php endif; ?>
-                </div>
+                </a>
         <div class="nos-prises-positions-content">
             <h3 class="nos-prises-positions-content-top-titre">
                 <?php pll_e('Nos prises de position');?>
@@ -144,12 +153,12 @@ get_header();
                 <?php the_title();?>
             </h2>
 
-            <p class="nos-prises-positions-content-texte">
+            
             <?php 
 
             if (get_field('resume_pour_la_home_page')) : ?>
 
-            <?php echo the_field('resume_pour_la_home_page');?>
+            <p class="nos-prises-positions-content-texte"><?php echo the_field('resume_pour_la_home_page');?> </p>
 
             <?php else : ?>
 
@@ -166,7 +175,7 @@ get_header();
 
 
             <?php endif; ?>
-            </p>
+
 
             <a class="cta-a" href="<?php the_permalink(); ?>"><?php pll_e('En savoir plus');?></a>
 

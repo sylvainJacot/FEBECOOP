@@ -71,7 +71,7 @@ get_header();
             endif; ?>
                              </h2>
                             <p class="slm-card-item-content-desc"><? the_sub_field('description'); ?></p>
-                            <p class="cta-b"><? pll_e('Aller vers le site'); ?></p>
+                            <p class="cta-b"><?php the_field("bouton_sites") ?></p>
                         </div>    
         </a>
     <?php endwhile; ?>

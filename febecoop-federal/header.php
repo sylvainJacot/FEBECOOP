@@ -148,11 +148,11 @@ if (empty($meta_description)) {
                 <div class="header-second-section-laptop-wrapper">
 
                     <div class="header-second-section-top">
-                        <div class="header-socials-wrapper socials-header-laptop">
+                        <!-- <div class="header-socials-wrapper socials-header-laptop">
                             <?php while (have_rows('reseaux_sociaux', 'option')) : the_row(); ?>
                                 <a class="social-item-b " href="<?php the_sub_field('url'); ?>" target="_blank" rel="noopener"><img src="<?php echo get_template_directory_uri(); ?>/src/ASSETS/IMAGES/common/VECTOR/social-<?php echo sanitize_title(get_sub_field('nom')); ?>-blue.svg" alt="<?php the_sub_field('nom'); ?>"></a>
                             <?php endwhile; ?>
-                        </div>
+                        </div> -->
                         <?php get_template_part('src/TEMPLATES/Header/header-top-nav'); ?>
                         <div class="nav-search-laptop-placeholder" id="js-nav-search-laptop-placeholder">
                             <input type="image" alt="Search" src="<?php bloginfo('template_url'); ?>/src/ASSETS/IMAGES/common/VECTOR/search-ic.svg" />
