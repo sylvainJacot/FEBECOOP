@@ -212,12 +212,12 @@ get_header();
                 <div class="febe-territoire-belge-territoire">
                         <h3><?php the_field('titre_pour_la_flandre');?></h3>
                         <p><?php the_field('texte_pour_la_flandre');?></p>
-                        <a class="cta-b" href="https://dev.atelierdesign.be/FEBECOOP-MULTI/febecoop-flandre"><?php pll_e('Aller sur le site');?></a>
+                        <a class="cta-b" href="https://vlaanderen-brussel.febecoop.be"><?php pll_e('Aller sur le site');?></a>
                 </div>
                 <div class="febe-territoire-belge-territoire">
                         <h3><?php the_field('titre_pour_la_wallonie');?></h3>
                         <p><?php the_field('texte_pour_la_wallonie');?></p>
-                        <a class="cta-b" href="https://dev.atelierdesign.be/FEBECOOP-MULTI/febecoop-wallonie-bruxelles"><?php pll_e('Aller sur le site');?></a>
+                        <a class="cta-b" href="https://wallonie-bruxelles.febecoop.be"><?php pll_e('Aller sur le site');?></a>
                 </div>
             </div>
     </div>

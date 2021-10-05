@@ -71,6 +71,16 @@ if (empty($meta_description)) {
     <meta name="twitter:description" content="<?php the_field('meta_description'); ?>">
     <meta name="twitter:image" content="<?php the_field('image_partage', 'options'); ?>">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKPEZGXXW4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TKPEZGXXW4');
+    </script>
+
 
     <?php wp_head() ?>
 </head>
@@ -107,9 +117,9 @@ if (empty($meta_description)) {
                 <ul>
                     <li>
                         <? if ($lang === "fr") : ?>
-                        <a href="https://dev.atelierdesign.be/FEBECOOP-MULTI/landing/?page_id=45">nl</a></li>
+                        <a href="https://febecoop.be/?page_id=45">nl</a></li>
                         <? else : ?>
-                        <a href="https://dev.atelierdesign.be/FEBECOOP-MULTI/landing/">fr</a></li>   
+                        <a href="https://febecoop.be/">fr</a></li>   
                         <? endif ?> 
                 </ul>
             </div>

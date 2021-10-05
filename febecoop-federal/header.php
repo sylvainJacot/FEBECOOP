@@ -71,6 +71,16 @@ if (empty($meta_description)) {
     <meta name="twitter:description" content="<?php the_field('meta_description'); ?>">
     <meta name="twitter:image" content="<?php the_field('image_partage', 'options'); ?>">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8MLPKQ8KE"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G8MLPKQ8KE');
+    </script>
+
 
     <?php wp_head() ?>
 </head>
