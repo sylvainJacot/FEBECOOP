@@ -1,0 +1,16 @@
+@import "./cookie-bar.scss";
+@import "./cookie-modal.scss";
+@import "./privacy-overview.scss";
+
+
+.wt-cli-cookie-bar-container {
+    * {
+        @include hando;
+    }
+}
+
+.cli-modal {
+    * {
+        @include hando;
+    }
+}

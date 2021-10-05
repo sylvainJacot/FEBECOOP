@@ -1,0 +1,58 @@
+.cli-modal  {
+    .cli-modal-dialog {
+        .cli-modal-content{
+            .cli-modal-close{
+
+            }
+            .cli-modal-body {
+                .cli-tab-container {
+                    .cli-row {
+                        .cli-align-items-stretch {
+                            .cli-privacy-overview {
+                                > h4 {
+
+                                }
+                                .cli-privacy-content {
+
+                                }
+                                .cli-privacy-readmore {
+
+                                }
+                            }
+                        }
+                        .cli-tab-section-container {
+                            .cli-tab-section {
+                                .cli-tab-header {
+                                    .cli-nav-link {
+
+                                    }
+                                    .cli-necessary-caption {
+                                        
+                                    }
+                                }
+                                .cli-tab-content {
+                                    .cli-tab-pane {
+                                        .wt-cli-cookie-description {
+                                            .wt-cli-element {
+                                                thead {
+                                                    tr {
+                                                        th {
+                                                           background-color: $blue-1; 
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .cli-modal-footer {
+
+            }
+        }
+    }
+}

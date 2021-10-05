@@ -6,7 +6,7 @@
     .frm_checkbox {
         label {
             @include frm-checkbox-label;
-            text-indent: 0px;
+            text-indent: 0px !important;
             display: flex !important;
             align-items: center !important;
             padding-left: 0px !important;

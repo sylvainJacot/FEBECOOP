@@ -1,0 +1,20 @@
+.cli-modal-dialog {
+    .cli-modal-content {
+        .cli-modal-body {
+
+        }
+        .cli-modal-footer {
+            .cli-tab-container {
+                .cli-row{
+                    .cli-align-items-stretch {
+                        .cli-tab-footer {
+                            .wt-cli-privacy-btn {
+                                background-color: $orange-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
