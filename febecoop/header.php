@@ -126,7 +126,7 @@ if (empty($meta_description)) {
                     </div>
 
 
-                    <button id="js-main-navigation-menu-button" class="main-navigation-menu-button">
+                    <button id="js-main-navigation-menu-button" class="main-navigation-menu-button" aria-label="Main Navigation Menu">
                         <span></span>
                         <span></span>
                         <span></span>

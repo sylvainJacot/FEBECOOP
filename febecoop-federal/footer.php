@@ -50,15 +50,15 @@
                             </p>
                             <div class="coordonees-item-content">
                             <div class="coordonees-item-coordonees">
-                                <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo $new_fulladress; ?>&travelmode=driving" target="_blank">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo $new_fulladress; ?>&travelmode=driving" rel="noreferrer" target="_blank">
                                 <p><?php the_sub_field('addresse'); ?></p>
                                 <p><?php the_sub_field('localite'); ?></p>
                                  </a>
                             </div>
 
                             <div class="coordonees-item-tel-email">
-                                <a href="mailto:<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a><br />
-                                <a href="tel:<?php the_sub_field('telephone'); ?>"><?php the_sub_field('telephone'); ?></a>
+                                <a href="mailto:<?php the_sub_field('email'); ?>" rel="noreferrer" ><?php the_sub_field('email'); ?></a><br />
+                                <a href="tel:<?php the_sub_field('telephone'); ?>" rel="noreferrer" ><?php the_sub_field('telephone'); ?></a>
                             </div>
 
                             </div>
