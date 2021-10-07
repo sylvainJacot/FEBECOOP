@@ -117,6 +117,7 @@ if (empty($meta_description)) {
                 <ul>
                     <li>
                         <? if ($lang === "fr") : ?>
+                        <!-- <a href="https://febecoop.be/nl">nl</a></li> -->
                         <a href="https://febecoop.be/?page_id=45">nl</a></li>
                         <? else : ?>
                         <a href="https://febecoop.be/">fr</a></li>   

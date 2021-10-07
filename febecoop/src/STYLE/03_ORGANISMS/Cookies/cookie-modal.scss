@@ -1,8 +1,11 @@
 .cli-modal  {
     .cli-modal-dialog {
         .cli-modal-content{
+            padding: 2rem 3rem;
             .cli-modal-close{
-
+                right: 8px !important;
+                top: 8px !important; 
+                padding: 8px !important; 
             }
             .cli-modal-body {
                 .cli-tab-container {
@@ -51,8 +54,43 @@
                 }
             }
             .cli-modal-footer {
-
+                .wt-cli-element {
+                    .cli-row {
+                        .cli-align-items-stretch {
+                            .cli-tab-footer {
+                                .wt-cli-privacy-btn {
+                                    display: block !important;
+                                    @include hando-b;
+                                    font-size: 12px !important;
+                                    @include tracking(150);
+                                    line-height: 21px !important;
+                                    color: $white;
+                                    background: $orange-1;
+                                    border-radius: 8px !important;
+                                    padding: 16px 32px !important;
+                                    width: 100% !important;
+                                    text-align: center !important;
+                                    text-transform: uppercase !important;
+                                    height: fit-content !important;
+                                    @include trans-a;
+                                    @include tablet {
+                                        display: inline-block !important;
+                                        width: fit-content !important;
+                                    }
+                                    &:hover {
+                                        background: $red-1 !important;
+                                        @include trans-a;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
+    }
+
+    * {
+        color: $blue-1;
     }
 }

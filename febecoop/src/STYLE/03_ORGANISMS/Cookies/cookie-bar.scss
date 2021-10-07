@@ -1,17 +1,45 @@
 .wt-cli-cookie-bar-container {
-    > div {
+    .wt-cli-cookie-bar {
+        padding: 2rem 3rem !important;
+        -webkit-box-shadow: 0 15px 100px -40px $blue-1-30 !important; 
+        box-shadow: 0 15px 100px -40px $blue-1-30 !important;
+        border-radius: 16px !important;
         .cli-wrapper {
             > span {
                 .cli-bar-container {
                     .cli-bar-message {
-
+                        margin-bottom: 1rem !important;
+                        font-size: 14px !important;
+                        line-height: 26.62px !important;
+                        letter-spacing: 0.025em !important;
                     }
                     .cli-bar-btn_container {
                         .cli_settings_button {
 
                         }
                         .cli-plugin-button {
-
+                            display: block !important;
+                            @include hando-b;
+                            font-size: 12px !important;
+                            @include tracking(150);
+                            line-height: 21px !important;
+                            color: $white;
+                            background: $orange-1;
+                            border-radius: 8px !important;
+                            padding: 16px 32px !important;
+                            width: 100% !important;
+                            text-align: center !important;
+                            text-transform: uppercase !important;
+                            height: fit-content !important;
+                            @include trans-a;
+                            @include tablet {
+                                display: inline-block !important;
+                                width: fit-content !important;
+                            }
+                            &:hover {
+                                background: $red-1 !important;
+                                @include trans-a;
+                            }
                         }
                     }
                 }

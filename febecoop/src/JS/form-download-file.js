@@ -7,11 +7,11 @@
 // if(SubmitBtn) {
 //     SubmitBtn.addEventListener('click', () => {
 
-//         // let EmailInput = document.querySelector('#js-ContainerEmail input[aria-invalid="true"]')
+//         let EmailInput = document.querySelector('#js-ContainerEmail input[aria-invalid="true"]')
         
-//         // if (EmailInput) {
-//         //     DownloadBtn.click();
-//         // }
+//         if (EmailInput) {
+//             DownloadBtn.click();
+//         }
 
 //         DownloadBtn.click();
     
