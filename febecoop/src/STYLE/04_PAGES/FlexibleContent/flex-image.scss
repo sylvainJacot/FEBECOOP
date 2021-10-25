@@ -6,6 +6,7 @@
     border-radius: $border-radius-small-picture;
     overflow: hidden;
     margin: $flex-items-yMargins * 2 0px !important;
+    width: 100%;
     @include tablet {
         margin: $flex-items-yMargins * 2 0px !important;
     }
@@ -16,8 +17,8 @@
         margin: $flex-items-yMargins * 2 0px !important;
     }
     > img {
-        min-width: 100%;
-        min-height: 100%;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 }

@@ -39,6 +39,7 @@
         .publication-content  {
             order: 2;
             margin: auto;
+            width: 100%;
             @include laptopS {
                 order: 1;
                 width: $largeur-flex-main-l;
