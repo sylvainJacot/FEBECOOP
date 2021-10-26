@@ -31,10 +31,14 @@
                             text-align: center !important;
                             text-transform: uppercase !important;
                             height: fit-content !important;
+                            margin: 0 !important;
+                            margin-top: 20px !important;
                             @include trans-a;
                             @include tablet {
                                 display: inline-block !important;
                                 width: fit-content !important;
+                                margin: auto !important;
+                                margin-left: 20px !important;
                             }
                             &:hover {
                                 background: $red-1 !important;
