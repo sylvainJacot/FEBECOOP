@@ -518,11 +518,17 @@ display: none;
         &:before {
             transform: translate(-50%,-50%) rotate(90deg);
         }
+        &:after {
+            display: none;
+        }
     }
     .swiper-button-next-type-a {
         @include slider-cta-type-a;
         &:before {
             transform: translate(-50%,-50%) rotate(-90deg);
+        }
+        &:after {
+            display: none;
         }
     }
 }
