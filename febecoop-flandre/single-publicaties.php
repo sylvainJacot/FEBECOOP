@@ -202,15 +202,15 @@ get_header();
 
 <script type="text/javascript">
 
-// WALLONIE
+// FLANDRE
 // Digi gratuit
-var input = document.getElementById("field_6702i");
+var input = document.getElementById("field_4v394");
 // Digi payant
-var input2 = document.getElementById("field_mgmpa");
+var input2 = document.getElementById("field_t0046");
 // Papier gratuit
-var input3 = document.getElementById("field_941i4");
+var input3 = document.getElementById("field_1ws3b");
 // Papier payant
-var input4 = document.getElementById("field_23s3i");
+var input4 = document.getElementById("field_92els");
 
 
 if(input) {

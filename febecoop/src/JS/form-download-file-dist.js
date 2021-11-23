@@ -1,1 +1,1 @@
-"use strict";
+"use strict";var DownloadBtn=document.querySelector("#js-download-form"),SubmitBtn=document.querySelector("#submit-form-digi-gratuit");SubmitBtn&&SubmitBtn.addEventListener("click",(function(){document.querySelector('#js-ContainerEmail input[aria-invalid="true"]')&&DownloadBtn.click(),DownloadBtn.click()}));

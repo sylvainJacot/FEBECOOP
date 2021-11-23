@@ -112,17 +112,22 @@ if (empty($meta_description)) {
 
             <div class="menu-lang menu-lang-laptop menu-lang-landing" id="js-menu-lang">
 
-            <? $lang = get_field('lang');?>                                                                                
-            <a href="#"><?php echo $lang; ?><?php get_template_part( '/src/assets/images/common/svg/icons/arrow' );?></a>
-                <ul>
-                    <li>
-                        <? if ($lang === "fr") : ?>
-                        <!-- <a href="https://febecoop.be/nl">nl</a></li> -->
-                        <a href="https://febecoop.be/?page_id=45">nl</a></li>
-                        <? else : ?>
-                        <a href="https://febecoop.be/">fr</a></li>   
-                        <? endif ?> 
-                </ul>
+            <!-- <? $lang = get_field('lang');?>                                                                                
+            <a href="#"><?php echo $lang; ?><?php get_template_part( '/src/assets/images/common/svg/icons/arrow' );?></a> -->
+
+
+            <? $languages = pll_the_languages(array('raw' => 1)); ?>
+            <a href="#"><?php echo pll_current_language(); ?><?php get_template_part( '/src/assets/images/common/svg/icons/arrow' );?></a>
+
+            <ul>
+        <?php
+        foreach ($languages as $lang) :
+        if($lang['slug'] != pll_current_language()):
+            echo '<li><a href ="' . $lang['url'] .'" hreflang = "' . $lang['slug'] . '">' . $lang['slug'] . '</a></li>';
+        endif;
+        endforeach;
+        ?>
+    </ul>
             </div>
 
 

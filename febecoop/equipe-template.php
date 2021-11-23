@@ -70,7 +70,7 @@ get_header();
     $members = new WP_Query(
         array(
             'post_type' => ' team-members',
-            // 'lang'           => $lang, 
+            'lang'           => $lang, 
             'showposts' => -1,
         )
     );

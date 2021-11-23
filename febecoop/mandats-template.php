@@ -45,6 +45,7 @@ foreach ( $terms as $term ):
         array(
             'post_type' => 'nos-mandats',
             'showposts' => -1,
+            'lang'           => $lang, 
             'tax_query' => array(
                 array(
                     'taxonomy'  => 'cat_nos_mandats',
@@ -65,7 +66,6 @@ foreach ( $terms as $term ):
 
 <div class="main-members-mandats-section-row-grid">
         <?php while ($mandats->have_posts()) : $mandats->the_post(); ?>
-
         <div class="main-members-mandats-section-row-item">
         <?php
             $image = get_field('nm-logo');
