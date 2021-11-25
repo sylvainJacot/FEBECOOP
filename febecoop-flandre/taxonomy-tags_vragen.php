@@ -96,7 +96,7 @@ $terms_tags  = get_terms(
             else : ?>
                 <span class="generic-content"><p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p></span>
             <?php endif; ?>
-            <a style="opacity: 0; transition: opacity 1s;"  href="<?php echo esc_url(home_url('/')); ?>veelgestelde-vragen" class="cta-a"><?php pll_e('Tous les outils et notes pratiques');?></a>
+            <a style="opacity: 0; transition: opacity 1s;"  href="<?php echo esc_url(home_url('/')); ?>cooperatief_werken" class="cta-a"><?php pll_e('Tous les outils et notes pratiques');?></a>
             </div>
         </div>
     </div>

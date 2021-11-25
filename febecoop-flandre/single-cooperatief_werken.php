@@ -60,7 +60,7 @@ get_header();
                 'category__in' => wp_get_post_categories($post->ID),
                 'numberposts' => 3,
                 'orderby' => 'rand',
-                'post_type' => 'veelgestelde-vragen',
+                'post_type' => 'cooperatief_werken',
                 'post__not_in' => array($post->ID)
             ));
 

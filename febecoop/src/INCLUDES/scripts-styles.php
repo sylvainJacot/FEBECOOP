@@ -22,7 +22,6 @@ function febecoop_scripts() {
     // Scripts
     wp_enqueue_script( "customswiper-script", get_template_directory_uri(  ) . "/src/JS/customswipers-dist.js", array(), rand(100000,200000), true);
     wp_enqueue_script( "togglemenu-script", get_template_directory_uri(  ) . "/src/JS/toggle-menu-dist.js", array(), rand(100000,200000), true);
-   
     wp_enqueue_script( "togglemenuMobile-script", get_template_directory_uri(  ) . "/src/JS/toggle-menu-mobile-dist.js", array(), rand(100000,200000), true);
    
     

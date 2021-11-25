@@ -84,7 +84,7 @@ $terms = get_terms( array(
         $thiscat = get_queried_object_id();
         $loopNotesOutils = new WP_Query(
             array(
-                'post_type' => 'veelgestelde-vragen',
+                'post_type' => 'cooperatief_werken',
                 'status' => 'published',
                 'posts_per_page' => -1,
                 'orderby'  => 'post_date',
@@ -223,7 +223,7 @@ foreach ($terms as $term) : ?>
                 <?php }
                 ?>
             </div>
-            <a href="<?php echo esc_url(home_url('/')); ?>veelgestelde-vragen" class="cta-a"><?php pll_e('Toutes les notes pratiques & outils'); ?></a>
+            <a href="<?php echo esc_url(home_url('/')); ?>cooperatief_werken" class="cta-a"><?php pll_e('Toutes les notes pratiques & outils'); ?></a>
         </div>
 
     </div>
