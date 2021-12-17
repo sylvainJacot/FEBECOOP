@@ -25,7 +25,7 @@
             else : ?>
                 <span class="generic-content"><p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p></span>
             <?php endif; ?>
-            <a href="<?php echo esc_url(home_url('/')); ?>cooperatief_werken" class="cta-a"><?php pll_e('Tous les outils et notes pratiques');?></a>
+            <a href="<?php echo esc_url(home_url('/')); ?>veelgestelde-vragen" class="cta-a"><?php pll_e('Tous les outils et notes pratiques');?></a>
             
         </div>
         </div>

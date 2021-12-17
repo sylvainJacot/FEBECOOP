@@ -16,7 +16,7 @@ function febecoop_scripts() {
     // Register Scripts
     // CDNS
     wp_enqueue_script( "swiper-script", "https://unpkg.com/swiper/swiper-bundle.min.js", array(), rand(100000,200000), true);
-
+    wp_enqueue_script( "fancy-script", "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js", array(), rand(100000,200000), true);
    
 
     // Scripts

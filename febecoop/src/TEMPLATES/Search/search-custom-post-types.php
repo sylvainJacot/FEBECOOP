@@ -12,4 +12,4 @@
     <input type="hidden" name="post_type[]" value="kenniscentrum" />
     <input type="hidden" name="post_type[]" value="praktijkverhaal" />
     <input type="hidden" name="post_type[]" value="workshops-en-events" />
-    <input type="hidden" name="post_type[]" value="cooperatief_werken" />
+    <input type="hidden" name="post_type[]" value="veelgestelde-vragen" />

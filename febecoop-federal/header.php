@@ -28,6 +28,11 @@ if (empty($meta_description)) {
     <link rel="preload" as="font" type="font/woff2" href="<?php echo get_template_directory_uri(); ?>/src/ASSETS/FONTS/HANDO/Hando-Bold.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="<?php echo get_template_directory_uri(); ?>/src/ASSETS/FONTS/HANDO/Hando-Regular.woff2" crossorigin>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta charset="utf-8">
